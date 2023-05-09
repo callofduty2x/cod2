@@ -1,0 +1,1 @@
+int marker_r_material_load_obj;

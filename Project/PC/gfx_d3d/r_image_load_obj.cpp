@@ -1,0 +1,1 @@
+int marker_r_image_load_obj;

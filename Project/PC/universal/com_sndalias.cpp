@@ -1,3 +1,11 @@
+void __cdecl Com_SetSoundAliasSeed(int)
+{	UNIMPLEMENTED();
+}
+
+int __cdecl Com_GetSoundAliasSeed(void)
+{	UNIMPLEMENTED();
+}
+
 void * __cdecl Com_GetSoundFileMem(struct snd_alias_t const *)
 {	UNIMPLEMENTED();
 }
@@ -26,6 +34,10 @@ int __cdecl SND_GetAliasOffset(struct snd_alias_t const *)
 {	UNIMPLEMENTED();
 }
 
+struct snd_alias_list_t * __cdecl Com_FindSoundAlias(char const *)
+{	UNIMPLEMENTED();
+}
+
 struct snd_alias_t * __cdecl Com_PickSoundAlias(char const *)
 {	UNIMPLEMENTED();
 }
@@ -38,4 +50,13 @@ struct snd_alias_t * __cdecl SV_PickSoundAlias(char const *)
 {	UNIMPLEMENTED();
 }
 
+struct snd_alias_t * __cdecl SND_GetAliasWithOffset(char const *,int)
+{	UNIMPLEMENTED();
+}
+
 struct <unnamed-tag> g_sa;
+int marker_com_sndalias;
+int __cdecl Com_SoundAliasRand(void)
+{	UNIMPLEMENTED();
+}
+

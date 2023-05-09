@@ -1,0 +1,1 @@
+int marker_r_light_load_obj;

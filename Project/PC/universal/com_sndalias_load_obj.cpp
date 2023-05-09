@@ -1,0 +1,1 @@
+int marker_com_sndalias_load_obj;

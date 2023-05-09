@@ -1,0 +1,11 @@
+#include <stdint.h>
+
+typedef enum
+{
+	DX_CAPS_RESPONSE_QUIT = 0,
+	DX_CAPS_RESPONSE_WARN = 1,
+	DX_CAPS_RESPONSE_INFO = 2,
+	DX_CAPS_RESPONSE_FORBID_DX7 = 3,
+	DX_CAPS_RESPONSE_FORBID_DX9 = 4
+} DxCapsResponse;
+

@@ -1,0 +1,58 @@
+#include <stdint.h>
+
+struct clipMap_t
+{
+	int32_t name;
+	int32_t numStaticModels;
+	int32_t staticModelList;
+	int32_t numMaterials;
+	int32_t materials;
+	int32_t numBrushSides;
+	int32_t brushsides;
+	int32_t numNodes;
+	int32_t nodes;
+	int32_t numLeafs;
+	int32_t leafs;
+	int32_t leafbrushNodesCount;
+	int32_t leafbrushNodes;
+	int32_t numLeafBrushes;
+	int32_t leafbrushes;
+	int32_t numLeafSurfaces;
+	int32_t leafsurfaces;
+	int32_t vertCount;
+	int32_t verts;
+	int32_t edgeCount;
+	int32_t edges;
+	int32_t triCount;
+	int32_t tris;
+	int32_t borderCount;
+	int32_t borders;
+	int32_t partitionCount;
+	int32_t partitions;
+	int32_t aabbTreeCount;
+	int32_t aabbTrees;
+	int32_t numSubModels;
+	int32_t cmodels;
+	int16_t numBrushes;
+	char pad0[2];
+	int32_t brushes;
+	int32_t numClusters;
+	int32_t clusterBytes;
+	int32_t visibility;
+	int32_t vised;
+	int32_t numEntityChars;
+	int32_t entityString;
+	int32_t box_brush;
+	char box_model[72];
+	int32_t pathNodeCount;
+	int32_t pathNodes;
+	int32_t chainNodeCount;
+	int32_t chainNodes;
+	int32_t chainNodesRev;
+	int32_t visBytes;
+	int32_t pathVis;
+	int32_t nodeTreeCount;
+	int32_t nodeTree;
+	int32_t checksum;
+};
+

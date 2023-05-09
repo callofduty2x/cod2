@@ -1,0 +1,61 @@
+#include <stdint.h>
+
+struct DxGlobals
+{
+	int32_t hinst;
+	int32_t d3d9;
+	int32_t device;
+	int32_t adapterIndex;
+	int32_t backBufferFormat;
+	int32_t displayModeCount;
+	char displayModes[4096];
+	char resolutionNameTable[1028];
+	char refreshRateNameTable[1028];
+	char modeText[5120];
+	int32_t gpuSync;
+	int32_t multiSampleType;
+	int32_t multiSampleQuality;
+	int32_t sunSpriteSamples;
+	char renderTargets[260];
+	int32_t singleSampleDepthStencilSurface;
+	int16_t cubemapShotRes;
+	int16_t cubemapShotPixelBorder;
+	int8_t deviceLost;
+	int8_t inScene;
+	int16_t feedbackWidth;
+	int16_t feedbackHeight;
+	char pad0[2];
+	int32_t targetWindowIndex;
+	int32_t windowCount;
+	char windows[16];
+	int32_t flushGpuQuery;
+	int32_t gpuSyncDelay;
+	int32_t gpuSyncAlreadyWaited;
+	int8_t flushGpuQueryIssued;
+	char pad1[3];
+	int32_t anisotropy;
+	int32_t maxAnisotropy;
+	int32_t maxClipPlanes;
+	int8_t stencilTwoSided;
+	int8_t stencilWrap;
+	int8_t slopeScaleDepthBias;
+	int8_t canMipCubemaps;
+	int8_t hasBlendOp;
+	int8_t hasSeparateAlphaBlend;
+	int8_t hasTransparencyMsaa;
+	char pad2[1];
+	char dynamicIndexBufferPool[12];
+	int32_t dynamicIndexBuffer;
+	char skinnedCacheVbPool[24];
+	char dynamicVertexBufferPool[12];
+	int32_t dynamicVertexBuffer;
+	int32_t particleCloudVertexBuffer;
+	int32_t particleCloudIndexBuffer;
+	int32_t skinnedCacheLockAddr;
+	int32_t smodelCacheVb;
+	int32_t smodelCacheIndices;
+	int32_t dynamicBufferFrame;
+	int32_t tempSkinBuf;
+	int32_t tempSkinPos;
+};
+

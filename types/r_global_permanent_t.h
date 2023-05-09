@@ -1,0 +1,57 @@
+#include <stdint.h>
+
+struct r_global_permanent_t
+{
+	int32_t materialLoaded;
+	int32_t materialCount;
+	char sortedMaterials[4096];
+	int32_t whiteImage;
+	int32_t blackImage;
+	int32_t identityNormalMapImage;
+	int32_t specularityImage;
+	int32_t lightmapWeightsImage;
+	int64_t lightGridWeightsImage;
+	int32_t outdoorImage;
+	int32_t dlightDef;
+	int32_t defaultMaterial;
+	int32_t rawMaterial;
+	int32_t stencilPlaneMaterial;
+	int32_t whiteMaterial;
+	int32_t additiveMaterial;
+	int32_t pointMaterial;
+	int32_t lineMaterial;
+	int32_t clearAlphaStencilMaterial;
+	int32_t shadowClearMaterial;
+	int32_t shadowCookieOverlayMaterial;
+	int32_t shadowCookieBlurMaterial;
+	int32_t glareBlindMaterial;
+	int32_t normalFillMaterial;
+	int32_t alphaBlendFillMaterial;
+	int32_t alphaTestPassFillMaterial;
+	int32_t alphaTestFailFillMaterial;
+	int32_t additiveFillMaterial;
+	int32_t depthOnlyFillMaterial;
+	int32_t stencilOneSideKeepFillMaterial;
+	int32_t stencilOneSideRejectFillMaterial;
+	int32_t stencilTwoSideKeepFillMaterial;
+	int32_t stencilTwoSideRejectFillMaterial;
+	int32_t phongBumpFillMaterial;
+	int32_t phongBumpSpecFillMaterial;
+	int32_t colorChannelMixerMaterial;
+	int32_t frameColorDebugMaterial;
+	int32_t frameAlphaDebugMaterial;
+	int32_t rawImage;
+	int32_t world;
+	int32_t sunHalfAngleImage;
+	int32_t waterColorImage;
+	int32_t feedbackReplaceMaterial;
+	int32_t feedbackBlendMaterial;
+	char symmetricFilterMaterial[32];
+	int32_t shellShockMaterial;
+	int32_t glowSetupMaterial;
+	int32_t glowApplySkyBleedMaterial;
+	int32_t glowApplyBloomMaterial;
+	int32_t savedScreenTime;
+	char rawTexdef[12];
+};
+

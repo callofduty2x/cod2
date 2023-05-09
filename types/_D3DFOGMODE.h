@@ -1,0 +1,11 @@
+#include <stdint.h>
+
+typedef enum
+{
+	D3DFOG_NONE = 0,
+	D3DFOG_EXP = 1,
+	D3DFOG_EXP2 = 2,
+	D3DFOG_LINEAR = 3,
+	D3DFOG_FORCE_DWORD = 2147483647
+} _D3DFOGMODE;
+

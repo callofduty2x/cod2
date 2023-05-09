@@ -1,0 +1,10 @@
+#include <stdint.h>
+
+typedef enum
+{
+	D3DLIGHT_POINT = 1,
+	D3DLIGHT_SPOT = 2,
+	D3DLIGHT_DIRECTIONAL = 3,
+	D3DLIGHT_FORCE_DWORD = 2147483647
+} _D3DLIGHTTYPE;
+

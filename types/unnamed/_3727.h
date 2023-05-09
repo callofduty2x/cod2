@@ -1,0 +1,49 @@
+#include <stdint.h>
+
+struct _3727
+{
+	gameState_t gameState;
+	int32_t viewX;
+	int32_t viewY;
+	int32_t viewWidth;
+	int32_t viewHeight;
+	int32_t viewAspect;
+	int32_t serverCommandSequence;
+	int32_t processedSnapshotNum;
+	int32_t localServer;
+	char gametype[32];
+	char szHostName[256];
+	int32_t maxclients;
+	char mapname[64];
+	char redTeam[64];
+	char blueTeam[64];
+	int32_t voteTime;
+	int32_t voteYes;
+	int32_t voteNo;
+	char voteString[256];
+	int64_t teamVoteTime;
+	int64_t teamVoteYes;
+	int64_t teamVoteNo;
+	int64_t teamVoteModified;
+	char teamVoteString[512];
+	int32_t levelStartTime;
+	int64_t teamScores;
+	char gameModels[1024];
+	char fxs[256];
+	int32_t smokeGrenadeFx;
+	char shellshockParms[2112];
+	shellshock_parms_t holdBreathParams;
+	int32_t numInlineModels;
+	char inlineDrawModel[4092];
+	char inlineModelMidpoints[12276];
+	char teamChatMsgs[2168];
+	char teamChatMsgTimes[32];
+	int32_t teamChatPos;
+	int32_t teamLastChatPos;
+	cgMedia_t media;
+	int32_t compassWidth;
+	int32_t compassHeight;
+	int32_t compassY;
+	char corpseinfo[9664];
+};
+

@@ -1,0 +1,11 @@
+#include <stdint.h>
+
+typedef enum
+{
+	ATI_4_COMPS_CONVERTER_ARGB = 0,
+	ATI_4_COMPS_CONVERTER_ABGR = 1,
+	STD_CONVERTER_ARGB = 2,
+	STD_CONVERTER_ABGR = 3,
+	UNKNOWN_CONVERTER = 4
+} ConverterType;
+

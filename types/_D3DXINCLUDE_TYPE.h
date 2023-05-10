@@ -1,9 +1,0 @@
-#include <stdint.h>
-
-typedef enum
-{
-	D3DXINC_LOCAL = 0,
-	D3DXINC_SYSTEM = 1,
-	D3DXINC_FORCE_DWORD = 2147483647
-} _D3DXINCLUDE_TYPE;
-

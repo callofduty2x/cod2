@@ -6,11 +6,11 @@ float * __cdecl CG_TeamColor(int)
 {	UNIMPLEMENTED();
 }
 
-void __cdecl CG_NorthDirectionChanged(void)
+void __cdecl CG_NorthDirectionChanged()
 {	UNIMPLEMENTED();
 }
 
-float * __cdecl CG_FadeColor(int,int,int)
+float * __cdecl CG_FadeColor(int startMsec, int totalMsec, int fadeMsec)
 {	UNIMPLEMENTED();
 }
 
@@ -42,15 +42,15 @@ void __cdecl CG_DebugBox(float const * const,float const * const,float const * c
 {	UNIMPLEMENTED();
 }
 
-void __cdecl CG_UpdateCompPointerOrientation(void)
+void __cdecl CG_UpdateCompPointerOrientation()
 {	UNIMPLEMENTED();
 }
 
-void __cdecl CG_UpdateCompassOrientation(void)
+void __cdecl CG_UpdateCompassOrientation()
 {	UNIMPLEMENTED();
 }
 
-int __cdecl CG_DrawDevString(float,float,char const *,float const * const,int,struct Font_s *,int)
+int __cdecl CG_DrawDevString(float x, float y, char const * s, float const * const color, int align, struct Font_s * font, int style)
 {	UNIMPLEMENTED();
 }
 
@@ -58,15 +58,15 @@ void __cdecl CG_DrawRotatedQuadPic(float,float,float const (*)[2],float,float co
 {	UNIMPLEMENTED();
 }
 
-void __cdecl CG_DrawRotatedPicPhysical(float,float,float,float,float,float const * const,struct Material *)
+void __cdecl CG_DrawRotatedPicPhysical(float x, float y, float width, float height, float angle, float const * const color, struct Material * material)
 {	UNIMPLEMENTED();
 }
 
-void __cdecl CG_TileClear(void)
+void __cdecl CG_TileClear()
 {	UNIMPLEMENTED();
 }
 
-int __cdecl CG_DrawSmallDevStringColor(float,float,char const *,float const * const,int)
+int __cdecl CG_DrawSmallDevStringColor(float x, float y, char const * s, float const * const color, int align)
 {	UNIMPLEMENTED();
 }
 
@@ -74,19 +74,19 @@ int __cdecl CG_DrawSmallDevString(float,float,char const *,float,int)
 {	UNIMPLEMENTED();
 }
 
-int __cdecl CG_DrawBigDevStringColor(float,float,char const *,float const * const,int)
+int __cdecl CG_DrawBigDevStringColor(float x, float y, char const * s, float const * const color, int align)
 {	UNIMPLEMENTED();
 }
 
-int __cdecl CG_DrawBigDevString(float,float,char const *,float,int)
+int __cdecl CG_DrawBigDevString(float x, float y, char const * s, float alpha, int align)
 {	UNIMPLEMENTED();
 }
 
-void __cdecl CG_DrawStringExt(float,float,char const *,float const * const,int,int,float,int)
+void __cdecl CG_DrawStringExt(float x, float y, char const * string, float const * const setColor, int forceColor, int shadow, float charHeight, int adjust)
 {	UNIMPLEMENTED();
 }
 
-void __cdecl CG_DrawRotatedPic(float,float,float,float,int,int,float,float const * const,struct Material *)
+void __cdecl CG_DrawRotatedPic(float x, float y, float width, float height, int horzAlign, int vertAlign, float angle, float const * const color, struct Material * material)
 {	UNIMPLEMENTED();
 }
 

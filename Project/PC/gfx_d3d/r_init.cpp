@@ -26,19 +26,19 @@ int __cdecl R_GetVertexSize(void)
 {	UNIMPLEMENTED();
 }
 
-void __cdecl R_EndRegistration(void)
+void __cdecl R_EndRegistration()
 {	UNIMPLEMENTED();
 }
 
-char const * __cdecl R_ErrorDescription(long)
+char const * __cdecl R_ErrorDescription(long hr)
 {	UNIMPLEMENTED();
 }
 
-void __cdecl R_FatalLockError(long)
+void __cdecl R_FatalLockError(long hr)
 {	UNIMPLEMENTED();
 }
 
-void __cdecl R_FatalInitError(char const *)
+void __cdecl R_FatalInitError(char const * msg)
 {	UNIMPLEMENTED();
 }
 
@@ -46,7 +46,7 @@ void __cdecl R_UnloadWorld(void)
 {	UNIMPLEMENTED();
 }
 
-void __cdecl R_Error(enum errorParm_t,char const *,...)
+void __cdecl R_Error(enum errorParm_t errorLevel, char const * msg, ...)
 {	UNIMPLEMENTED();
 }
 
@@ -54,11 +54,11 @@ void __cdecl R_ReleaseAndSetNULL(struct IUnknown *,char const *,char const *,int
 {	UNIMPLEMENTED();
 }
 
-void __cdecl R_GammaCorrect(unsigned char *,int)
+void __cdecl R_GammaCorrect(unsigned char * buffer, int bufSize)
 {	UNIMPLEMENTED();
 }
 
-void __cdecl R_SetColorMappings(void)
+void __cdecl R_SetColorMappings()
 {	UNIMPLEMENTED();
 }
 
@@ -74,7 +74,7 @@ void __cdecl R_ShutdownDirect3D(void)
 {	UNIMPLEMENTED();
 }
 
-void __cdecl R_BeginRegistration(struct vidConfig_t *)
+void __cdecl R_BeginRegistration(struct vidConfig_t * vidConfigOut)
 {	UNIMPLEMENTED();
 }
 
@@ -206,6 +206,26 @@ void __cdecl R_InitDirect3D(void)
 }
 
 void __cdecl R_Init(void)
+{	UNIMPLEMENTED();
+}
+
+R_UpdateGpuSyncType()
+{	UNIMPLEMENTED();
+}
+
+void std::__adjust_heap<_D3DDISPLAYMODE*, int, _D3DDISPLAYMODE, unsigned char (*)(_D3DDISPLAYMODE const&, _D3DDISPLAYMODE const&)>(_D3DDISPLAYMODE*, int, int, _D3DDISPLAYMODE, unsigned char (*)(_D3DDISPLAYMODE const&, _D3DDISPLAYMODE const&))
+{	UNIMPLEMENTED();
+}
+
+void std::__insertion_sort<_D3DDISPLAYMODE*, unsigned char (*)(_D3DDISPLAYMODE const&, _D3DDISPLAYMODE const&)>(_D3DDISPLAYMODE*, _D3DDISPLAYMODE*, unsigned char (*)(_D3DDISPLAYMODE const&, _D3DDISPLAYMODE const&))
+{	UNIMPLEMENTED();
+}
+
+void std::__introsort_loop<_D3DDISPLAYMODE*, int, unsigned char (*)(_D3DDISPLAYMODE const&, _D3DDISPLAYMODE const&)>(_D3DDISPLAYMODE*, _D3DDISPLAYMODE*, int, unsigned char (*)(_D3DDISPLAYMODE const&, _D3DDISPLAYMODE const&))
+{	UNIMPLEMENTED();
+}
+
+R_RecoverLostDevice()
 {	UNIMPLEMENTED();
 }
 

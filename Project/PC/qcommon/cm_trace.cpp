@@ -2,39 +2,39 @@ int __cdecl I_side(float)
 {	UNIMPLEMENTED();
 }
 
-struct cmodel_t * __cdecl CM_ClipHandleToModel(int)
+struct cmodel_t * __cdecl CM_ClipHandleToModel(int handle)
 {	UNIMPLEMENTED();
 }
 
-int __cdecl CM_TempBoxModel(float const * const,float const * const,int)
+int __cdecl CM_TempBoxModel(float const * const mins, float const * const maxs, int contents)
 {	UNIMPLEMENTED();
 }
 
-float __cdecl CM_RadiusOfModel(int)
+float __cdecl CM_RadiusOfModel(int handle)
 {	UNIMPLEMENTED();
 }
 
-int __cdecl CM_ContentsOfModel(int)
+int __cdecl CM_ContentsOfModel(int handle)
 {	UNIMPLEMENTED();
 }
 
-int __cdecl CM_BoxSightTrace(int,float const * const,float const * const,float const * const,float const * const,int,int)
+int __cdecl CM_BoxSightTrace(int oldHitNum, float const * const start, float const * const end, float const * const mins, float const * const maxs, int model, int brushmask)
 {	UNIMPLEMENTED();
 }
 
-void __cdecl CM_TransformedBoxTrace(struct trace_t *,float const * const,float const * const,float const * const,float const * const,int,int,float const * const,float const * const)
+void __cdecl CM_TransformedBoxTrace(struct trace_t * results, float const * const start, float const * const end, float const * const mins, float const * const maxs, int model, int brushmask, float const * const origin, float const * const angles)
 {	UNIMPLEMENTED();
 }
 
-void __cdecl CM_BoxTrace(struct trace_t *,float const * const,float const * const,float const * const,float const * const,int,int)
+void __cdecl CM_BoxTrace(struct trace_t * results, float const * const start, float const * const end, float const * const mins, float const * const maxs, int model, int brushmask)
 {	UNIMPLEMENTED();
 }
 
-int __cdecl CM_TransformedBoxSightTrace(int,float const * const,float const * const,float const * const,float const * const,int,int,float const * const,float const * const)
+int __cdecl CM_TransformedBoxSightTrace(int hitNum, float const * const start, float const * const end, float const * const mins, float const * const maxs, int model, int brushmask, float const * const origin, float const * const angles)
 {	UNIMPLEMENTED();
 }
 
-void __cdecl CM_TransformedBoxTraceExternal(struct trace_t *,float const * const,float const * const,float const * const,float const * const,int,int,float const * const,float const * const)
+void __cdecl CM_TransformedBoxTraceExternal(struct trace_t * results, float const * const start, float const * const end, float const * const mins, float const * const maxs, int model, int brushmask, float const * const origin, float const * const angles)
 {	UNIMPLEMENTED();
 }
 

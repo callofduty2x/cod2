@@ -2,7 +2,7 @@ void __cdecl RB_DrawDebugPolys(void)
 {	UNIMPLEMENTED();
 }
 
-void __cdecl RB_DrawDebug(struct GfxViewParms const *)
+void __cdecl RB_DrawDebug(struct GfxViewParms const * viewParms)
 {	UNIMPLEMENTED();
 }
 

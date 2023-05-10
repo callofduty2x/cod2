@@ -22,7 +22,7 @@ void __cdecl RB_CheckOverflowOptimized(int)
 {	UNIMPLEMENTED();
 }
 
-void __cdecl RB_TessBad(enum surfaceType_t const *)
+void __cdecl RB_TessBad(enum surfaceType_t const * surfType)
 {	UNIMPLEMENTED();
 }
 
@@ -30,7 +30,7 @@ void __cdecl RB_TessRawGeometry(enum surfaceType_t const *)
 {	UNIMPLEMENTED();
 }
 
-void __cdecl RB_TessXModelRigid(enum surfaceType_t const *)
+void __cdecl RB_TessXModelRigid(enum surfaceType_t const * surfType)
 {	UNIMPLEMENTED();
 }
 
@@ -38,27 +38,27 @@ void __cdecl RB_TessParticleCloud(struct GfxEntity const *)
 {	UNIMPLEMENTED();
 }
 
-void __cdecl RB_TessXModelSkinned(enum surfaceType_t const *)
+void __cdecl RB_TessXModelSkinned(enum surfaceType_t const * surfType)
 {	UNIMPLEMENTED();
 }
 
-void __cdecl RB_TessTriangles(enum surfaceType_t const *)
+void __cdecl RB_TessTriangles(enum surfaceType_t const * surfType)
 {	UNIMPLEMENTED();
 }
 
-void __cdecl RB_TessStaticModelCached(enum surfaceType_t const *)
+void __cdecl RB_TessStaticModelCached(enum surfaceType_t const * surfType)
 {	UNIMPLEMENTED();
 }
 
-void __cdecl RB_TessPoly(enum surfaceType_t const *)
+void __cdecl RB_TessPoly(enum surfaceType_t const * surfType)
 {	UNIMPLEMENTED();
 }
 
-void __cdecl RB_TessEntity(struct GfxEntity const *)
+void __cdecl RB_TessEntity(struct GfxEntity const * re)
 {	UNIMPLEMENTED();
 }
 
-void __cdecl RB_TessBackEndEntity(enum surfaceType_t const *)
+void __cdecl RB_TessBackEndEntity(enum surfaceType_t const * surfType)
 {	UNIMPLEMENTED();
 }
 

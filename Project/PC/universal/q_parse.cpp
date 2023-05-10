@@ -1,20 +1,20 @@
-int __cdecl Com_Compress(char *)
+int __cdecl Com_Compress(char * data_p)
 {	UNIMPLEMENTED();
 }
 
-char const * __cdecl Com_GetLastTokenPos(void)
+char const * __cdecl Com_GetLastTokenPos()
 {	UNIMPLEMENTED();
 }
 
-void __cdecl Com_ParseReturnToMark(char const * *,struct com_parse_mark_t *)
+void __cdecl Com_ParseReturnToMark(char const * *, struct com_parse_mark_t *)
 {	UNIMPLEMENTED();
 }
 
-void __cdecl Com_ParseSetMark(char const * *,struct com_parse_mark_t *)
+void __cdecl Com_ParseSetMark(char const * * text, struct com_parse_mark_t * mark)
 {	UNIMPLEMENTED();
 }
 
-void __cdecl Com_SetScriptWarningPrefix(char const *)
+void __cdecl Com_SetScriptWarningPrefix(char const * prefix)
 {	UNIMPLEMENTED();
 }
 
@@ -26,7 +26,7 @@ char const * __cdecl Com_ParseRestOfLine(char const * *)
 {	UNIMPLEMENTED();
 }
 
-int __cdecl Com_GetArgCountOnLine(char const * *)
+int __cdecl Com_GetArgCountOnLine(char const * * data_p)
 {	UNIMPLEMENTED();
 }
 
@@ -34,7 +34,7 @@ int const __cdecl Com_SkipBracedSection(char const * *,int)
 {	UNIMPLEMENTED();
 }
 
-void __cdecl Com_ScriptError(char const *,...)
+void __cdecl Com_ScriptError(char const * msg, ...)
 {	UNIMPLEMENTED();
 }
 

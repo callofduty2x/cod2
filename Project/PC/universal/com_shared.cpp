@@ -1,20 +1,20 @@
-void __cdecl Com_Memset(void *,int,int)
+void __cdecl Com_Memset(void * dest, int val, int count)
 {	UNIMPLEMENTED();
 }
 
-int __cdecl Com_HashKey(char *,int)
+int __cdecl Com_HashKey(char * string, int maxlen)
 {	UNIMPLEMENTED();
 }
 
-int __cdecl Com_RealTime(struct qtime_s *)
+int __cdecl Com_RealTime(struct qtime_s * qtime)
 {	UNIMPLEMENTED();
 }
 
-bool __cdecl Com_Filter(char const *,char const *,int)
+bool __cdecl Com_Filter(char const * filter, char const * name, int casesensitive)
 {	UNIMPLEMENTED();
 }
 
-bool __cdecl Com_FilterPath(char const *,char const *,int)
+bool __cdecl Com_FilterPath(char const * filter, char const * name, int casesensitive)
 {	UNIMPLEMENTED();
 }
 

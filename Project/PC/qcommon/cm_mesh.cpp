@@ -2,15 +2,15 @@ bool __cdecl CM_RayTriangleIntersect(float const * const,float const * const,flo
 {	UNIMPLEMENTED();
 }
 
-void __cdecl CM_MeshTestInLeaf(struct traceWork_t const *,struct cLeaf_t *,struct trace_t *)
+void __cdecl CM_MeshTestInLeaf(struct traceWork_t const * tw, struct cLeaf_t * leaf, struct trace_t * trace)
 {	UNIMPLEMENTED();
 }
 
-void __cdecl CM_TraceThroughAabbTree(struct traceWork_t const *,struct CollisionAabbTree *,struct trace_t *)
+void __cdecl CM_TraceThroughAabbTree(struct traceWork_t const * tw, struct CollisionAabbTree * aabbTree, struct trace_t * trace)
 {	UNIMPLEMENTED();
 }
 
-void __cdecl CM_SightTraceThroughAabbTree(struct traceWork_t const *,struct CollisionAabbTree *,struct trace_t *)
+void __cdecl CM_SightTraceThroughAabbTree(struct traceWork_t const * tw, struct CollisionAabbTree * aabbTree, struct trace_t * trace)
 {	UNIMPLEMENTED();
 }
 

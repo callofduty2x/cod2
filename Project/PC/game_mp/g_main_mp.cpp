@@ -2,35 +2,35 @@ void __cdecl G_UpdateObjectiveToClients(void)
 {	UNIMPLEMENTED();
 }
 
-void __cdecl G_LogPrintf(char const *,...)
+void __cdecl G_LogPrintf(char const * fmt, ...)
 {	UNIMPLEMENTED();
 }
 
-struct clientState_s * __cdecl G_GetClientState(int)
+struct clientState_s * __cdecl G_GetClientState(int clientNum)
 {	UNIMPLEMENTED();
 }
 
-void __cdecl G_SetClientArchiveTime(int,int)
+void __cdecl G_SetClientArchiveTime(int clientNum, int time)
 {	UNIMPLEMENTED();
 }
 
-int __cdecl G_GetClientArchiveTime(int)
+int __cdecl G_GetClientArchiveTime(int clientNum)
 {	UNIMPLEMENTED();
 }
 
-int __cdecl G_GetClientScore(int)
+int __cdecl G_GetClientScore(int clientNum)
 {	UNIMPLEMENTED();
 }
 
-float __cdecl G_GetFogOpaqueDistSqrd(void)
+float __cdecl G_GetFogOpaqueDistSqrd()
 {	UNIMPLEMENTED();
 }
 
-void __cdecl G_SetSavePersist(int)
+void __cdecl G_SetSavePersist(int savepersist)
 {	UNIMPLEMENTED();
 }
 
-int __cdecl G_GetSavePersist(void)
+int __cdecl G_GetSavePersist()
 {	UNIMPLEMENTED();
 }
 
@@ -38,11 +38,11 @@ void __cdecl G_UpdateHudElemsToClients(void)
 {	UNIMPLEMENTED();
 }
 
-void __cdecl CalculateRanks(void)
+void __cdecl CalculateRanks()
 {	UNIMPLEMENTED();
 }
 
-void __cdecl G_AddDebugString(float const * const,float const * const,float,char const *)
+void __cdecl G_AddDebugString(float const * const xyz, float const * const color, float scale, char const * pszText)
 {	UNIMPLEMENTED();
 }
 
@@ -50,15 +50,15 @@ void __cdecl SendScoreboardMessageToAllIntermissionClients(void)
 {	UNIMPLEMENTED();
 }
 
-void __cdecl ExitLevel(void)
+void __cdecl ExitLevel()
 {	UNIMPLEMENTED();
 }
 
-void __cdecl G_RunThink(struct gentity_s *)
+void __cdecl G_RunThink(struct gentity_s * ent)
 {	UNIMPLEMENTED();
 }
 
-void __cdecl CheckVote(void)
+void __cdecl CheckVote()
 {	UNIMPLEMENTED();
 }
 
@@ -70,7 +70,7 @@ void __cdecl G_FreeEntities(void)
 {	UNIMPLEMENTED();
 }
 
-void __cdecl G_ShutdownGame(int)
+void __cdecl G_ShutdownGame(int freeScripts)
 {	UNIMPLEMENTED();
 }
 
@@ -78,23 +78,23 @@ void __cdecl DebugDumpAnims(void)
 {	UNIMPLEMENTED();
 }
 
-void __cdecl G_SightTrace(int *,float const * const,float const * const,int,int)
+void __cdecl G_SightTrace(int * hitNum, float const * const start, float const * const end, int passEntityNum, int contentmask)
 {	UNIMPLEMENTED();
 }
 
-int __cdecl G_LocationalTracePassed(float const * const,float const * const,int,int)
+int __cdecl G_LocationalTracePassed(float const * const start, float const * const end, int passEntityNum, int contentmask)
 {	UNIMPLEMENTED();
 }
 
-void __cdecl G_LocationalTrace(struct trace_t *,float const * const,float const * const,int,int,unsigned char *)
+void __cdecl G_LocationalTrace(struct trace_t * results, float const * const start, float const * const end, int passEntityNum, int contentmask, unsigned char * priorityMap)
 {	UNIMPLEMENTED();
 }
 
-int __cdecl G_TraceCapsuleComplete(float const * const,float const * const,float const * const,float const * const,int,int)
+int __cdecl G_TraceCapsuleComplete(float const * const, float const * const, float const * const, float const * const, int, int)
 {	UNIMPLEMENTED();
 }
 
-void __cdecl G_TraceCapsule(struct trace_t *,float const * const,float const * const,float const * const,float const * const,int,int)
+void __cdecl G_TraceCapsule(struct trace_t * results, float const * const start, float const * const mins, float const * const maxs, float const * const end, int passEntityNum, int contentmask)
 {	UNIMPLEMENTED();
 }
 
@@ -102,11 +102,11 @@ void __cdecl G_XAnimUpdateEnt(struct gentity_s *)
 {	UNIMPLEMENTED();
 }
 
-void __cdecl G_RunFrame(int)
+void __cdecl G_RunFrame(int levelTime)
 {	UNIMPLEMENTED();
 }
 
-void __cdecl G_InitGame(int,int,int,int)
+void __cdecl G_InitGame(int levelTime, int randomSeed, int restart, int savepersist)
 {	UNIMPLEMENTED();
 }
 

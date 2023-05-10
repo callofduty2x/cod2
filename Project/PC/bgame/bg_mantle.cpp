@@ -2,15 +2,15 @@ float __cdecl acos(float)
 {	UNIMPLEMENTED();
 }
 
-bool __cdecl Mantle_IsWeaponInactive(struct playerState_s *)
+bool __cdecl Mantle_IsWeaponInactive(struct playerState_s * ps)
 {	UNIMPLEMENTED();
 }
 
-void __cdecl Mantle_ClearHint(struct playerState_s *)
+void __cdecl Mantle_ClearHint(struct playerState_s * ps)
 {	UNIMPLEMENTED();
 }
 
-void __cdecl Mantle_ShutdownAnims(void)
+void __cdecl Mantle_ShutdownAnims()
 {	UNIMPLEMENTED();
 }
 
@@ -18,19 +18,19 @@ void __cdecl Mantle_CapView(struct playerState_s *)
 {	UNIMPLEMENTED();
 }
 
-void __cdecl Mantle_Move(struct pmove_t *,struct playerState_s *,struct pml_t *)
+void __cdecl Mantle_Move(struct pmove_t * pm, struct playerState_s * ps, struct pml_t * pml)
 {	UNIMPLEMENTED();
 }
 
-void __cdecl Mantle_CreateAnims(void * (__cdecl*)(int))
+void __cdecl Mantle_CreateAnims(void *  xanimAlloc)(int))
 {	UNIMPLEMENTED();
 }
 
-void __cdecl Mantle_RegisterDvars(void)
+void __cdecl Mantle_RegisterDvars()
 {	UNIMPLEMENTED();
 }
 
-void __cdecl Mantle_Check(struct pmove_t *,struct pml_t *)
+void __cdecl Mantle_Check(struct pmove_t * pm, struct pml_t * pml)
 {	UNIMPLEMENTED();
 }
 

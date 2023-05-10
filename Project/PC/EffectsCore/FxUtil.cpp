@@ -287,7 +287,7 @@ public: void * __cdecl FxMemMgr<class Emitter>::Alloc(unsigned int)
 {	UNIMPLEMENTED();
 }
 
-void __cdecl FX_InitServer(void)
+void __cdecl FX_InitServer()
 {	UNIMPLEMENTED();
 }
 
@@ -299,7 +299,7 @@ void __cdecl FX_EffectList_SwitchToLocalClient(int)
 {	UNIMPLEMENTED();
 }
 
-void __cdecl FX_SetSortGroup(class Effect *)
+void __cdecl FX_SetSortGroup(class Effect * fx)
 {	UNIMPLEMENTED();
 }
 
@@ -307,31 +307,31 @@ float __cdecl FX_GetClientVisibility(float const * const,float const * const)
 {	UNIMPLEMENTED();
 }
 
-int __cdecl FX_GetCluster(float const * const)
+int __cdecl FX_GetCluster(float const * const origin)
 {	UNIMPLEMENTED();
 }
 
-void __cdecl FX_UpdateAllNonBolt(void)
+void __cdecl FX_UpdateAllNonBolt()
 {	UNIMPLEMENTED();
 }
 
-void __cdecl FX_UpdateAllBolt(void)
+void __cdecl FX_UpdateAllBolt()
 {	UNIMPLEMENTED();
 }
 
-void __cdecl FX_UpdateScheduledEffectsBolt(void)
+void __cdecl FX_UpdateScheduledEffectsBolt()
 {	UNIMPLEMENTED();
 }
 
-void __cdecl FX_UpdateScheduledEffectsNonBolt(void)
+void __cdecl FX_UpdateScheduledEffectsNonBolt()
 {	UNIMPLEMENTED();
 }
 
-float __cdecl FX_GetServerVisibility(float const * const,float const * const)
+float __cdecl FX_GetServerVisibility(float const * const start, float const * const end)
 {	UNIMPLEMENTED();
 }
 
-void __cdecl FX_Rewind(int)
+void __cdecl FX_Rewind(int time)
 {	UNIMPLEMENTED();
 }
 
@@ -339,15 +339,15 @@ void __cdecl FX_Stop(void)
 {	UNIMPLEMENTED();
 }
 
-void __cdecl FX_Free(bool)
+void __cdecl FX_Free(bool bRemoveTemplates)
 {	UNIMPLEMENTED();
 }
 
-int __cdecl FX_Init(bool)
+int __cdecl FX_Init(bool rendererExists)
 {	UNIMPLEMENTED();
 }
 
-void __cdecl FX_CalcOrigin2(class PrimitiveTemplate const *,float * const,float * const,float const * const,float const (* const)[3])
+void __cdecl FX_CalcOrigin2(class PrimitiveTemplate const * primTemp, float * const org, float * const org2, float const * const origin, float const  ax)[3])
 {	UNIMPLEMENTED();
 }
 
@@ -355,15 +355,15 @@ void __cdecl FX_AddFlash(struct EffectPrimitive *,float (* const)[3],float const
 {	UNIMPLEMENTED();
 }
 
-void __cdecl FX_DrawAll(void)
+void __cdecl FX_DrawAll()
 {	UNIMPLEMENTED();
 }
 
-bool __cdecl FX_GetBoneOrientation(struct FxBoltInfo const *,struct orientation_t *)
+bool __cdecl FX_GetBoneOrientation(struct FxBoltInfo const * bolt, struct orientation_t * orient)
 {	UNIMPLEMENTED();
 }
 
-int __cdecl FX_Restore(struct MemoryFile *)
+int __cdecl FX_Restore(struct MemoryFile * memFile)
 {	UNIMPLEMENTED();
 }
 
@@ -415,11 +415,11 @@ void __cdecl FX_AddParticle(struct EffectPrimitive *,float (* const)[3],float co
 {	UNIMPLEMENTED();
 }
 
-void __cdecl FX_AddScheduledEffects(void)
+void __cdecl FX_AddScheduledEffects()
 {	UNIMPLEMENTED();
 }
 
-void __cdecl FX_DrawScheduledEffects(void)
+void __cdecl FX_DrawScheduledEffects()
 {	UNIMPLEMENTED();
 }
 

@@ -6,15 +6,15 @@ void __cdecl R_SwitchFog(int,int)
 {	UNIMPLEMENTED();
 }
 
-void __cdecl R_ClearFogs(void)
+void __cdecl R_ClearFogs()
 {	UNIMPLEMENTED();
 }
 
-void __cdecl R_ArchiveFogState(struct MemoryFile *)
+void __cdecl R_ArchiveFogState(struct MemoryFile * memFile)
 {	UNIMPLEMENTED();
 }
 
-void __cdecl R_SetFog(int,float,float,unsigned char,unsigned char,unsigned char,float)
+void __cdecl R_SetFog(int fogvar, float start, float end, unsigned char r, unsigned char g, unsigned char b, float density)
 {	UNIMPLEMENTED();
 }
 

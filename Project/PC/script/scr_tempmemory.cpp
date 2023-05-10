@@ -14,23 +14,23 @@ int __cdecl Scr_Allign4Strict(int)
 {	UNIMPLEMENTED();
 }
 
-void __cdecl TempMemoryReset(void)
+void __cdecl TempMemoryReset()
 {	UNIMPLEMENTED();
 }
 
-char * __cdecl TempMalloc(int)
+char * __cdecl TempMalloc(int len)
 {	UNIMPLEMENTED();
 }
 
-void __cdecl TempMemorySetPos(char *)
+void __cdecl TempMemorySetPos(char * pos)
 {	UNIMPLEMENTED();
 }
 
-char * __cdecl TempMallocAlignStrict(int)
+char * __cdecl TempMallocAlignStrict(int len)
 {	UNIMPLEMENTED();
 }
 
-char * __cdecl TempMallocAlign(int)
+char * __cdecl TempMallocAlign(int len)
 {	UNIMPLEMENTED();
 }
 

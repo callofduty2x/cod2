@@ -1,4 +1,4 @@
-int __cdecl OnSameTeam(struct gentity_s *,struct gentity_s *)
+int __cdecl OnSameTeam(struct gentity_s * ent1, struct gentity_s * ent2)
 {	UNIMPLEMENTED();
 }
 
@@ -6,7 +6,7 @@ void __cdecl TeamplayInfoMessage(struct gentity_s *)
 {	UNIMPLEMENTED();
 }
 
-void __cdecl CheckTeamStatus(void)
+void __cdecl CheckTeamStatus()
 {	UNIMPLEMENTED();
 }
 

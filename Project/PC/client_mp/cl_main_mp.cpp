@@ -2,51 +2,51 @@ void __cdecl WinInitControlfp(void)
 {	UNIMPLEMENTED();
 }
 
-struct Font_s * __cdecl CL_RegisterFont(char const *,int)
+struct Font_s * __cdecl CL_RegisterFont(char const * fontName, int imageTrack)
 {	UNIMPLEMENTED();
 }
 
-bool __cdecl CL_GetDisplayHUDWithKeycatchUI(void)
+bool __cdecl CL_GetDisplayHUDWithKeycatchUI()
 {	UNIMPLEMENTED();
 }
 
-int __cdecl CL_GetKeyCatchers(void)
+int __cdecl CL_GetKeyCatchers()
 {	UNIMPLEMENTED();
 }
 
-void __cdecl CL_DrawTextPhysicalWithCursor(char const *,int,struct Font_s *,float,float,float,float,float const * const,int,int,char)
+void __cdecl CL_DrawTextPhysicalWithCursor(char const * text, int maxChars, struct Font_s * font, float x, float y, float xScale, float yScale, float const * const color, int style, int cursorPos, char cursor)
 {	UNIMPLEMENTED();
 }
 
-void __cdecl CL_DrawTextPhysical(char const *,int,struct Font_s *,float,float,float,float,float const * const,int)
+void __cdecl CL_DrawTextPhysical(char const * text, int maxChars, struct Font_s * font, float x, float y, float xScale, float yScale, float const * const color, int style)
 {	UNIMPLEMENTED();
 }
 
-float __cdecl CL_NormalizedTextScale(struct Font_s *,float)
+float __cdecl CL_NormalizedTextScale(struct Font_s * font, float scale)
 {	UNIMPLEMENTED();
 }
 
-int __cdecl CL_TextHeight(struct Font_s *)
+int __cdecl CL_TextHeight(struct Font_s * font)
 {	UNIMPLEMENTED();
 }
 
-int __cdecl CL_TextWidth(char const *,int,struct Font_s *)
+int __cdecl CL_TextWidth(char const * text, int maxChars, struct Font_s * font)
 {	UNIMPLEMENTED();
 }
 
-void __cdecl CL_ShutdownDebugData(void)
+void __cdecl CL_ShutdownDebugData()
 {	UNIMPLEMENTED();
 }
 
-void __cdecl CL_UpdateDebugData(void)
+void __cdecl CL_UpdateDebugData()
 {	UNIMPLEMENTED();
 }
 
-void __cdecl CL_FlushDebugData(int)
+void __cdecl CL_FlushDebugData(int fromServer)
 {	UNIMPLEMENTED();
 }
 
-char const * __cdecl CL_GetServerIPAddress(void)
+char const * __cdecl CL_GetServerIPAddress()
 {	UNIMPLEMENTED();
 }
 
@@ -62,19 +62,19 @@ void __cdecl CL_GetPingInfo(int,char *,int)
 {	UNIMPLEMENTED();
 }
 
-void __cdecl CL_StopLogo(void)
+void __cdecl CL_StopLogo()
 {	UNIMPLEMENTED();
 }
 
-void __cdecl CL_DrawLogo(void)
+void __cdecl CL_DrawLogo()
 {	UNIMPLEMENTED();
 }
 
-int __cdecl CL_ScaledMilliseconds(void)
+int __cdecl CL_ScaledMilliseconds()
 {	UNIMPLEMENTED();
 }
 
-void __cdecl CL_ShutdownRef(void)
+void __cdecl CL_ShutdownRef()
 {	UNIMPLEMENTED();
 }
 
@@ -82,23 +82,23 @@ int __cdecl CL_IsClientActive(void)
 {	UNIMPLEMENTED();
 }
 
-void __cdecl CL_RequestAuthorization(void)
+void __cdecl CL_RequestAuthorization()
 {	UNIMPLEMENTED();
 }
 
-void __cdecl CL_ResetSkeletonCache(int)
+void __cdecl CL_ResetSkeletonCache(int localClientNum)
 {	UNIMPLEMENTED();
 }
 
-char * __cdecl CL_AllocSkelMemory(int,unsigned int)
+char * __cdecl CL_AllocSkelMemory(int localClientNum, unsigned int size)
 {	UNIMPLEMENTED();
 }
 
-int __cdecl CL_GetSkelTimeStamp(int)
+int __cdecl CL_GetSkelTimeStamp(int localClientNum)
 {	UNIMPLEMENTED();
 }
 
-void __cdecl CL_AddReliableCommand(char const *)
+void __cdecl CL_AddReliableCommand(char const * cmd)
 {	UNIMPLEMENTED();
 }
 
@@ -118,7 +118,7 @@ bool __cdecl CL_AllLocalClientsStateConsistent(void)
 {	UNIMPLEMENTED();
 }
 
-bool __cdecl CL_AnyLocalClientChallenging(void)
+bool __cdecl CL_AnyLocalClientChallenging()
 {	UNIMPLEMENTED();
 }
 
@@ -146,11 +146,11 @@ int __cdecl CL_GetActiveLocalClientIndex(int)
 {	UNIMPLEMENTED();
 }
 
-int __cdecl CL_GetLocalClientActiveCount(void)
+int __cdecl CL_GetLocalClientActiveCount()
 {	UNIMPLEMENTED();
 }
 
-bool __cdecl CL_GetLocalClientActive(int)
+bool __cdecl CL_GetLocalClientActive(int clientNum)
 {	UNIMPLEMENTED();
 }
 
@@ -158,23 +158,23 @@ void __cdecl CL_SetView(void)
 {	UNIMPLEMENTED();
 }
 
-void __cdecl CL_ForwardCommandToServer(char const *)
+void __cdecl CL_ForwardCommandToServer(char const * string)
 {	UNIMPLEMENTED();
 }
 
-void __cdecl CL_ClearState(void)
+void __cdecl CL_ClearState()
 {	UNIMPLEMENTED();
 }
 
-void __cdecl CL_StopRecord_f(void)
+void __cdecl CL_StopRecord_f()
 {	UNIMPLEMENTED();
 }
 
-void __cdecl CL_WriteDemoMessage(struct msg_t *,int)
+void __cdecl CL_WriteDemoMessage(struct msg_t * msg, int headerBytes)
 {	UNIMPLEMENTED();
 }
 
-bool __cdecl CL_IsRenderingSplitScreen(void)
+bool __cdecl CL_IsRenderingSplitScreen()
 {	UNIMPLEMENTED();
 }
 
@@ -186,31 +186,31 @@ void __cdecl CL_SetLocalClientViewData(void)
 {	UNIMPLEMENTED();
 }
 
-void __cdecl CL_AddDebugLine(float const * const,float const * const,float const * const,int,int,int)
+void __cdecl CL_AddDebugLine(float const * const start, float const * const end, float const * const color, int depthTest, int duration, int fromServer)
 {	UNIMPLEMENTED();
 }
 
-void __cdecl CL_AddDebugString(float const * const,float const * const,float,char const *,int)
+void __cdecl CL_AddDebugString(float const * const xyz, float const * const color, float scale, char const * text, int fromServer)
 {	UNIMPLEMENTED();
 }
 
-void __cdecl CL_SwitchToLocalClient(int)
+void __cdecl CL_SwitchToLocalClient(int clientNum)
 {	UNIMPLEMENTED();
 }
 
-void __cdecl CL_DrawTextWithCursor(char const *,int,struct Font_s *,float,float,int,int,float,float,float const * const,int,int,char)
+void __cdecl CL_DrawTextWithCursor(char const * text, int maxChars, struct Font_s * font, float x, float y, int horzAlign, int vertAlign, float xScale, float yScale, float const * const color, int style, int cursorPos, char cursor)
 {	UNIMPLEMENTED();
 }
 
-void __cdecl CL_DrawText(char const *,int,struct Font_s *,float,float,int,int,float,float,float const * const,int)
+void __cdecl CL_DrawText(char const * text, int maxChars, struct Font_s * font, float x, float y, int horzAlign, int vertAlign, float xScale, float yScale, float const * const color, int style)
 {	UNIMPLEMENTED();
 }
 
-bool __cdecl CL_IsPlayerTalking(int)
+bool __cdecl CL_IsPlayerTalking(int clientIndex)
 {	UNIMPLEMENTED();
 }
 
-bool __cdecl CL_AllLocalClientsDisconnected(void)
+bool __cdecl CL_AllLocalClientsDisconnected()
 {	UNIMPLEMENTED();
 }
 
@@ -218,19 +218,19 @@ void __cdecl CL_UpdateServerInfo(int)
 {	UNIMPLEMENTED();
 }
 
-void __cdecl CL_GetPing(int,char *,int,int *)
+void __cdecl CL_GetPing(int n, char * buf, int buflen, int * pingtime)
 {	UNIMPLEMENTED();
 }
 
-void __cdecl CL_StopLogoOrCinematic(void)
+void __cdecl CL_StopLogoOrCinematic()
 {	UNIMPLEMENTED();
 }
 
-void __cdecl CL_InitRenderer(void)
+void __cdecl CL_InitRenderer()
 {	UNIMPLEMENTED();
 }
 
-int __cdecl CL_UpdateDirtyPings_f(int)
+int __cdecl CL_UpdateDirtyPings_f(int source)
 {	UNIMPLEMENTED();
 }
 
@@ -238,7 +238,7 @@ void __cdecl CL_UpdateInGameState(void)
 {	UNIMPLEMENTED();
 }
 
-void __cdecl CL_Disconnect(void)
+void __cdecl CL_Disconnect()
 {	UNIMPLEMENTED();
 }
 
@@ -246,7 +246,7 @@ void __cdecl CL_SetLocalClientActive(int,bool)
 {	UNIMPLEMENTED();
 }
 
-char const * __cdecl CL_GetUsernameForLocalClient(int)
+char const * __cdecl CL_GetUsernameForLocalClient(int controllerIndex)
 {	UNIMPLEMENTED();
 }
 
@@ -258,7 +258,7 @@ void __cdecl CL_NextDemo(void)
 {	UNIMPLEMENTED();
 }
 
-void __cdecl CL_ToggleMenu_f(void)
+void __cdecl CL_ToggleMenu_f()
 {	UNIMPLEMENTED();
 }
 
@@ -266,51 +266,51 @@ void __cdecl CL_CheckTimeout(void)
 {	UNIMPLEMENTED();
 }
 
-void __cdecl CL_CheckForResend(void)
+void __cdecl CL_CheckForResend()
 {	UNIMPLEMENTED();
 }
 
-void __cdecl CL_Disconnect_f(void)
+void __cdecl CL_Disconnect_f()
 {	UNIMPLEMENTED();
 }
 
-void __cdecl CL_MapLoading(char const *)
+void __cdecl CL_MapLoading(char const * mapname)
 {	UNIMPLEMENTED();
 }
 
-void __cdecl CL_LocalServers_f(void)
+void __cdecl CL_LocalServers_f()
 {	UNIMPLEMENTED();
 }
 
-void __cdecl CL_PlayLogo_f(void)
+void __cdecl CL_PlayLogo_f()
 {	UNIMPLEMENTED();
 }
 
-void __cdecl CL_RefPrintf(int,char const *,...)
+void __cdecl CL_RefPrintf(int print_level, char const * fmt, ...)
 {	UNIMPLEMENTED();
 }
 
-void __cdecl CL_Configstrings_f(void)
+void __cdecl CL_Configstrings_f()
 {	UNIMPLEMENTED();
 }
 
-void __cdecl CL_Reconnect_f(void)
+void __cdecl CL_Reconnect_f()
 {	UNIMPLEMENTED();
 }
 
-void __cdecl CL_Setenv_f(void)
+void __cdecl CL_Setenv_f()
 {	UNIMPLEMENTED();
 }
 
-void __cdecl CL_ForwardToServer_f(void)
+void __cdecl CL_ForwardToServer_f()
 {	UNIMPLEMENTED();
 }
 
-void __cdecl CL_DemoCompleted(void)
+void __cdecl CL_DemoCompleted()
 {	UNIMPLEMENTED();
 }
 
-void __cdecl CL_ShowIP_f(void)
+void __cdecl CL_ShowIP_f()
 {	UNIMPLEMENTED();
 }
 
@@ -318,7 +318,7 @@ void __cdecl CL_VoicePacket(struct msg_t *)
 {	UNIMPLEMENTED();
 }
 
-void __cdecl CL_Clientinfo_f(void)
+void __cdecl CL_Clientinfo_f()
 {	UNIMPLEMENTED();
 }
 
@@ -326,11 +326,11 @@ void __cdecl CL_DisconnectPacket(struct netadr_t)
 {	UNIMPLEMENTED();
 }
 
-void __cdecl CL_Record_f(void)
+void __cdecl CL_Record_f()
 {	UNIMPLEMENTED();
 }
 
-void __cdecl CL_VoiceTransmit(void)
+void __cdecl CL_VoiceTransmit()
 {	UNIMPLEMENTED();
 }
 
@@ -338,79 +338,79 @@ void __cdecl CL_VoiceFrame(void)
 {	UNIMPLEMENTED();
 }
 
-void __cdecl CL_Init(void)
+void __cdecl CL_Init()
 {	UNIMPLEMENTED();
 }
 
-void __cdecl CL_StartHunkUsers(void)
+void __cdecl CL_StartHunkUsers()
 {	UNIMPLEMENTED();
 }
 
-void __cdecl CL_Snd_Restart_f(void)
+void __cdecl CL_Snd_Restart_f()
 {	UNIMPLEMENTED();
 }
 
-void __cdecl CL_RunOncePerClientFrame(int)
+void __cdecl CL_RunOncePerClientFrame(int msec)
 {	UNIMPLEMENTED();
 }
 
-void __cdecl CL_startSingleplayer_f(void)
+void __cdecl CL_startSingleplayer_f()
 {	UNIMPLEMENTED();
 }
 
-void __cdecl CL_ShutdownHunkUsers(void)
+void __cdecl CL_ShutdownHunkUsers()
 {	UNIMPLEMENTED();
 }
 
-void __cdecl CL_Shutdown(void)
+void __cdecl CL_Shutdown()
 {	UNIMPLEMENTED();
 }
 
-void __cdecl CL_ShutdownAll(void)
+void __cdecl CL_ShutdownAll()
 {	UNIMPLEMENTED();
 }
 
-void __cdecl CL_InitRef(void)
+void __cdecl CL_InitRef()
 {	UNIMPLEMENTED();
 }
 
-void __cdecl CL_Vid_Restart_f(void)
+void __cdecl CL_Vid_Restart_f()
 {	UNIMPLEMENTED();
 }
 
-void __cdecl CL_SetupForNewServerMap(char const *,char const *)
+void __cdecl CL_SetupForNewServerMap(char const * pszMapName, char const * pszGametype)
 {	UNIMPLEMENTED();
 }
 
-void __cdecl CL_InitLoad(char const *,char const *)
+void __cdecl CL_InitLoad(char const * mapname, char const * gametype)
 {	UNIMPLEMENTED();
 }
 
-bool __cdecl CL_ConnectionlessPacket(struct netadr_t,struct msg_t *,int)
+bool __cdecl CL_ConnectionlessPacket(struct netadr_t from, struct msg_t * msg, int time)
 {	UNIMPLEMENTED();
 }
 
-void __cdecl CL_DownloadsComplete(void)
+void __cdecl CL_DownloadsComplete()
 {	UNIMPLEMENTED();
 }
 
-bool __cdecl CL_PacketEvent(struct netadr_t,struct msg_t *,int)
+bool __cdecl CL_PacketEvent(struct netadr_t from, struct msg_t * msg, int time)
 {	UNIMPLEMENTED();
 }
 
-void __cdecl CL_ReadDemoMessage(void)
+void __cdecl CL_ReadDemoMessage()
 {	UNIMPLEMENTED();
 }
 
-void __cdecl CL_Frame(int)
+void __cdecl CL_Frame(int msec)
 {	UNIMPLEMENTED();
 }
 
-void __cdecl CL_PlayDemo_f(void)
+void __cdecl CL_PlayDemo_f()
 {	UNIMPLEMENTED();
 }
 
-void __cdecl CL_InitOnceForAllClients(void)
+void __cdecl CL_InitOnceForAllClients()
 {	UNIMPLEMENTED();
 }
 
@@ -471,6 +471,50 @@ struct dvar_s const * const cl_freelook;
 struct dvar_s const * const cl_shownet;
 int g_localClientNum;
 void __cdecl CL_ShutdownRenderer(void)
+{	UNIMPLEMENTED();
+}
+
+CL_ShutdownDemo()
+{	UNIMPLEMENTED();
+}
+
+CL_OpenedIWDList_f()
+{	UNIMPLEMENTED();
+}
+
+CL_ReferencedIWDList_f()
+{	UNIMPLEMENTED();
+}
+
+Voice_SendVoiceData()
+{	UNIMPLEMENTED();
+}
+
+CL_SyncGpu()
+{	UNIMPLEMENTED();
+}
+
+CL_SetRecommended_f()
+{	UNIMPLEMENTED();
+}
+
+CL_OpenScriptMenu_f()
+{	UNIMPLEMENTED();
+}
+
+Client_SendVoiceData(int bytes,  char* enc_buffer)
+{	UNIMPLEMENTED();
+}
+
+CL_BeginDownload(char const* localName,  char const* remoteName)
+{	UNIMPLEMENTED();
+}
+
+CL_NextDownload()
+{	UNIMPLEMENTED();
+}
+
+CL_InitDownloads()
 {	UNIMPLEMENTED();
 }
 

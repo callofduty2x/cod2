@@ -1,16 +1,16 @@
-struct gentity_s * __cdecl fire_rocket(struct gentity_s *,float * const,float * const)
+struct gentity_s * __cdecl fire_rocket(struct gentity_s * self, float * const start, float * const dir)
 {	UNIMPLEMENTED();
 }
 
-struct gentity_s * __cdecl fire_grenade(struct gentity_s *,float * const,float * const,int,int)
+struct gentity_s * __cdecl fire_grenade(struct gentity_s * self, float * const start, float * const dir, int grenadeWPID, int time)
 {	UNIMPLEMENTED();
 }
 
-void __cdecl G_ExplodeMissile(struct gentity_s *)
+void __cdecl G_ExplodeMissile(struct gentity_s * ent)
 {	UNIMPLEMENTED();
 }
 
-void __cdecl G_RunMissile(struct gentity_s *)
+void __cdecl G_RunMissile(struct gentity_s * ent)
 {	UNIMPLEMENTED();
 }
 

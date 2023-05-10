@@ -1,12 +1,12 @@
-void __cdecl CG_SetNextSnap(struct snapshot_t *)
+void __cdecl CG_SetNextSnap(struct snapshot_t * snap)
 {	UNIMPLEMENTED();
 }
 
-void __cdecl CG_SetInitialSnapshot(struct snapshot_t *)
+void __cdecl CG_SetInitialSnapshot(struct snapshot_t * snap)
 {	UNIMPLEMENTED();
 }
 
-void __cdecl CG_ProcessSnapshots(void)
+void __cdecl CG_ProcessSnapshots()
 {	UNIMPLEMENTED();
 }
 

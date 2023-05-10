@@ -10,39 +10,39 @@ int __cdecl I_strlen(char const *)
 {	UNIMPLEMENTED();
 }
 
-bool __cdecl Con_IsActive(void)
+bool __cdecl Con_IsActive()
 {	UNIMPLEMENTED();
 }
 
-void __cdecl Con_Bottom(void)
+void __cdecl Con_Bottom()
 {	UNIMPLEMENTED();
 }
 
-void __cdecl Con_Top(void)
+void __cdecl Con_Top()
 {	UNIMPLEMENTED();
 }
 
-void __cdecl Con_PageDown(void)
+void __cdecl Con_PageDown()
 {	UNIMPLEMENTED();
 }
 
-void __cdecl Con_PageUp(void)
+void __cdecl Con_PageUp()
 {	UNIMPLEMENTED();
 }
 
-void __cdecl Con_ToggleConsoleOutput(void)
+void __cdecl Con_ToggleConsoleOutput()
 {	UNIMPLEMENTED();
 }
 
-bool __cdecl Con_AnySpaceAfterCommand(void)
+bool __cdecl Con_AnySpaceAfterCommand()
 {	UNIMPLEMENTED();
 }
 
-void __cdecl Con_AutoCompleteFromList(char const * * const,int,char const *,char * const,int)
+void __cdecl Con_AutoCompleteFromList(char const * * const strings, int stringCount, char const * prefix, char * const completed, int sizeofCompleted)
 {	UNIMPLEMENTED();
 }
 
-void __cdecl CL_ConsoleFixPosition(void)
+void __cdecl CL_ConsoleFixPosition()
 {	UNIMPLEMENTED();
 }
 
@@ -50,7 +50,7 @@ void __cdecl Con_OpenConsoleOutput(void)
 {	UNIMPLEMENTED();
 }
 
-void __cdecl Con_ToggleConsole_f(void)
+void __cdecl Con_ToggleConsole_f()
 {	UNIMPLEMENTED();
 }
 
@@ -66,15 +66,15 @@ char const * __cdecl CL_GetHudMsgIconMaterialName(unsigned char)
 {	UNIMPLEMENTED();
 }
 
-void __cdecl Con_Shutdown(void)
+void __cdecl Con_Shutdown()
 {	UNIMPLEMENTED();
 }
 
-void __cdecl Con_ClearSubtitles(void)
+void __cdecl Con_ClearSubtitles()
 {	UNIMPLEMENTED();
 }
 
-void __cdecl Con_ClearNotify(void)
+void __cdecl Con_ClearNotify()
 {	UNIMPLEMENTED();
 }
 
@@ -86,15 +86,15 @@ void __cdecl Con_OpenConsole(void)
 {	UNIMPLEMENTED();
 }
 
-void __cdecl Con_Close(void)
+void __cdecl Con_Close()
 {	UNIMPLEMENTED();
 }
 
-char const * __cdecl Con_TokenizeInput(void)
+char const * __cdecl Con_TokenizeInput()
 {	UNIMPLEMENTED();
 }
 
-void __cdecl CL_RegisterHudMsgIconMaterial(char const *)
+void __cdecl CL_RegisterHudMsgIconMaterial(char const * name)
 {	UNIMPLEMENTED();
 }
 
@@ -102,39 +102,39 @@ void __cdecl Con_DrawSolidConsole(void)
 {	UNIMPLEMENTED();
 }
 
-void __cdecl Con_DrawSubtitles(int,int,int,float,enum msgwnd_mode_t)
+void __cdecl Con_DrawSubtitles(int xPos, int yPos, int charHeight, float alpha, enum msgwnd_mode_t mode)
 {	UNIMPLEMENTED();
 }
 
-void __cdecl Con_DrawMiniConsole(int,int,float)
+void __cdecl Con_DrawMiniConsole(int xPos, int yPos, float alpha)
 {	UNIMPLEMENTED();
 }
 
-void __cdecl Con_DrawBoldMessages(int,int,float,enum msgwnd_mode_t)
+void __cdecl Con_DrawBoldMessages(int xPos, int yPos, float alpha, enum msgwnd_mode_t mode)
 {	UNIMPLEMENTED();
 }
 
-void __cdecl Con_DrawNotify(int,int,float,enum msgwnd_mode_t)
+void __cdecl Con_DrawNotify(int xPos, int yPos, float alpha, enum msgwnd_mode_t mode)
 {	UNIMPLEMENTED();
 }
 
-void __cdecl Con_DrawConsole(void)
+void __cdecl Con_DrawConsole()
 {	UNIMPLEMENTED();
 }
 
-void __cdecl CL_DeathMessagePrint(char const *,float const * const,char const *,float const * const,char const *,float,float,float const * const,bool)
+void __cdecl CL_DeathMessagePrint(char const * attackerName, float const * const attackerColor, char const * victimName, float const * const victimColor, char const * iconShader, float iconWidth, float iconHeight, float const * const iconColor, bool horzFlipIcon)
 {	UNIMPLEMENTED();
 }
 
-void __cdecl CL_ConsolePrint(enum print_msg_type_t,char const *,int,int)
+void __cdecl CL_ConsolePrint(enum print_msg_type_t type, char const * txt, int duration, int linewidth)
 {	UNIMPLEMENTED();
 }
 
-void __cdecl Con_DrawSay(int)
+void __cdecl Con_DrawSay(int y)
 {	UNIMPLEMENTED();
 }
 
-void __cdecl Con_Init(void)
+void __cdecl Con_Init()
 {	UNIMPLEMENTED();
 }
 

@@ -1,8 +1,8 @@
-void __cdecl RefreshQuitOnErrorCondition(void)
+void __cdecl RefreshQuitOnErrorCondition()
 {	UNIMPLEMENTED();
 }
 
-bool __cdecl QuitOnError(void)
+bool __cdecl QuitOnError()
 {	UNIMPLEMENTED();
 }
 

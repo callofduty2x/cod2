@@ -2,19 +2,19 @@ void __cdecl MD4Init(struct MD4_CTX *)
 {	UNIMPLEMENTED();
 }
 
-void __cdecl MD4Update(struct MD4_CTX *,unsigned char const *,unsigned int)
+void __cdecl MD4Update(struct MD4_CTX * context, unsigned char const * input, unsigned int inputLen)
 {	UNIMPLEMENTED();
 }
 
-void __cdecl MD4Final(unsigned char * const,struct MD4_CTX *)
+void __cdecl MD4Final(unsigned char * const digest, struct MD4_CTX * context)
 {	UNIMPLEMENTED();
 }
 
-unsigned int __cdecl Com_BlockChecksumKey(void *,int,int)
+unsigned int __cdecl Com_BlockChecksumKey(void * buffer, int length, int key)
 {	UNIMPLEMENTED();
 }
 
-unsigned int __cdecl Com_BlockChecksum(void const *,int)
+unsigned int __cdecl Com_BlockChecksum(void const * buffer, int length)
 {	UNIMPLEMENTED();
 }
 

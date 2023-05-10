@@ -3,15 +3,15 @@ void __cdecl BG_LerpHudColors(struct hudelem_s const &,int,union hudelem_color_t
 {	UNIMPLEMENTED();
 }
 
-void __cdecl BG_AddPredictableEventToPlayerstate(int,int,struct playerState_s *)
+void __cdecl BG_AddPredictableEventToPlayerstate(int newEvent, int eventParm, struct playerState_s * ps)
 {	UNIMPLEMENTED();
 }
 
-struct gitem_s const * __cdecl BG_FindItemForWeapon(int)
+struct gitem_s const * __cdecl BG_FindItemForWeapon(int weapon)
 {	UNIMPLEMENTED();
 }
 
-void __cdecl BG_PlayerStateToEntityState(struct playerState_s *,struct entityState_s *,int,unsigned char)
+void __cdecl BG_PlayerStateToEntityState(struct playerState_s * ps, struct entityState_s * s, int snap, unsigned char handler)
 {	UNIMPLEMENTED();
 }
 
@@ -19,27 +19,27 @@ void __cdecl BG_GetMarkDir(float const * const,float const * const,float * const
 {	UNIMPLEMENTED();
 }
 
-int __cdecl BG_CheckProneValid(int,float const * const,float,float,float,float *,float *,float *,int,int,float * const,unsigned char,enum proneCheckType_t,float)
+int __cdecl BG_CheckProneValid(int passEntityNum, float const * const vPos, float fSize, float fHeight, float fYaw, float * pfTorsoHeight, float * pfTorsoPitch, float * pfWaistPitch, int bAlreadyProne, int bOnGround, float * const vGroundNormal, unsigned char handler, enum proneCheckType_t proneCheckType, float prone_feet_dist)
 {	UNIMPLEMENTED();
 }
 
-int __cdecl BG_CheckProne(int,float const * const,float,float,float,float *,float *,float *,int,int,float * const,unsigned char,enum proneCheckType_t,float)
+int __cdecl BG_CheckProne(int passEntityNum, float const * const vPos, float fSize, float fHeight, float fYaw, float * pfTorsoHeight, float * pfTorsoPitch, float * pfWaistPitch, int bAlreadyProne, int bOnGround, float * const vGroundNormal, unsigned char handler, enum proneCheckType_t proneCheckType, float prone_feet_dist)
 {	UNIMPLEMENTED();
 }
 
-void __cdecl BG_EvaluateTrajectoryDelta(struct trajectory_t const *,int,float * const)
+void __cdecl BG_EvaluateTrajectoryDelta(struct trajectory_t const * tr, int atTime, float * const result)
 {	UNIMPLEMENTED();
 }
 
-void __cdecl BG_EvaluateTrajectory(struct trajectory_t const *,int,float * const)
+void __cdecl BG_EvaluateTrajectory(struct trajectory_t const * tr, int atTime, float * const result)
 {	UNIMPLEMENTED();
 }
 
-int __cdecl BG_CanItemBeGrabbed(struct entityState_s const *,struct playerState_s const *,int)
+int __cdecl BG_CanItemBeGrabbed(struct entityState_s const * ent, struct playerState_s const * ps, int bTouched)
 {	UNIMPLEMENTED();
 }
 
-int __cdecl BG_PlayerTouchesItem(struct playerState_s *,struct entityState_s *,int)
+int __cdecl BG_PlayerTouchesItem(struct playerState_s * ps, struct entityState_s * item, int atTime)
 {	UNIMPLEMENTED();
 }
 
@@ -47,7 +47,7 @@ struct gitem_s const * __cdecl G_FindItem(char const *)
 {	UNIMPLEMENTED();
 }
 
-void __cdecl BG_RegisterDvars(void)
+void __cdecl BG_RegisterDvars()
 {	UNIMPLEMENTED();
 }
 

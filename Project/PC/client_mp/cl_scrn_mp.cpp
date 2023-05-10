@@ -1,20 +1,20 @@
-void __cdecl SCR_UpdateScreen(void)
+void __cdecl SCR_UpdateScreen()
 {	UNIMPLEMENTED();
 }
 
-float __cdecl CL_GetMenuBlurRadius(void)
+float __cdecl CL_GetMenuBlurRadius()
 {	UNIMPLEMENTED();
 }
 
-void __cdecl SCR_Init(void)
+void __cdecl SCR_Init()
 {	UNIMPLEMENTED();
 }
 
-void __cdecl SCR_DrawConsoleString(int,int,short const *,int,float const * const)
+void __cdecl SCR_DrawConsoleString(int x, int y, short const * string, int maxChars, float const * const setColor)
 {	UNIMPLEMENTED();
 }
 
-void __cdecl SCR_DrawSmallStringExt(int,int,char const *,float const * const)
+void __cdecl SCR_DrawSmallStringExt(int x, int y, char const * string, float const * const setColor)
 {	UNIMPLEMENTED();
 }
 
@@ -30,11 +30,11 @@ void __cdecl CL_DrawScreen(void)
 {	UNIMPLEMENTED();
 }
 
-void __cdecl CL_CubemapShot_f(void)
+void __cdecl CL_CubemapShot_f()
 {	UNIMPLEMENTED();
 }
 
-void __cdecl SCR_UpdateScreenInternal(void)
+void __cdecl SCR_UpdateScreenInternal()
 {	UNIMPLEMENTED();
 }
 

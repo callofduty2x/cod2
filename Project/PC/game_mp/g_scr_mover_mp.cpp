@@ -1,84 +1,84 @@
-void (__cdecl*__cdecl ScriptEnt_GetMethod(char const * *))(struct scr_entref_t)
+void (__cdecl*__cdecl ScriptEnt_GetMethod pName))(struct scr_entref_t)
 {	UNIMPLEMENTED();
 }
 
-void __cdecl ScriptEntCmdGetCommandTimes(float *,float *,float *)
+void __cdecl ScriptEntCmdGetCommandTimes(float * pfTotalTime, float * pfAccelTime, float * pfDecelTime)
 {	UNIMPLEMENTED();
 }
 
-void __cdecl InitScriptMover(struct gentity_s *)
+void __cdecl InitScriptMover(struct gentity_s * pSelf)
 {	UNIMPLEMENTED();
 }
 
-void __cdecl ScriptEntCmd_NotSolid(struct scr_entref_t)
+void __cdecl ScriptEntCmd_NotSolid(struct scr_entref_t entref)
 {	UNIMPLEMENTED();
 }
 
-void __cdecl ScriptEntCmd_Solid(struct scr_entref_t)
+void __cdecl ScriptEntCmd_Solid(struct scr_entref_t entref)
 {	UNIMPLEMENTED();
 }
 
-void __cdecl SP_script_origin(struct gentity_s *)
+void __cdecl SP_script_origin(struct gentity_s * pSelf)
 {	UNIMPLEMENTED();
 }
 
-void __cdecl SP_script_brushmodel(struct gentity_s *)
+void __cdecl SP_script_brushmodel(struct gentity_s * pSelf)
 {	UNIMPLEMENTED();
 }
 
-void __cdecl ScriptEntCmd_RotateVelocity(struct scr_entref_t)
+void __cdecl ScriptEntCmd_RotateVelocity(struct scr_entref_t entref)
 {	UNIMPLEMENTED();
 }
 
-void __cdecl ScriptEnt_RotateAxis(struct scr_entref_t,int)
+void __cdecl ScriptEnt_RotateAxis(struct scr_entref_t entref, int iAxis)
 {	UNIMPLEMENTED();
 }
 
-void __cdecl ScriptEntCmd_RotateTo(struct scr_entref_t)
+void __cdecl ScriptEntCmd_RotateTo(struct scr_entref_t entref)
 {	UNIMPLEMENTED();
 }
 
-void __cdecl ScriptEnt_MoveAxis(struct scr_entref_t,int)
+void __cdecl ScriptEnt_MoveAxis(struct scr_entref_t entref, int iAxis)
 {	UNIMPLEMENTED();
 }
 
-void __cdecl ScriptEntCmd_GravityMove(struct scr_entref_t)
+void __cdecl ScriptEntCmd_GravityMove(struct scr_entref_t entref)
 {	UNIMPLEMENTED();
 }
 
-void __cdecl ScriptEntCmd_MoveTo(struct scr_entref_t)
+void __cdecl ScriptEntCmd_MoveTo(struct scr_entref_t entref)
 {	UNIMPLEMENTED();
 }
 
-void __cdecl ScriptEntCmd_RotateRoll(struct scr_entref_t)
+void __cdecl ScriptEntCmd_RotateRoll(struct scr_entref_t entref)
 {	UNIMPLEMENTED();
 }
 
-void __cdecl ScriptEntCmd_RotateYaw(struct scr_entref_t)
+void __cdecl ScriptEntCmd_RotateYaw(struct scr_entref_t entref)
 {	UNIMPLEMENTED();
 }
 
-void __cdecl ScriptEntCmd_RotatePitch(struct scr_entref_t)
+void __cdecl ScriptEntCmd_RotatePitch(struct scr_entref_t entref)
 {	UNIMPLEMENTED();
 }
 
-void __cdecl ScriptEntCmd_MoveZ(struct scr_entref_t)
+void __cdecl ScriptEntCmd_MoveZ(struct scr_entref_t entref)
 {	UNIMPLEMENTED();
 }
 
-void __cdecl ScriptEntCmd_MoveY(struct scr_entref_t)
+void __cdecl ScriptEntCmd_MoveY(struct scr_entref_t entref)
 {	UNIMPLEMENTED();
 }
 
-void __cdecl ScriptEntCmd_MoveX(struct scr_entref_t)
+void __cdecl ScriptEntCmd_MoveX(struct scr_entref_t entref)
 {	UNIMPLEMENTED();
 }
 
-void __cdecl SP_script_model(struct gentity_s *)
+void __cdecl SP_script_model(struct gentity_s * pSelf)
 {	UNIMPLEMENTED();
 }
 
-void __cdecl Reached_ScriptMover(struct gentity_s *)
+void __cdecl Reached_ScriptMover(struct gentity_s * pEnt)
 {	UNIMPLEMENTED();
 }
 

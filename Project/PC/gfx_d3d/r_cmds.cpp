@@ -1,8 +1,8 @@
-void __cdecl R_UnregisterCmds(void)
+void __cdecl R_UnregisterCmds()
 {	UNIMPLEMENTED();
 }
 
-void __cdecl R_RegisterCmds(void)
+void __cdecl R_RegisterCmds()
 {	UNIMPLEMENTED();
 }
 

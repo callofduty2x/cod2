@@ -6,15 +6,15 @@ public: long __cdecl D3DQuery::GetData(void *,unsigned long,unsigned long)
 {	UNIMPLEMENTED();
 }
 
-int __cdecl RB_CalcSunSpriteSamples(void)
+int __cdecl RB_CalcSunSpriteSamples()
 {	UNIMPLEMENTED();
 }
 
-void __cdecl RB_DrawSun(int)
+void __cdecl RB_DrawSun(int viewIndex)
 {	UNIMPLEMENTED();
 }
 
-void __cdecl RB_DrawSunPostEffects(int)
+void __cdecl RB_DrawSunPostEffects(int viewIndex)
 {	UNIMPLEMENTED();
 }
 

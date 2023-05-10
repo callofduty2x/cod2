@@ -6,19 +6,19 @@ float __cdecl UI_ClampDvar(float,float,float)
 {	UNIMPLEMENTED();
 }
 
-void __cdecl UI_FillRectPhysical(float,float,float,float,float const * const)
+void __cdecl UI_FillRectPhysical(float x, float y, float width, float height, float const * const color)
 {	UNIMPLEMENTED();
 }
 
-void __cdecl UI_FillRect(float,float,float,float,int,int,float const * const)
+void __cdecl UI_FillRect(float x, float y, float width, float height, int horzAlign, int vertAlign, float const * const color)
 {	UNIMPLEMENTED();
 }
 
-void __cdecl UI_DrawLoadBar(float,float,float,float,int,int,float const * const,struct Material *)
+void __cdecl UI_DrawLoadBar(float x, float y, float w, float h, int horzAlign, int vertAlign, float const * const color, struct Material * material)
 {	UNIMPLEMENTED();
 }
 
-void __cdecl UI_DrawHandlePic(float,float,float,float,int,int,float const * const,struct Material *)
+void __cdecl UI_DrawHandlePic(float x, float y, float w, float h, int horzAlign, int vertAlign, float const * const color, struct Material * hMaterial)
 {	UNIMPLEMENTED();
 }
 

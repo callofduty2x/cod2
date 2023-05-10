@@ -1,4 +1,4 @@
-struct XAnim_s * __cdecl Scr_GetAnims(int)
+struct XAnim_s * __cdecl Scr_GetAnims(int index)
 {	UNIMPLEMENTED();
 }
 
@@ -6,23 +6,23 @@ int __cdecl Scr_GetAnimsIndex(struct XAnim_s const *)
 {	UNIMPLEMENTED();
 }
 
-void __cdecl SetAnimCheck(int)
+void __cdecl SetAnimCheck(int bAnimCheck)
 {	UNIMPLEMENTED();
 }
 
-struct scr_animtree_t __cdecl Scr_FindAnimTree(char const *)
+struct scr_animtree_t __cdecl Scr_FindAnimTree(char const * filename)
 {	UNIMPLEMENTED();
 }
 
-void __cdecl Scr_FindAnim(char const *,char const *,struct scr_anim_s *,int)
+void __cdecl Scr_FindAnim(char const * filename, char const * animName, struct scr_anim_s * anim, int user)
 {	UNIMPLEMENTED();
 }
 
-void __cdecl Scr_UsingTree(char const *,unsigned int)
+void __cdecl Scr_UsingTree(char const * filename, unsigned int sourcePos)
 {	UNIMPLEMENTED();
 }
 
-void __cdecl Scr_EmitAnimation(char *,unsigned int,unsigned int)
+void __cdecl Scr_EmitAnimation(char * pos, unsigned int animName, unsigned int sourcePos)
 {	UNIMPLEMENTED();
 }
 

@@ -90,7 +90,7 @@ void __cdecl std::_Rotate<struct ShadowCandidate *,int,struct ShadowCandidate>(s
 {	UNIMPLEMENTED();
 }
 
-void __cdecl R_ResetShadowCookies(void)
+void __cdecl R_ResetShadowCookies()
 {	UNIMPLEMENTED();
 }
 

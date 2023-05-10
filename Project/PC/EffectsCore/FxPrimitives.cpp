@@ -199,11 +199,11 @@ public: __cdecl FxBoltFramePtr::operator bool(void)const
 {	UNIMPLEMENTED();
 }
 
-public: virtual float __cdecl Effect::GetVisibility(float const * const,float const * const,float)
+public: virtual float __cdecl Effect::GetVisibility(float const * const start, float const * const dir, float halfLen)
 {	UNIMPLEMENTED();
 }
 
-public: virtual void __cdecl Effect::AddVisibility(void)
+public: virtual void __cdecl Effect::AddVisibility()
 {	UNIMPLEMENTED();
 }
 
@@ -475,51 +475,51 @@ private: void __cdecl FxMemMgr<class Emitter>::MakeFirstBlock(struct FxMemBlock 
 {	UNIMPLEMENTED();
 }
 
-public: virtual unsigned char __cdecl Flash::TypeID(void)
+public: virtual unsigned char __cdecl Flash::TypeID()
 {	UNIMPLEMENTED();
 }
 
-public: virtual unsigned char __cdecl Light::TypeID(void)
+public: virtual unsigned char __cdecl Light::TypeID()
 {	UNIMPLEMENTED();
 }
 
-public: virtual void __cdecl Light::Draw(void)
+public: virtual void __cdecl Light::Draw()
 {	UNIMPLEMENTED();
 }
 
-public: virtual unsigned char __cdecl Emitter::TypeID(void)
+public: virtual unsigned char __cdecl Emitter::TypeID()
 {	UNIMPLEMENTED();
 }
 
-public: virtual bool __cdecl Emitter::Cull(void)
+public: virtual bool __cdecl Emitter::Cull()
 {	UNIMPLEMENTED();
 }
 
-public: virtual unsigned char __cdecl Cylinder::TypeID(void)
+public: virtual unsigned char __cdecl Cylinder::TypeID()
 {	UNIMPLEMENTED();
 }
 
-public: virtual unsigned char __cdecl Tail::TypeID(void)
+public: virtual unsigned char __cdecl Tail::TypeID()
 {	UNIMPLEMENTED();
 }
 
-public: virtual unsigned char __cdecl Line::TypeID(void)
+public: virtual unsigned char __cdecl Line::TypeID()
 {	UNIMPLEMENTED();
 }
 
-public: virtual void __cdecl Line::Die(void)
+public: virtual void __cdecl Line::Die()
 {	UNIMPLEMENTED();
 }
 
-public: virtual unsigned char __cdecl Cloud::TypeID(void)
+public: virtual unsigned char __cdecl Cloud::TypeID()
 {	UNIMPLEMENTED();
 }
 
-public: virtual void __cdecl Cloud::Die(void)
+public: virtual void __cdecl Cloud::Die()
 {	UNIMPLEMENTED();
 }
 
-public: virtual unsigned char __cdecl OrientedParticle::TypeID(void)
+public: virtual unsigned char __cdecl OrientedParticle::TypeID()
 {	UNIMPLEMENTED();
 }
 
@@ -543,11 +543,11 @@ protected: float __cdecl Particle::GetNormalizedDuration(float,float)
 {	UNIMPLEMENTED();
 }
 
-public: virtual void __cdecl Effect::FixupArchiveLoad(class PrimitiveTemplate const *)
+public: virtual void __cdecl Effect::FixupArchiveLoad(class PrimitiveTemplate const * primTemplate)
 {	UNIMPLEMENTED();
 }
 
-public: virtual unsigned char __cdecl Effect::TypeID(void)
+public: virtual unsigned char __cdecl Effect::TypeID()
 {	UNIMPLEMENTED();
 }
 
@@ -555,19 +555,19 @@ public: int __cdecl Effect::GetAge(void)
 {	UNIMPLEMENTED();
 }
 
-public: void __cdecl Effect::SetTimeStartEnd(int,int)
+public: void __cdecl Effect::SetTimeStartEnd(int start, int end)
 {	UNIMPLEMENTED();
 }
 
-public: virtual void __cdecl Effect::Draw(void)
+public: virtual void __cdecl Effect::Draw()
 {	UNIMPLEMENTED();
 }
 
-public: virtual bool __cdecl Effect::Cull(void)
+public: virtual bool __cdecl Effect::Cull()
 {	UNIMPLEMENTED();
 }
 
-public: virtual void __cdecl Effect::Die(void)
+public: virtual void __cdecl Effect::Die()
 {	UNIMPLEMENTED();
 }
 
@@ -575,11 +575,11 @@ private: __cdecl FxBoltFrame::FxBoltFrame(struct FxBoltInfo const *)
 {	UNIMPLEMENTED();
 }
 
-public: void __cdecl Flash::Init(void)
+public: void __cdecl Flash::Init()
 {	UNIMPLEMENTED();
 }
 
-public: virtual void __cdecl Light::FixupArchiveLoad(class PrimitiveTemplate const *)
+public: virtual void __cdecl Light::FixupArchiveLoad(class PrimitiveTemplate const * primTemplate)
 {	UNIMPLEMENTED();
 }
 
@@ -587,7 +587,7 @@ protected: void __cdecl Cloud::GenerateRandomTumbleAxis(void)
 {	UNIMPLEMENTED();
 }
 
-public: virtual void __cdecl Particle::FixupArchiveLoad(class PrimitiveTemplate const *)
+public: virtual void __cdecl Particle::FixupArchiveLoad(class PrimitiveTemplate const * primTemplate)
 {	UNIMPLEMENTED();
 }
 
@@ -599,47 +599,47 @@ bool __cdecl IsParticleInert(float const * const,float const * const,float)
 {	UNIMPLEMENTED();
 }
 
-public: virtual void __cdecl Particle::AddVisibility(void)
+public: virtual void __cdecl Particle::AddVisibility()
 {	UNIMPLEMENTED();
 }
 
-public: void __cdecl Particle::SetRandomVelocity2Weights(float,float,float)
+public: void __cdecl Particle::SetRandomVelocity2Weights(float, float, float)
 {	UNIMPLEMENTED();
 }
 
-public: void __cdecl Particle::SetRandomVelocityWeights(float,float,float)
+public: void __cdecl Particle::SetRandomVelocityWeights(float weight1, float weight2, float weight3)
 {	UNIMPLEMENTED();
 }
 
-void __cdecl FxChannelInstance_Create(struct FxChannel const *,struct FxChannelInstance *)
+void __cdecl FxChannelInstance_Create(struct FxChannel const * master, struct FxChannelInstance * createe)
 {	UNIMPLEMENTED();
 }
 
-public: virtual bool __cdecl Effect::Update(void)
+public: virtual bool __cdecl Effect::Update()
 {	UNIMPLEMENTED();
 }
 
-public: virtual void __cdecl Light::CreateChannelInstances(class PrimitiveTemplate const *)
+public: virtual void __cdecl Light::CreateChannelInstances(class PrimitiveTemplate const * primTemp)
 {	UNIMPLEMENTED();
 }
 
-public: virtual void __cdecl Tail::FixupArchiveLoad(class PrimitiveTemplate const *)
+public: virtual void __cdecl Tail::FixupArchiveLoad(class PrimitiveTemplate const * primTemplate)
 {	UNIMPLEMENTED();
 }
 
-protected: void __cdecl Tail::CalcNewEndpoint(struct orientation_t const *)
+protected: void __cdecl Tail::CalcNewEndpoint(struct orientation_t const * or_)
 {	UNIMPLEMENTED();
 }
 
-public: virtual void __cdecl Cloud::FixupArchiveLoad(class PrimitiveTemplate const *)
+public: virtual void __cdecl Cloud::FixupArchiveLoad(class PrimitiveTemplate const * primTemplate)
 {	UNIMPLEMENTED();
 }
 
-public: virtual void __cdecl Particle::CreateChannelInstances(class PrimitiveTemplate const *)
+public: virtual void __cdecl Particle::CreateChannelInstances(class PrimitiveTemplate const * primTemp)
 {	UNIMPLEMENTED();
 }
 
-public: void __cdecl Particle::SetAxis(float (* const)[3])
+public: void __cdecl Particle::SetAxis(float  ax)[3])
 {	UNIMPLEMENTED();
 }
 
@@ -651,11 +651,11 @@ protected: void __cdecl Light::UpdateSize(void)
 {	UNIMPLEMENTED();
 }
 
-public: virtual bool __cdecl Light::Cull(void)
+public: virtual bool __cdecl Light::Cull()
 {	UNIMPLEMENTED();
 }
 
-public: virtual bool __cdecl Cylinder::Cull(void)
+public: virtual bool __cdecl Cylinder::Cull()
 {	UNIMPLEMENTED();
 }
 
@@ -663,19 +663,19 @@ protected: void __cdecl Tail::UpdateLength(void)
 {	UNIMPLEMENTED();
 }
 
-public: virtual void __cdecl Tail::CreateChannelInstances(class PrimitiveTemplate const *)
+public: virtual void __cdecl Tail::CreateChannelInstances(class PrimitiveTemplate const * primTemp)
 {	UNIMPLEMENTED();
 }
 
-public: virtual bool __cdecl Tail::Cull(void)
+public: virtual bool __cdecl Tail::Cull()
 {	UNIMPLEMENTED();
 }
 
-public: void __cdecl Tail::InitEndPoint(void)
+public: void __cdecl Tail::InitEndPoint()
 {	UNIMPLEMENTED();
 }
 
-public: virtual bool __cdecl Line::Cull(void)
+public: virtual bool __cdecl Line::Cull()
 {	UNIMPLEMENTED();
 }
 
@@ -683,15 +683,15 @@ protected: void __cdecl Cloud::UpdateLength(void)
 {	UNIMPLEMENTED();
 }
 
-public: virtual void __cdecl Cloud::CreateChannelInstances(class PrimitiveTemplate const *)
+public: virtual void __cdecl Cloud::CreateChannelInstances(class PrimitiveTemplate const * primTemp)
 {	UNIMPLEMENTED();
 }
 
-public: virtual bool __cdecl Cloud::Cull(void)
+public: virtual bool __cdecl Cloud::Cull()
 {	UNIMPLEMENTED();
 }
 
-public: virtual bool __cdecl OrientedParticle::Cull(void)
+public: virtual bool __cdecl OrientedParticle::Cull()
 {	UNIMPLEMENTED();
 }
 
@@ -699,7 +699,7 @@ protected: void __cdecl Particle::UpdateRotation(void)
 {	UNIMPLEMENTED();
 }
 
-protected: void __cdecl Particle::UpdateAlpha(void)
+protected: void __cdecl Particle::UpdateAlpha()
 {	UNIMPLEMENTED();
 }
 
@@ -711,23 +711,23 @@ protected: void __cdecl Particle::UpdateSize(void)
 {	UNIMPLEMENTED();
 }
 
-protected: void __cdecl Particle::IntegrateVelocity2(float,float * const)
+protected: void __cdecl Particle::IntegrateVelocity2(float normDuration, float * const outVector)
 {	UNIMPLEMENTED();
 }
 
-protected: void __cdecl Particle::IntegrateVelocity(float,float * const)
+protected: void __cdecl Particle::IntegrateVelocity(float normDuration, float * const outVector)
 {	UNIMPLEMENTED();
 }
 
-protected: void __cdecl Particle::CalcVelocity2Value(float,float * const,struct orientation_t const *)
+protected: void __cdecl Particle::CalcVelocity2Value(float normTime, float * const outVector, struct orientation_t const * or_)
 {	UNIMPLEMENTED();
 }
 
-protected: void __cdecl Particle::CalcVelocityValue(float,float * const,struct orientation_t const *)
+protected: void __cdecl Particle::CalcVelocityValue(float normTime, float * const outVector, struct orientation_t const * or_)
 {	UNIMPLEMENTED();
 }
 
-public: virtual float __cdecl Particle::GetVisibility(float const * const,float const * const,float)
+public: virtual float __cdecl Particle::GetVisibility(float const * const start, float const * const dir, float halfLen)
 {	UNIMPLEMENTED();
 }
 
@@ -735,11 +735,11 @@ public: virtual bool __cdecl Particle::Cull(void)
 {	UNIMPLEMENTED();
 }
 
-public: void __cdecl FxBoltFrame::Release(void)const 
+public: void __cdecl FxBoltFrame::Release()const 
 {	UNIMPLEMENTED();
 }
 
-protected: void __cdecl Light::UpdateRGB(void)
+protected: void __cdecl Light::UpdateRGB()
 {	UNIMPLEMENTED();
 }
 
@@ -747,27 +747,27 @@ protected: void __cdecl Emitter::UpdateAngles(void)
 {	UNIMPLEMENTED();
 }
 
-protected: void __cdecl Particle::UpdateRGB(void)
+protected: void __cdecl Particle::UpdateRGB()
 {	UNIMPLEMENTED();
 }
 
-protected: void __cdecl Particle::GetTotalVelocity(float,float * const,struct orientation_t const *)
+protected: void __cdecl Particle::GetTotalVelocity(float normTime, float * const outVector, struct orientation_t const * or_)
 {	UNIMPLEMENTED();
 }
 
-public: void __cdecl Particle::IntegrateTotalVelocity(int,float * const)
+public: void __cdecl Particle::IntegrateTotalVelocity(int duration, float * const outVector)
 {	UNIMPLEMENTED();
 }
 
-protected: void __cdecl Particle::ApplyImpact(struct orientation_t const *,float,float const * const,float,float const * const)
+protected: void __cdecl Particle::ApplyImpact(struct orientation_t const * or_, float normTime, float const * const velocity, float traceFraction, float const * const traceNormal)
 {	UNIMPLEMENTED();
 }
 
-public: void __cdecl Effect::SetBoltFrame(class FxBoltFramePtr *)
+public: void __cdecl Effect::SetBoltFrame(class FxBoltFramePtr * boltFrame)
 {	UNIMPLEMENTED();
 }
 
-public: virtual __cdecl Effect::~Effect(void)
+public: virtual __cdecl Effect::~Effect()
 {	UNIMPLEMENTED();
 }
 
@@ -775,103 +775,103 @@ public: __cdecl Effect::Effect(void)
 {	UNIMPLEMENTED();
 }
 
-public: static class FxBoltFramePtr const __cdecl FxBoltFrame::Acquire(struct FxBoltInfo const *)
+public: static class FxBoltFramePtr const __cdecl FxBoltFrame::Acquire(struct FxBoltInfo const * bolt)
 {	UNIMPLEMENTED();
 }
 
-public: virtual bool __cdecl Flash::Update(void)
+public: virtual bool __cdecl Flash::Update()
 {	UNIMPLEMENTED();
 }
 
-public: virtual __cdecl Light::~Light(void)
+public: virtual __cdecl Light::~Light()
 {	UNIMPLEMENTED();
 }
 
-public: __cdecl Light::Light(void)
+public: __cdecl Light::Light()
 {	UNIMPLEMENTED();
 }
 
-public: virtual __cdecl Particle::~Particle(void)
+public: virtual __cdecl Particle::~Particle()
 {	UNIMPLEMENTED();
 }
 
-public: __cdecl Particle::Particle(void)
+public: __cdecl Particle::Particle()
 {	UNIMPLEMENTED();
 }
 
-public: virtual __cdecl Emitter::~Emitter(void)
+public: virtual __cdecl Emitter::~Emitter()
 {	UNIMPLEMENTED();
 }
 
-public: __cdecl Emitter::Emitter(void)
+public: __cdecl Emitter::Emitter()
 {	UNIMPLEMENTED();
 }
 
-public: virtual __cdecl Tail::~Tail(void)
+public: virtual __cdecl Tail::~Tail()
 {	UNIMPLEMENTED();
 }
 
-public: __cdecl Tail::Tail(void)
+public: __cdecl Tail::Tail()
 {	UNIMPLEMENTED();
 }
 
-public: virtual __cdecl Line::~Line(void)
+public: virtual __cdecl Line::~Line()
 {	UNIMPLEMENTED();
 }
 
-public: __cdecl Line::Line(void)
+public: __cdecl Line::Line()
 {	UNIMPLEMENTED();
 }
 
-public: virtual __cdecl Cloud::~Cloud(void)
+public: virtual __cdecl Cloud::~Cloud()
 {	UNIMPLEMENTED();
 }
 
-public: __cdecl Cloud::Cloud(void)
+public: __cdecl Cloud::Cloud()
 {	UNIMPLEMENTED();
 }
 
-public: virtual __cdecl OrientedParticle::~OrientedParticle(void)
+public: virtual __cdecl OrientedParticle::~OrientedParticle()
 {	UNIMPLEMENTED();
 }
 
-public: __cdecl OrientedParticle::OrientedParticle(void)
+public: __cdecl OrientedParticle::OrientedParticle()
 {	UNIMPLEMENTED();
 }
 
-public: virtual __cdecl Cylinder::~Cylinder(void)
+public: virtual __cdecl Cylinder::~Cylinder()
 {	UNIMPLEMENTED();
 }
 
-public: __cdecl Cylinder::Cylinder(void)
+public: __cdecl Cylinder::Cylinder()
 {	UNIMPLEMENTED();
 }
 
-struct XModel * __cdecl FX_XModelPrecache(char const *)
+struct XModel * __cdecl FX_XModelPrecache(char const * name)
 {	UNIMPLEMENTED();
 }
 
-public: void __cdecl FxBoltFramePtr::Archive(class FxArchive &)
+public: void __cdecl FxBoltFramePtr::Archive(class FxArchive & arch)
 {	UNIMPLEMENTED();
 }
 
-public: virtual void __cdecl Effect::Archive(class FxArchive &)
+public: virtual void __cdecl Effect::Archive(class FxArchive & arch)
 {	UNIMPLEMENTED();
 }
 
-public: struct orientation_t const * __cdecl FxBoltFrame::GetOrientation(void)
+public: struct orientation_t const * __cdecl FxBoltFrame::GetOrientation()
 {	UNIMPLEMENTED();
 }
 
-public: virtual void __cdecl Light::Archive(class FxArchive &)
+public: virtual void __cdecl Light::Archive(class FxArchive & arch)
 {	UNIMPLEMENTED();
 }
 
-public: virtual void __cdecl Particle::Archive(class FxArchive &)
+public: virtual void __cdecl Particle::Archive(class FxArchive & arch)
 {	UNIMPLEMENTED();
 }
 
-public: void __cdecl Particle::GetTotalVelocityAtTime0(float * const)
+public: void __cdecl Particle::GetTotalVelocityAtTime0(float * const outVector)
 {	UNIMPLEMENTED();
 }
 
@@ -879,103 +879,103 @@ protected: bool __cdecl Effect::GetBoltOrientation(struct orientation_t const * 
 {	UNIMPLEMENTED();
 }
 
-public: virtual void __cdecl Flash::Archive(class FxArchive &)
+public: virtual void __cdecl Flash::Archive(class FxArchive & arch)
 {	UNIMPLEMENTED();
 }
 
-public: virtual bool __cdecl Light::Update(void)
+public: virtual bool __cdecl Light::Update()
 {	UNIMPLEMENTED();
 }
 
-public: virtual void __cdecl Emitter::Archive(class FxArchive &)
+public: virtual void __cdecl Emitter::Archive(class FxArchive & arch)
 {	UNIMPLEMENTED();
 }
 
-public: virtual bool __cdecl Cylinder::Update(void)
+public: virtual bool __cdecl Cylinder::Update()
 {	UNIMPLEMENTED();
 }
 
-public: virtual void __cdecl Tail::Archive(class FxArchive &)
+public: virtual void __cdecl Tail::Archive(class FxArchive & arch)
 {	UNIMPLEMENTED();
 }
 
-public: virtual void __cdecl Line::Archive(class FxArchive &)
+public: virtual void __cdecl Line::Archive(class FxArchive & arch)
 {	UNIMPLEMENTED();
 }
 
-public: virtual bool __cdecl Line::Update(void)
+public: virtual bool __cdecl Line::Update()
 {	UNIMPLEMENTED();
 }
 
-public: virtual void __cdecl Cloud::Archive(class FxArchive &)
+public: virtual void __cdecl Cloud::Archive(class FxArchive & arch)
 {	UNIMPLEMENTED();
 }
 
-public: virtual void __cdecl OrientedParticle::Archive(class FxArchive &)
+public: virtual void __cdecl OrientedParticle::Archive(class FxArchive & arch)
 {	UNIMPLEMENTED();
 }
 
-public: virtual void __cdecl Cylinder::Archive(class FxArchive &)
+public: virtual void __cdecl Cylinder::Archive(class FxArchive & arch)
 {	UNIMPLEMENTED();
 }
 
-protected: void __cdecl Emitter::UpdateEmitFx(float * const,struct orientation_t const *)
+protected: void __cdecl Emitter::UpdateEmitFx(float * const bindVelocity, struct orientation_t const * or_)
 {	UNIMPLEMENTED();
 }
 
-protected: bool __cdecl Particle::UpdateOrigin(struct orientation_t const *)
+protected: bool __cdecl Particle::UpdateOrigin(struct orientation_t const * or_)
 {	UNIMPLEMENTED();
 }
 
-public: virtual bool __cdecl Particle::Update(void)
+public: virtual bool __cdecl Particle::Update()
 {	UNIMPLEMENTED();
 }
 
-public: virtual void __cdecl Particle::Die(void)
+public: virtual void __cdecl Particle::Die()
 {	UNIMPLEMENTED();
 }
 
-public: virtual bool __cdecl Emitter::Update(void)
+public: virtual bool __cdecl Emitter::Update()
 {	UNIMPLEMENTED();
 }
 
-public: virtual bool __cdecl Tail::Update(void)
+public: virtual bool __cdecl Tail::Update()
 {	UNIMPLEMENTED();
 }
 
-public: virtual bool __cdecl Cloud::Update(void)
+public: virtual bool __cdecl Cloud::Update()
 {	UNIMPLEMENTED();
 }
 
-public: virtual bool __cdecl OrientedParticle::Update(void)
+public: virtual bool __cdecl OrientedParticle::Update()
 {	UNIMPLEMENTED();
 }
 
-public: virtual void __cdecl Flash::Draw(void)
+public: virtual void __cdecl Flash::Draw()
 {	UNIMPLEMENTED();
 }
 
-public: virtual void __cdecl Emitter::Draw(void)
+public: virtual void __cdecl Emitter::Draw()
 {	UNIMPLEMENTED();
 }
 
-public: virtual void __cdecl Cylinder::Draw(void)
+public: virtual void __cdecl Cylinder::Draw()
 {	UNIMPLEMENTED();
 }
 
-public: virtual void __cdecl Tail::Draw(void)
+public: virtual void __cdecl Tail::Draw()
 {	UNIMPLEMENTED();
 }
 
-public: virtual void __cdecl Line::Draw(void)
+public: virtual void __cdecl Line::Draw()
 {	UNIMPLEMENTED();
 }
 
-public: virtual void __cdecl Cloud::Draw(void)
+public: virtual void __cdecl Cloud::Draw()
 {	UNIMPLEMENTED();
 }
 
-public: virtual void __cdecl OrientedParticle::Draw(void)
+public: virtual void __cdecl OrientedParticle::Draw()
 {	UNIMPLEMENTED();
 }
 
@@ -1008,6 +1008,14 @@ void * __cdecl FxModelAlloc(int)
 }
 
 void __cdecl FX_AddFxToScene(class Effect *,enum refEntityType_t)
+{	UNIMPLEMENTED();
+}
+
+Flash::Cull()
+{	UNIMPLEMENTED();
+}
+
+Flash::~Flash()
 {	UNIMPLEMENTED();
 }
 

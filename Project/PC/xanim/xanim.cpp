@@ -42,19 +42,19 @@ struct XAnimInfo * __cdecl GetAnimInfo(int)
 {	UNIMPLEMENTED();
 }
 
-bool __cdecl XAnimNotetrackExists(struct XAnim_s const *,unsigned int,unsigned int)
+bool __cdecl XAnimNotetrackExists(struct XAnim_s const * anims, unsigned int animIndex, unsigned int name)
 {	UNIMPLEMENTED();
 }
 
-bool __cdecl XAnimIsLooped(struct XAnim_s const *,unsigned int)
+bool __cdecl XAnimIsLooped(struct XAnim_s const * anims, unsigned int animIndex)
 {	UNIMPLEMENTED();
 }
 
-void __cdecl XAnimSetTime(struct XAnimTree_s *,unsigned int,float)
+void __cdecl XAnimSetTime(struct XAnimTree_s * tree, unsigned int animIndex, float time)
 {	UNIMPLEMENTED();
 }
 
-bool __cdecl XAnimIsPrimitive(struct XAnim_s *,unsigned int)
+bool __cdecl XAnimIsPrimitive(struct XAnim_s * anims, unsigned int animIndex)
 {	UNIMPLEMENTED();
 }
 
@@ -62,47 +62,47 @@ bool __cdecl XAnimHasTime(struct XAnim_s const *,unsigned int)
 {	UNIMPLEMENTED();
 }
 
-int __cdecl DObjGetClientNotifyList(struct XAnimNotify_s * *)
+int __cdecl DObjGetClientNotifyList(struct XAnimNotify_s * * notifyList)
 {	UNIMPLEMENTED();
 }
 
-unsigned int __cdecl XAnimGetAnimTreeSize(struct XAnim_s const *)
+unsigned int __cdecl XAnimGetAnimTreeSize(struct XAnim_s const * anims)
 {	UNIMPLEMENTED();
 }
 
-char const * __cdecl XAnimGetAnimTreeDebugName(struct XAnim_s const *)
+char const * __cdecl XAnimGetAnimTreeDebugName(struct XAnim_s const * anims)
 {	UNIMPLEMENTED();
 }
 
-char const * __cdecl XAnimGetAnimName(struct XAnim_s const *,unsigned int)
+char const * __cdecl XAnimGetAnimName(struct XAnim_s const * anims, unsigned int animIndex)
 {	UNIMPLEMENTED();
 }
 
-unsigned int __cdecl XAnimGetChildAt(struct XAnim_s const *,unsigned int,unsigned int)
+unsigned int __cdecl XAnimGetChildAt(struct XAnim_s const * anims, unsigned int animIndex, unsigned int childIndex)
 {	UNIMPLEMENTED();
 }
 
-int __cdecl XAnimGetNumChildren(struct XAnim_s const *,unsigned int)
+int __cdecl XAnimGetNumChildren(struct XAnim_s const * anims, unsigned int animIndex)
 {	UNIMPLEMENTED();
 }
 
-bool __cdecl XAnimHasFinished(struct XAnimTree_s const *,unsigned int)
+bool __cdecl XAnimHasFinished(struct XAnimTree_s const * tree, unsigned int animIndex)
 {	UNIMPLEMENTED();
 }
 
-float __cdecl XAnimGetWeight(struct XAnimTree_s const *,unsigned int)
+float __cdecl XAnimGetWeight(struct XAnimTree_s const * tree, unsigned int animIndex)
 {	UNIMPLEMENTED();
 }
 
-float __cdecl XAnimGetTime(struct XAnimTree_s const *,unsigned int)
+float __cdecl XAnimGetTime(struct XAnimTree_s const * tree, unsigned int animIndex)
 {	UNIMPLEMENTED();
 }
 
-float __cdecl XAnimGetLength(struct XAnim_s const *,unsigned int)
+float __cdecl XAnimGetLength(struct XAnim_s const * anims, unsigned int animIndex)
 {	UNIMPLEMENTED();
 }
 
-struct XAnim_s * __cdecl XAnimGetAnims(struct XAnimTree_s const *)
+struct XAnim_s * __cdecl XAnimGetAnims(struct XAnimTree_s const * tree)
 {	UNIMPLEMENTED();
 }
 
@@ -114,23 +114,23 @@ void __cdecl XAnimDisableLeakCheck(void)
 {	UNIMPLEMENTED();
 }
 
-void __cdecl XAnimAbort(void)
+void __cdecl XAnimAbort()
 {	UNIMPLEMENTED();
 }
 
-void __cdecl XAnimSetAnimRate(struct XAnimTree_s *,unsigned int,float)
+void __cdecl XAnimSetAnimRate(struct XAnimTree_s * tree, unsigned int animIndex, float rate)
 {	UNIMPLEMENTED();
 }
 
-int __cdecl XAnimGetLengthMsec(struct XAnim_s const *,unsigned int)
+int __cdecl XAnimGetLengthMsec(struct XAnim_s const * anims, unsigned int anim)
 {	UNIMPLEMENTED();
 }
 
-struct XAnimTree_s * __cdecl XAnimCreateTree(struct XAnim_s *,void * (__cdecl*)(int))
+struct XAnimTree_s * __cdecl XAnimCreateTree(struct XAnim_s * anims, void *  Alloc)(int))
 {	UNIMPLEMENTED();
 }
 
-void __cdecl XAnimFreeList(struct XAnim_s *)
+void __cdecl XAnimFreeList(struct XAnim_s * anims)
 {	UNIMPLEMENTED();
 }
 
@@ -138,31 +138,31 @@ void __cdecl XAnimFreeAnims(struct XAnim_s *,void (__cdecl*)(void *,int))
 {	UNIMPLEMENTED();
 }
 
-char const * __cdecl XAnimGetAnimDebugName(struct XAnim_s const *,unsigned int)
+char const * __cdecl XAnimGetAnimDebugName(struct XAnim_s const * anims, unsigned int animIndex)
 {	UNIMPLEMENTED();
 }
 
-struct XAnim_s * __cdecl XAnimCreateAnims(char const *,int,void * (__cdecl*)(int))
+struct XAnim_s * __cdecl XAnimCreateAnims(char const * debugName, int size, void *  Alloc)(int))
 {	UNIMPLEMENTED();
 }
 
-void __cdecl XAnimBlend(struct XAnim_s *,unsigned int,char const *,unsigned int,unsigned int,unsigned int)
+void __cdecl XAnimBlend(struct XAnim_s * anims, unsigned int animIndex, char const * name, unsigned int children, unsigned int num, unsigned int flags)
 {	UNIMPLEMENTED();
 }
 
-void __cdecl XAnimGetAbsDelta(struct XAnim_s const *,unsigned int,float * const,float * const,float)
+void __cdecl XAnimGetAbsDelta(struct XAnim_s const * anims, unsigned int animIndex, float * const rot, float * const trans, float time)
 {	UNIMPLEMENTED();
 }
 
-void __cdecl XAnimGetRelDelta(struct XAnim_s const *,unsigned int,float * const,float * const,float,float)
+void __cdecl XAnimGetRelDelta(struct XAnim_s const * anims, unsigned int animIndex, float * const rot, float * const trans, float time1, float time2)
 {	UNIMPLEMENTED();
 }
 
-void __cdecl XAnimCalcAbsDelta(struct XAnimTree_s *,unsigned int,float * const,float * const)
+void __cdecl XAnimCalcAbsDelta(struct XAnimTree_s * tree, unsigned int animIndex, float * const rot, float * const trans)
 {	UNIMPLEMENTED();
 }
 
-void __cdecl XAnimCalcDelta(struct XAnimTree_s *,unsigned int,float * const,float * const,bool)
+void __cdecl XAnimCalcDelta(struct XAnimTree_s * tree, unsigned int animIndex, float * const rot, float * const trans, bool bUseGoalWeight)
 {	UNIMPLEMENTED();
 }
 
@@ -170,19 +170,19 @@ void __cdecl XAnimClearTreeAnimCache(struct XAnimTree_s *)
 {	UNIMPLEMENTED();
 }
 
-void __cdecl XAnimFree(struct XAnimParts_s *)
+void __cdecl XAnimFree(struct XAnimParts_s * parts)
 {	UNIMPLEMENTED();
 }
 
-void __cdecl XAnimShutdown(void)
+void __cdecl XAnimShutdown()
 {	UNIMPLEMENTED();
 }
 
-void __cdecl XAnimInit(void)
+void __cdecl XAnimInit()
 {	UNIMPLEMENTED();
 }
 
-void __cdecl XAnimClearGoalWeight(struct XAnimTree_s *,unsigned int,float)
+void __cdecl XAnimClearGoalWeight(struct XAnimTree_s * tree, unsigned int animIndex, float blendTime)
 {	UNIMPLEMENTED();
 }
 
@@ -190,7 +190,7 @@ void __cdecl XAnimClearChildGoalWeights(struct XAnimTree_s *,unsigned int,float)
 {	UNIMPLEMENTED();
 }
 
-void __cdecl XAnimClearTreeGoalWeights(struct XAnimTree_s *,unsigned int,float)
+void __cdecl XAnimClearTreeGoalWeights(struct XAnimTree_s * tree, unsigned int animIndex, float blendTime)
 {	UNIMPLEMENTED();
 }
 
@@ -198,23 +198,23 @@ struct XAnimParts_s * __cdecl XAnimPrecache(char const *)
 {	UNIMPLEMENTED();
 }
 
-void __cdecl XAnimClearTree(struct XAnimTree_s *)
+void __cdecl XAnimClearTree(struct XAnimTree_s * tree)
 {	UNIMPLEMENTED();
 }
 
-void __cdecl XAnimClearTreeGoalWeightsStrict(struct XAnimTree_s *,unsigned int,float)
+void __cdecl XAnimClearTreeGoalWeightsStrict(struct XAnimTree_s * tree, unsigned int animIndex, float blendTime)
 {	UNIMPLEMENTED();
 }
 
-void __cdecl DObjInitServerTime(struct DObj_s *,float)
+void __cdecl DObjInitServerTime(struct DObj_s * obj, float dtime)
 {	UNIMPLEMENTED();
 }
 
-void __cdecl XAnimFreeTree(struct XAnimTree_s *,void (__cdecl*)(void *,int))
+void __cdecl XAnimFreeTree(struct XAnimTree_s * tree, void  Free)(void *,int))
 {	UNIMPLEMENTED();
 }
 
-void __cdecl XAnimCreate(struct XAnim_s *,unsigned int,char const *)
+void __cdecl XAnimCreate(struct XAnim_s * anims, unsigned int animIndex, char const * name)
 {	UNIMPLEMENTED();
 }
 
@@ -226,7 +226,7 @@ void __cdecl XAnimCloneClientAnimTree(struct XAnimTree_s const *,struct XAnimTre
 {	UNIMPLEMENTED();
 }
 
-void __cdecl XAnimCloneAnimTree(struct XAnimTree_s const *,struct XAnimTree_s *)
+void __cdecl XAnimCloneAnimTree(struct XAnimTree_s const * from, struct XAnimTree_s * to)
 {	UNIMPLEMENTED();
 }
 
@@ -234,15 +234,15 @@ void __cdecl DObjTransfer(struct DObj_s const *,struct DObj_s *,float)
 {	UNIMPLEMENTED();
 }
 
-void __cdecl XAnimSetCompleteGoalWeight(struct XAnimTree_s *,unsigned int,float,float,float,unsigned int,unsigned int,int)
+void __cdecl XAnimSetCompleteGoalWeight(struct XAnimTree_s * tree, unsigned int animIndex, float goalWeight, float goalTime, float rate, unsigned int notifyName, unsigned int notifyType, int bRestart)
 {	UNIMPLEMENTED();
 }
 
-void __cdecl XAnimSetupSyncNodes(struct XAnim_s *)
+void __cdecl XAnimSetupSyncNodes(struct XAnim_s * anims)
 {	UNIMPLEMENTED();
 }
 
-int __cdecl XAnimSetCompleteGoalWeightKnobAll(struct XAnimTree_s *,unsigned int,unsigned int,float,float,float,unsigned int,int)
+int __cdecl XAnimSetCompleteGoalWeightKnobAll(struct XAnimTree_s * tree, unsigned int animIndex, unsigned int rootIndex, float goalWeight, float goalTime, float rate, unsigned int notifyName, int bRestart)
 {	UNIMPLEMENTED();
 }
 
@@ -250,7 +250,7 @@ void __cdecl XAnimSetCompleteGoalWeightKnob(struct XAnimTree_s *,unsigned int,fl
 {	UNIMPLEMENTED();
 }
 
-int __cdecl XAnimSetGoalWeight(struct XAnimTree_s *,unsigned int,float,float,float,unsigned int,unsigned int,int)
+int __cdecl XAnimSetGoalWeight(struct XAnimTree_s * tree, unsigned int animIndex, float goalWeight, float goalTime, float rate, unsigned int notifyName, unsigned int notifyType, int bRestart)
 {	UNIMPLEMENTED();
 }
 
@@ -258,19 +258,19 @@ void __cdecl XAnimSetGoalWeightKnob(struct XAnimTree_s *,unsigned int,float,floa
 {	UNIMPLEMENTED();
 }
 
-void __cdecl DObjDisplayAnim(struct DObj_s *)
+void __cdecl DObjDisplayAnim(struct DObj_s * obj)
 {	UNIMPLEMENTED();
 }
 
-void __cdecl DObjCalcAnim(struct DObj_s const *,int * const)
+void __cdecl DObjCalcAnim(struct DObj_s const * obj, int * const partBits)
 {	UNIMPLEMENTED();
 }
 
-int __cdecl DObjUpdateServerInfo(struct DObj_s *,float,int)
+int __cdecl DObjUpdateServerInfo(struct DObj_s * obj, float dtime, int bNotify)
 {	UNIMPLEMENTED();
 }
 
-void __cdecl DObjUpdateClientInfo(struct DObj_s *,float)
+void __cdecl DObjUpdateClientInfo(struct DObj_s * obj, float dtime)
 {	UNIMPLEMENTED();
 }
 

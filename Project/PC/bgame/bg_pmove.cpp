@@ -38,15 +38,15 @@ void __cdecl Vec3CrossWithUp(float const * const,float * const)
 {	UNIMPLEMENTED();
 }
 
-void __cdecl PM_SetProneMovementOverride(struct playerState_s *)
+void __cdecl PM_SetProneMovementOverride(struct playerState_s * ps)
 {	UNIMPLEMENTED();
 }
 
-int __cdecl PM_GetViewHeightLerpTime(struct playerState_s const *,int,int)
+int __cdecl PM_GetViewHeightLerpTime(struct playerState_s const * ps, int iTarget, int bDown)
 {	UNIMPLEMENTED();
 }
 
-int __cdecl PM_GroundSurfaceType(struct pml_t *)
+int __cdecl PM_GroundSurfaceType(struct pml_t * pml)
 {	UNIMPLEMENTED();
 }
 
@@ -54,55 +54,55 @@ float __cdecl PM_DamageScale_Walk(int)
 {	UNIMPLEMENTED();
 }
 
-int __cdecl PM_GetEffectiveStance(struct playerState_s *)
+int __cdecl PM_GetEffectiveStance(struct playerState_s * ps)
 {	UNIMPLEMENTED();
 }
 
-void __cdecl PM_AddTouchEnt(struct pmove_t *,int)
+void __cdecl PM_AddTouchEnt(struct pmove_t *, int)
 {	UNIMPLEMENTED();
 }
 
-void __cdecl PM_playerTrace(struct pmove_t *,struct trace_t *,float const * const,float const * const,float const * const,float const * const,int,int)
+void __cdecl PM_playerTrace(struct pmove_t * pm, struct trace_t * results, float const * const start, float const * const mins, float const * const maxs, float const * const end, int passEntityNum, int contentMask)
 {	UNIMPLEMENTED();
 }
 
-void __cdecl PM_trace(struct pmove_t *,struct trace_t *,float const * const,float const * const,float const * const,float const * const,int,int)
+void __cdecl PM_trace(struct pmove_t * pm, struct trace_t * results, float const * const start, float const * const mins, float const * const maxs, float const * const end, int passEntityNum, int contentMask)
 {	UNIMPLEMENTED();
 }
 
-int __cdecl PM_ShouldMakeFootsteps(struct pmove_t *)
+int __cdecl PM_ShouldMakeFootsteps(struct pmove_t * pm)
 {	UNIMPLEMENTED();
 }
 
-void __cdecl PM_AddEvent(struct playerState_s *,int)
+void __cdecl PM_AddEvent(struct playerState_s * ps, int newEvent)
 {	UNIMPLEMENTED();
 }
 
-float __cdecl BG_GetSpeed(struct playerState_s const *,int)
+float __cdecl BG_GetSpeed(struct playerState_s const * ps, int time)
 {	UNIMPLEMENTED();
 }
 
-void __cdecl PM_FootstepEvent(struct pmove_t *,struct pml_t *,int,int,int)
+void __cdecl PM_FootstepEvent(struct pmove_t * pm, struct pml_t * pml, int iOldBobCycle, int iNewBobCycle, int bFootStep)
 {	UNIMPLEMENTED();
 }
 
-void __cdecl PM_ClipVelocity(float const * const,float const * const,float * const)
+void __cdecl PM_ClipVelocity(float const * const in, float const * const normal, float * const out)
 {	UNIMPLEMENTED();
 }
 
-void __cdecl PM_UpdateLean(struct playerState_s *,float,struct usercmd_s *,void (__cdecl*)(struct trace_t *,float const * const,float const * const,float const * const,float const * const,int,int))
+void __cdecl PM_UpdateLean(struct playerState_s * ps, float msec, struct usercmd_s * cmd, void  capsuleTrace)(struct trace_t *,float const * const,float const * const,float const * const,float const * const,int,int))
 {	UNIMPLEMENTED();
 }
 
-void __cdecl PM_UpdatePronePitch(struct pmove_t *,struct pml_t *)
+void __cdecl PM_UpdatePronePitch(struct pmove_t * pm, struct pml_t * pml)
 {	UNIMPLEMENTED();
 }
 
-void __cdecl PM_UpdateViewAngles(struct playerState_s *,float,struct usercmd_s *,unsigned char)
+void __cdecl PM_UpdateViewAngles(struct playerState_s * ps, float msec, struct usercmd_s * cmd, unsigned char handler)
 {	UNIMPLEMENTED();
 }
 
-void __cdecl Pmove(struct pmove_t *)
+void __cdecl Pmove(struct pmove_t * pm)
 {	UNIMPLEMENTED();
 }
 

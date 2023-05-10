@@ -106,15 +106,15 @@ void __cdecl std::_Rotate<struct Material * *,int,struct Material *>(struct Mate
 {	UNIMPLEMENTED();
 }
 
-void __cdecl Material_ReloadAll(void)
+void __cdecl Material_ReloadAll()
 {	UNIMPLEMENTED();
 }
 
-void __cdecl Material_ReleaseAll(void)
+void __cdecl Material_ReleaseAll()
 {	UNIMPLEMENTED();
 }
 
-void __cdecl Material_FinishLoading(void)
+void __cdecl Material_FinishLoading()
 {	UNIMPLEMENTED();
 }
 
@@ -122,7 +122,7 @@ struct Material * __cdecl Material_LoadRawImage(char const *,int)
 {	UNIMPLEMENTED();
 }
 
-bool __cdecl Material_IsDefault(struct Material const *)
+bool __cdecl Material_IsDefault(struct Material const * material)
 {	UNIMPLEMENTED();
 }
 
@@ -130,7 +130,7 @@ void __cdecl Material_DirtySort(void)
 {	UNIMPLEMENTED();
 }
 
-void * __cdecl Material_Alloc(int)
+void * __cdecl Material_Alloc(int size)
 {	UNIMPLEMENTED();
 }
 
@@ -138,19 +138,19 @@ bool __cdecl R_IsMaterialRefractive(struct Material *)
 {	UNIMPLEMENTED();
 }
 
-int __cdecl R_GetMaterialSubimageCount(struct Material *)
+int __cdecl R_GetMaterialSubimageCount(struct Material * handle)
 {	UNIMPLEMENTED();
 }
 
-char const * __cdecl R_GetMaterialName(struct Material *)
+char const * __cdecl R_GetMaterialName(struct Material * handle)
 {	UNIMPLEMENTED();
 }
 
-struct Material * __cdecl R_RegisterRawImage(char const *,int,int)
+struct Material * __cdecl R_RegisterRawImage(char const * name, int baseImageFlags, int imageTrack)
 {	UNIMPLEMENTED();
 }
 
-void __cdecl Material_Sort(void)
+void __cdecl Material_Sort()
 {	UNIMPLEMENTED();
 }
 
@@ -158,15 +158,15 @@ void __cdecl Unload_Material(struct Material *)
 {	UNIMPLEMENTED();
 }
 
-struct Material * __cdecl Material_Register(char const *,int)
+struct Material * __cdecl Material_Register(char const * name, int imageTrack)
 {	UNIMPLEMENTED();
 }
 
-struct Material * __cdecl Material_RegisterHandle(char const *,int,int)
+struct Material * __cdecl Material_RegisterHandle(char const * name, int baseImageFlags, int imageTrack)
 {	UNIMPLEMENTED();
 }
 
-void __cdecl Material_Init(void)
+void __cdecl Material_Init()
 {	UNIMPLEMENTED();
 }
 
@@ -174,7 +174,7 @@ void __cdecl Load_CreateMaterialShader(union MaterialShaderPtr *,struct Material
 {	UNIMPLEMENTED();
 }
 
-void __cdecl Load_BuildVertexDecl(struct MaterialVertexDeclaration * *)
+void __cdecl Load_BuildVertexDecl(struct MaterialVertexDeclaration * * mtlVertDecl)
 {	UNIMPLEMENTED();
 }
 
@@ -188,6 +188,82 @@ void __cdecl Material_LoadBuiltIn(struct BuiltInMaterialTable const * const,int)
 }
 
 struct D3DVertexDeclaration * __cdecl Material_BuildVertexDecl(struct MaterialStreamRouting const *,int,struct stream_source_info_t const * const)
+{	UNIMPLEMENTED();
+}
+
+Material_RegisterLiteral(float const*)
+{	UNIMPLEMENTED();
+}
+
+Material_SetTechnique(char const* name,  MaterialTechnique* technique)
+{	UNIMPLEMENTED();
+}
+
+Material_SetTechniqueSet(char const* name,  MaterialTechniqueSet* techniqueSet)
+{	UNIMPLEMENTED();
+}
+
+Material_SetStateMap(char const* name,  MaterialStateMap* stateMap)
+{	UNIMPLEMENTED();
+}
+
+Material_SetShader(char const* shaderName,  MaterialShaderType shaderType,  int shaderVersion,  MaterialShader* mtlShader)
+{	UNIMPLEMENTED();
+}
+
+Material_UpdatePicmipAll()
+{	UNIMPLEMENTED();
+}
+
+Material_LoadFile(char const* filename,  int* file)
+{	UNIMPLEMENTED();
+}
+
+void std::__adjust_heap<Material**, int, Material*, unsigned char (*)(Material const*, Material const*)>(Material**, int, int, Material*, unsigned char (*)(Material const*, Material const*))
+{	UNIMPLEMENTED();
+}
+
+void std::__insertion_sort<Material**, unsigned char (*)(Material const*, Material const*)>(Material**, Material**, unsigned char (*)(Material const*, Material const*))
+{	UNIMPLEMENTED();
+}
+
+void std::__introsort_loop<Material**, int, unsigned char (*)(Material const*, Material const*)>(Material**, Material**, int, unsigned char (*)(Material const*, Material const*))
+{	UNIMPLEMENTED();
+}
+
+Material_RegisterString(char const* string)
+{	UNIMPLEMENTED();
+}
+
+Material_AllocVertexDecl(MaterialStreamRouting* routingData,  int streamCount,  unsigned char* existing)
+{	UNIMPLEMENTED();
+}
+
+Material_FindStateMap(char const* name)
+{	UNIMPLEMENTED();
+}
+
+Material_FindTechniqueSet(char const* name)
+{	UNIMPLEMENTED();
+}
+
+Material_FindTechnique(char const* name)
+{	UNIMPLEMENTED();
+}
+
+Material_FindShader(char const* shaderName,  MaterialShaderType shaderType,  int shaderVersion)
+{	UNIMPLEMENTED();
+}
+
+Material_Shutdown()
+{	UNIMPLEMENTED();
+}
+
+R_Cmd_ReloadMaterialTextures()
+{	UNIMPLEMENTED();
+}
+
+Material_Duplicate(Material* mtlCopy,  char const* name)
 {	UNIMPLEMENTED();
 }
 

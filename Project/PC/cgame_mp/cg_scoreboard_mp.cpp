@@ -1,12 +1,12 @@
-void __cdecl CG_ScrollScoreboardDown(void)
+void __cdecl CG_ScrollScoreboardDown()
 {	UNIMPLEMENTED();
 }
 
-void __cdecl CG_ScrollScoreboardUp(void)
+void __cdecl CG_ScrollScoreboardUp()
 {	UNIMPLEMENTED();
 }
 
-int __cdecl CG_ScoreboardDisplayed(void)
+int __cdecl CG_ScoreboardDisplayed()
 {	UNIMPLEMENTED();
 }
 
@@ -18,7 +18,7 @@ bool __cdecl Scoreboard_HandleInputNonXboxLive(int)
 {	UNIMPLEMENTED();
 }
 
-void __cdecl CG_RegisterScoreboardGraphics(void)
+void __cdecl CG_RegisterScoreboardGraphics()
 {	UNIMPLEMENTED();
 }
 
@@ -26,15 +26,15 @@ bool __cdecl Scoreboard_HandleInput(int)
 {	UNIMPLEMENTED();
 }
 
-int __cdecl CalcBorderLines(struct sbpicinfo_t * const)
+int __cdecl CalcBorderLines(struct sbpicinfo_t * const backdropBorderLines)
 {	UNIMPLEMENTED();
 }
 
-void __cdecl CG_DrawScoreboard_GetTeamColor(int,float * const)
+void __cdecl CG_DrawScoreboard_GetTeamColor(int, float * const)
 {	UNIMPLEMENTED();
 }
 
-int __cdecl CG_DrawScoreboard(void)
+int __cdecl CG_DrawScoreboard()
 {	UNIMPLEMENTED();
 }
 

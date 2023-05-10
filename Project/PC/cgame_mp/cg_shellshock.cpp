@@ -6,19 +6,19 @@ void __cdecl CG_StartShellShock(struct shellshock_parms_t const *,int,int)
 {	UNIMPLEMENTED();
 }
 
-void __cdecl CG_PerturbCamera(void)
+void __cdecl CG_PerturbCamera()
 {	UNIMPLEMENTED();
 }
 
-void __cdecl CG_SetShellShockParmsFromDvars(struct shellshock_parms_t *)
+void __cdecl CG_SetShellShockParmsFromDvars(struct shellshock_parms_t * parms)
 {	UNIMPLEMENTED();
 }
 
-int __cdecl CG_DrawShellShockSavedScreenBlend(struct shellshock_parms_t const *,int,int)
+int __cdecl CG_DrawShellShockSavedScreenBlend(struct shellshock_parms_t const *, int, int)
 {	UNIMPLEMENTED();
 }
 
-int __cdecl CG_SaveShellShockDvars(char const *)
+int __cdecl CG_SaveShellShockDvars(char const * name)
 {	UNIMPLEMENTED();
 }
 
@@ -26,11 +26,11 @@ void __cdecl CG_PrintPerturbationPoints(void)
 {	UNIMPLEMENTED();
 }
 
-int __cdecl CG_LoadShellShockDvars(char const *)
+int __cdecl CG_LoadShellShockDvars(char const * name)
 {	UNIMPLEMENTED();
 }
 
-void __cdecl CG_UpdateShellShock(struct shellshock_parms_t const *,int,int)
+void __cdecl CG_UpdateShellShock(struct shellshock_parms_t const * parms, int start, int duration)
 {	UNIMPLEMENTED();
 }
 

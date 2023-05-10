@@ -6,11 +6,11 @@ void __cdecl RemoveRefToValue(struct VariableValue_s *)
 {	UNIMPLEMENTED();
 }
 
-void __cdecl Scr_CompileShutdown(void)
+void __cdecl Scr_CompileShutdown()
 {	UNIMPLEMENTED();
 }
 
-int __cdecl CompareCaseInfo(void const *,void const *)
+int __cdecl CompareCaseInfo(void const * elem1, void const * elem2)
 {	UNIMPLEMENTED();
 }
 
@@ -26,7 +26,7 @@ void __cdecl Scr_CompileStatement(union sval_u)
 {	UNIMPLEMENTED();
 }
 
-void __cdecl ScriptCompile(union sval_u,unsigned int,unsigned int)
+void __cdecl ScriptCompile(union sval_u val, unsigned int fileId, unsigned int scriptId)
 {	UNIMPLEMENTED();
 }
 

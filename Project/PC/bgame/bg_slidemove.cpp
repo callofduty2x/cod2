@@ -1,4 +1,4 @@
-void __cdecl PM_StepSlideMove(struct pmove_t *,struct pml_t *,int)
+void __cdecl PM_StepSlideMove(struct pmove_t * pm, struct pml_t * pml, int gravity)
 {	UNIMPLEMENTED();
 }
 

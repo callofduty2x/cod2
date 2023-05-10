@@ -26,19 +26,19 @@ public: void __cdecl FxArchive::BeginWriting(struct MemoryFile *)
 {	UNIMPLEMENTED();
 }
 
-public: void __cdecl FxArchive::BeginReading(struct MemoryFile *)
+public: void __cdecl FxArchive::BeginReading(struct MemoryFile * memFile)
 {	UNIMPLEMENTED();
 }
 
-public: __cdecl FxArchive::FxArchive(void)
+public: __cdecl FxArchive::FxArchive()
 {	UNIMPLEMENTED();
 }
 
-public: void __cdecl FxArchive::WriteData(void const *,int)
+public: void __cdecl FxArchive::WriteData(void const * p, int byteCount)
 {	UNIMPLEMENTED();
 }
 
-public: void __cdecl FxArchive::ReadData(void *,int)
+public: void __cdecl FxArchive::ReadData(void * p, int byteCount)
 {	UNIMPLEMENTED();
 }
 
@@ -74,15 +74,15 @@ public: struct Material * __cdecl FxArchive::ReadMaterial(void)
 {	UNIMPLEMENTED();
 }
 
-public: void __cdecl FxArchive::ArchiveChannelInstance(struct FxChannelInstance *)
+public: void __cdecl FxArchive::ArchiveChannelInstance(struct FxChannelInstance * channelInstance)
 {	UNIMPLEMENTED();
 }
 
-public: void __cdecl FxArchive::ArchiveModel(struct XModel * *)
+public: void __cdecl FxArchive::ArchiveModel(struct XModel * * model)
 {	UNIMPLEMENTED();
 }
 
-public: void __cdecl FxArchive::ArchiveMaterial(struct Material * *)
+public: void __cdecl FxArchive::ArchiveMaterial(struct Material * * ph)
 {	UNIMPLEMENTED();
 }
 
@@ -90,8 +90,16 @@ public: struct EffectTemplate * __cdecl FxArchive::ReadEffect(void)
 {	UNIMPLEMENTED();
 }
 
-public: void __cdecl FxArchive::ArchiveEffect(struct EffectTemplate const * *)
+public: void __cdecl FxArchive::ArchiveEffect(struct EffectTemplate const * * fx)
 {	UNIMPLEMENTED();
 }
 
 int marker_FxArchive;
+FxArchive::ArchiveFxBoltInfo(FxBoltInfo* bolt)
+{	UNIMPLEMENTED();
+}
+
+FxArchive::ArchiveFxGfxEntity(FxGfxEntity* entity)
+{	UNIMPLEMENTED();
+}
+

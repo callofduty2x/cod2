@@ -1,4 +1,4 @@
-void __cdecl GScr_LoadConsts(void)
+void __cdecl GScr_LoadConsts()
 {	UNIMPLEMENTED();
 }
 

@@ -1,4 +1,4 @@
-void __cdecl RB_UploadWaterTexture(struct GfxImage *,struct water_t *)
+void __cdecl RB_UploadWaterTexture(struct GfxImage * image, struct water_t * water)
 {	UNIMPLEMENTED();
 }
 

@@ -14,11 +14,11 @@ int __cdecl ObjectiveStateIndexFromString(enum objectiveState_t *,unsigned int)
 {	UNIMPLEMENTED();
 }
 
-void __cdecl Scr_SetHealth(struct gentity_s *,int)
+void __cdecl Scr_SetHealth(struct gentity_s * ent, int offset)
 {	UNIMPLEMENTED();
 }
 
-void __cdecl Scr_SetAngles(struct gentity_s *,int)
+void __cdecl Scr_SetAngles(struct gentity_s * ent, int offset)
 {	UNIMPLEMENTED();
 }
 
@@ -26,59 +26,59 @@ void (__cdecl*__cdecl Scr_GetMethod(char const * *,int *))(struct scr_entref_t)
 {	UNIMPLEMENTED();
 }
 
-void __cdecl G_InitObjectives(void)
+void __cdecl G_InitObjectives()
 {	UNIMPLEMENTED();
 }
 
-char const * __cdecl Scr_GetGameTypeNameForScript(char const *)
+char const * __cdecl Scr_GetGameTypeNameForScript(char const * pszGameTypeScript)
 {	UNIMPLEMENTED();
 }
 
-int __cdecl Scr_IsValidGameType(char const *)
+int __cdecl Scr_IsValidGameType(char const * pszGameType)
 {	UNIMPLEMENTED();
 }
 
-void __cdecl GScr_DisableAimAssist(struct scr_entref_t)
+void __cdecl GScr_DisableAimAssist(struct scr_entref_t entref)
 {	UNIMPLEMENTED();
 }
 
-void __cdecl GScr_EnableAimAssist(struct scr_entref_t)
+void __cdecl GScr_EnableAimAssist(struct scr_entref_t entref)
 {	UNIMPLEMENTED();
 }
 
-void __cdecl GScr_DisableGrenadeBounce(struct scr_entref_t)
+void __cdecl GScr_DisableGrenadeBounce(struct scr_entref_t entref)
 {	UNIMPLEMENTED();
 }
 
-void __cdecl GScr_EnableGrenadeBounce(struct scr_entref_t)
+void __cdecl GScr_EnableGrenadeBounce(struct scr_entref_t entref)
 {	UNIMPLEMENTED();
 }
 
-void __cdecl GScr_DisableGrenadeTouchDamage(struct scr_entref_t)
+void __cdecl GScr_DisableGrenadeTouchDamage(struct scr_entref_t entref)
 {	UNIMPLEMENTED();
 }
 
-void __cdecl GScr_EnableGrenadeTouchDamage(struct scr_entref_t)
+void __cdecl GScr_EnableGrenadeTouchDamage(struct scr_entref_t entref)
 {	UNIMPLEMENTED();
 }
 
-void __cdecl ScrCmd_ShowToPlayer(struct scr_entref_t)
+void __cdecl ScrCmd_ShowToPlayer(struct scr_entref_t entref)
 {	UNIMPLEMENTED();
 }
 
-void __cdecl ScrCmd_Hide(struct scr_entref_t)
+void __cdecl ScrCmd_Hide(struct scr_entref_t entref)
 {	UNIMPLEMENTED();
 }
 
-void __cdecl ScrCmd_Show(struct scr_entref_t)
+void __cdecl ScrCmd_Show(struct scr_entref_t entref)
 {	UNIMPLEMENTED();
 }
 
-unsigned int __cdecl GScr_AllocString(char const *)
+unsigned int __cdecl GScr_AllocString(char const * s)
 {	UNIMPLEMENTED();
 }
 
-void __cdecl GScr_FreeScripts(void)
+void __cdecl GScr_FreeScripts()
 {	UNIMPLEMENTED();
 }
 
@@ -86,19 +86,19 @@ void __cdecl Scr_LocalizationError(int,char const *)
 {	UNIMPLEMENTED();
 }
 
-int __cdecl GScr_GetHeadIconIndex(char const *)
+int __cdecl GScr_GetHeadIconIndex(char const * pszIcon)
 {	UNIMPLEMENTED();
 }
 
-int __cdecl GScr_GetStatusIconIndex(char const *)
+int __cdecl GScr_GetStatusIconIndex(char const * pszIcon)
 {	UNIMPLEMENTED();
 }
 
-int __cdecl GScr_GetScriptMenuIndex(char const *)
+int __cdecl GScr_GetScriptMenuIndex(char const * pszMenu)
 {	UNIMPLEMENTED();
 }
 
-int __cdecl G_GetHintStringIndex(int *,char const *)
+int __cdecl G_GetHintStringIndex(int * piIndex, char const * pszString)
 {	UNIMPLEMENTED();
 }
 
@@ -106,79 +106,79 @@ void __cdecl GScr_AddVector(float const * const)
 {	UNIMPLEMENTED();
 }
 
-void __cdecl Scr_SetOrigin(struct gentity_s *,int)
+void __cdecl Scr_SetOrigin(struct gentity_s * ent, int offset)
 {	UNIMPLEMENTED();
 }
 
-void __cdecl GScr_GetPartName(void)
+void __cdecl GScr_GetPartName()
 {	UNIMPLEMENTED();
 }
 
-void __cdecl GScr_GetNumParts(void)
+void __cdecl GScr_GetNumParts()
 {	UNIMPLEMENTED();
 }
 
-void __cdecl GScr_AddEntity(struct gentity_s *)
+void __cdecl GScr_AddEntity(struct gentity_s * pEnt)
 {	UNIMPLEMENTED();
 }
 
-void __cdecl Scr_ParseGameTypeList(void)
+void __cdecl Scr_ParseGameTypeList()
 {	UNIMPLEMENTED();
 }
 
-void __cdecl Scr_ConstructMessageString(int,int,char const *,char *,int)
+void __cdecl Scr_ConstructMessageString(int firstParmIndex, int lastParmIndex, char const * errorContext, char * string, int stringLimit)
 {	UNIMPLEMENTED();
 }
 
-void __cdecl Scr_MakeGameMessage(int,char const *)
+void __cdecl Scr_MakeGameMessage(int iClientNum, char const * pszCmd)
 {	UNIMPLEMENTED();
 }
 
-void __cdecl Scr_PlayerVote(struct gentity_s *,char *)
+void __cdecl Scr_PlayerVote(struct gentity_s * self, char * option)
 {	UNIMPLEMENTED();
 }
 
-void __cdecl Scr_VoteCalled(struct gentity_s *,char *,char *,char *)
+void __cdecl Scr_VoteCalled(struct gentity_s * self, char * command, char * param1, char * param2)
 {	UNIMPLEMENTED();
 }
 
-void __cdecl Scr_PlayerKilled(struct gentity_s *,struct gentity_s *,struct gentity_s *,int,int,int,float const * const,enum hitLocation_t,int,int)
+void __cdecl Scr_PlayerKilled(struct gentity_s * self, struct gentity_s * inflictor, struct gentity_s * attacker, int damage, int meansOfDeath, int iWeapon, float const * const vDir, enum hitLocation_t hitLoc, int psTimeOffset, int deathAnimDuration)
 {	UNIMPLEMENTED();
 }
 
-void __cdecl Scr_PlayerDamage(struct gentity_s *,struct gentity_s *,struct gentity_s *,int,int,int,int,float const * const,float const * const,enum hitLocation_t,int)
+void __cdecl Scr_PlayerDamage(struct gentity_s * self, struct gentity_s * inflictor, struct gentity_s * attacker, int damage, int dflags, int meansOfDeath, int iWeapon, float const * const vPoint, float const * const vDir, enum hitLocation_t hitLoc, int timeOffset)
 {	UNIMPLEMENTED();
 }
 
-void __cdecl Scr_PlayerDisconnect(struct gentity_s *)
+void __cdecl Scr_PlayerDisconnect(struct gentity_s * self)
 {	UNIMPLEMENTED();
 }
 
-void __cdecl Scr_PlayerConnect(struct gentity_s *)
+void __cdecl Scr_PlayerConnect(struct gentity_s * self)
 {	UNIMPLEMENTED();
 }
 
-void __cdecl Scr_StartupGameType(void)
+void __cdecl Scr_StartupGameType()
 {	UNIMPLEMENTED();
 }
 
-void __cdecl Scr_LoadGameType(void)
+void __cdecl Scr_LoadGameType()
 {	UNIMPLEMENTED();
 }
 
-void __cdecl Scr_LoadLevel(void)
+void __cdecl Scr_LoadLevel()
 {	UNIMPLEMENTED();
 }
 
-void __cdecl Scr_SightTracePassed(void)
+void __cdecl Scr_SightTracePassed()
 {	UNIMPLEMENTED();
 }
 
-void __cdecl GScr_LoadGameTypeScript(void)
+void __cdecl GScr_LoadGameTypeScript()
 {	UNIMPLEMENTED();
 }
 
-void __cdecl GScr_LoadScripts(void)
+void __cdecl GScr_LoadScripts()
 {	UNIMPLEMENTED();
 }
 

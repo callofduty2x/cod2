@@ -1,40 +1,40 @@
-void __cdecl CM_UnlinkEntity(struct svEntity_s *)
+void __cdecl CM_UnlinkEntity(struct svEntity_s * ent)
 {	UNIMPLEMENTED();
 }
 
-int __cdecl CM_AreaEntities(float const * const,float const * const,int *,int,int)
+int __cdecl CM_AreaEntities(float const * const mins, float const * const maxs, int * entityList, int maxcount, int contentmask)
 {	UNIMPLEMENTED();
 }
 
-void __cdecl CM_LinkEntity(struct svEntity_s *,float * const,float * const,int)
+void __cdecl CM_LinkEntity(struct svEntity_s * ent, float * const absmin, float * const absmax, int clipHandle)
 {	UNIMPLEMENTED();
 }
 
-void __cdecl CM_LinkWorld(void)
+void __cdecl CM_LinkWorld()
 {	UNIMPLEMENTED();
 }
 
-int __cdecl CM_PointTraceStaticModelsComplete(float const * const,float const * const,int)
+int __cdecl CM_PointTraceStaticModelsComplete(float const * const start, float const * const end, int contentmask)
 {	UNIMPLEMENTED();
 }
 
-void __cdecl CM_PointTraceStaticModels(struct trace_t *,float const * const,float const * const,int)
+void __cdecl CM_PointTraceStaticModels(struct trace_t * results, float const * const start, float const * const end, int contentmask)
 {	UNIMPLEMENTED();
 }
 
-void __cdecl CM_ClipMoveToEntities(struct moveclip_t *,struct trace_t *)
+void __cdecl CM_ClipMoveToEntities(struct moveclip_t * clip, struct trace_t * trace)
 {	UNIMPLEMENTED();
 }
 
-int __cdecl CM_ClipSightTraceToEntities(struct sightclip_t *)
+int __cdecl CM_ClipSightTraceToEntities(struct sightclip_t * clip)
 {	UNIMPLEMENTED();
 }
 
-int __cdecl CM_PointSightTraceToEntities(struct sightpointtrace_t *)
+int __cdecl CM_PointSightTraceToEntities(struct sightpointtrace_t * clip)
 {	UNIMPLEMENTED();
 }
 
-void __cdecl CM_PointTraceToEntities(struct pointtrace_t *,struct trace_t *)
+void __cdecl CM_PointTraceToEntities(struct pointtrace_t * clip, struct trace_t * trace)
 {	UNIMPLEMENTED();
 }
 

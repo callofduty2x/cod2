@@ -2,27 +2,27 @@ void __cdecl Byte4SetRgba(unsigned char * const,unsigned char,unsigned char,unsi
 {	UNIMPLEMENTED();
 }
 
-int __cdecl compare_hudelems(void const *,void const *)
+int __cdecl compare_hudelems(void const * pe0, void const * pe1)
 {	UNIMPLEMENTED();
 }
 
-float __cdecl CG_AlignHudElemY(int,float,float)
+float __cdecl CG_AlignHudElemY(int alignOrg, float y, float height)
 {	UNIMPLEMENTED();
 }
 
-float __cdecl CG_AlignHudElemX(int,float,float)
+float __cdecl CG_AlignHudElemX(int alignOrg, float x, float width)
 {	UNIMPLEMENTED();
 }
 
-bool __cdecl CG_AreHudElemsHidden(void)
+bool __cdecl CG_AreHudElemsHidden()
 {	UNIMPLEMENTED();
 }
 
-void __cdecl CG_Draw3dHudElems(void)
+void __cdecl CG_Draw3dHudElems()
 {	UNIMPLEMENTED();
 }
 
-void __cdecl CG_Draw2dHudElems(int)
+void __cdecl CG_Draw2dHudElems(int foreground)
 {	UNIMPLEMENTED();
 }
 

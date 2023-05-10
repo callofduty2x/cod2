@@ -1,8 +1,8 @@
-void __cdecl R_UnregisterDvars(void)
+void __cdecl R_UnregisterDvars()
 {	UNIMPLEMENTED();
 }
 
-void __cdecl R_RegisterDvars(void)
+void __cdecl R_RegisterDvars()
 {	UNIMPLEMENTED();
 }
 

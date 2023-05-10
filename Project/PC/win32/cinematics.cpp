@@ -35,3 +35,47 @@ bool __cdecl PlayXMVInternal(char const *,bool,bool,bool (__cdecl*)(void))
 {	UNIMPLEMENTED();
 }
 
+ROQ_StopCinematicFromHandle(int handle)
+{	UNIMPLEMENTED();
+}
+
+ROQ_SetExtentsFromHandle(int,  int,  int,  int,  int)
+{	UNIMPLEMENTED();
+}
+
+ROQ_UploadCinematicFromHandle(int handle)
+{	UNIMPLEMENTED();
+}
+
+ROQ_PlayCinematic(char const* arg,  int x,  int y,  int w,  int h,  int systemBits)
+{	UNIMPLEMENTED();
+}
+
+ROQ_DrawCinematicFromHandle(int handle)
+{	UNIMPLEMENTED();
+}
+
+ROQ_DrawCinematic()
+{	UNIMPLEMENTED();
+}
+
+ROQ_CloseAllVideos()
+{	UNIMPLEMENTED();
+}
+
+ROQ_StopCinematic()
+{	UNIMPLEMENTED();
+}
+
+ROQ_RunCinematicFromHandle(int handle)
+{	UNIMPLEMENTED();
+}
+
+ROQ_RunCinematic()
+{	UNIMPLEMENTED();
+}
+
+ROQ_PlayCinematic_f()
+{	UNIMPLEMENTED();
+}
+

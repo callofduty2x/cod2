@@ -6,7 +6,7 @@ struct rectDef_s const * __cdecl Window_GetRect(struct windowDef_t const *)
 {	UNIMPLEMENTED();
 }
 
-int __cdecl CG_CrosshairPlayer(void)
+int __cdecl CG_CrosshairPlayer()
 {	UNIMPLEMENTED();
 }
 
@@ -14,15 +14,15 @@ void __cdecl CG_ClearSoundPlaybackTracking(void)
 {	UNIMPLEMENTED();
 }
 
-bool __cdecl CG_PlaySoundOnCurrentLocalClient(int,float const * const,char const *)
+bool __cdecl CG_PlaySoundOnCurrentLocalClient(int entitynum, float const * const origin, char const * aliasname)
 {	UNIMPLEMENTED();
 }
 
-bool __cdecl CG_PlaySoundOnFirstClient(void)
+bool __cdecl CG_PlaySoundOnFirstClient()
 {	UNIMPLEMENTED();
 }
 
-char const * __cdecl CG_Argv(int)
+char const * __cdecl CG_Argv(int arg)
 {	UNIMPLEMENTED();
 }
 
@@ -30,59 +30,59 @@ void __cdecl CG_SwitchToLocalClient(int)
 {	UNIMPLEMENTED();
 }
 
-void __cdecl CG_GetEntityOrientation(int,float * const,float (* const)[3])
+void __cdecl CG_GetEntityOrientation(int entnum, float * const origin_out, float  axis_out)[3])
 {	UNIMPLEMENTED();
 }
 
-void __cdecl CG_GetDObjOrientation(int,float (* const)[3])
+void __cdecl CG_GetDObjOrientation(int dobjHandle, float  axis_out)[3])
 {	UNIMPLEMENTED();
 }
 
-void __cdecl CG_FreeWeapons(void)
+void __cdecl CG_FreeWeapons()
 {	UNIMPLEMENTED();
 }
 
-void __cdecl CG_InitVote(void)
+void __cdecl CG_InitVote()
 {	UNIMPLEMENTED();
 }
 
-void __cdecl CG_Shutdown(void)
+void __cdecl CG_Shutdown()
 {	UNIMPLEMENTED();
 }
 
-void __cdecl CG_TranslateHudElemMessage(char const *,char const *,char * const)
+void __cdecl CG_TranslateHudElemMessage(char const * message, char const * messageType, char * const hudElemString)
 {	UNIMPLEMENTED();
 }
 
-void __cdecl CG_SafeTranslateHudElemString(int,char * const)
+void __cdecl CG_SafeTranslateHudElemString(int index, char * const hudElemString)
 {	UNIMPLEMENTED();
 }
 
-void * __cdecl Hunk_AllocXAnimClient(int)
+void * __cdecl Hunk_AllocXAnimClient(int size)
 {	UNIMPLEMENTED();
 }
 
-void __cdecl CG_StartAmbient(void)
+void __cdecl CG_StartAmbient()
 {	UNIMPLEMENTED();
 }
 
-void __cdecl CG_BoldGameMessage(char const *)
+void __cdecl CG_BoldGameMessage(char const * msg)
 {	UNIMPLEMENTED();
 }
 
-void __cdecl CG_GameMessage(char const *)
+void __cdecl CG_GameMessage(char const * msg)
 {	UNIMPLEMENTED();
 }
 
-int __cdecl CG_PlaySoundAliasAsMasterByName(int,float const * const,char const *)
+int __cdecl CG_PlaySoundAliasAsMasterByName(int entitynum, float const * const origin, char const * aliasname)
 {	UNIMPLEMENTED();
 }
 
-int __cdecl CG_PlaySoundAliasByName(int,float const * const,char const *)
+int __cdecl CG_PlaySoundAliasByName(int entitynum, float const * const origin, char const * aliasname)
 {	UNIMPLEMENTED();
 }
 
-int __cdecl CG_PlaySoundAlias(int,float const * const,struct snd_alias_list_t *)
+int __cdecl CG_PlaySoundAlias(int entitynum, float const * const origin, struct snd_alias_list_t * aliasList)
 {	UNIMPLEMENTED();
 }
 
@@ -90,23 +90,23 @@ int __cdecl CG_PlayEntitySoundAliasByName(int,char const *)
 {	UNIMPLEMENTED();
 }
 
-int __cdecl CG_PlayEntitySoundAlias(int,struct snd_alias_list_t *)
+int __cdecl CG_PlayEntitySoundAlias(int entitynum, struct snd_alias_list_t * aliasList)
 {	UNIMPLEMENTED();
 }
 
-int __cdecl CG_PlayClientSoundAliasByName(char const *)
+int __cdecl CG_PlayClientSoundAliasByName(char const * aliasname)
 {	UNIMPLEMENTED();
 }
 
-int __cdecl CG_PlayClientSoundAlias(struct snd_alias_list_t *)
+int __cdecl CG_PlayClientSoundAlias(struct snd_alias_list_t * aliasList)
 {	UNIMPLEMENTED();
 }
 
-void __cdecl CG_PlaySmokeGrenadesAtTime(int)
+void __cdecl CG_PlaySmokeGrenadesAtTime(int gametime)
 {	UNIMPLEMENTED();
 }
 
-void __cdecl CG_Init(int,int,int)
+void __cdecl CG_Init(int serverMessageNum, int serverCommandSequence, int clientNum)
 {	UNIMPLEMENTED();
 }
 
@@ -338,6 +338,10 @@ void __cdecl CG_CreateDObj(struct DObjModel_s *,unsigned short,struct XAnimTree_
 }
 
 void __cdecl CG_RegisterGraphics(char const *)
+{	UNIMPLEMENTED();
+}
+
+Hunk_AllocXAnimPrecache(int size)
 {	UNIMPLEMENTED();
 }
 

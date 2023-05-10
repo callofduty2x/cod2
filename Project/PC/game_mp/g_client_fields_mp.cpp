@@ -1,12 +1,12 @@
-void __cdecl GScr_AddFieldsForClient(void)
+void __cdecl GScr_AddFieldsForClient()
 {	UNIMPLEMENTED();
 }
 
-void __cdecl Scr_SetClientField(struct gclient_s *,int)
+void __cdecl Scr_SetClientField(struct gclient_s * client, int offset)
 {	UNIMPLEMENTED();
 }
 
-void __cdecl Scr_GetClientField(struct gclient_s *,int)
+void __cdecl Scr_GetClientField(struct gclient_s * client, int offset)
 {	UNIMPLEMENTED();
 }
 

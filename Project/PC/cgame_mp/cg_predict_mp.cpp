@@ -1,24 +1,24 @@
-void __cdecl CG_ClearSolidList(void)
+void __cdecl CG_ClearSolidList()
 {	UNIMPLEMENTED();
 }
 
-void __cdecl CG_BuildSolidList(void)
+void __cdecl CG_BuildSolidList()
 {	UNIMPLEMENTED();
 }
 
-int __cdecl CG_PointContents(float const * const,int,int)
+int __cdecl CG_PointContents(float const * const point, int passEntityNum, int contentmask)
 {	UNIMPLEMENTED();
 }
 
-void __cdecl CG_ClipMoveToEntities(float const * const,float const * const,float const * const,float const * const,int,int,int,struct trace_t *)
+void __cdecl CG_ClipMoveToEntities(float const * const start, float const * const mins, float const * const maxs, float const * const end, int skipNumber, int mask, int capsule, struct trace_t * tr)
 {	UNIMPLEMENTED();
 }
 
-void __cdecl CG_TraceCapsule(struct trace_t *,float const * const,float const * const,float const * const,float const * const,int,int)
+void __cdecl CG_TraceCapsule(struct trace_t * result, float const * const start, float const * const mins, float const * const maxs, float const * const end, int skipNumber, int mask)
 {	UNIMPLEMENTED();
 }
 
-void __cdecl CG_PredictPlayerState(void)
+void __cdecl CG_PredictPlayerState()
 {	UNIMPLEMENTED();
 }
 

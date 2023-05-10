@@ -1,8 +1,8 @@
-void __cdecl Svcmd_EntityList_f(void)
+void __cdecl Svcmd_EntityList_f()
 {	UNIMPLEMENTED();
 }
 
-void __cdecl Svcmd_RemoveIP_f(void)
+void __cdecl Svcmd_RemoveIP_f()
 {	UNIMPLEMENTED();
 }
 
@@ -10,11 +10,11 @@ void __cdecl Svcmd_AddIP_f(void)
 {	UNIMPLEMENTED();
 }
 
-void __cdecl G_ProcessIPBans(void)
+void __cdecl G_ProcessIPBans()
 {	UNIMPLEMENTED();
 }
 
-int __cdecl ConsoleCommand(void)
+int __cdecl ConsoleCommand()
 {	UNIMPLEMENTED();
 }
 

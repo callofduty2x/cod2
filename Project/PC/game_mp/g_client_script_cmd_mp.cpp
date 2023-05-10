@@ -1,80 +1,80 @@
-void (__cdecl*__cdecl Player_GetMethod(char const * *))(struct scr_entref_t)
+void (__cdecl*__cdecl Player_GetMethod pName))(struct scr_entref_t)
 {	UNIMPLEMENTED();
 }
 
-void __cdecl BodyEnd(struct gentity_s *)
+void __cdecl BodyEnd(struct gentity_s * ent)
 {	UNIMPLEMENTED();
 }
 
-void __cdecl PlayerCmd_pingPlayer(struct scr_entref_t)
+void __cdecl PlayerCmd_pingPlayer(struct scr_entref_t entref)
 {	UNIMPLEMENTED();
 }
 
-void __cdecl PlayerCmd_takeAllWeapons(struct scr_entref_t)
+void __cdecl PlayerCmd_takeAllWeapons(struct scr_entref_t entref)
 {	UNIMPLEMENTED();
 }
 
-void __cdecl PlayerCmd_isOnGround(struct scr_entref_t)
+void __cdecl PlayerCmd_isOnGround(struct scr_entref_t entref)
 {	UNIMPLEMENTED();
 }
 
-void __cdecl PlayerCmd_playerADS(struct scr_entref_t)
+void __cdecl PlayerCmd_playerADS(struct scr_entref_t entref)
 {	UNIMPLEMENTED();
 }
 
-void __cdecl PlayerCmd_meleeButtonPressed(struct scr_entref_t)
+void __cdecl PlayerCmd_meleeButtonPressed(struct scr_entref_t entref)
 {	UNIMPLEMENTED();
 }
 
-void __cdecl PlayerCmd_attackButtonPressed(struct scr_entref_t)
+void __cdecl PlayerCmd_attackButtonPressed(struct scr_entref_t entref)
 {	UNIMPLEMENTED();
 }
 
-void __cdecl PlayerCmd_useButtonPressed(struct scr_entref_t)
+void __cdecl PlayerCmd_useButtonPressed(struct scr_entref_t entref)
 {	UNIMPLEMENTED();
 }
 
-void __cdecl PlayerCmd_hasWeapon(struct scr_entref_t)
+void __cdecl PlayerCmd_hasWeapon(struct scr_entref_t entref)
 {	UNIMPLEMENTED();
 }
 
-void __cdecl PlayerCmd_getCurrentOffhand(struct scr_entref_t)
+void __cdecl PlayerCmd_getCurrentOffhand(struct scr_entref_t entref)
 {	UNIMPLEMENTED();
 }
 
-void __cdecl PlayerCmd_getCurrentWeapon(struct scr_entref_t)
+void __cdecl PlayerCmd_getCurrentWeapon(struct scr_entref_t entref)
 {	UNIMPLEMENTED();
 }
 
-void __cdecl PlayerCmd_getFractionMaxAmmo(struct scr_entref_t)
+void __cdecl PlayerCmd_getFractionMaxAmmo(struct scr_entref_t entref)
 {	UNIMPLEMENTED();
 }
 
-void __cdecl PlayerCmd_getFractionStartAmmo(struct scr_entref_t)
+void __cdecl PlayerCmd_getFractionStartAmmo(struct scr_entref_t entref)
 {	UNIMPLEMENTED();
 }
 
-void __cdecl PlayerCmd_giveMaxAmmo(struct scr_entref_t)
+void __cdecl PlayerCmd_giveMaxAmmo(struct scr_entref_t entref)
 {	UNIMPLEMENTED();
 }
 
-void __cdecl PlayerCmd_giveStartAmmo(struct scr_entref_t)
+void __cdecl PlayerCmd_giveStartAmmo(struct scr_entref_t entref)
 {	UNIMPLEMENTED();
 }
 
-void __cdecl PlayerCmd_switchToOffhand(struct scr_entref_t)
+void __cdecl PlayerCmd_switchToOffhand(struct scr_entref_t entref)
 {	UNIMPLEMENTED();
 }
 
-void __cdecl PlayerCmd_switchToWeapon(struct scr_entref_t)
+void __cdecl PlayerCmd_switchToWeapon(struct scr_entref_t entref)
 {	UNIMPLEMENTED();
 }
 
-void __cdecl PlayerCmd_takeWeapon(struct scr_entref_t)
+void __cdecl PlayerCmd_takeWeapon(struct scr_entref_t entref)
 {	UNIMPLEMENTED();
 }
 
-void __cdecl PlayerCmd_giveWeapon(struct scr_entref_t)
+void __cdecl PlayerCmd_giveWeapon(struct scr_entref_t entref)
 {	UNIMPLEMENTED();
 }
 

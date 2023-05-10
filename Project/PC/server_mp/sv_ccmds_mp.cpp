@@ -1,12 +1,12 @@
-void __cdecl SV_RemoveOperatorCommands(void)
+void __cdecl SV_RemoveOperatorCommands()
 {	UNIMPLEMENTED();
 }
 
-void __cdecl SV_GameCompleteStatus_f(void)
+void __cdecl SV_GameCompleteStatus_f()
 {	UNIMPLEMENTED();
 }
 
-void __cdecl SV_Heartbeat_f(void)
+void __cdecl SV_Heartbeat_f()
 {	UNIMPLEMENTED();
 }
 
@@ -14,15 +14,15 @@ void __cdecl SV_RemoveDedicatedCommands(void)
 {	UNIMPLEMENTED();
 }
 
-char const * __cdecl SV_GetMapBaseName(char const *)
+char const * __cdecl SV_GetMapBaseName(char const * mapname)
 {	UNIMPLEMENTED();
 }
 
-void __cdecl SV_AddDedicatedCommands(void)
+void __cdecl SV_AddDedicatedCommands()
 {	UNIMPLEMENTED();
 }
 
-void __cdecl SV_AddOperatorCommands(void)
+void __cdecl SV_AddOperatorCommands()
 {	UNIMPLEMENTED();
 }
 

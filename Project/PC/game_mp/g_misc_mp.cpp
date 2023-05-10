@@ -1,4 +1,4 @@
-void __cdecl G_InitTurrets(void)
+void __cdecl G_InitTurrets()
 {	UNIMPLEMENTED();
 }
 
@@ -6,15 +6,15 @@ void __cdecl SP_info_notnull(struct gentity_s *)
 {	UNIMPLEMENTED();
 }
 
-void __cdecl turret_use(struct gentity_s *,struct gentity_s *,struct gentity_s *)
+void __cdecl turret_use(struct gentity_s * self, struct gentity_s * owner, struct gentity_s * activator)
 {	UNIMPLEMENTED();
 }
 
-int __cdecl G_IsTurretUsable(struct gentity_s *,struct gentity_s *)
+int __cdecl G_IsTurretUsable(struct gentity_s * self, struct gentity_s * owner)
 {	UNIMPLEMENTED();
 }
 
-void __cdecl turret_controller(struct gentity_s *,int * const)
+void __cdecl turret_controller(struct gentity_s * self, int * const partBits)
 {	UNIMPLEMENTED();
 }
 
@@ -22,51 +22,51 @@ void __cdecl use_corona(struct gentity_s *,struct gentity_s *,struct gentity_s *
 {	UNIMPLEMENTED();
 }
 
-void __cdecl TeleportPlayer(struct gentity_s *,float * const,float * const)
+void __cdecl TeleportPlayer(struct gentity_s * player, float * const origin, float * const angles)
 {	UNIMPLEMENTED();
 }
 
-void __cdecl G_ClientStopUsingTurret(struct gentity_s *)
+void __cdecl G_ClientStopUsingTurret(struct gentity_s * self)
 {	UNIMPLEMENTED();
 }
 
-void __cdecl G_FreeTurret(struct gentity_s *)
+void __cdecl G_FreeTurret(struct gentity_s * self)
 {	UNIMPLEMENTED();
 }
 
-void __cdecl SP_corona(struct gentity_s *)
+void __cdecl SP_corona(struct gentity_s * ent)
 {	UNIMPLEMENTED();
 }
 
-void __cdecl SP_misc_model(struct gentity_s *)
+void __cdecl SP_misc_model(struct gentity_s * ent)
 {	UNIMPLEMENTED();
 }
 
-void __cdecl SP_light(struct gentity_s *)
+void __cdecl SP_light(struct gentity_s * self)
 {	UNIMPLEMENTED();
 }
 
-void __cdecl SP_info_null(struct gentity_s *)
+void __cdecl SP_info_null(struct gentity_s * self)
 {	UNIMPLEMENTED();
 }
 
-void __cdecl G_SpawnTurret(struct gentity_s *,char const *)
+void __cdecl G_SpawnTurret(struct gentity_s * self, char const * weaponinfoname)
 {	UNIMPLEMENTED();
 }
 
-void __cdecl SP_turret(struct gentity_s *)
+void __cdecl SP_turret(struct gentity_s * self)
 {	UNIMPLEMENTED();
 }
 
-void __cdecl turret_think(struct gentity_s *)
+void __cdecl turret_think(struct gentity_s * self)
 {	UNIMPLEMENTED();
 }
 
-void __cdecl turret_think_init(struct gentity_s *)
+void __cdecl turret_think_init(struct gentity_s * self)
 {	UNIMPLEMENTED();
 }
 
-void __cdecl turret_think_client(struct gentity_s *)
+void __cdecl turret_think_client(struct gentity_s * self)
 {	UNIMPLEMENTED();
 }
 

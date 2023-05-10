@@ -14,23 +14,23 @@ void __cdecl LL_ADD<struct static_model_tree_list_t>(struct static_model_tree_li
 {	UNIMPLEMENTED();
 }
 
-void __cdecl R_StaticModelCacheStats_f(void)
+void __cdecl R_StaticModelCacheStats_f()
 {	UNIMPLEMENTED();
 }
 
-void __cdecl R_InitStaticModelIndexCache(void)
+void __cdecl R_InitStaticModelIndexCache()
 {	UNIMPLEMENTED();
 }
 
-void __cdecl R_UsedCachedStaticModelSurface(struct GfxStaticModelSurfaceCached *)
+void __cdecl R_UsedCachedStaticModelSurface(struct GfxStaticModelSurfaceCached * surf)
 {	UNIMPLEMENTED();
 }
 
-void __cdecl R_FlushStaticModelCache(void)
+void __cdecl R_FlushStaticModelCache()
 {	UNIMPLEMENTED();
 }
 
-void __cdecl R_StaticModelCacheFlush_f(void)
+void __cdecl R_StaticModelCacheFlush_f()
 {	UNIMPLEMENTED();
 }
 
@@ -38,11 +38,11 @@ struct GfxStaticModelSurfaceCached * __cdecl R_CacheStaticModelSurface(struct Gf
 {	UNIMPLEMENTED();
 }
 
-void __cdecl R_SkinStaticModelCachedCmd(struct SkinStaticModelCachedCmd *,struct SkinBuffers *)
+void __cdecl R_SkinStaticModelCachedCmd(struct SkinStaticModelCachedCmd * skinCmd, struct SkinBuffers * skinBuffers)
 {	UNIMPLEMENTED();
 }
 
-void __cdecl R_InitStaticModelCache(void)
+void __cdecl R_InitStaticModelCache()
 {	UNIMPLEMENTED();
 }
 
@@ -76,6 +76,10 @@ struct GfxStaticModelSurfaceCached * __cdecl SMC_Allocate(struct static_model_ca
 }
 
 void __cdecl R_AllocStaticModelCache(void)
+{	UNIMPLEMENTED();
+}
+
+R_ShutdownStaticModelCache()
 {	UNIMPLEMENTED();
 }
 

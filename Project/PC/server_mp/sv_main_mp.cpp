@@ -6,15 +6,15 @@ char * __cdecl SV_ExpandNewlines(char *)
 {	UNIMPLEMENTED();
 }
 
-void __cdecl SVC_Info(struct netadr_t)
+void __cdecl SVC_Info(struct netadr_t from)
 {	UNIMPLEMENTED();
 }
 
-void __cdecl SV_AddServerCommand(struct client_s *,enum svscmd_type,char const *)
+void __cdecl SV_AddServerCommand(struct client_s * client, enum svscmd_type type, char const * cmd)
 {	UNIMPLEMENTED();
 }
 
-void __cdecl SV_SendServerCommand(struct client_s *,enum svscmd_type,char const *,...)
+void __cdecl SV_SendServerCommand(struct client_s * cl, enum svscmd_type type, char const * fmt, ...)
 {	UNIMPLEMENTED();
 }
 
@@ -22,19 +22,19 @@ int __cdecl SV_CheckPaused(void)
 {	UNIMPLEMENTED();
 }
 
-void __cdecl SVC_GameCompleteStatus(struct netadr_t)
+void __cdecl SVC_GameCompleteStatus(struct netadr_t from)
 {	UNIMPLEMENTED();
 }
 
-void __cdecl SVC_Status(struct netadr_t)
+void __cdecl SVC_Status(struct netadr_t from)
 {	UNIMPLEMENTED();
 }
 
-void __cdecl SV_FreeClientScriptId(struct client_s *)
+void __cdecl SV_FreeClientScriptId(struct client_s * cl)
 {	UNIMPLEMENTED();
 }
 
-void __cdecl SV_VoicePacket(struct netadr_t,struct msg_t *)
+void __cdecl SV_VoicePacket(struct netadr_t from, struct msg_t * msg)
 {	UNIMPLEMENTED();
 }
 
@@ -42,7 +42,7 @@ void __cdecl SV_CheckTimeouts(void)
 {	UNIMPLEMENTED();
 }
 
-void __cdecl SV_BotUserMove(struct client_s *)
+void __cdecl SV_BotUserMove(struct client_s * cl)
 {	UNIMPLEMENTED();
 }
 
@@ -50,19 +50,19 @@ void __cdecl SV_UpdateBots(void)
 {	UNIMPLEMENTED();
 }
 
-void __cdecl SV_RunFrame(void)
+void __cdecl SV_RunFrame()
 {	UNIMPLEMENTED();
 }
 
-void __cdecl SV_Frame(int)
+void __cdecl SV_Frame(int msec)
 {	UNIMPLEMENTED();
 }
 
-void __cdecl SV_ConnectionlessPacket(struct netadr_t,struct msg_t *)
+void __cdecl SV_ConnectionlessPacket(struct netadr_t from, struct msg_t * msg)
 {	UNIMPLEMENTED();
 }
 
-void __cdecl SV_PacketEvent(struct netadr_t,struct msg_t *)
+void __cdecl SV_PacketEvent(struct netadr_t from, struct msg_t * msg)
 {	UNIMPLEMENTED();
 }
 

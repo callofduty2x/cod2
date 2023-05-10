@@ -2,11 +2,11 @@ float __cdecl exp(float)
 {	UNIMPLEMENTED();
 }
 
-void __cdecl RB_GaussianFilterImage(float,enum GfxRenderTargetId)
+void __cdecl RB_GaussianFilterImage(float radius, enum GfxRenderTargetId renderTargetId)
 {	UNIMPLEMENTED();
 }
 
-void __cdecl RB_GlowFilterImage(float * const)
+void __cdecl RB_GlowFilterImage(float * const radius)
 {	UNIMPLEMENTED();
 }
 

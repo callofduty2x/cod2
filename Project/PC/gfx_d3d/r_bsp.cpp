@@ -1,29 +1,29 @@
 float const * const vec3_colorintensity;
-void __cdecl R_ResetSunLightOverride(void)
+void __cdecl R_ResetSunLightOverride()
 {	UNIMPLEMENTED();
 }
 
-void __cdecl R_SetSunLightOverride(float const * const)
+void __cdecl R_SetSunLightOverride(float const * const sunColor)
 {	UNIMPLEMENTED();
 }
 
-void __cdecl R_GetWorldBounds(float * const,float * const)
+void __cdecl R_GetWorldBounds(float * const min, float * const max)
 {	UNIMPLEMENTED();
 }
 
-void __cdecl R_InterpretSunLightParseParams(struct SunLightParseParams *)
+void __cdecl R_InterpretSunLightParseParams(struct SunLightParseParams * sunParse)
 {	UNIMPLEMENTED();
 }
 
-void __cdecl R_UpdateLightsFromDvars(void)
+void __cdecl R_UpdateLightsFromDvars()
 {	UNIMPLEMENTED();
 }
 
-void __cdecl R_ResetSunLightParseParams(void)
+void __cdecl R_ResetSunLightParseParams()
 {	UNIMPLEMENTED();
 }
 
-void __cdecl R_LoadWorld(char const *,int *)
+void __cdecl R_LoadWorld(char const * name, int * checksum)
 {	UNIMPLEMENTED();
 }
 
@@ -41,6 +41,22 @@ void __cdecl R_CopyParseParamsFromDvars(struct SunLightParseParams *)
 }
 
 void __cdecl R_InitDynamicData(void)
+{	UNIMPLEMENTED();
+}
+
+R_ReleaseWorld()
+{	UNIMPLEMENTED();
+}
+
+R_CreateWorldVertexBuffer(GfxWorldVertex* vertices,  int vertexCount)
+{	UNIMPLEMENTED();
+}
+
+R_ReloadWorld()
+{	UNIMPLEMENTED();
+}
+
+R_ShutdownWorld()
 {	UNIMPLEMENTED();
 }
 

@@ -1,12 +1,12 @@
-void __cdecl R_FlushSun(void)
+void __cdecl R_FlushSun()
 {	UNIMPLEMENTED();
 }
 
-int __cdecl R_GetSundvarsSize(void)
+int __cdecl R_GetSundvarsSize()
 {	UNIMPLEMENTED();
 }
 
-void __cdecl R_Cmd_SaveSun(void)
+void __cdecl R_Cmd_SaveSun()
 {	UNIMPLEMENTED();
 }
 
@@ -14,7 +14,7 @@ void __cdecl R_SetSunFromDvars(struct sunflare_t *)
 {	UNIMPLEMENTED();
 }
 
-void __cdecl R_RegisterSunDvars(void)
+void __cdecl R_RegisterSunDvars()
 {	UNIMPLEMENTED();
 }
 
@@ -42,6 +42,10 @@ int marker_r_sky;
 struct dvar_s const * const r_sunsprite_size;
 struct dvar_s const * const r_sunglare_max_lighten;
 void __cdecl R_SaveSunFromDvars(char const *)
+{	UNIMPLEMENTED();
+}
+
+R_Cmd_LoadSun()
 {	UNIMPLEMENTED();
 }
 

@@ -22,15 +22,15 @@ float __cdecl IntAsFloat(int)
 {	UNIMPLEMENTED();
 }
 
-int __cdecl Info_Validate(char const *)
+int __cdecl Info_Validate(char const * s)
 {	UNIMPLEMENTED();
 }
 
-void __cdecl Info_RemoveKey(char *,char const *)
+void __cdecl Info_RemoveKey(char * s, char const * key)
 {	UNIMPLEMENTED();
 }
 
-void __cdecl Info_NextPair(char const * *,char *,char *)
+void __cdecl Info_NextPair(char const * * head, char * key, char * value)
 {	UNIMPLEMENTED();
 }
 
@@ -38,27 +38,27 @@ void __cdecl ConvertWCharToChar(unsigned short const *,char *,int)
 {	UNIMPLEMENTED();
 }
 
-int __cdecl Com_sprintf(char *,int,char const *,...)
+int __cdecl Com_sprintf(char * dest, int size, char const * fmt, ...)
 {	UNIMPLEMENTED();
 }
 
-char __cdecl I_CleanChar(char)
+char __cdecl I_CleanChar(char character)
 {	UNIMPLEMENTED();
 }
 
-char * __cdecl I_CleanStr(char *)
+char * __cdecl I_CleanStr(char * string)
 {	UNIMPLEMENTED();
 }
 
-int __cdecl I_DrawStrlen(char const *)
+int __cdecl I_DrawStrlen(char const * str)
 {	UNIMPLEMENTED();
 }
 
-void __cdecl I_strncpyz(char *,char const *,int)
+void __cdecl I_strncpyz(char * dest, char const * src, int destsize)
 {	UNIMPLEMENTED();
 }
 
-bool __cdecl I_isdigit(int)
+bool __cdecl I_isdigit(int c)
 {	UNIMPLEMENTED();
 }
 
@@ -66,11 +66,11 @@ bool __cdecl I_isalpha(int)
 {	UNIMPLEMENTED();
 }
 
-bool __cdecl I_isupper(int)
+bool __cdecl I_isupper(int c)
 {	UNIMPLEMENTED();
 }
 
-bool __cdecl I_islower(int)
+bool __cdecl I_islower(int c)
 {	UNIMPLEMENTED();
 }
 
@@ -78,35 +78,35 @@ bool __cdecl I_isprint(int)
 {	UNIMPLEMENTED();
 }
 
-int __cdecl FloatWriteSwap(float)
+int __cdecl FloatWriteSwap(float f)
 {	UNIMPLEMENTED();
 }
 
-float __cdecl FloatReadSwap(int)
+float __cdecl FloatReadSwap(int n)
 {	UNIMPLEMENTED();
 }
 
-unsigned __int64 __cdecl Long64NoSwap(unsigned __int64)
+unsigned __int64 __cdecl Long64NoSwap(unsigned __int64 ll)
 {	UNIMPLEMENTED();
 }
 
-unsigned __int64 __cdecl Long64Swap(unsigned __int64)
+unsigned __int64 __cdecl Long64Swap(unsigned __int64 l)
 {	UNIMPLEMENTED();
 }
 
-int __cdecl LongNoSwap(int)
+int __cdecl LongNoSwap(int l)
 {	UNIMPLEMENTED();
 }
 
-int __cdecl LongSwap(int)
+int __cdecl LongSwap(int l)
 {	UNIMPLEMENTED();
 }
 
-short __cdecl ShortNoSwap(short)
+short __cdecl ShortNoSwap(short l)
 {	UNIMPLEMENTED();
 }
 
-short __cdecl ShortSwap(short)
+short __cdecl ShortSwap(short l)
 {	UNIMPLEMENTED();
 }
 
@@ -122,43 +122,43 @@ unsigned __int64 __cdecl LittleLong64(unsigned __int64)
 {	UNIMPLEMENTED();
 }
 
-void __cdecl Com_DefaultExtension(char *,int,char const *)
+void __cdecl Com_DefaultExtension(char * path, int maxSize, char const * extension)
 {	UNIMPLEMENTED();
 }
 
-char const * __cdecl Com_GetExtensionSubString(char const *)
+char const * __cdecl Com_GetExtensionSubString(char const * filename)
 {	UNIMPLEMENTED();
 }
 
-char * __cdecl Com_SkipPath(char *)
+char * __cdecl Com_SkipPath(char * pathname)
 {	UNIMPLEMENTED();
 }
 
-unsigned char __cdecl ColorIndex(unsigned char)
+unsigned char __cdecl ColorIndex(unsigned char c)
 {	UNIMPLEMENTED();
 }
 
-float __cdecl UnGetLeanFraction(float)
+float __cdecl UnGetLeanFraction(float fFrac)
 {	UNIMPLEMENTED();
 }
 
-void __cdecl Info_SetValueForKey(char *,char const *,char const *)
+void __cdecl Info_SetValueForKey(char * s, char const * key, char const * value)
 {	UNIMPLEMENTED();
 }
 
-void __cdecl Com_InitThreadData(int)
+void __cdecl Com_InitThreadData(int threadContext)
 {	UNIMPLEMENTED();
 }
 
-void __cdecl I_strncat(char *,int,char const *)
+void __cdecl I_strncat(char * dest, int size, char const * src)
 {	UNIMPLEMENTED();
 }
 
-char * __cdecl I_strupr(char *)
+char * __cdecl I_strupr(char * s)
 {	UNIMPLEMENTED();
 }
 
-char * __cdecl I_strlwr(char *)
+char * __cdecl I_strlwr(char * s)
 {	UNIMPLEMENTED();
 }
 
@@ -166,11 +166,11 @@ bool __cdecl I_isalnum(int)
 {	UNIMPLEMENTED();
 }
 
-int __cdecl FloatWriteNoSwap(float)
+int __cdecl FloatWriteNoSwap(float f)
 {	UNIMPLEMENTED();
 }
 
-float __cdecl FloatReadNoSwap(int)
+float __cdecl FloatReadNoSwap(int n)
 {	UNIMPLEMENTED();
 }
 
@@ -178,11 +178,11 @@ void __cdecl Com_StripFilename(char const *,char *)
 {	UNIMPLEMENTED();
 }
 
-void __cdecl Com_StripExtension(char const *,char *)
+void __cdecl Com_StripExtension(char const * in, char * out)
 {	UNIMPLEMENTED();
 }
 
-bool __cdecl I_isforfilename(int)
+bool __cdecl I_isforfilename(int c)
 {	UNIMPLEMENTED();
 }
 
@@ -190,11 +190,11 @@ float __cdecl GetLeanFraction(float)
 {	UNIMPLEMENTED();
 }
 
-char * __cdecl Info_ValueForKey(char const *,char const *)
+char * __cdecl Info_ValueForKey(char const * s, char const * key)
 {	UNIMPLEMENTED();
 }
 
-void __cdecl AddLeanToPosition(float * const,float,float,float,float)
+void __cdecl AddLeanToPosition(float * const position, float fViewYaw, float fLeanFrac, float fViewRoll, float fLeanDist)
 {	UNIMPLEMENTED();
 }
 
@@ -202,7 +202,7 @@ int __cdecl ParseConfigStringToStruct(unsigned char *,struct cspField_t const *,
 {	UNIMPLEMENTED();
 }
 
-void __cdecl Info_RemoveKey_Big(char *,char const *)
+void __cdecl Info_RemoveKey_Big(char * s, char const * key)
 {	UNIMPLEMENTED();
 }
 
@@ -210,7 +210,7 @@ void __cdecl Com_AssembleFilepath(char const *,char const *,char const *,char *,
 {	UNIMPLEMENTED();
 }
 
-void __cdecl Info_SetValueForKey_Big(char *,char const *,char const *)
+void __cdecl Info_SetValueForKey_Big(char * s, char const * key, char const * value)
 {	UNIMPLEMENTED();
 }
 

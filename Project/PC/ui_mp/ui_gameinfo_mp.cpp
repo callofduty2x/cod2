@@ -1,8 +1,8 @@
-int __cdecl UI_ParseInfos(char const *,int,char * * const)
+int __cdecl UI_ParseInfos(char const * buf, int max, char * * const infos)
 {	UNIMPLEMENTED();
 }
 
-void __cdecl UI_LoadArenas(void)
+void __cdecl UI_LoadArenas()
 {	UNIMPLEMENTED();
 }
 

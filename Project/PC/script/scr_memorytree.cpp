@@ -1,44 +1,44 @@
-unsigned int __cdecl Scr_GetStringUsage(void)
+unsigned int __cdecl Scr_GetStringUsage()
 {	UNIMPLEMENTED();
 }
 
-void __cdecl MT_DumpTree(void)
+void __cdecl MT_DumpTree()
 {	UNIMPLEMENTED();
 }
 
-void __cdecl MT_Init(void)
+void __cdecl MT_Init()
 {	UNIMPLEMENTED();
 }
 
-void __cdecl MT_FinishForceAlloc(unsigned char *)
+void __cdecl MT_FinishForceAlloc(unsigned char * allocBits)
 {	UNIMPLEMENTED();
 }
 
-int __cdecl MT_Realloc(int,int)
+int __cdecl MT_Realloc(int oldNumBytes, int newNumbytes)
 {	UNIMPLEMENTED();
 }
 
-void __cdecl MT_ForceAllocIndex(unsigned char *,unsigned int,int)
+void __cdecl MT_ForceAllocIndex(unsigned char * allocBits, unsigned int nodeNum, int numBytes)
 {	UNIMPLEMENTED();
 }
 
-void __cdecl MT_FreeIndex(unsigned int,int)
+void __cdecl MT_FreeIndex(unsigned int nodeNum, int numBytes)
 {	UNIMPLEMENTED();
 }
 
-unsigned short __cdecl MT_AllocIndex(int,int)
+unsigned short __cdecl MT_AllocIndex(int numBytes, int type)
 {	UNIMPLEMENTED();
 }
 
-void __cdecl MT_Free(void *,int)
+void __cdecl MT_Free(void * p, int numBytes)
 {	UNIMPLEMENTED();
 }
 
-void * __cdecl MT_Alloc(int,int)
+void * __cdecl MT_Alloc(int numBytes, int type)
 {	UNIMPLEMENTED();
 }
 
-unsigned char * __cdecl MT_InitForceAlloc(void)
+unsigned char * __cdecl MT_InitForceAlloc()
 {	UNIMPLEMENTED();
 }
 

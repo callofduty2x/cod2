@@ -1,8 +1,8 @@
-enum hitLocation_t __cdecl G_GetHitLocationIndexFromString(unsigned short)
+enum hitLocation_t __cdecl G_GetHitLocationIndexFromString(unsigned short sString)
 {	UNIMPLEMENTED();
 }
 
-unsigned short __cdecl G_GetHitLocationString(enum hitLocation_t)
+unsigned short __cdecl G_GetHitLocationString(enum hitLocation_t hitLoc)
 {	UNIMPLEMENTED();
 }
 
@@ -18,7 +18,7 @@ void __cdecl LookAtKiller(struct gentity_s *,struct gentity_s *,struct gentity_s
 {	UNIMPLEMENTED();
 }
 
-void __cdecl G_ParseHitLocDmgTable(void)
+void __cdecl G_ParseHitLocDmgTable()
 {	UNIMPLEMENTED();
 }
 
@@ -30,19 +30,19 @@ void __cdecl G_DamageClient(struct gentity_s *,struct gentity_s *,struct gentity
 {	UNIMPLEMENTED();
 }
 
-void __cdecl player_die(struct gentity_s *,struct gentity_s *,struct gentity_s *,int,int,int,float const * const,enum hitLocation_t,int)
+void __cdecl player_die(struct gentity_s * self, struct gentity_s * inflictor, struct gentity_s * attacker, int damage, int meansOfDeath, int iWeapon, float const * const vDir, enum hitLocation_t hitLoc, int psTimeOffset)
 {	UNIMPLEMENTED();
 }
 
-float __cdecl CanDamage(struct gentity_s *,float const * const)
+float __cdecl CanDamage(struct gentity_s * targ, float const * const origin)
 {	UNIMPLEMENTED();
 }
 
-void __cdecl G_Damage(struct gentity_s *,struct gentity_s *,struct gentity_s *,float const * const,float const * const,int,int,int,enum hitLocation_t,int)
+void __cdecl G_Damage(struct gentity_s * targ, struct gentity_s * inflictor, struct gentity_s * attacker, float const * const dir, float const * const point, int damage, int dflags, int mod, enum hitLocation_t hitLoc, int timeOffset)
 {	UNIMPLEMENTED();
 }
 
-int __cdecl G_RadiusDamage(float const * const,struct gentity_s *,struct gentity_s *,float,float,float,struct gentity_s *,int)
+int __cdecl G_RadiusDamage(float const * const origin, struct gentity_s * inflictor, struct gentity_s * attacker, float fInnerDamage, float fOuterDamage, float radius, struct gentity_s * ignore, int mod)
 {	UNIMPLEMENTED();
 }
 

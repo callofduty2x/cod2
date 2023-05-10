@@ -6,31 +6,31 @@ void __cdecl SV_PrintServerCommandsForClient(struct client_s *)
 {	UNIMPLEMENTED();
 }
 
-void __cdecl SV_UpdateServerCommandsToClient(struct client_s *,struct msg_t *)
+void __cdecl SV_UpdateServerCommandsToClient(struct client_s * client, struct msg_t * msg)
 {	UNIMPLEMENTED();
 }
 
-void __cdecl SV_ArchiveSnapshot(void)
+void __cdecl SV_ArchiveSnapshot()
 {	UNIMPLEMENTED();
 }
 
-int __cdecl SV_GetArchivedClientInfo(int,int *,struct playerState_s *,struct clientState_s *)
+int __cdecl SV_GetArchivedClientInfo(int clientNum, int * pArchiveTime, struct playerState_s * ps, struct clientState_s * cs)
 {	UNIMPLEMENTED();
 }
 
-bool __cdecl SV_GetClientPositionAtTime(int,int,float * const)
+bool __cdecl SV_GetClientPositionAtTime(int client, int gametime, float * const pos)
 {	UNIMPLEMENTED();
 }
 
-void __cdecl SV_SendMessageToClient(struct msg_t *,struct client_s *)
+void __cdecl SV_SendMessageToClient(struct msg_t * msg, struct client_s * client)
 {	UNIMPLEMENTED();
 }
 
-void __cdecl SV_SendClientSnapshot(struct client_s *)
+void __cdecl SV_SendClientSnapshot(struct client_s * client)
 {	UNIMPLEMENTED();
 }
 
-void __cdecl SV_SendClientMessages(void)
+void __cdecl SV_SendClientMessages()
 {	UNIMPLEMENTED();
 }
 

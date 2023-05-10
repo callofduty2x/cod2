@@ -1,4 +1,4 @@
-void __cdecl Huff_Init(struct huffman_t *)
+void __cdecl Huff_Init(struct huffman_t * huff)
 {	UNIMPLEMENTED();
 }
 
@@ -14,7 +14,7 @@ void __cdecl huffman_send(struct nodetype *,struct nodetype *,unsigned char *)
 {	UNIMPLEMENTED();
 }
 
-void __cdecl Huff_offsetReceive(struct nodetype *,int *,unsigned char *,int *)
+void __cdecl Huff_offsetReceive(struct nodetype * node, int * ch, unsigned char * fin, int * offset)
 {	UNIMPLEMENTED();
 }
 
@@ -22,7 +22,7 @@ int __cdecl Huff_Receive(struct nodetype *,int *,unsigned char *)
 {	UNIMPLEMENTED();
 }
 
-void __cdecl Huff_offsetTransmit(struct huff_t *,int,unsigned char *,int *)
+void __cdecl Huff_offsetTransmit(struct huff_t * huff, int ch, unsigned char * fout, int * offset)
 {	UNIMPLEMENTED();
 }
 
@@ -30,7 +30,7 @@ void __cdecl Huff_transmit(struct huff_t *,int,unsigned char *)
 {	UNIMPLEMENTED();
 }
 
-void __cdecl Huff_addRef(struct huff_t *,unsigned char)
+void __cdecl Huff_addRef(struct huff_t * huff, unsigned char ch)
 {	UNIMPLEMENTED();
 }
 

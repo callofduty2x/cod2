@@ -18,11 +18,11 @@ void __cdecl Vec3Negate(float const * const,float * const)
 {	UNIMPLEMENTED();
 }
 
-public: int __cdecl FxHelper::GetSeed(void)
+public: int __cdecl FxHelper::GetSeed()
 {	UNIMPLEMENTED();
 }
 
-public: void __cdecl FxHelper::CameraShake(float * const,float,int,int)
+public: void __cdecl FxHelper::CameraShake(float * const origin, float intensity, int radius, int time_)
 {	UNIMPLEMENTED();
 }
 
@@ -30,71 +30,71 @@ public: void __cdecl FxHelper::AddPolyToScene(struct Material *,int,struct GfxWo
 {	UNIMPLEMENTED();
 }
 
-public: void __cdecl FxHelper::AddLightToScene(float * const,float,float,float,float)
+public: void __cdecl FxHelper::AddLightToScene(float * const org, float radius, float red, float green, float blue)
 {	UNIMPLEMENTED();
 }
 
-public: bool __cdecl FxHelper::IsMaterialRefractive(struct Material *)
+public: bool __cdecl FxHelper::IsMaterialRefractive(struct Material * handle)
 {	UNIMPLEMENTED();
 }
 
-public: int __cdecl FxHelper::GetMaterialSubimageCount(struct Material *)
+public: int __cdecl FxHelper::GetMaterialSubimageCount(struct Material * handle)
 {	UNIMPLEMENTED();
 }
 
-public: char const * __cdecl FxHelper::GetMaterialName(struct Material *)
+public: char const * __cdecl FxHelper::GetMaterialName(struct Material * handle)
 {	UNIMPLEMENTED();
 }
 
-public: void __cdecl FxHelper::SetIgnorePrecacheErrors(bool)
+public: void __cdecl FxHelper::SetIgnorePrecacheErrors(bool ignore)
 {	UNIMPLEMENTED();
 }
 
-public: void __cdecl FxHelper::AdjustTime(int)
+public: void __cdecl FxHelper::AdjustTime(int intime)
 {	UNIMPLEMENTED();
 }
 
-public: void __cdecl FxHelper::Init(void)
+public: void __cdecl FxHelper::Init()
 {	UNIMPLEMENTED();
 }
 
-public: __cdecl FxHelper::FxHelper(void)
+public: __cdecl FxHelper::FxHelper()
 {	UNIMPLEMENTED();
 }
 
-public: bool __cdecl FxHelper::CullCylinder(float const * const,float const * const,float,float,int)
+public: bool __cdecl FxHelper::CullCylinder(float const * const worldPos0, float const * const worldPos1, float radius0, float radius1, int planeCount)
 {	UNIMPLEMENTED();
 }
 
-public: bool __cdecl FxHelper::CullSpherePreviousFrame(float const * const,float)
+public: bool __cdecl FxHelper::CullSpherePreviousFrame(float const * const worldPos, float radius)
 {	UNIMPLEMENTED();
 }
 
-public: bool __cdecl FxHelper::CullSphere(float const * const,float,int)
+public: bool __cdecl FxHelper::CullSphere(float const * const worldPos, float radius, int planeCount)
 {	UNIMPLEMENTED();
 }
 
-public: void __cdecl FxHelper::CalcFrustumPlanes(struct refdef_s *,float)
+public: void __cdecl FxHelper::CalcFrustumPlanes(struct refdef_s * refdef, float zfar)
 {	UNIMPLEMENTED();
 }
 
-public: void __cdecl FxHelper::AdjustCamera(struct refdef_s *,float)
+public: void __cdecl FxHelper::AdjustCamera(struct refdef_s * refdef, float zfar)
 {	UNIMPLEMENTED();
 }
 
-public: void __cdecl FxHelper::Trace(struct trace_t *,float * const,float const * const,float const * const,float * const,int,int)
+public: void __cdecl FxHelper::Trace(struct trace_t * tr, float * const start, float const * const min, float const * const max, float * const end, int skipEntNum, int flags)
 {	UNIMPLEMENTED();
 }
 
-public: void __cdecl FxHelper::Archive(class FxArchive &)
+public: void __cdecl FxHelper::Archive(class FxArchive & arch)
 {	UNIMPLEMENTED();
 }
 
-public: void __cdecl FxHelper::WarpTime(int)
+public: void __cdecl FxHelper::WarpTime(int intime)
 {	UNIMPLEMENTED();
 }
 
-public: void __cdecl FxHelper::AddFxToScene(struct GfxEntity *,struct XModel const *)
+public: void __cdecl FxHelper::AddFxToScene(struct GfxEntity * ent, struct XModel const * model)
 {	UNIMPLEMENTED();
 }
 

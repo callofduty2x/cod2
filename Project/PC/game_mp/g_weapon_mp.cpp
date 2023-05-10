@@ -1,4 +1,4 @@
-int __cdecl LogAccuracyHit(struct gentity_s *,struct gentity_s *)
+int __cdecl LogAccuracyHit(struct gentity_s * target, struct gentity_s * attacker)
 {	UNIMPLEMENTED();
 }
 
@@ -6,23 +6,23 @@ int __cdecl Bullet_GetDamage(struct weaponParms const *,float)
 {	UNIMPLEMENTED();
 }
 
-void __cdecl SnapVectorTowards(float * const,float * const)
+void __cdecl SnapVectorTowards(float * const v, float * const to)
 {	UNIMPLEMENTED();
 }
 
-void __cdecl Bullet_Endpos(float,float * const,struct weaponParms const *,float)
+void __cdecl Bullet_Endpos(float spread, float * const end, struct weaponParms const * wp, float maxRange)
 {	UNIMPLEMENTED();
 }
 
-void __cdecl G_SetEquippedOffHand(int,int)
+void __cdecl G_SetEquippedOffHand(int clientNum, int offHandIndex)
 {	UNIMPLEMENTED();
 }
 
-void __cdecl G_SelectWeaponIndex(int,int)
+void __cdecl G_SelectWeaponIndex(int clientNum, int iWeaponIndex)
 {	UNIMPLEMENTED();
 }
 
-int __cdecl G_GivePlayerWeapon(struct playerState_s *,int)
+int __cdecl G_GivePlayerWeapon(struct playerState_s * pPS, int iWeaponIndex)
 {	UNIMPLEMENTED();
 }
 
@@ -30,35 +30,35 @@ int __cdecl G_GetWeaponIndexForName(char const *)
 {	UNIMPLEMENTED();
 }
 
-void __cdecl G_SetupWeaponDef(void)
+void __cdecl G_SetupWeaponDef()
 {	UNIMPLEMENTED();
 }
 
-void __cdecl Weapon_RocketLauncher_Fire(struct gentity_s *,float,struct weaponParms *)
+void __cdecl Weapon_RocketLauncher_Fire(struct gentity_s * ent, float spread, struct weaponParms * wp)
 {	UNIMPLEMENTED();
 }
 
-struct gentity_s * __cdecl weapon_grenadelauncher_fire(struct gentity_s *,int,struct weaponParms *)
+struct gentity_s * __cdecl weapon_grenadelauncher_fire(struct gentity_s * ent, int grenType, struct weaponParms * wp)
 {	UNIMPLEMENTED();
 }
 
-void __cdecl G_UseOffHand(struct gentity_s *)
+void __cdecl G_UseOffHand(struct gentity_s * ent)
 {	UNIMPLEMENTED();
 }
 
-void __cdecl Weapon_Melee(struct gentity_s *,struct weaponParms *,float,float,float)
+void __cdecl Weapon_Melee(struct gentity_s * ent, struct weaponParms * wp, float range, float width, float height)
 {	UNIMPLEMENTED();
 }
 
-void __cdecl FireWeaponMelee(struct gentity_s *)
+void __cdecl FireWeaponMelee(struct gentity_s * ent)
 {	UNIMPLEMENTED();
 }
 
-void __cdecl Bullet_Fire(struct gentity_s *,float,struct weaponParms *,struct gentity_s *,int)
+void __cdecl Bullet_Fire(struct gentity_s * attacker, float spread, struct weaponParms * wp, struct gentity_s * weaponEnt, int gametime)
 {	UNIMPLEMENTED();
 }
 
-void __cdecl FireWeaponAntiLag(struct gentity_s *,int)
+void __cdecl FireWeaponAntiLag(struct gentity_s * ent, int gametime)
 {	UNIMPLEMENTED();
 }
 

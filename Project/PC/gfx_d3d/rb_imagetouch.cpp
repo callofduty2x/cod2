@@ -1,0 +1,4 @@
+RB_TouchAllImages()
+{	UNIMPLEMENTED();
+}
+

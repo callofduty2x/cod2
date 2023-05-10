@@ -30,15 +30,15 @@ private: void __cdecl FxMemMgr<struct ScheduledEffect>::MakeFirstBlock(struct Fx
 {	UNIMPLEMENTED();
 }
 
-public: float __cdecl FxScheduler::GetEffectLength(struct EffectTemplate *)
+public: float __cdecl FxScheduler::GetEffectLength(struct EffectTemplate * fx)
 {	UNIMPLEMENTED();
 }
 
-public: union TMediaElement __cdecl MediaHandles::GetHandle(void)const 
+public: union TMediaElement __cdecl MediaHandles::GetHandle()const 
 {	UNIMPLEMENTED();
 }
 
-public: struct EffectTemplate * __cdecl MediaHandles::GetEffect(void)const 
+public: struct EffectTemplate * __cdecl MediaHandles::GetEffect()const 
 {	UNIMPLEMENTED();
 }
 
@@ -46,27 +46,27 @@ public: void __cdecl MediaHandles::operator=(class MediaHandles const &)
 {	UNIMPLEMENTED();
 }
 
-public: float __cdecl FxScheduler::GetDecalSize(class PrimitiveTemplate const *)const 
+public: float __cdecl FxScheduler::GetDecalSize(class PrimitiveTemplate const * primTemp)const 
 {	UNIMPLEMENTED();
 }
 
-public: float __cdecl FxScheduler::GetDecalAlpha(class PrimitiveTemplate const *)const 
+public: float __cdecl FxScheduler::GetDecalAlpha(class PrimitiveTemplate const * primTemp)const 
 {	UNIMPLEMENTED();
 }
 
-public: void __cdecl FxScheduler::Clean(bool,struct EffectTemplate *)
+public: void __cdecl FxScheduler::Clean(bool bRemoveTemplates, struct EffectTemplate * fxToPreserve)
 {	UNIMPLEMENTED();
 }
 
-public: void __cdecl FxScheduler::GetDecalColor(class PrimitiveTemplate const *,float * const)const 
+public: void __cdecl FxScheduler::GetDecalColor(class PrimitiveTemplate const * primTemp, float * const rgba)const 
 {	UNIMPLEMENTED();
 }
 
-struct EffectTemplate * __cdecl FX_TryRegisterEffect(char const *)
+struct EffectTemplate * __cdecl FX_TryRegisterEffect(char const * name)
 {	UNIMPLEMENTED();
 }
 
-public: void __cdecl FxScheduler::CreateDecalEffect(class PrimitiveTemplate const *,float * const,float (* const)[3])
+public: void __cdecl FxScheduler::CreateDecalEffect(class PrimitiveTemplate const * primTemp, float * const org, float  ax)[3])
 {	UNIMPLEMENTED();
 }
 
@@ -74,23 +74,23 @@ struct EffectTemplate * __cdecl FX_RegisterEffect(char const *)
 {	UNIMPLEMENTED();
 }
 
-public: void __cdecl ScheduledEffect::Archive(class FxArchive &)
+public: void __cdecl ScheduledEffect::Archive(class FxArchive & arch)
 {	UNIMPLEMENTED();
 }
 
-public: void __cdecl FxScheduler::Archive(class FxArchive &)
+public: void __cdecl FxScheduler::Archive(class FxArchive & arch)
 {	UNIMPLEMENTED();
 }
 
-bool __cdecl FX_GetBoltingFrame(class PrimitiveTemplate const *,struct FxBoltInfo const *,class FxBoltFramePtr *)
+bool __cdecl FX_GetBoltingFrame(class PrimitiveTemplate const * primTemp, struct FxBoltInfo const * bolt, class FxBoltFramePtr * boltFrame)
 {	UNIMPLEMENTED();
 }
 
-public: void __cdecl FxScheduler::CreateEffect(struct EffectTemplate const *,class PrimitiveTemplate const *,struct FxBoltInfo const *,float const * const,float const (* const)[3],int,int)
+public: void __cdecl FxScheduler::CreateEffect(struct EffectTemplate const *, class PrimitiveTemplate const *, struct FxBoltInfo const *, float const * const, float const )[3],int,int)
 {	UNIMPLEMENTED();
 }
 
-public: void __cdecl FxScheduler::PlayEffect(struct EffectTemplate const *,float const * const,float const (* const)[3],struct FxBoltInfo const *)
+public: void __cdecl FxScheduler::PlayEffect(struct EffectTemplate const * fx fx,  float const * const origin origin,  float const  forward)[3],struct FxBoltInfo const *)
 {	UNIMPLEMENTED();
 }
 
@@ -122,6 +122,14 @@ void __cdecl ReportPlayEffectError(void)
 }
 
 void __cdecl FX_AddEffect(struct EffectPrimitive *,float (* const)[3],float const * const,int,int)
+{	UNIMPLEMENTED();
+}
+
+FxScheduler::FxScheduler()
+{	UNIMPLEMENTED();
+}
+
+FX_InitTemplates()
 {	UNIMPLEMENTED();
 }
 

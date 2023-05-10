@@ -30,7 +30,7 @@ void __cdecl R_SetupViewProjectionMatrices(struct GfxViewParms *)
 {	UNIMPLEMENTED();
 }
 
-void __cdecl R_DefaultVertexFrames(int,struct GfxWorldVertex * const)
+void __cdecl R_DefaultVertexFrames(int vertCount, struct GfxWorldVertex * const verts)
 {	UNIMPLEMENTED();
 }
 
@@ -42,7 +42,7 @@ void __cdecl R_GetClearColor(float * const)
 {	UNIMPLEMENTED();
 }
 
-void __cdecl R_AddDrawSurfForSurface(struct GfxSurface *,int)
+void __cdecl R_AddDrawSurfForSurface(struct GfxSurface * surf, int entIndex)
 {	UNIMPLEMENTED();
 }
 
@@ -50,27 +50,27 @@ void __cdecl R_AddDrawSurf(enum surfaceType_t const *,int,struct Material const 
 {	UNIMPLEMENTED();
 }
 
-void __cdecl R_DecomposeSort(unsigned int,int *,struct Material const * *,int *)
+void __cdecl R_DecomposeSort(unsigned int, int *, struct Material const * *, int *)
 {	UNIMPLEMENTED();
 }
 
-void __cdecl R_AddLightToScene(float const * const,float,float,float,float)
+void __cdecl R_AddLightToScene(float const * const org, float radius, float r, float g, float b)
 {	UNIMPLEMENTED();
 }
 
-void __cdecl R_AddPolyToScene(struct Material *,unsigned short,unsigned short,struct GfxWorldVertex const * const)
+void __cdecl R_AddPolyToScene(struct Material * materialHandle, unsigned short lmapIndex, unsigned short vertCount, struct GfxWorldVertex const * const verts)
 {	UNIMPLEMENTED();
 }
 
-int __cdecl R_AddStaticModelToScene(int)
+int __cdecl R_AddStaticModelToScene(int smodelIndex)
 {	UNIMPLEMENTED();
 }
 
-void __cdecl R_AddBModelSurfaces(struct GfxSceneEntity *,int)
+void __cdecl R_AddBModelSurfaces(struct GfxSceneEntity * sceneEnt, int entIndex)
 {	UNIMPLEMENTED();
 }
 
-void __cdecl qsortDrawSurfs(struct GfxDrawSurf *,int)
+void __cdecl qsortDrawSurfs(struct GfxDrawSurf * drawSurfs, int drawSurfCount)
 {	UNIMPLEMENTED();
 }
 
@@ -78,7 +78,7 @@ float __cdecl R_GetDefaultNearClip(void)
 {	UNIMPLEMENTED();
 }
 
-void __cdecl R_AddXModelSurfaces(int)
+void __cdecl R_AddXModelSurfaces(int entIndex)
 {	UNIMPLEMENTED();
 }
 
@@ -86,11 +86,11 @@ void __cdecl R_SortDrawSurfs(struct GfxDrawSurf *,int)
 {	UNIMPLEMENTED();
 }
 
-void __cdecl R_SetLodOrigin(struct refdef_s const *)
+void __cdecl R_SetLodOrigin(struct refdef_s const * refdef)
 {	UNIMPLEMENTED();
 }
 
-void __cdecl R_UpdateGfxEntityBounds(struct GfxEntity *)
+void __cdecl R_UpdateGfxEntityBounds(struct GfxEntity * ent)
 {	UNIMPLEMENTED();
 }
 
@@ -98,11 +98,11 @@ void __cdecl R_SkinGfxEntity(struct GfxEntity *)
 {	UNIMPLEMENTED();
 }
 
-struct GfxEntity * __cdecl R_AddRefEntityToScene(struct GfxEntity const *,union GfxModel,struct centity_s const *)
+struct GfxEntity * __cdecl R_AddRefEntityToScene(struct GfxEntity const * refEnt, union GfxModel sceneModel, struct centity_s const * cent)
 {	UNIMPLEMENTED();
 }
 
-void __cdecl R_ClearScene(void)
+void __cdecl R_ClearScene()
 {	UNIMPLEMENTED();
 }
 
@@ -110,7 +110,7 @@ void __cdecl R_GenerateDrawSurfsForView(struct GfxViewParms const *,int)
 {	UNIMPLEMENTED();
 }
 
-void __cdecl R_RenderScene(struct refdef_s const *)
+void __cdecl R_RenderScene(struct refdef_s const * refdef)
 {	UNIMPLEMENTED();
 }
 

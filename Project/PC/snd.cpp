@@ -30,7 +30,7 @@ void __cdecl MemFile_ReadVec3(struct MemoryFile *,float * const)
 {	UNIMPLEMENTED();
 }
 
-void __cdecl SND_ErrorCleanup(void)
+void __cdecl SND_ErrorCleanup()
 {	UNIMPLEMENTED();
 }
 
@@ -46,7 +46,7 @@ bool __cdecl SND_IsAliasChannel3D(int)
 {	UNIMPLEMENTED();
 }
 
-float __cdecl SND_GetLerpedSlavePercentage(float)
+float __cdecl SND_GetLerpedSlavePercentage(float baseSlavePercentage)
 {	UNIMPLEMENTED();
 }
 
@@ -54,7 +54,7 @@ void __cdecl SND_RestoreListeners(struct snd_listener *)
 {	UNIMPLEMENTED();
 }
 
-void __cdecl SND_SaveListeners(struct snd_listener *)
+void __cdecl SND_SaveListeners(struct snd_listener * listeners)
 {	UNIMPLEMENTED();
 }
 
@@ -62,19 +62,19 @@ bool __cdecl SND_AnyActiveListeners(void)
 {	UNIMPLEMENTED();
 }
 
-void __cdecl SND_DeactivateChannelVolumes(int,int)
+void __cdecl SND_DeactivateChannelVolumes(int priority, int fademsec)
 {	UNIMPLEMENTED();
 }
 
-void __cdecl SND_SetChannelVolumes(int,float const * const,int)
+void __cdecl SND_SetChannelVolumes(int priority, float const * const channelvolume, int fademsec)
 {	UNIMPLEMENTED();
 }
 
-float __cdecl SND_Attenuate(struct SndCurve *,float,float,float)
+float __cdecl SND_Attenuate(struct SndCurve * volumeFalloffCurve, float radius, float mindist, float maxdist)
 {	UNIMPLEMENTED();
 }
 
-int __cdecl SND_GetListenerIndexNearestToOrigin(float const * const)
+int __cdecl SND_GetListenerIndexNearestToOrigin(float const * const origin)
 {	UNIMPLEMENTED();
 }
 
@@ -82,47 +82,47 @@ int __cdecl SND_GetLocalListenerIndex(void)
 {	UNIMPLEMENTED();
 }
 
-void __cdecl SND_SetListener(int,float const * const,float const (* const)[3])
+void __cdecl SND_SetListener(int entnum, float const * const origin, float const  axis)[3])
 {	UNIMPLEMENTED();
 }
 
-void __cdecl SND_DisconnectListener(void)
+void __cdecl SND_DisconnectListener()
 {	UNIMPLEMENTED();
 }
 
-void __cdecl SND_UpdateReverbs(void)
+void __cdecl SND_UpdateReverbs()
 {	UNIMPLEMENTED();
 }
 
-void __cdecl SND_DeactivateEnvironmentEffects(int,int)
+void __cdecl SND_DeactivateEnvironmentEffects(int priority, int fademsec)
 {	UNIMPLEMENTED();
 }
 
-bool __cdecl SND_UpdateBackgroundVolume(int,int)
+bool __cdecl SND_UpdateBackgroundVolume(int track, int frametime)
 {	UNIMPLEMENTED();
 }
 
-void __cdecl SND_UpdateLoopingSounds(void)
+void __cdecl SND_UpdateLoopingSounds()
 {	UNIMPLEMENTED();
 }
 
-int __cdecl SND_FindFree3DChannel(int,int)
+int __cdecl SND_FindFree3DChannel(int entnum, int entchannel)
 {	UNIMPLEMENTED();
 }
 
-int __cdecl SND_FindFree2DChannel(int,int)
+int __cdecl SND_FindFree2DChannel(int entnum, int entchannel)
 {	UNIMPLEMENTED();
 }
 
-void __cdecl SND_StopSounds(enum snd_stopsounds_arg_t)
+void __cdecl SND_StopSounds(enum snd_stopsounds_arg_t which)
 {	UNIMPLEMENTED();
 }
 
-void __cdecl SND_FadeAllSounds(float,int)
+void __cdecl SND_FadeAllSounds(float volume, int fadetime)
 {	UNIMPLEMENTED();
 }
 
-void __cdecl SND_StopMusic(int)
+void __cdecl SND_StopMusic(int fadetime)
 {	UNIMPLEMENTED();
 }
 
@@ -130,35 +130,35 @@ void __cdecl SND_RestoreEventually(void const *,int)
 {	UNIMPLEMENTED();
 }
 
-void __cdecl SND_ShutdownChannels(void)
+void __cdecl SND_ShutdownChannels()
 {	UNIMPLEMENTED();
 }
 
-void __cdecl SND_SetChannelInfo(int,int,struct snd_alias_t const *,struct snd_alias_t const *,float,float const * const,float,float,int,int,int,int,int,bool,enum snd_alias_system_t)
+void __cdecl SND_SetChannelInfo(int index, int entnum, struct snd_alias_t const * pAlias0, struct snd_alias_t const * pAlias1, float lerp, float const * const origin, float volume, float pitch, int srcChannelCount, int baserate, int total_msec, int start_msec, int startDelay, bool master, enum snd_alias_system_t system)
 {	UNIMPLEMENTED();
 }
 
-void __cdecl SND_GetCurrent3DPosition(int,float const * const,float * const)
+void __cdecl SND_GetCurrent3DPosition(int entnum, float const * const offset, float * const pos_out)
 {	UNIMPLEMENTED();
 }
 
-int __cdecl SND_GetSoundOverlay(enum snd_overlay_type_t,struct snd_overlay_info_t * const,int,int *)
+int __cdecl SND_GetSoundOverlay(enum snd_overlay_type_t type, struct snd_overlay_info_t * const info, int maxcount, int * cpu)
 {	UNIMPLEMENTED();
 }
 
-int __cdecl SND_PlayLocalSoundAliasByName(char const *,enum snd_alias_system_t)
+int __cdecl SND_PlayLocalSoundAliasByName(char const * aliasname, enum snd_alias_system_t system)
 {	UNIMPLEMENTED();
 }
 
-int __cdecl SND_PlayLocalSoundAlias(struct snd_alias_list_t *,enum snd_alias_system_t)
+int __cdecl SND_PlayLocalSoundAlias(struct snd_alias_list_t * aliasList, enum snd_alias_system_t system)
 {	UNIMPLEMENTED();
 }
 
-int __cdecl SND_PlaySoundAliasAsMaster(struct snd_alias_t const *,int,float const * const,int,enum snd_alias_system_t)
+int __cdecl SND_PlaySoundAliasAsMaster(struct snd_alias_t const * pAlias, int entnum, float const * const org, int timeshift, enum snd_alias_system_t system)
 {	UNIMPLEMENTED();
 }
 
-int __cdecl SND_PlaySoundAlias(struct snd_alias_t const *,int,float const * const,int,enum snd_alias_system_t)
+int __cdecl SND_PlaySoundAlias(struct snd_alias_t const * pAlias, int entnum, float const * const org, int timeshift, enum snd_alias_system_t system)
 {	UNIMPLEMENTED();
 }
 
@@ -166,27 +166,27 @@ void * __cdecl DB_LoadSounds(void *)
 {	UNIMPLEMENTED();
 }
 
-void __cdecl SND_PlayAmbientAlias(struct snd_alias_t const *,int,enum snd_alias_system_t)
+void __cdecl SND_PlayAmbientAlias(struct snd_alias_t const * pAlias, int fadetime, enum snd_alias_system_t system)
 {	UNIMPLEMENTED();
 }
 
-void __cdecl SND_PlayMusicAlias(struct snd_alias_t const *,enum snd_alias_system_t)
+void __cdecl SND_PlayMusicAlias(struct snd_alias_t const * pAlias, enum snd_alias_system_t system)
 {	UNIMPLEMENTED();
 }
 
-int __cdecl SND_PlayBlendedSoundAliases(struct snd_alias_t const *,struct snd_alias_t const *,float,int,float const * const,int,enum snd_alias_system_t)
+int __cdecl SND_PlayBlendedSoundAliases(struct snd_alias_t const *, struct snd_alias_t const *, float, int, float const * const, int, enum snd_alias_system_t)
 {	UNIMPLEMENTED();
 }
 
-void __cdecl SND_Save(struct MemoryFile *)
+void __cdecl SND_Save(struct MemoryFile * memFile)
 {	UNIMPLEMENTED();
 }
 
-void __cdecl SND_Restore(struct MemoryFile *)
+void __cdecl SND_Restore(struct MemoryFile * memFile)
 {	UNIMPLEMENTED();
 }
 
-void __cdecl SND_Shutdown(void)
+void __cdecl SND_Shutdown()
 {	UNIMPLEMENTED();
 }
 
@@ -198,23 +198,23 @@ bool __cdecl SND_ValidateEnvEffectsPriorityValue(char const *,int *)
 {	UNIMPLEMENTED();
 }
 
-void __cdecl SND_Update(void)
+void __cdecl SND_Update()
 {	UNIMPLEMENTED();
 }
 
-void __cdecl SND_SetEnvironmentEffects(int,char const *,float,float,int)
+void __cdecl SND_SetEnvironmentEffects(int priority, char const * roomstring, float drylevel, float wetlevel, int fademsec)
 {	UNIMPLEMENTED();
 }
 
-void __cdecl SND_DeactivateEnvironmentEffects_f(void)
+void __cdecl SND_DeactivateEnvironmentEffects_f()
 {	UNIMPLEMENTED();
 }
 
-void __cdecl SND_SetEnvironmentEffects_f(void)
+void __cdecl SND_SetEnvironmentEffects_f()
 {	UNIMPLEMENTED();
 }
 
-void __cdecl SND_Init(void)
+void __cdecl SND_Init()
 {	UNIMPLEMENTED();
 }
 

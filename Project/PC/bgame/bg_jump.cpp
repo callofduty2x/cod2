@@ -2,39 +2,39 @@ void __cdecl Vec2Scale(float const * const,float,float * const)
 {	UNIMPLEMENTED();
 }
 
-void __cdecl Jump_ActivateSlowdown(struct playerState_s *)
+void __cdecl Jump_ActivateSlowdown(struct playerState_s * ps)
 {	UNIMPLEMENTED();
 }
 
-bool __cdecl Jump_IsPlayerAboveMax(struct playerState_s *)
+bool __cdecl Jump_IsPlayerAboveMax(struct playerState_s * ps)
 {	UNIMPLEMENTED();
 }
 
-bool __cdecl Jump_GetStepHeight(struct playerState_s *,float const * const,float *)
+bool __cdecl Jump_GetStepHeight(struct playerState_s *, float const * const, float *)
 {	UNIMPLEMENTED();
 }
 
-void __cdecl Jump_ClearState(struct playerState_s *)
+void __cdecl Jump_ClearState(struct playerState_s * ps)
 {	UNIMPLEMENTED();
 }
 
-void __cdecl Jump_ClampVelocity(struct playerState_s *,float const * const)
+void __cdecl Jump_ClampVelocity(struct playerState_s * ps, float const * const origin)
 {	UNIMPLEMENTED();
 }
 
-float __cdecl Jump_ReduceFriction(struct playerState_s *)
+float __cdecl Jump_ReduceFriction(struct playerState_s * ps)
 {	UNIMPLEMENTED();
 }
 
-void __cdecl Jump_ApplySlowdown(struct playerState_s *)
+void __cdecl Jump_ApplySlowdown(struct playerState_s * ps)
 {	UNIMPLEMENTED();
 }
 
-bool __cdecl Jump_Check(struct pmove_t *,struct pml_t *)
+bool __cdecl Jump_Check(struct pmove_t * pm, struct pml_t * pml)
 {	UNIMPLEMENTED();
 }
 
-void __cdecl Jump_RegisterDvars(void)
+void __cdecl Jump_RegisterDvars()
 {	UNIMPLEMENTED();
 }
 

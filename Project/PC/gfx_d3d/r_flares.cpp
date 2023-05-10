@@ -1,4 +1,4 @@
-void __cdecl R_ClearFlares(void)
+void __cdecl R_ClearFlares()
 {	UNIMPLEMENTED();
 }
 

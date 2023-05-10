@@ -1,20 +1,20 @@
-void __cdecl CG_ScoresDown_f(void)
+void __cdecl CG_ScoresDown_f()
 {	UNIMPLEMENTED();
 }
 
-void __cdecl CG_ScoresUp_f(void)
+void __cdecl CG_ScoresUp_f()
 {	UNIMPLEMENTED();
 }
 
-void __cdecl CG_TargetCommand_f(void)
+void __cdecl CG_TargetCommand_f()
 {	UNIMPLEMENTED();
 }
 
-int __cdecl CG_ConsoleCommand(void)
+int __cdecl CG_ConsoleCommand()
 {	UNIMPLEMENTED();
 }
 
-void __cdecl CG_InitConsoleCommands(void)
+void __cdecl CG_InitConsoleCommands()
 {	UNIMPLEMENTED();
 }
 

@@ -6,7 +6,7 @@ void __cdecl Vec3Mul(float const * const,float const * const,float * const)
 {	UNIMPLEMENTED();
 }
 
-void __cdecl R_ScreenshotCommand(enum GfxScreenshotType)
+void __cdecl R_ScreenshotCommand(enum GfxScreenshotType type)
 {	UNIMPLEMENTED();
 }
 
@@ -14,23 +14,23 @@ void __cdecl R_SaveGameShot(char const *)
 {	UNIMPLEMENTED();
 }
 
-void __cdecl R_LevelShot(void)
+void __cdecl R_LevelShot()
 {	UNIMPLEMENTED();
 }
 
-void __cdecl R_LightingFromCubemapShots(float const * const)
+void __cdecl R_LightingFromCubemapShots(float const * const baseColor)
 {	UNIMPLEMENTED();
 }
 
-void __cdecl R_SaveCubemapShot(char const *,enum CubemapShot,float,float)
+void __cdecl R_SaveCubemapShot(char const * filename, enum CubemapShot shotIndex, float n0, float n1)
 {	UNIMPLEMENTED();
 }
 
-void __cdecl R_EndCubemapShot(enum CubemapShot)
+void __cdecl R_EndCubemapShot(enum CubemapShot shotIndex)
 {	UNIMPLEMENTED();
 }
 
-void __cdecl R_BeginCubemapShot(int,int)
+void __cdecl R_BeginCubemapShot(int pixelWidthHeight, int pixelBorder)
 {	UNIMPLEMENTED();
 }
 

@@ -1,12 +1,12 @@
-void __cdecl StatMon_Reset(void)
+void __cdecl StatMon_Reset()
 {	UNIMPLEMENTED();
 }
 
-void __cdecl StatMon_GetStatsArray(struct statmonitor_s const * *,int *)
+void __cdecl StatMon_GetStatsArray(struct statmonitor_s const * * array, int * count)
 {	UNIMPLEMENTED();
 }
 
-void __cdecl StatMon_Warning(int,int,char const *)
+void __cdecl StatMon_Warning(int type, int duration, char const * materialName)
 {	UNIMPLEMENTED();
 }
 

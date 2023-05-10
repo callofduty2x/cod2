@@ -2,11 +2,11 @@ unsigned char __cdecl empty_output_buffer(struct jpeg_compress_struct *)
 {	UNIMPLEMENTED();
 }
 
-void __cdecl R_LoadJpg(char const *,unsigned char * *,unsigned char * *,int *,int *,enum _D3DFORMAT *)
+void __cdecl R_LoadJpg(char const * filepath, unsigned char * * file, unsigned char * * pic, int * width, int * height, enum _D3DFORMAT * imageFormat)
 {	UNIMPLEMENTED();
 }
 
-void __cdecl R_SaveJpg(char const *,int,int,int,unsigned char *)
+void __cdecl R_SaveJpg(char const * filename, int quality, int image_width, int image_height, unsigned char * image_buffer)
 {	UNIMPLEMENTED();
 }
 

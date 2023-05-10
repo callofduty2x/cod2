@@ -1,4 +1,4 @@
-int __cdecl Scr_GetSourceBuffer(char const *)
+int __cdecl Scr_GetSourceBuffer(char const * codePos)
 {	UNIMPLEMENTED();
 }
 
@@ -14,15 +14,15 @@ char const * __cdecl Scr_GetOpcodePosOfType(int,unsigned int,unsigned int,int,un
 {	UNIMPLEMENTED();
 }
 
-void __cdecl AddThreadStartOpcodePos(unsigned int)
+void __cdecl AddThreadStartOpcodePos(unsigned int sourcePos)
 {	UNIMPLEMENTED();
 }
 
-void __cdecl RemoveOpcodePos(void)
+void __cdecl RemoveOpcodePos()
 {	UNIMPLEMENTED();
 }
 
-void __cdecl Scr_ShutdownOpcodeLookup(void)
+void __cdecl Scr_ShutdownOpcodeLookup()
 {	UNIMPLEMENTED();
 }
 
@@ -46,11 +46,11 @@ int __cdecl Scr_GetSourcePosOfType(char const *,int,struct Scr_SourcePos_t *)
 {	UNIMPLEMENTED();
 }
 
-void __cdecl AddOpcodePos(unsigned int,int)
+void __cdecl AddOpcodePos(unsigned int sourcePos, int type)
 {	UNIMPLEMENTED();
 }
 
-void __cdecl Scr_InitOpcodeLookup(void)
+void __cdecl Scr_InitOpcodeLookup()
 {	UNIMPLEMENTED();
 }
 
@@ -58,19 +58,19 @@ void __cdecl Scr_GetCodePos(char const *,unsigned int,char *,int)
 {	UNIMPLEMENTED();
 }
 
-void __cdecl Scr_PrintPrevCodePos(enum print_msg_type_t,char const *,unsigned int)
+void __cdecl Scr_PrintPrevCodePos(enum print_msg_type_t type, char const * codePos, unsigned int index)
 {	UNIMPLEMENTED();
 }
 
-char * __cdecl Scr_AddSourceBuffer(char const *,char const *,char const *,bool)
+char * __cdecl Scr_AddSourceBuffer(char const * filename, char const * extFilename, char const * codePos, bool archive)
 {	UNIMPLEMENTED();
 }
 
-void __cdecl RuntimeError(char const *,unsigned int,char const *,char const *)
+void __cdecl RuntimeError(char const * codePos, unsigned int index, char const * msg, char const * dialogMessage)
 {	UNIMPLEMENTED();
 }
 
-void __cdecl CompileError2(char const *,char *,...)
+void __cdecl CompileError2(char const * codePos, char * msg, ...)
 {	UNIMPLEMENTED();
 }
 

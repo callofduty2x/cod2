@@ -1,8 +1,8 @@
-void __cdecl CG_Respawn(void)
+void __cdecl CG_Respawn()
 {	UNIMPLEMENTED();
 }
 
-void __cdecl CG_DamageFeedback(int,int,int)
+void __cdecl CG_DamageFeedback(int yawByte, int pitchByte, int damage)
 {	UNIMPLEMENTED();
 }
 
@@ -10,7 +10,7 @@ void __cdecl CG_CheckPlayerstateEvents(struct playerState_s *,struct playerState
 {	UNIMPLEMENTED();
 }
 
-void __cdecl CG_TransitionPlayerState(struct playerState_s *,struct playerState_s *)
+void __cdecl CG_TransitionPlayerState(struct playerState_s * ps, struct playerState_s * ops)
 {	UNIMPLEMENTED();
 }
 

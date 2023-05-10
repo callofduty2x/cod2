@@ -1,16 +1,16 @@
-char * __cdecl vtos(float const * const)
+char * __cdecl vtos(float const * const v)
 {	UNIMPLEMENTED();
 }
 
-int __cdecl G_SpawnStringInternal(struct SpawnVar *,char const *,char const *,char const * *)
+int __cdecl G_SpawnStringInternal(struct SpawnVar * spawnVar, char const * key, char const * defaultString, char const * * out)
 {	UNIMPLEMENTED();
 }
 
-unsigned int __cdecl G_NewString(char const *)
+unsigned int __cdecl G_NewString(char const * string)
 {	UNIMPLEMENTED();
 }
 
-int __cdecl G_ParseSpawnVars(struct SpawnVar *)
+int __cdecl G_ParseSpawnVars(struct SpawnVar * spawnVar)
 {	UNIMPLEMENTED();
 }
 

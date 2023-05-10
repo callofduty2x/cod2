@@ -1,24 +1,24 @@
-void __cdecl CalcScreenY(float *,int)
+void __cdecl CalcScreenY(float * y, int vertAlign)
 {	UNIMPLEMENTED();
 }
 
-void __cdecl CalcScreenX(float *,int)
+void __cdecl CalcScreenX(float * x, int horzAlign)
 {	UNIMPLEMENTED();
 }
 
-float __cdecl GetVirtualHeightFromRealHeight(float)
+float __cdecl GetVirtualHeightFromRealHeight(float height)
 {	UNIMPLEMENTED();
 }
 
-float __cdecl GetVirtualWidthFromRealWidth(float)
+float __cdecl GetVirtualWidthFromRealWidth(float width)
 {	UNIMPLEMENTED();
 }
 
-float __cdecl GetRealHeightFromVirtualHeight(float)
+float __cdecl GetRealHeightFromVirtualHeight(float height)
 {	UNIMPLEMENTED();
 }
 
-float __cdecl GetRealWidthFromVirtualWidth(float)
+float __cdecl GetRealWidthFromVirtualWidth(float width)
 {	UNIMPLEMENTED();
 }
 
@@ -42,15 +42,15 @@ void __cdecl ApplySplitscreenScaling(float *,float *,float *,float *)
 {	UNIMPLEMENTED();
 }
 
-void __cdecl CalcSplitScreenTextOffset(struct Font_s *,float *)
+void __cdecl CalcSplitScreenTextOffset(struct Font_s * font, float * y)
 {	UNIMPLEMENTED();
 }
 
-void __cdecl CalcScreenPlacement(float *,float *,float *,float *,int,int)
+void __cdecl CalcScreenPlacement(float * x, float * y, float * w, float * h, int horzAlign, int vertAlign)
 {	UNIMPLEMENTED();
 }
 
-void __cdecl SetScreenScaling(float,float,int,int,int,int)
+void __cdecl SetScreenScaling(float safeAreaRatioHorizontal, float safeAreaRatioVertical, int viewportX, int viewportY, int viewportWidth, int viewportHeight)
 {	UNIMPLEMENTED();
 }
 

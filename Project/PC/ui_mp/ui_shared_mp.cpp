@@ -18,15 +18,15 @@ bool __cdecl Window_HasFocus(struct windowDef_t const *)
 {	UNIMPLEMENTED();
 }
 
-int __cdecl Menu_Count(struct displayContextDef_s *)
+int __cdecl Menu_Count(struct displayContextDef_s * dc)
 {	UNIMPLEMENTED();
 }
 
-int __cdecl Display_KeyBindPending(void)
+int __cdecl Display_KeyBindPending()
 {	UNIMPLEMENTED();
 }
 
-void __cdecl Controls_SetDefaults(void)
+void __cdecl Controls_SetDefaults()
 {	UNIMPLEMENTED();
 }
 
@@ -50,7 +50,7 @@ void __cdecl GradientBar_Paint(struct rectDef_s *,float * const)
 {	UNIMPLEMENTED();
 }
 
-void __cdecl LerpColor(float * const,float * const,float * const,float)
+void __cdecl LerpColor(float * const a, float * const b, float * const c, float t)
 {	UNIMPLEMENTED();
 }
 
@@ -58,7 +58,7 @@ int __cdecl Item_OwnerDraw_HandleKey(struct itemDef_s *,int)
 {	UNIMPLEMENTED();
 }
 
-int __cdecl GetCommandHasBinding(char const *)
+int __cdecl GetCommandHasBinding(char const * command)
 {	UNIMPLEMENTED();
 }
 
@@ -74,7 +74,7 @@ int __cdecl Display_VisibleMenuCount(struct displayContextDef_s *)
 {	UNIMPLEMENTED();
 }
 
-float __cdecl Item_Slider_ThumbPosition(struct itemDef_s *)
+float __cdecl Item_Slider_ThumbPosition(struct itemDef_s * item)
 {	UNIMPLEMENTED();
 }
 
@@ -82,7 +82,7 @@ void __cdecl Script_ShowGamerCard(struct displayContextDef_s *,struct itemDef_s 
 {	UNIMPLEMENTED();
 }
 
-struct menuDef_t * __cdecl Menus_FindByName(struct displayContextDef_s *,char const *)
+struct menuDef_t * __cdecl Menus_FindByName(struct displayContextDef_s * dc, char const * p)
 {	UNIMPLEMENTED();
 }
 
@@ -90,23 +90,23 @@ struct itemDef_s * __cdecl Menu_FindItemByName(struct menuDef_t *,char const *)
 {	UNIMPLEMENTED();
 }
 
-struct itemDef_s * __cdecl Menu_GetMatchingItemByNumber(struct menuDef_t *,int,char const *)
+struct itemDef_s * __cdecl Menu_GetMatchingItemByNumber(struct menuDef_t * menu, int index, char const * name)
 {	UNIMPLEMENTED();
 }
 
-int __cdecl Menu_ItemsMatchingGroup(struct menuDef_t *,char const *)
+int __cdecl Menu_ItemsMatchingGroup(struct menuDef_t * menu, char const * name)
 {	UNIMPLEMENTED();
 }
 
-int __cdecl Menus_AnyFullScreenVisible(struct displayContextDef_s *)
+int __cdecl Menus_AnyFullScreenVisible(struct displayContextDef_s * dc)
 {	UNIMPLEMENTED();
 }
 
-int __cdecl GetKeyBindings(char const *,char (* const)[128])
+int __cdecl GetKeyBindings(char const * command, char  bindings)[128])
 {	UNIMPLEMENTED();
 }
 
-void __cdecl Controls_GetConfig(void)
+void __cdecl Controls_GetConfig()
 {	UNIMPLEMENTED();
 }
 
@@ -114,11 +114,11 @@ void __cdecl Item_SetMouseOver(struct itemDef_s *,int)
 {	UNIMPLEMENTED();
 }
 
-void __cdecl Menu_FadeItemByName(struct menuDef_t *,char const *,int)
+void __cdecl Menu_FadeItemByName(struct menuDef_t * menu, char const * p, int fadeOut)
 {	UNIMPLEMENTED();
 }
 
-void __cdecl Menu_ShowItemByName(struct menuDef_t *,char const *,int)
+void __cdecl Menu_ShowItemByName(struct menuDef_t * menu, char const * p, int bShow)
 {	UNIMPLEMENTED();
 }
 
@@ -126,11 +126,11 @@ void __cdecl Item_UpdatePosition(struct itemDef_s *)
 {	UNIMPLEMENTED();
 }
 
-void __cdecl Menu_Setup(struct displayContextDef_s *)
+void __cdecl Menu_Setup(struct displayContextDef_s * dc)
 {	UNIMPLEMENTED();
 }
 
-struct menuDef_t * __cdecl Menu_GetFocused(struct displayContextDef_s *)
+struct menuDef_t * __cdecl Menu_GetFocused(struct displayContextDef_s * dc)
 {	UNIMPLEMENTED();
 }
 
@@ -138,15 +138,15 @@ struct itemDef_s * __cdecl Menu_GetFocusedItem(struct menuDef_t *)
 {	UNIMPLEMENTED();
 }
 
-void __cdecl Menu_OrbitItemByName(struct menuDef_t *,char const *,float,float,float,float,int)
+void __cdecl Menu_OrbitItemByName(struct menuDef_t * menu, char const * p, float x, float y, float cx, float cy, int time)
 {	UNIMPLEMENTED();
 }
 
-void __cdecl Menu_TransitionItemByName(struct menuDef_t *,char const *,struct rectDef_s,struct rectDef_s,int,float)
+void __cdecl Menu_TransitionItemByName(struct menuDef_t * menu, char const * p, struct rectDef_s rectFrom, struct rectDef_s rectTo, int time, float amt)
 {	UNIMPLEMENTED();
 }
 
-void __cdecl Menus_Close(struct displayContextDef_s *,struct menuDef_t *)
+void __cdecl Menus_Close(struct displayContextDef_s * dc, struct menuDef_t * menu)
 {	UNIMPLEMENTED();
 }
 
@@ -158,15 +158,15 @@ struct itemDef_s * __cdecl Menu_ClearFocus(struct displayContextDef_s *,struct m
 {	UNIMPLEMENTED();
 }
 
-void __cdecl Menu_SetFeederSelection(struct displayContextDef_s *,struct menuDef_t *,int,int,char const *)
+void __cdecl Menu_SetFeederSelection(struct displayContextDef_s * dc, struct menuDef_t * menu, int feeder, int index, char const * name)
 {	UNIMPLEMENTED();
 }
 
-void __cdecl Item_Text_Wrapped_Paint(struct itemDef_s *,char const *,float * const)
+void __cdecl Item_Text_Wrapped_Paint(struct itemDef_s * item, char const * textPtr, float * const color)
 {	UNIMPLEMENTED();
 }
 
-void __cdecl Item_Text_AutoWrapped_Paint(struct itemDef_s *,char const *,float * const)
+void __cdecl Item_Text_AutoWrapped_Paint(struct itemDef_s * item, char const * textPtr, float * const color)
 {	UNIMPLEMENTED();
 }
 
@@ -178,11 +178,11 @@ int __cdecl Item_Slider_OverSlider(struct itemDef_s *,float,float)
 {	UNIMPLEMENTED();
 }
 
-void __cdecl Menus_CloseAll(struct displayContextDef_s *)
+void __cdecl Menus_CloseAll(struct displayContextDef_s * dc)
 {	UNIMPLEMENTED();
 }
 
-void __cdecl Menus_CloseByName(struct displayContextDef_s *,char const *)
+void __cdecl Menus_CloseByName(struct displayContextDef_s * dc, char const * p)
 {	UNIMPLEMENTED();
 }
 
@@ -190,7 +190,7 @@ int __cdecl Color_Parse(char const * *,float (*)[4])
 {	UNIMPLEMENTED();
 }
 
-int __cdecl Item_YesNo_HandleKey(struct displayContextDef_s *,struct itemDef_s *,int)
+int __cdecl Item_YesNo_HandleKey(struct displayContextDef_s * dc, struct itemDef_s * item, int key)
 {	UNIMPLEMENTED();
 }
 
@@ -202,179 +202,179 @@ struct MenuList * __cdecl UI_LoadMenus(char const *,int)
 {	UNIMPLEMENTED();
 }
 
-int __cdecl Item_Slider_HandleKey(struct displayContextDef_s *,struct itemDef_s *,int,int)
+int __cdecl Item_Slider_HandleKey(struct displayContextDef_s * dc, struct itemDef_s * item, int key, int down)
 {	UNIMPLEMENTED();
 }
 
-int __cdecl String_Parse(char const * *,char *,int)
+int __cdecl String_Parse(char const * * p, char * out, int len)
 {	UNIMPLEMENTED();
 }
 
-int __cdecl GetKeyBindingLocalizedString(char const *,char * const)
+int __cdecl GetKeyBindingLocalizedString(char const * command, char * const keys)
 {	UNIMPLEMENTED();
 }
 
-void __cdecl BindingFromName(char const *,char * const)
+void __cdecl BindingFromName(char const * dvar, char * const nameBind)
 {	UNIMPLEMENTED();
 }
 
-void __cdecl Item_TextColor(struct displayContextDef_s *,struct itemDef_s *,float (*)[4])
+void __cdecl Item_TextColor(struct displayContextDef_s * dc, struct itemDef_s * item, float  newColor)[4])
 {	UNIMPLEMENTED();
 }
 
-void __cdecl Item_SetTextExtents(struct itemDef_s *,int *,int *,char const *)
+void __cdecl Item_SetTextExtents(struct itemDef_s * item, int * width, int * height, char const * text)
 {	UNIMPLEMENTED();
 }
 
-int __cdecl Menu_CheckOnKey(struct displayContextDef_s *,struct menuDef_t *,int)
+int __cdecl Menu_CheckOnKey(struct displayContextDef_s * dc, struct menuDef_t * menu, int key)
 {	UNIMPLEMENTED();
 }
 
-int __cdecl Item_SetFocus(struct displayContextDef_s *,struct itemDef_s *,float,float)
+int __cdecl Item_SetFocus(struct displayContextDef_s * dc, struct itemDef_s * item, float x, float y)
 {	UNIMPLEMENTED();
 }
 
-void __cdecl Script_Play(struct displayContextDef_s *,struct itemDef_s *,char const * *)
+void __cdecl Script_Play(struct displayContextDef_s * dc, struct itemDef_s * item, char const * * args)
 {	UNIMPLEMENTED();
 }
 
-void __cdecl Script_SetDvar(struct displayContextDef_s *,struct itemDef_s *,char const * *)
+void __cdecl Script_SetDvar(struct displayContextDef_s * dc, struct itemDef_s * item, char const * * args)
 {	UNIMPLEMENTED();
 }
 
-void __cdecl Script_Orbit(struct displayContextDef_s *,struct itemDef_s *,char const * *)
+void __cdecl Script_Orbit(struct displayContextDef_s * dc, struct itemDef_s * item, char const * * args)
 {	UNIMPLEMENTED();
 }
 
-void __cdecl Script_Transition(struct displayContextDef_s *,struct itemDef_s *,char const * *)
+void __cdecl Script_Transition(struct displayContextDef_s * dc, struct itemDef_s * item, char const * * args)
 {	UNIMPLEMENTED();
 }
 
-void __cdecl Script_InGameClose(struct displayContextDef_s *,struct itemDef_s *,char const * *)
+void __cdecl Script_InGameClose(struct displayContextDef_s * dc, struct itemDef_s * item, char const * * args)
 {	UNIMPLEMENTED();
 }
 
-void __cdecl Script_Close(struct displayContextDef_s *,struct itemDef_s *,char const * *)
+void __cdecl Script_Close(struct displayContextDef_s * dc, struct itemDef_s * item, char const * * args)
 {	UNIMPLEMENTED();
 }
 
-void __cdecl Script_CloseForGameType(struct displayContextDef_s *,struct itemDef_s *,char const * *)
+void __cdecl Script_CloseForGameType(struct displayContextDef_s * dc, struct itemDef_s * item, char const * * args)
 {	UNIMPLEMENTED();
 }
 
-void __cdecl Script_FadeOut(struct displayContextDef_s *,struct itemDef_s *,char const * *)
+void __cdecl Script_FadeOut(struct displayContextDef_s * dc, struct itemDef_s * item, char const * * args)
 {	UNIMPLEMENTED();
 }
 
-void __cdecl Script_FadeIn(struct displayContextDef_s *,struct itemDef_s *,char const * *)
+void __cdecl Script_FadeIn(struct displayContextDef_s * dc, struct itemDef_s * item, char const * * args)
 {	UNIMPLEMENTED();
 }
 
-void __cdecl Script_Hide(struct displayContextDef_s *,struct itemDef_s *,char const * *)
+void __cdecl Script_Hide(struct displayContextDef_s * dc, struct itemDef_s * item, char const * * args)
 {	UNIMPLEMENTED();
 }
 
-void __cdecl Script_Show(struct displayContextDef_s *,struct itemDef_s *,char const * *)
+void __cdecl Script_Show(struct displayContextDef_s * dc, struct itemDef_s * item, char const * * args)
 {	UNIMPLEMENTED();
 }
 
-void __cdecl Script_SetItemColor(struct displayContextDef_s *,struct itemDef_s *,char const * *)
+void __cdecl Script_SetItemColor(struct displayContextDef_s * dc, struct itemDef_s * item, char const * * args)
 {	UNIMPLEMENTED();
 }
 
-void __cdecl Script_SetBackground(struct displayContextDef_s *,struct itemDef_s *,char const * *)
+void __cdecl Script_SetBackground(struct displayContextDef_s * dc, struct itemDef_s * item, char const * * args)
 {	UNIMPLEMENTED();
 }
 
-void __cdecl Script_SetColor(struct displayContextDef_s *,struct itemDef_s *,char const * *)
+void __cdecl Script_SetColor(struct displayContextDef_s * dc, struct itemDef_s * item, char const * * args)
 {	UNIMPLEMENTED();
 }
 
-void __cdecl Controls_SetConfig(int)
+void __cdecl Controls_SetConfig(int restart)
 {	UNIMPLEMENTED();
 }
 
-void __cdecl Item_Text_Paint(struct displayContextDef_s *,struct itemDef_s *)
+void __cdecl Item_Text_Paint(struct displayContextDef_s * dc, struct itemDef_s * item)
 {	UNIMPLEMENTED();
 }
 
-struct itemDef_s * __cdecl Menu_SetNextCursorItem(struct displayContextDef_s *,struct menuDef_t *)
+struct itemDef_s * __cdecl Menu_SetNextCursorItem(struct displayContextDef_s * dc, struct menuDef_t * menu)
 {	UNIMPLEMENTED();
 }
 
-struct itemDef_s * __cdecl Menu_SetPrevCursorItem(struct displayContextDef_s *,struct menuDef_t *)
+struct itemDef_s * __cdecl Menu_SetPrevCursorItem(struct displayContextDef_s * dc, struct menuDef_t * menu)
 {	UNIMPLEMENTED();
 }
 
-int __cdecl Item_TextField_HandleKey(struct displayContextDef_s *,struct itemDef_s *,int)
+int __cdecl Item_TextField_HandleKey(struct displayContextDef_s * dc, struct itemDef_s * item, int key)
 {	UNIMPLEMENTED();
 }
 
-int __cdecl Item_ListBox_MaxScroll(struct itemDef_s *)
+int __cdecl Item_ListBox_MaxScroll(struct itemDef_s * item)
 {	UNIMPLEMENTED();
 }
 
-void __cdecl Script_ScriptMenuResponse(struct displayContextDef_s *,struct itemDef_s *,char const * *)
+void __cdecl Script_ScriptMenuResponse(struct displayContextDef_s * dc, struct itemDef_s * item, char const * * args)
 {	UNIMPLEMENTED();
 }
 
-int __cdecl Item_Bind_HandleKey(struct displayContextDef_s *,struct itemDef_s *,int,int)
+int __cdecl Item_Bind_HandleKey(struct displayContextDef_s * dc, struct itemDef_s * item, int key, int down)
 {	UNIMPLEMENTED();
 }
 
-void __cdecl Item_Bind_Paint(struct displayContextDef_s *,struct itemDef_s *)
+void __cdecl Item_Bind_Paint(struct displayContextDef_s * dc, struct itemDef_s * item)
 {	UNIMPLEMENTED();
 }
 
-void __cdecl Item_Slider_Paint(struct displayContextDef_s *,struct itemDef_s *)
+void __cdecl Item_Slider_Paint(struct displayContextDef_s * dc, struct itemDef_s * item)
 {	UNIMPLEMENTED();
 }
 
-void __cdecl Item_YesNo_Paint(struct displayContextDef_s *,struct itemDef_s *)
+void __cdecl Item_YesNo_Paint(struct displayContextDef_s * dc, struct itemDef_s * item)
 {	UNIMPLEMENTED();
 }
 
-void __cdecl Item_TextField_Paint(struct displayContextDef_s *,struct itemDef_s *)
+void __cdecl Item_TextField_Paint(struct displayContextDef_s * dc, struct itemDef_s * item)
 {	UNIMPLEMENTED();
 }
 
-int __cdecl Item_ListBox_HandleKey(struct displayContextDef_s *,struct itemDef_s *,int,int,int)
+int __cdecl Item_ListBox_HandleKey(struct displayContextDef_s * dc, struct itemDef_s * item, int key, int down, int force)
 {	UNIMPLEMENTED();
 }
 
-int __cdecl Item_ListBox_ThumbPosition(struct itemDef_s *)
+int __cdecl Item_ListBox_ThumbPosition(struct itemDef_s * item)
 {	UNIMPLEMENTED();
 }
 
-void __cdecl Script_ExecNowOnDvarFloatValue(struct displayContextDef_s *,struct itemDef_s *,char const * *)
+void __cdecl Script_ExecNowOnDvarFloatValue(struct displayContextDef_s * dc, struct itemDef_s * item, char const * * args)
 {	UNIMPLEMENTED();
 }
 
-void __cdecl Script_ExecNowOnDvarIntValue(struct displayContextDef_s *,struct itemDef_s *,char const * *)
+void __cdecl Script_ExecNowOnDvarIntValue(struct displayContextDef_s * dc, struct itemDef_s * item, char const * * args)
 {	UNIMPLEMENTED();
 }
 
-void __cdecl Script_ExecNowOnDvarStringValue(struct displayContextDef_s *,struct itemDef_s *,char const * *)
+void __cdecl Script_ExecNowOnDvarStringValue(struct displayContextDef_s * dc, struct itemDef_s * item, char const * * args)
 {	UNIMPLEMENTED();
 }
 
-void __cdecl Script_ExecOnDvarFloatValue(struct displayContextDef_s *,struct itemDef_s *,char const * *)
+void __cdecl Script_ExecOnDvarFloatValue(struct displayContextDef_s * dc, struct itemDef_s * item, char const * * args)
 {	UNIMPLEMENTED();
 }
 
-void __cdecl Script_ExecOnDvarIntValue(struct displayContextDef_s *,struct itemDef_s *,char const * *)
+void __cdecl Script_ExecOnDvarIntValue(struct displayContextDef_s * dc, struct itemDef_s * item, char const * * args)
 {	UNIMPLEMENTED();
 }
 
-void __cdecl Script_ExecOnDvarStringValue(struct displayContextDef_s *,struct itemDef_s *,char const * *)
+void __cdecl Script_ExecOnDvarStringValue(struct displayContextDef_s * dc, struct itemDef_s * item, char const * * args)
 {	UNIMPLEMENTED();
 }
 
-void __cdecl Script_ExecNow(struct displayContextDef_s *,struct itemDef_s *,char const * *)
+void __cdecl Script_ExecNow(struct displayContextDef_s * dc, struct itemDef_s * item, char const * * args)
 {	UNIMPLEMENTED();
 }
 
-void __cdecl Script_Exec(struct displayContextDef_s *,struct itemDef_s *,char const * *)
+void __cdecl Script_Exec(struct displayContextDef_s * dc, struct itemDef_s * item, char const * * args)
 {	UNIMPLEMENTED();
 }
 
@@ -382,91 +382,91 @@ void __cdecl Menu_ScrollFeeder(struct displayContextDef_s *,struct menuDef_t *,i
 {	UNIMPLEMENTED();
 }
 
-int __cdecl Item_ListBox_OverLB(struct itemDef_s *,float,float)
+int __cdecl Item_ListBox_OverLB(struct itemDef_s * item, float x, float y)
 {	UNIMPLEMENTED();
 }
 
-int __cdecl Item_ListBox_ThumbDrawPosition(struct displayContextDef_s *,struct itemDef_s *)
+int __cdecl Item_ListBox_ThumbDrawPosition(struct displayContextDef_s * dc, struct itemDef_s * item)
 {	UNIMPLEMENTED();
 }
 
-void __cdecl Item_ListBox_Paint(struct displayContextDef_s *,struct itemDef_s *)
+void __cdecl Item_ListBox_Paint(struct displayContextDef_s * dc, struct itemDef_s * item)
 {	UNIMPLEMENTED();
 }
 
-void __cdecl Item_ListBox_MouseEnter(struct itemDef_s *,float,float)
+void __cdecl Item_ListBox_MouseEnter(struct itemDef_s * item, float x, float y)
 {	UNIMPLEMENTED();
 }
 
-int __cdecl Item_HandleKey(struct displayContextDef_s *,struct itemDef_s *,int,int)
+int __cdecl Item_HandleKey(struct displayContextDef_s * dc, struct itemDef_s * item, int key, int down)
 {	UNIMPLEMENTED();
 }
 
-void __cdecl Menu_HandleKey(struct displayContextDef_s *,struct menuDef_t *,int,int)
+void __cdecl Menu_HandleKey(struct displayContextDef_s * dc, struct menuDef_t * menu, int key, int down)
 {	UNIMPLEMENTED();
 }
 
-void __cdecl Item_RunScript(struct displayContextDef_s *,struct itemDef_s *,char const *)
+void __cdecl Item_RunScript(struct displayContextDef_s * dc, struct itemDef_s * item, char const * s)
 {	UNIMPLEMENTED();
 }
 
-void __cdecl Menus_Open(struct displayContextDef_s *,struct menuDef_t *)
+void __cdecl Menus_Open(struct displayContextDef_s * dc, struct menuDef_t * menu)
 {	UNIMPLEMENTED();
 }
 
-void __cdecl Item_MouseLeave(struct displayContextDef_s *,struct itemDef_s *)
+void __cdecl Item_MouseLeave(struct displayContextDef_s * dc, struct itemDef_s * item)
 {	UNIMPLEMENTED();
 }
 
-void __cdecl Item_MouseEnter(struct displayContextDef_s *,struct itemDef_s *,float,float)
+void __cdecl Item_MouseEnter(struct displayContextDef_s * dc, struct itemDef_s * item, float x, float y)
 {	UNIMPLEMENTED();
 }
 
-int __cdecl Menus_OpenByName(struct displayContextDef_s *,char const *)
+int __cdecl Menus_OpenByName(struct displayContextDef_s * dc, char const * p)
 {	UNIMPLEMENTED();
 }
 
-void __cdecl Script_InGameOpen(struct displayContextDef_s *,struct itemDef_s *,char const * *)
+void __cdecl Script_InGameOpen(struct displayContextDef_s * dc, struct itemDef_s * item, char const * * args)
 {	UNIMPLEMENTED();
 }
 
-void __cdecl Script_OpenForGameType(struct displayContextDef_s *,struct itemDef_s *,char const * *)
+void __cdecl Script_OpenForGameType(struct displayContextDef_s * dc, struct itemDef_s * item, char const * * args)
 {	UNIMPLEMENTED();
 }
 
-void __cdecl Script_Open(struct displayContextDef_s *,struct itemDef_s *,char const * *)
+void __cdecl Script_Open(struct displayContextDef_s * dc, struct itemDef_s * item, char const * * args)
 {	UNIMPLEMENTED();
 }
 
-void __cdecl Script_SetFocusByDvar(struct displayContextDef_s *,struct itemDef_s *,char const * *)
+void __cdecl Script_SetFocusByDvar(struct displayContextDef_s * dc, struct itemDef_s * item, char const * * args)
 {	UNIMPLEMENTED();
 }
 
-void __cdecl UI_AddMenuList(struct displayContextDef_s *,struct MenuList *)
+void __cdecl UI_AddMenuList(struct displayContextDef_s * dc, struct MenuList * menuList)
 {	UNIMPLEMENTED();
 }
 
-void __cdecl Script_SetFocus(struct displayContextDef_s *,struct itemDef_s *,char const * *)
+void __cdecl Script_SetFocus(struct displayContextDef_s * dc, struct itemDef_s * item, char const * * args)
 {	UNIMPLEMENTED();
 }
 
-void __cdecl Window_Paint(struct displayContextDef_s *,struct windowDef_t *,float,float,float,float)
+void __cdecl Window_Paint(struct displayContextDef_s * dc, struct windowDef_t * w, float fadeAmount, float fadeInAmount, float fadeClamp, float fadeCycle)
 {	UNIMPLEMENTED();
 }
 
-void __cdecl Item_OwnerDraw_Paint(struct displayContextDef_s *,struct itemDef_s *)
+void __cdecl Item_OwnerDraw_Paint(struct displayContextDef_s * dc, struct itemDef_s * item)
 {	UNIMPLEMENTED();
 }
 
-void __cdecl Item_Paint(struct displayContextDef_s *,struct itemDef_s *)
+void __cdecl Item_Paint(struct displayContextDef_s * dc, struct itemDef_s * item)
 {	UNIMPLEMENTED();
 }
 
-void __cdecl Menu_Paint(struct displayContextDef_s *,struct menuDef_t *,int)
+void __cdecl Menu_Paint(struct displayContextDef_s * dc, struct menuDef_t * menu, int forcePaint)
 {	UNIMPLEMENTED();
 }
 
-void __cdecl Menu_PaintAll(struct displayContextDef_s *)
+void __cdecl Menu_PaintAll(struct displayContextDef_s * dc)
 {	UNIMPLEMENTED();
 }
 
@@ -624,6 +624,18 @@ void __cdecl Item_StartCapture(struct displayContextDef_s *,struct itemDef_s *,i
 }
 
 void __cdecl UI_AddMenu(struct displayContextDef_s *,struct menuDef_t *)
+{	UNIMPLEMENTED();
+}
+
+Menu_HandleMouseMove(displayContextDef_s* dc,  menuDef_t* menu,  float x,  float y)
+{	UNIMPLEMENTED();
+}
+
+Display_MouseMove(displayContextDef_s* dc,  void* p,  int x,  int y)
+{	UNIMPLEMENTED();
+}
+
+Menus_HandleOOBClick(displayContextDef_s* dc,  menuDef_t* menu,  int key,  int down)
 {	UNIMPLEMENTED();
 }
 

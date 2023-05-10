@@ -78,19 +78,19 @@ void __cdecl RB_SetIndices(struct D3DIndexBuffer *)
 {	UNIMPLEMENTED();
 }
 
-void __cdecl RB_InitBackendGlobalStructs(void)
+void __cdecl RB_InitBackendGlobalStructs()
 {	UNIMPLEMENTED();
 }
 
-void __cdecl RB_SetCodeConstant(int,float,float,float,float)
+void __cdecl RB_SetCodeConstant(int constant, float x, float y, float z, float w)
 {	UNIMPLEMENTED();
 }
 
-void __cdecl RB_LookupColor(unsigned char,unsigned char * const)
+void __cdecl RB_LookupColor(unsigned char c, unsigned char * const color)
 {	UNIMPLEMENTED();
 }
 
-void __cdecl RB_UpdateColor(float const * const,float const * const)
+void __cdecl RB_UpdateColor(float const * const color_allies, float const * const color_axis)
 {	UNIMPLEMENTED();
 }
 
@@ -98,7 +98,7 @@ void __cdecl RB_FlushGpu(void)
 {	UNIMPLEMENTED();
 }
 
-void __cdecl RB_SetGammaRamp(struct GfxGammaRamp const *)
+void __cdecl RB_SetGammaRamp(struct GfxGammaRamp const * gammaTable)
 {	UNIMPLEMENTED();
 }
 
@@ -106,11 +106,11 @@ void __cdecl RB_CheckSkinnedCacheNotBusy(void)
 {	UNIMPLEMENTED();
 }
 
-void __cdecl RB_ClearScreen(unsigned char,float const * const,float,unsigned char)
+void __cdecl RB_ClearScreen(unsigned char whichToClear, float const * const color, float depth, unsigned char stencil)
 {	UNIMPLEMENTED();
 }
 
-void __cdecl RB_RegisterBackendAssets(void)
+void __cdecl RB_RegisterBackendAssets()
 {	UNIMPLEMENTED();
 }
 
@@ -118,31 +118,31 @@ void __cdecl RB_Resolve(struct GfxImage *)
 {	UNIMPLEMENTED();
 }
 
-void __cdecl RB_Set3D(void)
+void __cdecl RB_Set3D()
 {	UNIMPLEMENTED();
 }
 
-void __cdecl RB_DrawLines3D(int,int,struct GfxPointVertex const * const,bool)
+void __cdecl RB_DrawLines3D(int count, int width, struct GfxPointVertex const * const verts, bool depthTest)
 {	UNIMPLEMENTED();
 }
 
-void __cdecl RB_DrawLines2D(int,int,struct GfxPointVertex const * const)
+void __cdecl RB_DrawLines2D(int count, int width, struct GfxPointVertex const * const verts)
 {	UNIMPLEMENTED();
 }
 
-void __cdecl RB_DrawStretchPic(struct Material const *,float,float,float,float,float,float,float,float,unsigned long,enum GfxPrimStatsTarget)
+void __cdecl RB_DrawStretchPic(struct Material const * material, float x, float y, float w, float h, float s0, float t0, float s1, float t1, unsigned long color, enum GfxPrimStatsTarget statsTarget)
 {	UNIMPLEMENTED();
 }
 
-void __cdecl RB_DrawTextInSpace(char const *,struct Font_s *,float const * const,float const * const,float const * const,unsigned long)
+void __cdecl RB_DrawTextInSpace(char const * text, struct Font_s * font, float const * const org, float const * const xPixelStep, float const * const yPixelStep, unsigned long color)
 {	UNIMPLEMENTED();
 }
 
-void __cdecl RB_DrawFullScreenColoredQuad(struct Material const *,float,float,float,float,unsigned long)
+void __cdecl RB_DrawFullScreenColoredQuad(struct Material const * material, float s0, float t0, float s1, float t1, unsigned long color)
 {	UNIMPLEMENTED();
 }
 
-void __cdecl RB_EndFrame(void)
+void __cdecl RB_EndFrame()
 {	UNIMPLEMENTED();
 }
 
@@ -154,7 +154,7 @@ void __cdecl RB_DrawText(char const *,struct Font_s *,float,float,union GfxColor
 {	UNIMPLEMENTED();
 }
 
-void __cdecl RB_ExecuteRenderCommands(void const *)
+void __cdecl RB_ExecuteRenderCommands(void const * data)
 {	UNIMPLEMENTED();
 }
 
@@ -563,6 +563,22 @@ void __cdecl RB_RenderCommandFrame(void const *)
 }
 
 void __cdecl RB_ApplyLatePostEffectsCmd(struct GfxRenderCommandExecState *)
+{	UNIMPLEMENTED();
+}
+
+RB_IsGpuFenceFinished()
+{	UNIMPLEMENTED();
+}
+
+RB_GpuWaited(int ticks)
+{	UNIMPLEMENTED();
+}
+
+RB_AdaptiveGpuSyncWait()
+{	UNIMPLEMENTED();
+}
+
+RB_AdaptiveGpuSyncTarget()
 {	UNIMPLEMENTED();
 }
 

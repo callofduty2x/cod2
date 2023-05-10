@@ -110,7 +110,7 @@ void __cdecl std::_Rotate<struct GfxImage * *,int,struct GfxImage *>(struct GfxI
 {	UNIMPLEMENTED();
 }
 
-void __cdecl R_DownsampleMipMapBilinear(unsigned char const *,int,int,int,int,unsigned char *,int)
+void __cdecl R_DownsampleMipMapBilinear(unsigned char const * src, int srcBufferSize, int srcWidth, int srcHeight, int texelPitch, unsigned char * dst, int dstBufferSize)
 {	UNIMPLEMENTED();
 }
 
@@ -118,19 +118,19 @@ void __cdecl Load_Texture(struct GfxImageLoadDef * *,unsigned long,struct GfxIma
 {	UNIMPLEMENTED();
 }
 
-void __cdecl R_FreeImageAllocations(void)
+void __cdecl R_FreeImageAllocations()
 {	UNIMPLEMENTED();
 }
 
-void __cdecl R_ResetImageAllocations(void)
+void __cdecl R_ResetImageAllocations()
 {	UNIMPLEMENTED();
 }
 
-struct GfxImage * __cdecl Image_AllocProg(int,unsigned char)
+struct GfxImage * __cdecl Image_AllocProg(int imageProgType, unsigned char category)
 {	UNIMPLEMENTED();
 }
 
-void __cdecl Image_Release(struct GfxImage *)
+void __cdecl Image_Release(struct GfxImage * image)
 {	UNIMPLEMENTED();
 }
 
@@ -142,7 +142,7 @@ void * __cdecl Image_PhysicalAlloc(int)
 {	UNIMPLEMENTED();
 }
 
-void __cdecl Image_TrackTexture(struct GfxImage *,int,enum _D3DFORMAT,int,int,int)
+void __cdecl Image_TrackTexture(struct GfxImage * image, int imageFlags, enum _D3DFORMAT format, int width, int height, int depth)
 {	UNIMPLEMENTED();
 }
 
@@ -154,19 +154,19 @@ void __cdecl R_SumOfUsedImages(struct Image_MemUsage *)
 {	UNIMPLEMENTED();
 }
 
-void __cdecl Image_SetupSystem(struct GfxImage *,unsigned short,unsigned short,enum _D3DFORMAT)
+void __cdecl Image_SetupSystem(struct GfxImage * image, unsigned short width, unsigned short height, enum _D3DFORMAT imageFormat)
 {	UNIMPLEMENTED();
 }
 
-void __cdecl Image_SetupRenderTarget(struct GfxImage *,unsigned short,unsigned short,enum _D3DFORMAT)
+void __cdecl Image_SetupRenderTarget(struct GfxImage * image, unsigned short width, unsigned short height, enum _D3DFORMAT imageFormat)
 {	UNIMPLEMENTED();
 }
 
-void __cdecl Image_TrackFullscreenTexture(struct GfxImage *,int,enum _D3DFORMAT)
+void __cdecl Image_TrackFullscreenTexture(struct GfxImage * image, int picmip, enum _D3DFORMAT format)
 {	UNIMPLEMENTED();
 }
 
-void __cdecl R_ImageList_f(void)
+void __cdecl R_ImageList_f()
 {	UNIMPLEMENTED();
 }
 
@@ -174,19 +174,19 @@ struct GfxImage * __cdecl Image_FindExisting(char const *)
 {	UNIMPLEMENTED();
 }
 
-void __cdecl Image_RebuildCosinePowerMap(float)
+void __cdecl Image_RebuildCosinePowerMap(float shift)
 {	UNIMPLEMENTED();
 }
 
-struct GfxImage * __cdecl Image_Register(char const *,unsigned char,int)
+struct GfxImage * __cdecl Image_Register(char const * imageName, unsigned char semantic, int imageTrack)
 {	UNIMPLEMENTED();
 }
 
-void __cdecl R_InitImages(void)
+void __cdecl R_InitImages()
 {	UNIMPLEMENTED();
 }
 
-struct D3DSurface * __cdecl Image_GetSurface(struct GfxImage *)
+struct D3DSurface * __cdecl Image_GetSurface(struct GfxImage * image)
 {	UNIMPLEMENTED();
 }
 
@@ -217,6 +217,70 @@ void __cdecl Image_GetMipmapResolution(int,int,int,unsigned short *,unsigned sho
 }
 
 void __cdecl R_InitCodeImages(void)
+{	UNIMPLEMENTED();
+}
+
+R_GetMinSpecImageMemory()
+{	UNIMPLEMENTED();
+}
+
+Image_Create2DTexture(GfxImage* image,  unsigned short width,  unsigned short height,  int mipmapCount,  unsigned long usage,  _D3DFORMAT imageFormat,  _D3DPOOL memPool)
+{	UNIMPLEMENTED();
+}
+
+Image_Create3DTexture(GfxImage* image,  unsigned short width,  unsigned short height,  unsigned short depth,  int mipmapCount,  unsigned long usage,  _D3DFORMAT imageFormat,  _D3DPOOL memPool)
+{	UNIMPLEMENTED();
+}
+
+Image_CreateCubeTexture(GfxImage* image,  unsigned short edgeLen,  int mipmapCount,  unsigned long usage,  _D3DFORMAT imageFormat,  _D3DPOOL memPool)
+{	UNIMPLEMENTED();
+}
+
+Image_PicmipForSemantic(unsigned char semantic,  Picmip* picmip)
+{	UNIMPLEMENTED();
+}
+
+R_SetPicmip()
+{	UNIMPLEMENTED();
+}
+
+R_LoadWaterSetup(water_t const* water)
+{	UNIMPLEMENTED();
+}
+
+void std::__adjust_heap<GfxImage**, int, GfxImage*, int (*)(GfxImage*, GfxImage*)>(GfxImage**, int, int, GfxImage*, int (*)(GfxImage*, GfxImage*))
+{	UNIMPLEMENTED();
+}
+
+R_ReloadLostImages()
+{	UNIMPLEMENTED();
+}
+
+void std::__insertion_sort<GfxImage**, int (*)(GfxImage*, GfxImage*)>(GfxImage**, GfxImage**, int (*)(GfxImage*, GfxImage*))
+{	UNIMPLEMENTED();
+}
+
+Image_Alloc(char const* name,  unsigned char category,  unsigned char semantic,  int imageTrack)
+{	UNIMPLEMENTED();
+}
+
+void std::__introsort_loop<GfxImage**, int, int (*)(GfxImage*, GfxImage*)>(GfxImage**, GfxImage**, int, int (*)(GfxImage*, GfxImage*))
+{	UNIMPLEMENTED();
+}
+
+R_ShutdownImages()
+{	UNIMPLEMENTED();
+}
+
+R_ReleaseLostImages()
+{	UNIMPLEMENTED();
+}
+
+Image_UpdatePicmip(GfxImage* image)
+{	UNIMPLEMENTED();
+}
+
+Image_Reload(GfxImage* image)
 {	UNIMPLEMENTED();
 }
 

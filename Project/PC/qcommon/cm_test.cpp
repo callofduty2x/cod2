@@ -1,4 +1,4 @@
-unsigned char * __cdecl CM_ClusterPVS(int)
+unsigned char * __cdecl CM_ClusterPVS(int cluster)
 {	UNIMPLEMENTED();
 }
 
@@ -6,7 +6,7 @@ void __cdecl CM_StoreLeafs(struct leafList_s *,int)
 {	UNIMPLEMENTED();
 }
 
-void __cdecl CM_BoxLeafnums_r(struct leafList_s *,int)
+void __cdecl CM_BoxLeafnums_r(struct leafList_s * ll, int nodenum)
 {	UNIMPLEMENTED();
 }
 
@@ -14,19 +14,19 @@ int __cdecl CM_PointLeafnum_r(float const * const,int)
 {	UNIMPLEMENTED();
 }
 
-int __cdecl CM_PointContents(float const * const,int)
+int __cdecl CM_PointContents(float const * const p, int model)
 {	UNIMPLEMENTED();
 }
 
-int __cdecl CM_BoxLeafnums(float const * const,float const * const,int *,int,int *)
+int __cdecl CM_BoxLeafnums(float const * const mins, float const * const maxs, int * list, int listsize, int * lastLeaf)
 {	UNIMPLEMENTED();
 }
 
-int __cdecl CM_PointLeafnum(float const * const)
+int __cdecl CM_PointLeafnum(float const * const p)
 {	UNIMPLEMENTED();
 }
 
-int __cdecl CM_TransformedPointContents(float const * const,int,float const * const,float const * const)
+int __cdecl CM_TransformedPointContents(float const * const p, int model, float const * const origin, float const * const angles)
 {	UNIMPLEMENTED();
 }
 

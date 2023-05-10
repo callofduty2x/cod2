@@ -58,11 +58,11 @@ void __cdecl Scr_DecTime(void)
 {	UNIMPLEMENTED();
 }
 
-unsigned int __cdecl Scr_GetNumParam(void)
+unsigned int __cdecl Scr_GetNumParam()
 {	UNIMPLEMENTED();
 }
 
-int __cdecl Scr_IsSystemActive(unsigned char)
+int __cdecl Scr_IsSystemActive(unsigned char sys)
 {	UNIMPLEMENTED();
 }
 
@@ -70,27 +70,27 @@ char const * __cdecl Scr_GetReturnPos(unsigned int *)
 {	UNIMPLEMENTED();
 }
 
-unsigned int __cdecl Scr_GetNumScriptThreads(void)
+unsigned int __cdecl Scr_GetNumScriptThreads()
 {	UNIMPLEMENTED();
 }
 
-void __cdecl Scr_SetLoading(int)
+void __cdecl Scr_SetLoading(int bLoading)
 {	UNIMPLEMENTED();
 }
 
-void __cdecl Scr_Abort(void)
+void __cdecl Scr_Abort()
 {	UNIMPLEMENTED();
 }
 
-void __cdecl Scr_Settings(int,int,int)
+void __cdecl Scr_Settings(int developer, int developer_script, int abort_on_error)
 {	UNIMPLEMENTED();
 }
 
-void __cdecl Scr_ClearErrorMessage(void)
+void __cdecl Scr_ClearErrorMessage()
 {	UNIMPLEMENTED();
 }
 
-void __cdecl Scr_ResetTimeout(void)
+void __cdecl Scr_ResetTimeout()
 {	UNIMPLEMENTED();
 }
 
@@ -98,27 +98,27 @@ void __cdecl Scr_ErrorWithDialogMessage(char const *,char const *)
 {	UNIMPLEMENTED();
 }
 
-void __cdecl Scr_Error(char const *)
+void __cdecl Scr_Error(char const * error)
 {	UNIMPLEMENTED();
 }
 
-int __cdecl Scr_GetPointerType(unsigned int)
+int __cdecl Scr_GetPointerType(unsigned int index)
 {	UNIMPLEMENTED();
 }
 
-char const * __cdecl Scr_GetTypeName(unsigned int)
+char const * __cdecl Scr_GetTypeName(unsigned int index)
 {	UNIMPLEMENTED();
 }
 
-int __cdecl Scr_GetType(unsigned int)
+int __cdecl Scr_GetType(unsigned int index)
 {	UNIMPLEMENTED();
 }
 
-unsigned int __cdecl Scr_GetObject(unsigned int)
+unsigned int __cdecl Scr_GetObject(unsigned int index)
 {	UNIMPLEMENTED();
 }
 
-struct scr_entref_t __cdecl Scr_GetEntityRef(unsigned int)
+struct scr_entref_t __cdecl Scr_GetEntityRef(unsigned int index)
 {	UNIMPLEMENTED();
 }
 
@@ -126,7 +126,7 @@ int __cdecl Scr_GetFunc(unsigned int)
 {	UNIMPLEMENTED();
 }
 
-void __cdecl Scr_GetVector(unsigned int,float * const)
+void __cdecl Scr_GetVector(unsigned int index, float * const vectorValue)
 {	UNIMPLEMENTED();
 }
 
@@ -134,23 +134,23 @@ unsigned int __cdecl Scr_GetConstIString(unsigned int)
 {	UNIMPLEMENTED();
 }
 
-float __cdecl Scr_GetFloat(unsigned int)
+float __cdecl Scr_GetFloat(unsigned int index)
 {	UNIMPLEMENTED();
 }
 
-int __cdecl Scr_GetInt(unsigned int)
+int __cdecl Scr_GetInt(unsigned int index)
 {	UNIMPLEMENTED();
 }
 
-void __cdecl Scr_ObjectError(char const *)
+void __cdecl Scr_ObjectError(char const * error)
 {	UNIMPLEMENTED();
 }
 
-void __cdecl Scr_ParamError(unsigned int,char const *)
+void __cdecl Scr_ParamError(unsigned int index, char const * error)
 {	UNIMPLEMENTED();
 }
 
-char const * __cdecl Scr_GetIString(unsigned int)
+char const * __cdecl Scr_GetIString(unsigned int index)
 {	UNIMPLEMENTED();
 }
 
@@ -158,7 +158,7 @@ int __cdecl Scr_FindAllThreads(unsigned int,unsigned int *,unsigned int)
 {	UNIMPLEMENTED();
 }
 
-void __cdecl Scr_TraverseScript(char const *)
+void __cdecl Scr_TraverseScript(char const * pos)
 {	UNIMPLEMENTED();
 }
 
@@ -166,19 +166,19 @@ bool __cdecl Scr_IsEndonThread(unsigned int)
 {	UNIMPLEMENTED();
 }
 
-void __cdecl Scr_TerminalError(char const *)
+void __cdecl Scr_TerminalError(char const * error)
 {	UNIMPLEMENTED();
 }
 
-void __cdecl Scr_InitSystem(int)
+void __cdecl Scr_InitSystem(int sys)
 {	UNIMPLEMENTED();
 }
 
-void __cdecl Scr_AddArrayStringIndexed(unsigned int)
+void __cdecl Scr_AddArrayStringIndexed(unsigned int stringValue)
 {	UNIMPLEMENTED();
 }
 
-void __cdecl Scr_AddArray(void)
+void __cdecl Scr_AddArray()
 {	UNIMPLEMENTED();
 }
 
@@ -186,7 +186,7 @@ struct scr_animtree_t __cdecl Scr_GetAnimTree(unsigned int)
 {	UNIMPLEMENTED();
 }
 
-struct scr_anim_s __cdecl Scr_GetAnim(unsigned int,struct XAnimTree_s *)
+struct scr_anim_s __cdecl Scr_GetAnim(unsigned int, struct XAnimTree_s *)
 {	UNIMPLEMENTED();
 }
 
@@ -194,23 +194,23 @@ void __cdecl Scr_ClearOutParams(void)
 {	UNIMPLEMENTED();
 }
 
-unsigned int __cdecl Scr_GetConstLowercaseString(unsigned int)
+unsigned int __cdecl Scr_GetConstLowercaseString(unsigned int index)
 {	UNIMPLEMENTED();
 }
 
-unsigned int __cdecl Scr_GetConstString(unsigned int)
+unsigned int __cdecl Scr_GetConstString(unsigned int index)
 {	UNIMPLEMENTED();
 }
 
-char const * __cdecl Scr_GetNextCodepos(struct VariableValue_s *,char const *,int,int,unsigned int *)
+char const * __cdecl Scr_GetNextCodepos(struct VariableValue_s * top, char const * pos, int opcode, int mode, unsigned int * localId)
 {	UNIMPLEMENTED();
 }
 
-void __cdecl Scr_Shutdown(void)
+void __cdecl Scr_Shutdown()
 {	UNIMPLEMENTED();
 }
 
-char const * __cdecl Scr_GetDebugString(unsigned int)
+char const * __cdecl Scr_GetDebugString(unsigned int index)
 {	UNIMPLEMENTED();
 }
 
@@ -218,51 +218,51 @@ char const * __cdecl Scr_GetStringIncludeNull(unsigned int)
 {	UNIMPLEMENTED();
 }
 
-unsigned int __cdecl Scr_GetConstStringIncludeNull(unsigned int)
+unsigned int __cdecl Scr_GetConstStringIncludeNull(unsigned int index)
 {	UNIMPLEMENTED();
 }
 
-char const * __cdecl Scr_GetString(unsigned int)
+char const * __cdecl Scr_GetString(unsigned int index)
 {	UNIMPLEMENTED();
 }
 
-void __cdecl Scr_FreeThread(unsigned short)
+void __cdecl Scr_FreeThread(unsigned short handle)
 {	UNIMPLEMENTED();
 }
 
-void __cdecl VM_CancelNotify(unsigned int,unsigned int)
+void __cdecl VM_CancelNotify(unsigned int notifyListOwnerId, unsigned int startLocalId)
 {	UNIMPLEMENTED();
 }
 
-bool __cdecl SetEntityFieldValue(unsigned int,int,int,struct VariableValue_s *)
+bool __cdecl SetEntityFieldValue(unsigned int classnum, int entnum, int offset, struct VariableValue_s * value)
 {	UNIMPLEMENTED();
 }
 
-void __cdecl Scr_CancelNotifyList(unsigned int)
+void __cdecl Scr_CancelNotifyList(unsigned int notifyListOwnerId)
 {	UNIMPLEMENTED();
 }
 
-void __cdecl Scr_SetStructField(unsigned int,unsigned int)
+void __cdecl Scr_SetStructField(unsigned int structId, unsigned int index)
 {	UNIMPLEMENTED();
 }
 
-void __cdecl Scr_ShutdownSystem(unsigned char,int)
+void __cdecl Scr_ShutdownSystem(unsigned char sys, int bComplete)
 {	UNIMPLEMENTED();
 }
 
-void __cdecl Scr_SetDynamicEntityField(int,int,unsigned int)
+void __cdecl Scr_SetDynamicEntityField(int entnum, int classnum, unsigned int index)
 {	UNIMPLEMENTED();
 }
 
-void __cdecl Scr_MakeArray(void)
+void __cdecl Scr_MakeArray()
 {	UNIMPLEMENTED();
 }
 
-void __cdecl Scr_AddVector(float const *)
+void __cdecl Scr_AddVector(float const * value)
 {	UNIMPLEMENTED();
 }
 
-void __cdecl Scr_AddConstString(unsigned int)
+void __cdecl Scr_AddConstString(unsigned int value)
 {	UNIMPLEMENTED();
 }
 
@@ -270,15 +270,15 @@ void __cdecl Scr_AddIString(char const *)
 {	UNIMPLEMENTED();
 }
 
-void __cdecl Scr_AddString(char const *)
+void __cdecl Scr_AddString(char const * value)
 {	UNIMPLEMENTED();
 }
 
-void __cdecl Scr_AddObject(unsigned int)
+void __cdecl Scr_AddObject(unsigned int id)
 {	UNIMPLEMENTED();
 }
 
-void __cdecl Scr_AddUndefined(void)
+void __cdecl Scr_AddUndefined()
 {	UNIMPLEMENTED();
 }
 
@@ -286,35 +286,35 @@ void __cdecl Scr_AddAnim(struct scr_anim_s)
 {	UNIMPLEMENTED();
 }
 
-void __cdecl Scr_AddFloat(float)
+void __cdecl Scr_AddFloat(float value)
 {	UNIMPLEMENTED();
 }
 
-void __cdecl Scr_AddInt(int)
+void __cdecl Scr_AddInt(int value)
 {	UNIMPLEMENTED();
 }
 
-void __cdecl Scr_AddBool(int)
+void __cdecl Scr_AddBool(int value)
 {	UNIMPLEMENTED();
 }
 
-void __cdecl Scr_AddStruct(void)
+void __cdecl Scr_AddStruct()
 {	UNIMPLEMENTED();
 }
 
-void __cdecl Scr_AddEntityNum(int,int)
+void __cdecl Scr_AddEntityNum(int entnum, int classnum)
 {	UNIMPLEMENTED();
 }
 
-struct VariableValue_s __cdecl GetEntityFieldValue(unsigned int,int,int)
+struct VariableValue_s __cdecl GetEntityFieldValue(unsigned int classnum, int entnum, int offset)
 {	UNIMPLEMENTED();
 }
 
-void __cdecl Scr_NotifyNum(int,int,unsigned int,unsigned int)
+void __cdecl Scr_NotifyNum(int entnum, int classnum, unsigned int stringValue, unsigned int paramcount)
 {	UNIMPLEMENTED();
 }
 
-void __cdecl Scr_Init(void)
+void __cdecl Scr_Init()
 {	UNIMPLEMENTED();
 }
 
@@ -326,23 +326,23 @@ void __cdecl Scr_AddExecEntThreadNum(int,int,int,unsigned int)
 {	UNIMPLEMENTED();
 }
 
-void __cdecl Scr_AddExecThread(int,unsigned int)
+void __cdecl Scr_AddExecThread(int handle, unsigned int paramcount)
 {	UNIMPLEMENTED();
 }
 
-unsigned short __cdecl Scr_ExecEntThreadNum(int,int,int,unsigned int)
+unsigned short __cdecl Scr_ExecEntThreadNum(int entnum, int classnum, int handle, unsigned int paramcount)
 {	UNIMPLEMENTED();
 }
 
-unsigned short __cdecl Scr_ExecThread(int,unsigned int)
+unsigned short __cdecl Scr_ExecThread(int handle, unsigned int paramcount)
 {	UNIMPLEMENTED();
 }
 
-void __cdecl Scr_RunCurrentThreads(void)
+void __cdecl Scr_RunCurrentThreads()
 {	UNIMPLEMENTED();
 }
 
-void __cdecl Scr_IncTime(void)
+void __cdecl Scr_IncTime()
 {	UNIMPLEMENTED();
 }
 

@@ -1,4 +1,4 @@
-int __cdecl G_IsPlaying(struct gentity_s *)
+int __cdecl G_IsPlaying(struct gentity_s * ent)
 {	UNIMPLEMENTED();
 }
 
@@ -6,7 +6,7 @@ void __cdecl SanitizeString(char *,char *)
 {	UNIMPLEMENTED();
 }
 
-char * __cdecl ConcatArgs(int)
+char * __cdecl ConcatArgs(int start)
 {	UNIMPLEMENTED();
 }
 
@@ -18,11 +18,11 @@ int __cdecl ClientNumberFromString(struct gentity_s *,char *)
 {	UNIMPLEMENTED();
 }
 
-int __cdecl CheatsOk(struct gentity_s *)
+int __cdecl CheatsOk(struct gentity_s * ent)
 {	UNIMPLEMENTED();
 }
 
-void __cdecl DeathmatchScoreboardMessage(struct gentity_s *)
+void __cdecl DeathmatchScoreboardMessage(struct gentity_s * ent)
 {	UNIMPLEMENTED();
 }
 
@@ -46,19 +46,19 @@ void __cdecl Cmd_God_f(struct gentity_s *)
 {	UNIMPLEMENTED();
 }
 
-void __cdecl Cmd_Take_f(struct gentity_s *)
+void __cdecl Cmd_Take_f(struct gentity_s * ent)
 {	UNIMPLEMENTED();
 }
 
-void __cdecl Cmd_Score_f(struct gentity_s *)
+void __cdecl Cmd_Score_f(struct gentity_s * ent)
 {	UNIMPLEMENTED();
 }
 
-void __cdecl G_setfog(char const *)
+void __cdecl G_setfog(char const * fogstring)
 {	UNIMPLEMENTED();
 }
 
-void __cdecl Cmd_SetViewpos_f(struct gentity_s *)
+void __cdecl Cmd_SetViewpos_f(struct gentity_s * ent)
 {	UNIMPLEMENTED();
 }
 
@@ -70,23 +70,23 @@ void __cdecl Cmd_EntityCount_f(struct gentity_s *)
 {	UNIMPLEMENTED();
 }
 
-void __cdecl G_Say(struct gentity_s *,struct gentity_s *,int,char const *)
+void __cdecl G_Say(struct gentity_s * ent, struct gentity_s * target, int mode, char const * chatText)
 {	UNIMPLEMENTED();
 }
 
-void __cdecl Cmd_GameCommand_f(struct gentity_s *)
+void __cdecl Cmd_GameCommand_f(struct gentity_s * ent)
 {	UNIMPLEMENTED();
 }
 
-void __cdecl Cmd_MenuResponse_f(struct gentity_s *)
+void __cdecl Cmd_MenuResponse_f(struct gentity_s * pEnt)
 {	UNIMPLEMENTED();
 }
 
-void __cdecl Cmd_Vote_f(struct gentity_s *)
+void __cdecl Cmd_Vote_f(struct gentity_s * ent)
 {	UNIMPLEMENTED();
 }
 
-void __cdecl Cmd_CallVote_f(struct gentity_s *)
+void __cdecl Cmd_CallVote_f(struct gentity_s * ent)
 {	UNIMPLEMENTED();
 }
 
@@ -94,19 +94,19 @@ void __cdecl Cmd_Kill_f(struct gentity_s *)
 {	UNIMPLEMENTED();
 }
 
-void __cdecl StopFollowing(struct gentity_s *)
+void __cdecl StopFollowing(struct gentity_s * ent)
 {	UNIMPLEMENTED();
 }
 
-int __cdecl Cmd_FollowCycle_f(struct gentity_s *,int)
+int __cdecl Cmd_FollowCycle_f(struct gentity_s * ent, int dir)
 {	UNIMPLEMENTED();
 }
 
-void __cdecl Cmd_Give_f(struct gentity_s *)
+void __cdecl Cmd_Give_f(struct gentity_s * ent)
 {	UNIMPLEMENTED();
 }
 
-void __cdecl ClientCommand(int)
+void __cdecl ClientCommand(int clientNum)
 {	UNIMPLEMENTED();
 }
 

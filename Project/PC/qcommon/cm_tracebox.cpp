@@ -1,8 +1,8 @@
-void __cdecl CM_CalcTraceEntents(struct TraceExtents *)
+void __cdecl CM_CalcTraceEntents(struct TraceExtents * extents)
 {	UNIMPLEMENTED();
 }
 
-int __cdecl CM_TraceBox(struct TraceExtents const *,float const * const,float const * const,float)
+int __cdecl CM_TraceBox(struct TraceExtents const * extents, float const * const mins, float const * const maxs, float fraction)
 {	UNIMPLEMENTED();
 }
 

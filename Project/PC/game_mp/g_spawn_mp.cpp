@@ -1,4 +1,4 @@
-int __cdecl G_SpawnString(char const *,char const *,char const * *)
+int __cdecl G_SpawnString(char const * key, char const * defaultString, char const * * out)
 {	UNIMPLEMENTED();
 }
 
@@ -6,19 +6,19 @@ struct game_hudelem_s * __cdecl Scr_GetHudElem(unsigned int)
 {	UNIMPLEMENTED();
 }
 
-struct gentity_s * __cdecl Scr_GetEntity(unsigned int)
+struct gentity_s * __cdecl Scr_GetEntity(unsigned int index)
 {	UNIMPLEMENTED();
 }
 
-int __cdecl G_SpawnVector(char const *,char const *,float *)
+int __cdecl G_SpawnVector(char const * key, char const * defaultString, float * out)
 {	UNIMPLEMENTED();
 }
 
-int __cdecl G_SpawnInt(char const *,char const *,int *)
+int __cdecl G_SpawnInt(char const * key, char const * defaultString, int * out)
 {	UNIMPLEMENTED();
 }
 
-int __cdecl G_SpawnFloat(char const *,char const *,float *)
+int __cdecl G_SpawnFloat(char const * key, char const * defaultString, float * out)
 {	UNIMPLEMENTED();
 }
 
@@ -26,11 +26,11 @@ void __cdecl Scr_FreeEntityConstStrings(struct gentity_s *)
 {	UNIMPLEMENTED();
 }
 
-void __cdecl G_DuplicateEntityFields(struct gentity_s *,struct gentity_s const *)
+void __cdecl G_DuplicateEntityFields(struct gentity_s * dest, struct gentity_s const * source)
 {	UNIMPLEMENTED();
 }
 
-void __cdecl GScr_AddFieldsForEntity(void)
+void __cdecl GScr_AddFieldsForEntity()
 {	UNIMPLEMENTED();
 }
 
@@ -38,19 +38,19 @@ void __cdecl G_DuplicateScriptFields(struct gentity_s *,struct gentity_s const *
 {	UNIMPLEMENTED();
 }
 
-void __cdecl Scr_SetGenericField(unsigned char *,enum fieldtype_t,int)
+void __cdecl Scr_SetGenericField(unsigned char * b, enum fieldtype_t type, int ofs)
 {	UNIMPLEMENTED();
 }
 
-void __cdecl Scr_FreeHudElem(struct game_hudelem_s *)
+void __cdecl Scr_FreeHudElem(struct game_hudelem_s * hud)
 {	UNIMPLEMENTED();
 }
 
-void __cdecl Scr_FreeEntity(struct gentity_s *)
+void __cdecl Scr_FreeEntity(struct gentity_s * ent)
 {	UNIMPLEMENTED();
 }
 
-int __cdecl Scr_SetObjectField(unsigned int,int,int)
+int __cdecl Scr_SetObjectField(unsigned int classnum, int entnum, int offset)
 {	UNIMPLEMENTED();
 }
 
@@ -58,7 +58,7 @@ void __cdecl GScr_SetDynamicEntityField(struct gentity_s *,unsigned int)
 {	UNIMPLEMENTED();
 }
 
-void __cdecl SP_worldspawn(void)
+void __cdecl SP_worldspawn()
 {	UNIMPLEMENTED();
 }
 
@@ -66,19 +66,19 @@ void __cdecl Scr_AddHudElem(struct game_hudelem_s *)
 {	UNIMPLEMENTED();
 }
 
-void __cdecl Scr_AddEntity(struct gentity_s *)
+void __cdecl Scr_AddEntity(struct gentity_s * ent)
 {	UNIMPLEMENTED();
 }
 
-void __cdecl Scr_GetGenericField(unsigned char *,enum fieldtype_t,int)
+void __cdecl Scr_GetGenericField(unsigned char * b, enum fieldtype_t type, int ofs)
 {	UNIMPLEMENTED();
 }
 
-void __cdecl Scr_GetEntArray(void)
+void __cdecl Scr_GetEntArray()
 {	UNIMPLEMENTED();
 }
 
-void __cdecl Scr_GetEnt(void)
+void __cdecl Scr_GetEnt()
 {	UNIMPLEMENTED();
 }
 
@@ -86,27 +86,27 @@ void __cdecl Scr_GetEntityField(int,int)
 {	UNIMPLEMENTED();
 }
 
-void __cdecl Scr_GetObjectField(unsigned int,int,int)
+void __cdecl Scr_GetObjectField(unsigned int classnum, int entnum, int offset)
 {	UNIMPLEMENTED();
 }
 
-void __cdecl GScr_AddFieldsForRadiant(void)
+void __cdecl GScr_AddFieldsForRadiant()
 {	UNIMPLEMENTED();
 }
 
-int __cdecl G_CallSpawnEntity(struct gentity_s *)
+int __cdecl G_CallSpawnEntity(struct gentity_s * ent)
 {	UNIMPLEMENTED();
 }
 
-void __cdecl G_CallSpawn(void)
+void __cdecl G_CallSpawn()
 {	UNIMPLEMENTED();
 }
 
-void __cdecl G_SpawnEntitiesFromString(void)
+void __cdecl G_SpawnEntitiesFromString()
 {	UNIMPLEMENTED();
 }
 
-void __cdecl Scr_Notify(struct gentity_s *,unsigned short,unsigned int)
+void __cdecl Scr_Notify(struct gentity_s * ent, unsigned short stringValue, unsigned int paramcount)
 {	UNIMPLEMENTED();
 }
 
@@ -114,11 +114,11 @@ void __cdecl Scr_AddExecEntThread(struct gentity_s *,int,unsigned int)
 {	UNIMPLEMENTED();
 }
 
-unsigned short __cdecl Scr_ExecEntThread(struct gentity_s *,int,unsigned int)
+unsigned short __cdecl Scr_ExecEntThread(struct gentity_s * ent, int handle, unsigned int paramcount)
 {	UNIMPLEMENTED();
 }
 
-void __cdecl G_LoadStructs(void)
+void __cdecl G_LoadStructs()
 {	UNIMPLEMENTED();
 }
 

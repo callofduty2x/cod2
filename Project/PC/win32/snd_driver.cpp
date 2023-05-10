@@ -54,59 +54,59 @@ public: long __cdecl IXAudioSourceVoice::SetPitch(float)
 {	UNIMPLEMENTED();
 }
 
-int __cdecl SND_RawSamplesTime(void)
+int __cdecl SND_RawSamplesTime()
 {	UNIMPLEMENTED();
 }
 
-void __cdecl SND_EndRawSamples(void)
+void __cdecl SND_EndRawSamples()
 {	UNIMPLEMENTED();
 }
 
-void __cdecl SND_RawSamples(int,int,int,int,unsigned char const *)
+void __cdecl SND_RawSamples(int samples, int rate, int width, int s_channels, unsigned char const * data)
 {	UNIMPLEMENTED();
 }
 
-int __cdecl SND_GetDriverCPUPercentage(void)
+int __cdecl SND_GetDriverCPUPercentage()
 {	UNIMPLEMENTED();
 }
 
-void __cdecl SND_DriverPreUpdate(int)
+void __cdecl SND_DriverPreUpdate(int frametime)
 {	UNIMPLEMENTED();
 }
 
-int __cdecl SND_GetSoundFileSize(void const *)
+int __cdecl SND_GetSoundFileSize(void const * pSoundFile)
 {	UNIMPLEMENTED();
 }
 
-int __cdecl SND_GetStreamChannelLength(int)
+int __cdecl SND_GetStreamChannelLength(int index)
 {	UNIMPLEMENTED();
 }
 
-void __cdecl SND_Update3DChannelReverb(int)
+void __cdecl SND_Update3DChannelReverb(int index)
 {	UNIMPLEMENTED();
 }
 
-int __cdecl SND_GetStreamChannelPlaybackRate(int)
+int __cdecl SND_GetStreamChannelPlaybackRate(int index)
 {	UNIMPLEMENTED();
 }
 
-int __cdecl SND_Get3DChannelPlaybackRate(int)
+int __cdecl SND_Get3DChannelPlaybackRate(int index)
 {	UNIMPLEMENTED();
 }
 
-int __cdecl SND_Get2DChannelPlaybackRate(int)
+int __cdecl SND_Get2DChannelPlaybackRate(int index)
 {	UNIMPLEMENTED();
 }
 
-bool __cdecl SND_IsStreamChannelFree(int)
+bool __cdecl SND_IsStreamChannelFree(int index)
 {	UNIMPLEMENTED();
 }
 
-bool __cdecl SND_Is3DChannelFree(int)
+bool __cdecl SND_Is3DChannelFree(int index)
 {	UNIMPLEMENTED();
 }
 
-bool __cdecl SND_Is2DChannelFree(int)
+bool __cdecl SND_Is2DChannelFree(int index)
 {	UNIMPLEMENTED();
 }
 
@@ -114,7 +114,7 @@ void __cdecl XA_PacketCacheInit(void)
 {	UNIMPLEMENTED();
 }
 
-int __cdecl SND_Get3DChannelLength(int)
+int __cdecl SND_Get3DChannelLength(int index)
 {	UNIMPLEMENTED();
 }
 
@@ -122,39 +122,39 @@ int __cdecl SND_Get2DChannelLength(int)
 {	UNIMPLEMENTED();
 }
 
-void __cdecl SND_Set3DPosition(int,float const * const)
+void __cdecl SND_Set3DPosition(int index, float const * const org)
 {	UNIMPLEMENTED();
 }
 
-void __cdecl SND_GetStreamChannelSaveInfo(int,struct snd_save_stream_t *)
+void __cdecl SND_GetStreamChannelSaveInfo(int index, struct snd_save_stream_t * info)
 {	UNIMPLEMENTED();
 }
 
-void __cdecl SND_Get3DChannelSaveInfo(int,struct snd_save_3D_sample_t *)
+void __cdecl SND_Get3DChannelSaveInfo(int index, struct snd_save_3D_sample_t * info)
 {	UNIMPLEMENTED();
 }
 
-void __cdecl SND_Get2DChannelSaveInfo(int,struct snd_save_2D_sample_t *)
+void __cdecl SND_Get2DChannelSaveInfo(int index, struct snd_save_2D_sample_t * info)
 {	UNIMPLEMENTED();
 }
 
-void __cdecl SND_UpdateStreamChannelReverb(int)
+void __cdecl SND_UpdateStreamChannelReverb(int index)
 {	UNIMPLEMENTED();
 }
 
-void __cdecl SND_Update2DChannelReverb(int)
+void __cdecl SND_Update2DChannelReverb(int index)
 {	UNIMPLEMENTED();
 }
 
-void __cdecl SND_SetStreamChannelPlaybackRate(int,int)
+void __cdecl SND_SetStreamChannelPlaybackRate(int index, int rate)
 {	UNIMPLEMENTED();
 }
 
-void __cdecl SND_Set3DChannelPlaybackRate(int,int)
+void __cdecl SND_Set3DChannelPlaybackRate(int index, int rate)
 {	UNIMPLEMENTED();
 }
 
-void __cdecl SND_Set2DChannelPlaybackRate(int,int)
+void __cdecl SND_Set2DChannelPlaybackRate(int index, int rate)
 {	UNIMPLEMENTED();
 }
 
@@ -162,7 +162,7 @@ void __cdecl SND_SetStreamChannelVolume(int,float)
 {	UNIMPLEMENTED();
 }
 
-float __cdecl SND_GetStreamChannelVolume(int)
+float __cdecl SND_GetStreamChannelVolume(int index)
 {	UNIMPLEMENTED();
 }
 
@@ -170,7 +170,7 @@ void __cdecl SND_Set3DChannelVolume(int,float)
 {	UNIMPLEMENTED();
 }
 
-float __cdecl SND_Get3DChannelVolume(int)
+float __cdecl SND_Get3DChannelVolume(int index)
 {	UNIMPLEMENTED();
 }
 
@@ -178,7 +178,7 @@ void __cdecl SND_Set2DChannelVolume(int,float)
 {	UNIMPLEMENTED();
 }
 
-float __cdecl SND_Get2DChannelVolume(int)
+float __cdecl SND_Get2DChannelVolume(int index)
 {	UNIMPLEMENTED();
 }
 
@@ -186,27 +186,27 @@ struct IXAudioSourceVoice * __cdecl XA_GetNewSourceVoice(int,struct XAUDIOSOURCE
 {	UNIMPLEMENTED();
 }
 
-void __cdecl SND_PauseStreamChannel(int)
+void __cdecl SND_PauseStreamChannel(int index)
 {	UNIMPLEMENTED();
 }
 
-void __cdecl SND_StopStreamChannel(int)
+void __cdecl SND_StopStreamChannel(int index)
 {	UNIMPLEMENTED();
 }
 
-void __cdecl SND_Pause3DChannel(int)
+void __cdecl SND_Pause3DChannel(int index)
 {	UNIMPLEMENTED();
 }
 
-void __cdecl SND_Stop3DChannel(int)
+void __cdecl SND_Stop3DChannel(int index)
 {	UNIMPLEMENTED();
 }
 
-void __cdecl SND_Pause2DChannel(int)
+void __cdecl SND_Pause2DChannel(int index)
 {	UNIMPLEMENTED();
 }
 
-void __cdecl SND_Stop2DChannel(int)
+void __cdecl SND_Stop2DChannel(int index)
 {	UNIMPLEMENTED();
 }
 
@@ -214,59 +214,59 @@ void __cdecl XA_ShutdownChannels(void)
 {	UNIMPLEMENTED();
 }
 
-void __cdecl SND_SetRoomtype(int)
+void __cdecl SND_SetRoomtype(int roomtype)
 {	UNIMPLEMENTED();
 }
 
-void __cdecl SND_DriverPostUpdate(int)
+void __cdecl SND_DriverPostUpdate(int frametime)
 {	UNIMPLEMENTED();
 }
 
-void __cdecl SND_SetStreamChannelFromSaveInfo(int,struct snd_save_stream_t *)
+void __cdecl SND_SetStreamChannelFromSaveInfo(int index, struct snd_save_stream_t * info)
 {	UNIMPLEMENTED();
 }
 
-void __cdecl SND_Set2DChannelFromSaveInfo(int,struct snd_save_2D_sample_t *)
+void __cdecl SND_Set2DChannelFromSaveInfo(int index, struct snd_save_2D_sample_t * info)
 {	UNIMPLEMENTED();
 }
 
-void __cdecl SND_UnpauseStreamChannel(int,int)
+void __cdecl SND_UnpauseStreamChannel(int index, int timeshift)
 {	UNIMPLEMENTED();
 }
 
-void __cdecl SND_Unpause3DChannel(int,int)
+void __cdecl SND_Unpause3DChannel(int index, int timeshift)
 {	UNIMPLEMENTED();
 }
 
-void __cdecl SND_Unpause2DChannel(int,int)
+void __cdecl SND_Unpause2DChannel(int index, int timeshift)
 {	UNIMPLEMENTED();
 }
 
-void __cdecl SND_UpdateStreamChannel(int,int)
+void __cdecl SND_UpdateStreamChannel(int i, int frametime)
 {	UNIMPLEMENTED();
 }
 
-int __cdecl SND_StartAliasStreamOnChannel(struct snd_alias_t const *,struct snd_alias_t const *,float,int,float const * const,float,float,int,float,int,bool,int,enum snd_alias_system_t)
+int __cdecl SND_StartAliasStreamOnChannel(struct snd_alias_t const * pAlias0, struct snd_alias_t const * pAlias1, float lerp, int entnum, float const * const org, float volume, float pitch, int timeshift, float fraction, int startDelay, bool master, int index, enum snd_alias_system_t system)
 {	UNIMPLEMENTED();
 }
 
-int __cdecl SND_StartAlias3DSample(struct snd_alias_t const *,struct snd_alias_t const *,float,int,float const * const,float,float,int,float,int,bool,int *,enum snd_alias_system_t)
+int __cdecl SND_StartAlias3DSample(struct snd_alias_t const * pAlias0, struct snd_alias_t const * pAlias1, float lerp, int entnum, float const * const org, float volume, float pitch, int timeshift, float fraction, int startDelay, bool master, int * pChannel, enum snd_alias_system_t system)
 {	UNIMPLEMENTED();
 }
 
-int __cdecl SND_StartAlias2DSample(struct snd_alias_t const *,struct snd_alias_t const *,float,int,float,float,int,float,int,bool,int *,enum snd_alias_system_t)
+int __cdecl SND_StartAlias2DSample(struct snd_alias_t const * pAlias0, struct snd_alias_t const * pAlias1, float lerp, int entnum, float volume, float pitch, int timeshift, float fraction, int startDelay, bool master, int * pChannel, enum snd_alias_system_t system)
 {	UNIMPLEMENTED();
 }
 
-void __cdecl SND_Update3DChannel(int,int)
+void __cdecl SND_Update3DChannel(int i, int frametime)
 {	UNIMPLEMENTED();
 }
 
-void __cdecl SND_Update2DChannel(int,int)
+void __cdecl SND_Update2DChannel(int i, int frametime)
 {	UNIMPLEMENTED();
 }
 
-void __cdecl SND_ShutdownDriver(void)
+void __cdecl SND_ShutdownDriver()
 {	UNIMPLEMENTED();
 }
 
@@ -274,7 +274,7 @@ void __cdecl XA_SndStreamReadThread(void)
 {	UNIMPLEMENTED();
 }
 
-bool __cdecl SND_InitDriver(void)
+bool __cdecl SND_InitDriver()
 {	UNIMPLEMENTED();
 }
 
@@ -421,6 +421,10 @@ void __cdecl XA_ExecuteStreamRead(struct XaStreamReadInfo *)
 }
 
 void __cdecl XA_InitChannels(void)
+{	UNIMPLEMENTED();
+}
+
+SND_LoadSoundFile(SoundFile* soundFile)
 {	UNIMPLEMENTED();
 }
 

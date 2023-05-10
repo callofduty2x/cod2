@@ -1,4 +1,4 @@
-void __cdecl CG_InitLocalEntities(void)
+void __cdecl CG_InitLocalEntities()
 {	UNIMPLEMENTED();
 }
 
@@ -14,11 +14,11 @@ void __cdecl CG_AddMovingTracer(struct localEntity_s *)
 {	UNIMPLEMENTED();
 }
 
-struct localEntity_s * __cdecl CG_AllocLocalEntity(void)
+struct localEntity_s * __cdecl CG_AllocLocalEntity()
 {	UNIMPLEMENTED();
 }
 
-void __cdecl CG_AddLocalEntities(void)
+void __cdecl CG_AddLocalEntities()
 {	UNIMPLEMENTED();
 }
 

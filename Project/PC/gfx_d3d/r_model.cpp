@@ -74,15 +74,15 @@ void __cdecl LocalAddScaledMatrixTransformVector43(float const * const,float,str
 {	UNIMPLEMENTED();
 }
 
-struct DObj_s * __cdecl R_GetGfxEntityDObj(struct GfxSceneEntity *,struct GfxEntity *)
+struct DObj_s * __cdecl R_GetGfxEntityDObj(struct GfxSceneEntity *, struct GfxEntity *)
 {	UNIMPLEMENTED();
 }
 
-int __cdecl R_GetIgnorePrecacheErrors(void)
+int __cdecl R_GetIgnorePrecacheErrors()
 {	UNIMPLEMENTED();
 }
 
-void __cdecl R_SetIgnorePrecacheErrors(int)
+void __cdecl R_SetIgnorePrecacheErrors(int ignore)
 {	UNIMPLEMENTED();
 }
 
@@ -94,7 +94,7 @@ void __cdecl R_GetRigidTransform(struct DObjSkelMat_s const *,float const * cons
 {	UNIMPLEMENTED();
 }
 
-void __cdecl R_ModelBounds(struct GfxBrushModel *,float * const,float * const)
+void __cdecl R_ModelBounds(struct GfxBrushModel * bmodel, float * const mins, float * const maxs)
 {	UNIMPLEMENTED();
 }
 
@@ -102,39 +102,39 @@ float __cdecl R_GetLodDist(float const * const,float)
 {	UNIMPLEMENTED();
 }
 
-void __cdecl R_SkinRigidXModelCmd(struct SkinRigidXModelCmd *)
+void __cdecl R_SkinRigidXModelCmd(struct SkinRigidXModelCmd * skinRigidCmd)
 {	UNIMPLEMENTED();
 }
 
-void __cdecl R_SkinXModelCmd(struct SkinXModelCmd *,int)
+void __cdecl R_SkinXModelCmd(struct SkinXModelCmd * skinCmd, int context)
 {	UNIMPLEMENTED();
 }
 
-struct XModel * __cdecl R_RegisterModel(char const *)
+struct XModel * __cdecl R_RegisterModel(char const * name)
 {	UNIMPLEMENTED();
 }
 
-void __cdecl R_DObjReplaceMaterial(struct DObj_s *,int,int,struct Material *)
+void __cdecl R_DObjReplaceMaterial(struct DObj_s * obj, int lod, int surfaceIndex, struct Material * material)
 {	UNIMPLEMENTED();
 }
 
-void __cdecl R_DObjGetSurfMaterials(struct DObj_s *,int,struct Material * *)
+void __cdecl R_DObjGetSurfMaterials(struct DObj_s * obj, int lod, struct Material * * matHandleArray)
 {	UNIMPLEMENTED();
 }
 
-void __cdecl R_UpdateXModelBounds(struct GfxSceneEntity *,struct GfxEntity *)
+void __cdecl R_UpdateXModelBounds(struct GfxSceneEntity * sceneEnt, struct GfxEntity * ent)
 {	UNIMPLEMENTED();
 }
 
-void __cdecl R_SkinSceneDObj(struct GfxSceneEntity *,struct GfxEntity *)
+void __cdecl R_SkinSceneDObj(struct GfxSceneEntity * sceneEnt, struct GfxEntity * ent)
 {	UNIMPLEMENTED();
 }
 
-void __cdecl R_SkinStaticModel(struct GfxSceneEntity *,struct GfxEntity *,int)
+void __cdecl R_SkinStaticModel(struct GfxSceneEntity * sceneEnt, struct GfxEntity * ent, int smodelIndex)
 {	UNIMPLEMENTED();
 }
 
-void __cdecl R_SkinSceneEnt(struct GfxSceneEntity *,struct GfxEntity *)
+void __cdecl R_SkinSceneEnt(struct GfxSceneEntity * sceneEnt, struct GfxEntity * ent)
 {	UNIMPLEMENTED();
 }
 
@@ -232,6 +232,34 @@ void __cdecl R_XModelDebug(struct GfxSceneEntity *,struct GfxEntity *,struct DOb
 }
 
 void __cdecl R_SkinXModel(struct GfxSceneEntity *,struct GfxEntity *,int)
+{	UNIMPLEMENTED();
+}
+
+R_UnlockSkinnedCache()
+{	UNIMPLEMENTED();
+}
+
+R_OptimizeAllModels()
+{	UNIMPLEMENTED();
+}
+
+R_ReleaseAllModels()
+{	UNIMPLEMENTED();
+}
+
+Model_Alloc(int size)
+{	UNIMPLEMENTED();
+}
+
+R_LockSkinnedCache(GfxLockType lockType)
+{	UNIMPLEMENTED();
+}
+
+R_ShutdownModels()
+{	UNIMPLEMENTED();
+}
+
+R_FinishLoadingModels()
 {	UNIMPLEMENTED();
 }
 

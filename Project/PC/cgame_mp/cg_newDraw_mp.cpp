@@ -10,11 +10,11 @@ void __cdecl CG_GetTeamColor(float (*)[4])
 {	UNIMPLEMENTED();
 }
 
-int __cdecl CG_KeyInterceptEvent(int,int)
+int __cdecl CG_KeyInterceptEvent(int key, int down)
 {	UNIMPLEMENTED();
 }
 
-char const * __cdecl CG_GameTypeString(void)
+char const * __cdecl CG_GameTypeString()
 {	UNIMPLEMENTED();
 }
 
@@ -22,15 +22,15 @@ int __cdecl CG_OwnerDrawVisible(int)
 {	UNIMPLEMENTED();
 }
 
-int __cdecl CG_ServerMaterialName(int,char *,int)
+int __cdecl CG_ServerMaterialName(int index, char * materialName, int maxLen)
 {	UNIMPLEMENTED();
 }
 
-void __cdecl CG_ResetLowHealthOverlay(void)
+void __cdecl CG_ResetLowHealthOverlay()
 {	UNIMPLEMENTED();
 }
 
-float __cdecl CG_CalcPlayerHealth(void)
+float __cdecl CG_CalcPlayerHealth()
 {	UNIMPLEMENTED();
 }
 
@@ -42,15 +42,15 @@ void __cdecl CG_SetLegacySplitscreenScaling(void)
 {	UNIMPLEMENTED();
 }
 
-bool __cdecl CG_AreHudMenusHidden(void)
+bool __cdecl CG_AreHudMenusHidden()
 {	UNIMPLEMENTED();
 }
 
-char const * __cdecl CG_GetKillerText(void)
+char const * __cdecl CG_GetKillerText()
 {	UNIMPLEMENTED();
 }
 
-void __cdecl CG_ApplySplitScreenCompassScale(float *,float *,float *,float *)
+void __cdecl CG_ApplySplitScreenCompassScale(float * x, float * y, float * w, float * h)
 {	UNIMPLEMENTED();
 }
 
@@ -58,11 +58,11 @@ struct Material * __cdecl CG_ObjectiveIcon(int,int)
 {	UNIMPLEMENTED();
 }
 
-float __cdecl CG_FadeHudMenu(struct dvar_s const *,int,int)
+float __cdecl CG_FadeHudMenu(struct dvar_s const * fadeDvar, int displayStartTime, int duration)
 {	UNIMPLEMENTED();
 }
 
-void __cdecl CG_ArchiveState(struct MemoryFile *)
+void __cdecl CG_ArchiveState(struct MemoryFile * memFile)
 {	UNIMPLEMENTED();
 }
 
@@ -70,11 +70,11 @@ int __cdecl CG_ClientNumFromName(char const *)
 {	UNIMPLEMENTED();
 }
 
-bool __cdecl CG_CheckPlayerForLowClip(void)
+bool __cdecl CG_CheckPlayerForLowClip()
 {	UNIMPLEMENTED();
 }
 
-bool __cdecl CG_CheckPlayerForLowAmmo(void)
+bool __cdecl CG_CheckPlayerForLowAmmo()
 {	UNIMPLEMENTED();
 }
 
@@ -82,7 +82,7 @@ void __cdecl CG_DrawMenuShader(struct rectDef_s const *,struct Material *,float 
 {	UNIMPLEMENTED();
 }
 
-void __cdecl CG_DrawPlayerCompassBack(struct rectDef_s const *,struct Material *,float * const)
+void __cdecl CG_DrawPlayerCompassBack(struct rectDef_s const * rect, struct Material * material, float * const color)
 {	UNIMPLEMENTED();
 }
 
@@ -90,15 +90,15 @@ void __cdecl CG_ShowResponseHead(void)
 {	UNIMPLEMENTED();
 }
 
-void __cdecl CG_AntiBurnInHUD_RegisterDvars(void)
+void __cdecl CG_AntiBurnInHUD_RegisterDvars()
 {	UNIMPLEMENTED();
 }
 
-char const * __cdecl CG_GetTranslatedLocationString(int)
+char const * __cdecl CG_GetTranslatedLocationString(int iLocation)
 {	UNIMPLEMENTED();
 }
 
-void __cdecl CG_OwnerDraw(float,float,float,float,int,int,float,float,int,int,int,float,struct Font_s *,float,float * const,struct Material *,int)
+void __cdecl CG_OwnerDraw(float x, float y, float w, float h, int horzAlign, int vertAlign, float text_x, float text_y, int ownerDraw, int ownerDrawFlags, int align, float special, struct Font_s * font, float scale, float * const color, struct Material * material, int textStyle)
 {	UNIMPLEMENTED();
 }
 

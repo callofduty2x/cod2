@@ -10,27 +10,27 @@ void __cdecl Com_BitSet(int * const,int)
 {	UNIMPLEMENTED();
 }
 
-int __cdecl BG_PlayAnim(struct playerState_s *,int,enum animBodyPart_t,int,int,int,int)
+int __cdecl BG_PlayAnim(struct playerState_s * ps, int animNum, enum animBodyPart_t bodyPart, int forceDuration, int setTimer, int isContinue, int force)
 {	UNIMPLEMENTED();
 }
 
-void __cdecl BG_LerpOffset(float * const,float,float * const)
+void __cdecl BG_LerpOffset(float * const offset_goal, float maxOffsetChange, float * const offset)
 {	UNIMPLEMENTED();
 }
 
-void __cdecl BG_UpdateConditionValue(int,int,int,int)
+void __cdecl BG_UpdateConditionValue(int client, int condition, int value, int checkConversion)
 {	UNIMPLEMENTED();
 }
 
-int __cdecl BG_ExecuteCommand(struct playerState_s *,struct animScriptCommand_t *,int,int,int)
+int __cdecl BG_ExecuteCommand(struct playerState_s * ps, struct animScriptCommand_t * scriptCommand, int setTimer, int isContinue, int force)
 {	UNIMPLEMENTED();
 }
 
-void __cdecl BG_InitWeaponString(int,char const *)
+void __cdecl BG_InitWeaponString(int index, char const * name)
 {	UNIMPLEMENTED();
 }
 
-void __cdecl BG_AnimUpdatePlayerStateConditions(struct pmove_t *)
+void __cdecl BG_AnimUpdatePlayerStateConditions(struct pmove_t * pmove)
 {	UNIMPLEMENTED();
 }
 
@@ -38,7 +38,7 @@ int __cdecl BG_GetAnimScriptEvent(struct playerState_s *,enum scriptAnimEventTyp
 {	UNIMPLEMENTED();
 }
 
-int __cdecl BG_AnimScriptEvent(struct playerState_s *,enum scriptAnimEventTypes_t,int,int)
+int __cdecl BG_AnimScriptEvent(struct playerState_s * ps, enum scriptAnimEventTypes_t event, int isContinue, int force)
 {	UNIMPLEMENTED();
 }
 
@@ -46,19 +46,19 @@ int __cdecl BG_AnimScriptStateChange(struct playerState_s *,enum aistateEnum_t,e
 {	UNIMPLEMENTED();
 }
 
-int __cdecl BG_AnimScriptAnimation(struct playerState_s *,enum aistateEnum_t,enum scriptAnimMoveTypes_t,int)
+int __cdecl BG_AnimScriptAnimation(struct playerState_s * ps, enum aistateEnum_t state, enum scriptAnimMoveTypes_t movetype, int isContinue)
 {	UNIMPLEMENTED();
 }
 
-void __cdecl BG_InitWeaponStrings(void)
+void __cdecl BG_InitWeaponStrings()
 {	UNIMPLEMENTED();
 }
 
-void __cdecl BG_Player_DoControllers(struct DObj_s const *,struct entityState_s const *,int * const,struct clientInfo_t *,int)
+void __cdecl BG_Player_DoControllers(struct DObj_s const * pDObj, struct entityState_s const * es, int * const partBits, struct clientInfo_t * ci, int frametime)
 {	UNIMPLEMENTED();
 }
 
-void __cdecl BG_UpdatePlayerDObj(struct DObj_s *,struct entityState_s *,struct clientInfo_t *,int)
+void __cdecl BG_UpdatePlayerDObj(struct DObj_s * pDObj, struct entityState_s * es, struct clientInfo_t * ci, int attachIgnoreCollision)
 {	UNIMPLEMENTED();
 }
 
@@ -70,7 +70,7 @@ struct animation_s * __cdecl BG_AnimationForString(char const *)
 {	UNIMPLEMENTED();
 }
 
-void __cdecl BG_AnimParseError(char const *,...)
+void __cdecl BG_AnimParseError(char const * msg, ...)
 {	UNIMPLEMENTED();
 }
 
@@ -94,11 +94,11 @@ char * __cdecl BG_CopyStringIntoBuffer(char const *,char *,int,int *)
 {	UNIMPLEMENTED();
 }
 
-int __cdecl BG_IndexForString(char const *,struct animStringItem_t *,int)
+int __cdecl BG_IndexForString(char const * token, struct animStringItem_t * strings, int allowFail)
 {	UNIMPLEMENTED();
 }
 
-int __cdecl BG_AnimationIndexForString(char const *)
+int __cdecl BG_AnimationIndexForString(char const * string)
 {	UNIMPLEMENTED();
 }
 
@@ -106,15 +106,15 @@ int __cdecl BG_PlayAnimName(struct playerState_s *,char *,enum animBodyPart_t,in
 {	UNIMPLEMENTED();
 }
 
-void __cdecl BG_ParseCommands(char const * *,struct animScriptItem_t *,struct animScriptData_t *)
+void __cdecl BG_ParseCommands(char const * * input, struct animScriptItem_t * scriptItem, struct animScriptData_t * scriptData)
 {	UNIMPLEMENTED();
 }
 
-void __cdecl BG_PlayerAnimation(struct DObj_s const *,struct entityState_s *,struct clientInfo_t *)
+void __cdecl BG_PlayerAnimation(struct DObj_s const * pDObj, struct entityState_s * es, struct clientInfo_t * ci)
 {	UNIMPLEMENTED();
 }
 
-void __cdecl BG_LoadAnim(void)
+void __cdecl BG_LoadAnim()
 {	UNIMPLEMENTED();
 }
 

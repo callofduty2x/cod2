@@ -1,8 +1,8 @@
-void __cdecl CG_EntityEvent(struct centity_s *,int)
+void __cdecl CG_EntityEvent(struct centity_s * cent, int event)
 {	UNIMPLEMENTED();
 }
 
-void __cdecl CG_CheckEvents(struct centity_s *)
+void __cdecl CG_CheckEvents(struct centity_s * cent)
 {	UNIMPLEMENTED();
 }
 

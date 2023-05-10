@@ -14,15 +14,15 @@ void __cdecl CG_UpdateThirdPerson(void)
 {	UNIMPLEMENTED();
 }
 
-float __cdecl CG_GetViewFov(void)
+float __cdecl CG_GetViewFov()
 {	UNIMPLEMENTED();
 }
 
-void __cdecl CG_FxRestart(void)
+void __cdecl CG_FxRestart()
 {	UNIMPLEMENTED();
 }
 
-void __cdecl CG_FxSetTestPosition(void)
+void __cdecl CG_FxSetTestPosition()
 {	UNIMPLEMENTED();
 }
 
@@ -30,15 +30,15 @@ void __cdecl updateTestFX(void)
 {	UNIMPLEMENTED();
 }
 
-void __cdecl CG_FxTest(void)
+void __cdecl CG_FxTest()
 {	UNIMPLEMENTED();
 }
 
-void __cdecl CG_InitView(void)
+void __cdecl CG_InitView()
 {	UNIMPLEMENTED();
 }
 
-int __cdecl CG_DrawActiveFrame(int,enum DemoType,enum CubemapShot,int,int)
+int __cdecl CG_DrawActiveFrame(int serverTime, enum DemoType demoType, enum CubemapShot cubemapShot, int cubemapSize, int renderScreen)
 {	UNIMPLEMENTED();
 }
 

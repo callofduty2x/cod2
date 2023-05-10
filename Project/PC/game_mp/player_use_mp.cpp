@@ -1,4 +1,4 @@
-void __cdecl Player_UpdateActivate(struct gentity_s *)
+void __cdecl Player_UpdateActivate(struct gentity_s * ent)
 {	UNIMPLEMENTED();
 }
 
@@ -6,7 +6,7 @@ void __cdecl Player_UpdateLookAtEntity(struct gentity_s *)
 {	UNIMPLEMENTED();
 }
 
-void __cdecl Player_UpdateCursorHints(struct gentity_s *)
+void __cdecl Player_UpdateCursorHints(struct gentity_s * ent)
 {	UNIMPLEMENTED();
 }
 

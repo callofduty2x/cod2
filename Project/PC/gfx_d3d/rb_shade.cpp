@@ -54,23 +54,23 @@ void __cdecl RB_SetVertexDecl(struct D3DVertexDeclaration *)
 {	UNIMPLEMENTED();
 }
 
-void __cdecl RB_BeginSurface(struct Material const *,enum MaterialTechniqueType,int)
+void __cdecl RB_BeginSurface(struct Material const * material, enum MaterialTechniqueType techType, int lmapIndex)
 {	UNIMPLEMENTED();
 }
 
-void __cdecl RB_CreateDynamicBuffers(void)
+void __cdecl RB_CreateDynamicBuffers()
 {	UNIMPLEMENTED();
 }
 
-int __cdecl RB_SetIndexData(unsigned short const *,int)
+int __cdecl RB_SetIndexData(unsigned short const *, int)
 {	UNIMPLEMENTED();
 }
 
-void __cdecl RB_DrawTechnique(enum MaterialVertexDeclType,struct GfxDrawPrimArgs const *)
+void __cdecl RB_DrawTechnique(enum MaterialVertexDeclType vertDeclType, struct GfxDrawPrimArgs const * args)
 {	UNIMPLEMENTED();
 }
 
-void __cdecl RB_EndSurface(void)
+void __cdecl RB_EndSurface()
 {	UNIMPLEMENTED();
 }
 
@@ -168,6 +168,10 @@ void __cdecl RB_EndSurface_Standard(void)
 }
 
 void __cdecl RB_EndSurface_Optimized(void)
+{	UNIMPLEMENTED();
+}
+
+RB_SetVertexData(unsigned int streamIndex,  void const* data,  int vertexCount,  int stride)
 {	UNIMPLEMENTED();
 }
 

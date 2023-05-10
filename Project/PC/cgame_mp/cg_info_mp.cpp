@@ -1,8 +1,8 @@
-void __cdecl CG_LoadingString(char const *)
+void __cdecl CG_LoadingString(char const * s)
 {	UNIMPLEMENTED();
 }
 
-void __cdecl CG_DrawInformation(int)
+void __cdecl CG_DrawInformation(int serverLoading)
 {	UNIMPLEMENTED();
 }
 

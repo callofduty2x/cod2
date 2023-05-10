@@ -6,15 +6,15 @@ void __cdecl Vec4Set(float * const,float,float,float,float)
 {	UNIMPLEMENTED();
 }
 
-void __cdecl CG_DrawFrameOverlay(float,float,float,float,float const * const,struct Material *)
+void __cdecl CG_DrawFrameOverlay(float innerLeft, float innerRight, float innerTop, float innerBottom, float const * const color, struct Material * material)
 {	UNIMPLEMENTED();
 }
 
-void __cdecl CG_AddLagometerSnapshotInfo(struct snapshot_t *)
+void __cdecl CG_AddLagometerSnapshotInfo(struct snapshot_t * snap)
 {	UNIMPLEMENTED();
 }
 
-void __cdecl CG_AddLagometerFrameInfo(void)
+void __cdecl CG_AddLagometerFrameInfo()
 {	UNIMPLEMENTED();
 }
 
@@ -26,23 +26,23 @@ void __cdecl CG_ScreenFade(void)
 {	UNIMPLEMENTED();
 }
 
-void __cdecl CG_CalculateFPS(void)
+void __cdecl CG_CalculateFPS()
 {	UNIMPLEMENTED();
 }
 
-bool __cdecl CG_GetWeapReticleZoom(float *)
+bool __cdecl CG_GetWeapReticleZoom(float * pfZoom)
 {	UNIMPLEMENTED();
 }
 
-void __cdecl CG_ShakeCamera(void)
+void __cdecl CG_ShakeCamera()
 {	UNIMPLEMENTED();
 }
 
-void __cdecl CG_StartShakeCamera(float,int,float * const,float)
+void __cdecl CG_StartShakeCamera(float p, int duration, float * const src, float radius)
 {	UNIMPLEMENTED();
 }
 
-void __cdecl CG_DrawTurretCrossHair(void)
+void __cdecl CG_DrawTurretCrossHair()
 {	UNIMPLEMENTED();
 }
 
@@ -50,11 +50,11 @@ void __cdecl CG_DrawPerformanceWarnings(void)
 {	UNIMPLEMENTED();
 }
 
-void __cdecl CG_DrawTeamBackground(float,float,float,float,float,int)
+void __cdecl CG_DrawTeamBackground(float x, float y, float w, float h, float alpha, int team)
 {	UNIMPLEMENTED();
 }
 
-void __cdecl CG_DrawActive(void)
+void __cdecl CG_DrawActive()
 {	UNIMPLEMENTED();
 }
 
@@ -70,7 +70,7 @@ void __cdecl CG_DrawMiniConsole(void)
 {	UNIMPLEMENTED();
 }
 
-void __cdecl CG_DrawBoldGameMessages(void)
+void __cdecl CG_DrawBoldGameMessages()
 {	UNIMPLEMENTED();
 }
 
@@ -78,7 +78,7 @@ void __cdecl CG_DrawGameMessages(void)
 {	UNIMPLEMENTED();
 }
 
-void __cdecl CG_DrawCrosshair(void)
+void __cdecl CG_DrawCrosshair()
 {	UNIMPLEMENTED();
 }
 
@@ -86,7 +86,7 @@ void __cdecl CG_DrawDebugOverlays(void)
 {	UNIMPLEMENTED();
 }
 
-void __cdecl CG_PriorityCenterPrint(char const *,float,int)
+void __cdecl CG_PriorityCenterPrint(char const * str, float charWidth, int priority)
 {	UNIMPLEMENTED();
 }
 
@@ -94,7 +94,7 @@ void __cdecl CG_CenterPrint(char const *,float)
 {	UNIMPLEMENTED();
 }
 
-void __cdecl CG_CheckTimedMenus(void)
+void __cdecl CG_CheckTimedMenus()
 {	UNIMPLEMENTED();
 }
 
@@ -102,11 +102,11 @@ void __cdecl CG_DrawSay(void)
 {	UNIMPLEMENTED();
 }
 
-void __cdecl CG_DrawPlayerSprites(void)
+void __cdecl CG_DrawPlayerSprites()
 {	UNIMPLEMENTED();
 }
 
-void __cdecl CG_Draw2D(void)
+void __cdecl CG_Draw2D()
 {	UNIMPLEMENTED();
 }
 

@@ -2,11 +2,11 @@ int const __cdecl FastCeil(float)
 {	UNIMPLEMENTED();
 }
 
-void __cdecl HudElem_UpdateClient(struct gclient_s *,int,enum hudelem_update_t)
+void __cdecl HudElem_UpdateClient(struct gclient_s * client, int clientNum, enum hudelem_update_t which)
 {	UNIMPLEMENTED();
 }
 
-void (__cdecl*__cdecl HudElem_GetMethod(char const * *))(struct scr_entref_t)
+void (__cdecl*__cdecl HudElem_GetMethod pName))(struct scr_entref_t)
 {	UNIMPLEMENTED();
 }
 
@@ -14,15 +14,15 @@ struct game_hudelem_s * __cdecl HudElem_Alloc(int,int)
 {	UNIMPLEMENTED();
 }
 
-void __cdecl GScr_AddFieldsForHudElems(void)
+void __cdecl GScr_AddFieldsForHudElems()
 {	UNIMPLEMENTED();
 }
 
-void __cdecl Scr_FreeHudElemConstStrings(struct game_hudelem_s *)
+void __cdecl Scr_FreeHudElemConstStrings(struct game_hudelem_s * hud)
 {	UNIMPLEMENTED();
 }
 
-void __cdecl Scr_SetHudElemField(int,int)
+void __cdecl Scr_SetHudElemField(int entnum, int offset)
 {	UNIMPLEMENTED();
 }
 
@@ -30,27 +30,27 @@ void __cdecl HudElem_Free(struct game_hudelem_s *)
 {	UNIMPLEMENTED();
 }
 
-void __cdecl HudElem_DestroyAll(void)
+void __cdecl HudElem_DestroyAll()
 {	UNIMPLEMENTED();
 }
 
-void __cdecl HudElem_ClientDisconnect(struct gentity_s *)
+void __cdecl HudElem_ClientDisconnect(struct gentity_s * ent)
 {	UNIMPLEMENTED();
 }
 
-void __cdecl GScr_NewTeamHudElem(void)
+void __cdecl GScr_NewTeamHudElem()
 {	UNIMPLEMENTED();
 }
 
-void __cdecl GScr_NewClientHudElem(void)
+void __cdecl GScr_NewClientHudElem()
 {	UNIMPLEMENTED();
 }
 
-void __cdecl GScr_NewHudElem(void)
+void __cdecl GScr_NewHudElem()
 {	UNIMPLEMENTED();
 }
 
-void __cdecl Scr_GetHudElemField(int,int)
+void __cdecl Scr_GetHudElemField(int entnum, int offset)
 {	UNIMPLEMENTED();
 }
 

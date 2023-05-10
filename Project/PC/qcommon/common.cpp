@@ -1,16 +1,16 @@
-char __cdecl Com_GetDecimalDelimiter(void)
+char __cdecl Com_GetDecimalDelimiter()
 {	UNIMPLEMENTED();
 }
 
-int __cdecl Com_AddToString(char const *,char *,int,int,int)
+int __cdecl Com_AddToString(char const * add, char * msg, int len, int maxlen, int mayAddQuotes)
 {	UNIMPLEMENTED();
 }
 
-void __cdecl Com_SetWeaponInfoMemory(int)
+void __cdecl Com_SetWeaponInfoMemory(int iSource)
 {	UNIMPLEMENTED();
 }
 
-void __cdecl Field_Clear(struct field_t *)
+void __cdecl Field_Clear(struct field_t * edit)
 {	UNIMPLEMENTED();
 }
 
@@ -18,7 +18,7 @@ void __cdecl Com_CheckSyncFrame(void)
 {	UNIMPLEMENTED();
 }
 
-float __cdecl Com_GetTimescaleForSnd(void)
+float __cdecl Com_GetTimescaleForSnd()
 {	UNIMPLEMENTED();
 }
 
@@ -26,7 +26,7 @@ void __cdecl Com_SetScriptSettings(void)
 {	UNIMPLEMENTED();
 }
 
-void __cdecl Com_ShutdownEvents(void)
+void __cdecl Com_ShutdownEvents()
 {	UNIMPLEMENTED();
 }
 
@@ -50,11 +50,11 @@ void __cdecl Com_SetTimeScale(float)
 {	UNIMPLEMENTED();
 }
 
-void __cdecl Com_DPrintf(char const *,...)
+void __cdecl Com_DPrintf(char const * fmt, ...)
 {	UNIMPLEMENTED();
 }
 
-void __cdecl Com_LocalizedFloatToString(float,char *,unsigned int,unsigned int)
+void __cdecl Com_LocalizedFloatToString(float f, char * buffer, unsigned int maxlen, unsigned int numDecimalPlaces)
 {	UNIMPLEMENTED();
 }
 
@@ -70,15 +70,15 @@ int __cdecl Com_AddStartupCommands(void)
 {	UNIMPLEMENTED();
 }
 
-void __cdecl Com_FreeWeaponInfoMemory(int)
+void __cdecl Com_FreeWeaponInfoMemory(int iSource)
 {	UNIMPLEMENTED();
 }
 
-void __cdecl Com_PumpMessageLoop(void)
+void __cdecl Com_PumpMessageLoop()
 {	UNIMPLEMENTED();
 }
 
-int __cdecl Com_Milliseconds(void)
+int __cdecl Com_Milliseconds()
 {	UNIMPLEMENTED();
 }
 
@@ -86,7 +86,7 @@ struct sysEvent_t __cdecl Com_GetEvent(void)
 {	UNIMPLEMENTED();
 }
 
-int __cdecl Com_SafeMode(void)
+int __cdecl Com_SafeMode()
 {	UNIMPLEMENTED();
 }
 
@@ -106,23 +106,23 @@ void __cdecl Com_RunAutoExec(void)
 {	UNIMPLEMENTED();
 }
 
-void __cdecl Com_ExecStartupConfigs(char const *)
+void __cdecl Com_ExecStartupConfigs(char const * configFile)
 {	UNIMPLEMENTED();
 }
 
-int __cdecl Debug_EventLoop(void)
+int __cdecl Debug_EventLoop()
 {	UNIMPLEMENTED();
 }
 
-void __cdecl Com_ReadCDKey(void)
+void __cdecl Com_ReadCDKey()
 {	UNIMPLEMENTED();
 }
 
-void __cdecl Com_PrintMessage(enum print_msg_type_t,char const *)
+void __cdecl Com_PrintMessage(enum print_msg_type_t type, char const * msg)
 {	UNIMPLEMENTED();
 }
 
-void __cdecl Com_Printf(char const *,...)
+void __cdecl Com_Printf(char const * fmt, ...)
 {	UNIMPLEMENTED();
 }
 
@@ -130,19 +130,19 @@ void __cdecl Com_WriteDefaultsToFile(char const *)
 {	UNIMPLEMENTED();
 }
 
-void __cdecl Com_WriteCDKey(void)
+void __cdecl Com_WriteCDKey()
 {	UNIMPLEMENTED();
 }
 
-void __cdecl Info_Print(char const *)
+void __cdecl Info_Print(char const * s)
 {	UNIMPLEMENTED();
 }
 
-void __cdecl Com_WriteDefaults_f(void)
+void __cdecl Com_WriteDefaults_f()
 {	UNIMPLEMENTED();
 }
 
-void __cdecl Com_WriteConfig_f(void)
+void __cdecl Com_WriteConfig_f()
 {	UNIMPLEMENTED();
 }
 
@@ -150,11 +150,11 @@ void __cdecl Com_WriteConfiguration(void)
 {	UNIMPLEMENTED();
 }
 
-void __cdecl Com_StartupVariable(char const *)
+void __cdecl Com_StartupVariable(char const * match)
 {	UNIMPLEMENTED();
 }
 
-void __cdecl Com_Close(void)
+void __cdecl Com_Close()
 {	UNIMPLEMENTED();
 }
 
@@ -162,7 +162,7 @@ void __cdecl Com_SyncThreads(void)
 {	UNIMPLEMENTED();
 }
 
-void __cdecl Com_Restart(void)
+void __cdecl Com_Restart()
 {	UNIMPLEMENTED();
 }
 
@@ -170,35 +170,35 @@ void __cdecl Com_AssetLoadUI(void)
 {	UNIMPLEMENTED();
 }
 
-void __cdecl Com_Quit_f(void)
+void __cdecl Com_Quit_f()
 {	UNIMPLEMENTED();
 }
 
-void __cdecl Com_ShutdownInternal(char *)
+void __cdecl Com_ShutdownInternal(char * finalmsg)
 {	UNIMPLEMENTED();
 }
 
-void __cdecl Com_Shutdown(char *)
+void __cdecl Com_Shutdown(char * finalmsg)
 {	UNIMPLEMENTED();
 }
 
-int __cdecl Com_EventLoop(void)
+int __cdecl Com_EventLoop()
 {	UNIMPLEMENTED();
 }
 
-void __cdecl Com_Frame_Try_Block_Function(void)
+void __cdecl Com_Frame_Try_Block_Function()
 {	UNIMPLEMENTED();
 }
 
-void __cdecl Com_Frame(void)
+void __cdecl Com_Frame()
 {	UNIMPLEMENTED();
 }
 
-void __cdecl Com_Init_Try_Block_Function(char *)
+void __cdecl Com_Init_Try_Block_Function(char * commandLine)
 {	UNIMPLEMENTED();
 }
 
-void __cdecl Com_Init(char *)
+void __cdecl Com_Init(char * commandLine)
 {	UNIMPLEMENTED();
 }
 
@@ -316,6 +316,22 @@ void __cdecl Com_ErrorCleanup(void)
 }
 
 void __cdecl Com_StartHunkUsers(void)
+{	UNIMPLEMENTED();
+}
+
+Com_BeginRedirect(char* buffer,  int buffersize,  void  flush)(char*))
+{	UNIMPLEMENTED();
+}
+
+Com_EndRedirect()
+{	UNIMPLEMENTED();
+}
+
+Com_SetRecommended(int restart)
+{	UNIMPLEMENTED();
+}
+
+Com_CheckSetRecommended()
 {	UNIMPLEMENTED();
 }
 

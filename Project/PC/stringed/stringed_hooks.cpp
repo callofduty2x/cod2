@@ -1,4 +1,4 @@
-char const * __cdecl SEH_GetLanguageName(int)
+char const * __cdecl SEH_GetLanguageName(int iLanguage)
 {	UNIMPLEMENTED();
 }
 
@@ -6,11 +6,11 @@ int __cdecl Language_IsAsian(void)
 {	UNIMPLEMENTED();
 }
 
-int __cdecl SEH_VerifyLanguageSelection(int)
+int __cdecl SEH_VerifyLanguageSelection(int iLanguageSelection)
 {	UNIMPLEMENTED();
 }
 
-int __cdecl SEH_GetCurrentLanguage(void)
+int __cdecl SEH_GetCurrentLanguage()
 {	UNIMPLEMENTED();
 }
 
@@ -22,11 +22,11 @@ int __cdecl Taiwanese_CollapseBig5Code(unsigned int)
 {	UNIMPLEMENTED();
 }
 
-int __cdecl SEH_GetLanguageIndexForName(char const *,int *)
+int __cdecl SEH_GetLanguageIndexForName(char const * pszLanguageName, int * piLanguageIndex)
 {	UNIMPLEMENTED();
 }
 
-unsigned int __cdecl SEH_ReadCharFromString(char const * *,int *)
+unsigned int __cdecl SEH_ReadCharFromString(char const * * ppsText, int * pbIsTrailingPunctuation)
 {	UNIMPLEMENTED();
 }
 
@@ -42,7 +42,7 @@ int __cdecl Korean_CollapseKSC5601HangulCode(unsigned int)
 {	UNIMPLEMENTED();
 }
 
-int __cdecl SEH_PrintStrlen(char const *)
+int __cdecl SEH_PrintStrlen(char const * string)
 {	UNIMPLEMENTED();
 }
 
@@ -50,19 +50,19 @@ char const * __cdecl SE_GetString(char const *)
 {	UNIMPLEMENTED();
 }
 
-char const * __cdecl SEH_StringEd_GetString(char const *)
+char const * __cdecl SEH_StringEd_GetString(char const * pszReference)
 {	UNIMPLEMENTED();
 }
 
-char const * __cdecl SEH_LocalizeTextMessage(char const *,char const *,enum msgLocErrType_t)
+char const * __cdecl SEH_LocalizeTextMessage(char const * pszInputBuffer, char const * pszMessageType, enum msgLocErrType_t errType)
 {	UNIMPLEMENTED();
 }
 
-void __cdecl SEH_InitLanguage(void)
+void __cdecl SEH_InitLanguage()
 {	UNIMPLEMENTED();
 }
 
-char const * __cdecl SEH_SafeTranslateString(char const *)
+char const * __cdecl SEH_SafeTranslateString(char const * pszReference)
 {	UNIMPLEMENTED();
 }
 
@@ -116,6 +116,18 @@ bool __cdecl Korean_ValidKSC5601Hangul_Code(unsigned int)
 }
 
 int __cdecl SEH_GetLocalizedTokenReference(char *,char const *,char const *,enum msgLocErrType_t)
+{	UNIMPLEMENTED();
+}
+
+SEH_Init_StringEd()
+{	UNIMPLEMENTED();
+}
+
+SEH_Shutdown_StringEd()
+{	UNIMPLEMENTED();
+}
+
+SEH_UpdateLanguageInfo()
 {	UNIMPLEMENTED();
 }
 

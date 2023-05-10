@@ -10,67 +10,67 @@ bool __cdecl Byte4Compare(unsigned char const * const,unsigned char const * cons
 {	UNIMPLEMENTED();
 }
 
-void __cdecl Dvar_ResetScriptInfo(void)
+void __cdecl Dvar_ResetScriptInfo()
 {	UNIMPLEMENTED();
 }
 
-void __cdecl Dvar_AddFlags(struct dvar_s const *,int)
+void __cdecl Dvar_AddFlags(struct dvar_s const * dvar, int flags)
 {	UNIMPLEMENTED();
 }
 
-struct dvar_s const * __cdecl Dvar_RegisterString(char const *,char const *,unsigned short)
+struct dvar_s const * __cdecl Dvar_RegisterString(char const * dvarName, char const * value, unsigned short flags)
 {	UNIMPLEMENTED();
 }
 
-void __cdecl Dvar_SetModified(struct dvar_s const *)
+void __cdecl Dvar_SetModified(struct dvar_s const * dvar)
 {	UNIMPLEMENTED();
 }
 
-void __cdecl Dvar_ClearModified(struct dvar_s const *)
+void __cdecl Dvar_ClearModified(struct dvar_s const * dvar)
 {	UNIMPLEMENTED();
 }
 
-struct dvar_s const * __cdecl Dvar_FindVar(char const *)
+struct dvar_s const * __cdecl Dvar_FindVar(char const * dvarName)
 {	UNIMPLEMENTED();
 }
 
-char const * __cdecl Dvar_EnumToString(struct dvar_s const *)
+char const * __cdecl Dvar_EnumToString(struct dvar_s const * dvar)
 {	UNIMPLEMENTED();
 }
 
-bool __cdecl Dvar_IsValidName(char const *)
+bool __cdecl Dvar_IsValidName(char const * dvarName)
 {	UNIMPLEMENTED();
 }
 
-bool __cdecl Dvar_IsSystemActive(void)
+bool __cdecl Dvar_IsSystemActive()
 {	UNIMPLEMENTED();
 }
 
-void __cdecl Dvar_SetInAutoExec(bool)
+void __cdecl Dvar_SetInAutoExec(bool inAutoExec)
 {	UNIMPLEMENTED();
 }
 
-char const * __cdecl Dvar_GetString(char const *)
+char const * __cdecl Dvar_GetString(char const * dvarName)
 {	UNIMPLEMENTED();
 }
 
-float __cdecl Dvar_GetFloat(char const *)
+float __cdecl Dvar_GetFloat(char const * dvarName)
 {	UNIMPLEMENTED();
 }
 
-int __cdecl Dvar_GetInt(char const *)
+int __cdecl Dvar_GetInt(char const * dvarName)
 {	UNIMPLEMENTED();
 }
 
-bool __cdecl Dvar_GetBool(char const *)
+bool __cdecl Dvar_GetBool(char const * dvarName)
 {	UNIMPLEMENTED();
 }
 
-char const * __cdecl Dvar_IndexStringToEnumString(struct dvar_s const *,char const *)
+char const * __cdecl Dvar_IndexStringToEnumString(struct dvar_s const * dvar, char const * indexString)
 {	UNIMPLEMENTED();
 }
 
-char const * __cdecl Dvar_GetVariantString(char const *)
+char const * __cdecl Dvar_GetVariantString(char const * dvarName)
 {	UNIMPLEMENTED();
 }
 
@@ -86,19 +86,19 @@ float const * __cdecl Dvar_GetFloat2(char const *)
 {	UNIMPLEMENTED();
 }
 
-void __cdecl Dvar_UpdateEnumDomain(struct dvar_s const *,char const * * const)
+void __cdecl Dvar_UpdateEnumDomain(struct dvar_s const * dvar, char const * * const stringTable)
 {	UNIMPLEMENTED();
 }
 
-bool __cdecl Dvar_IsAtDefaultValue(struct dvar_s const *)
+bool __cdecl Dvar_IsAtDefaultValue(struct dvar_s const * dvar)
 {	UNIMPLEMENTED();
 }
 
-bool __cdecl Dvar_HasLatchedValue(struct dvar_s const *)
+bool __cdecl Dvar_HasLatchedValue(struct dvar_s const * dvar)
 {	UNIMPLEMENTED();
 }
 
-char const * __cdecl Dvar_DomainToString_GetLines(unsigned char,union DvarLimits,char *,int,int *)
+char const * __cdecl Dvar_DomainToString_GetLines(unsigned char type, union DvarLimits domain, char * outBuffer, int outBufferLen, int * outLineCount)
 {	UNIMPLEMENTED();
 }
 
@@ -106,19 +106,19 @@ char const * __cdecl Dvar_DomainToString(unsigned char,union DvarLimits,char *,i
 {	UNIMPLEMENTED();
 }
 
-char const * __cdecl Dvar_DisplayableLatchedValue(struct dvar_s const *)
+char const * __cdecl Dvar_DisplayableLatchedValue(struct dvar_s const * dvar)
 {	UNIMPLEMENTED();
 }
 
-char const * __cdecl Dvar_DisplayableResetValue(struct dvar_s const *)
+char const * __cdecl Dvar_DisplayableResetValue(struct dvar_s const * dvar)
 {	UNIMPLEMENTED();
 }
 
-char const * __cdecl Dvar_DisplayableValue(struct dvar_s const *)
+char const * __cdecl Dvar_DisplayableValue(struct dvar_s const * dvar)
 {	UNIMPLEMENTED();
 }
 
-int __cdecl Com_SaveDvarsToBuffer(char const * * const,int,char *,int)
+int __cdecl Com_SaveDvarsToBuffer(char const * * const dvarnames, int numDvars, char * buffer, int bufsize)
 {	UNIMPLEMENTED();
 }
 
@@ -126,23 +126,23 @@ int __cdecl Dvar_SerializeDvars(char *,unsigned int)
 {	UNIMPLEMENTED();
 }
 
-bool __cdecl Dvar_AnyLatchedValues(void)
+bool __cdecl Dvar_AnyLatchedValues()
 {	UNIMPLEMENTED();
 }
 
-void __cdecl Dvar_Shutdown(void)
+void __cdecl Dvar_Shutdown()
 {	UNIMPLEMENTED();
 }
 
-void __cdecl Dvar_PrintDomain(unsigned char,union DvarLimits)
+void __cdecl Dvar_PrintDomain(unsigned char type, union DvarLimits domain)
 {	UNIMPLEMENTED();
 }
 
-void __cdecl Dvar_GetUnpackedColor(struct dvar_s const *,float * const)
+void __cdecl Dvar_GetUnpackedColor(struct dvar_s const * dvar, float * const expandedColor)
 {	UNIMPLEMENTED();
 }
 
-void __cdecl Dvar_GetUnpackedColorByName(char const *,float * const)
+void __cdecl Dvar_GetUnpackedColorByName(char const * dvarName, float * const expandedColor)
 {	UNIMPLEMENTED();
 }
 
@@ -150,7 +150,7 @@ void __cdecl Dvar_ClearLatchedValue(struct dvar_s const *)
 {	UNIMPLEMENTED();
 }
 
-void __cdecl Dvar_ChangeResetValue(struct dvar_s const *,union DvarValue)
+void __cdecl Dvar_ChangeResetValue(struct dvar_s const * dvar, union DvarValue value)
 {	UNIMPLEMENTED();
 }
 
@@ -158,15 +158,15 @@ void __cdecl Dvar_Unregister(struct dvar_s const *,int)
 {	UNIMPLEMENTED();
 }
 
-void __cdecl Dvar_SetCheatState(void)
+void __cdecl Dvar_SetCheatState()
 {	UNIMPLEMENTED();
 }
 
-void __cdecl Dvar_Reset(struct dvar_s const *,enum DvarSetSource)
+void __cdecl Dvar_Reset(struct dvar_s const * dvar, enum DvarSetSource setSource)
 {	UNIMPLEMENTED();
 }
 
-void __cdecl Dvar_SetColorFromSource(struct dvar_s const *,float,float,float,float,enum DvarSetSource)
+void __cdecl Dvar_SetColorFromSource(struct dvar_s const * dvar, float r, float g, float b, float a, enum DvarSetSource source)
 {	UNIMPLEMENTED();
 }
 
@@ -182,15 +182,15 @@ void __cdecl Dvar_SetVec2FromSource(struct dvar_s const *,float,float,enum DvarS
 {	UNIMPLEMENTED();
 }
 
-void __cdecl Dvar_SetFloatFromSource(struct dvar_s const *,float,enum DvarSetSource)
+void __cdecl Dvar_SetFloatFromSource(struct dvar_s const * dvar, float value, enum DvarSetSource source)
 {	UNIMPLEMENTED();
 }
 
-void __cdecl Dvar_SetIntFromSource(struct dvar_s const *,int,enum DvarSetSource)
+void __cdecl Dvar_SetIntFromSource(struct dvar_s const * dvar, int value, enum DvarSetSource source)
 {	UNIMPLEMENTED();
 }
 
-void __cdecl Dvar_SetBoolFromSource(struct dvar_s const *,bool,enum DvarSetSource)
+void __cdecl Dvar_SetBoolFromSource(struct dvar_s const * dvar, bool value, enum DvarSetSource source)
 {	UNIMPLEMENTED();
 }
 
@@ -198,91 +198,91 @@ void __cdecl Dvar_MakeLatchedValueCurrent(struct dvar_s const *)
 {	UNIMPLEMENTED();
 }
 
-void __cdecl Dvar_UnregisterSystem(int)
+void __cdecl Dvar_UnregisterSystem(int sysFlag)
 {	UNIMPLEMENTED();
 }
 
-void __cdecl Dvar_ResetDvars(unsigned int,enum DvarSetSource)
+void __cdecl Dvar_ResetDvars(unsigned int filter, enum DvarSetSource setSource)
 {	UNIMPLEMENTED();
 }
 
-struct dvar_s const * __cdecl Dvar_SetFromStringByNameFromSource(char const *,char const *,enum DvarSetSource)
+struct dvar_s const * __cdecl Dvar_SetFromStringByNameFromSource(char const * dvarName, char const * string, enum DvarSetSource source)
 {	UNIMPLEMENTED();
 }
 
-void __cdecl Dvar_SetFromString(struct dvar_s const *,char const *)
+void __cdecl Dvar_SetFromString(struct dvar_s const * dvar, char const * string)
 {	UNIMPLEMENTED();
 }
 
-void __cdecl Dvar_SetColor(struct dvar_s const *,float,float,float,float)
+void __cdecl Dvar_SetColor(struct dvar_s const * dvar, float r, float g, float b, float a)
 {	UNIMPLEMENTED();
 }
 
-void __cdecl Dvar_SetString(struct dvar_s const *,char const *)
+void __cdecl Dvar_SetString(struct dvar_s const * dvar, char const * value)
 {	UNIMPLEMENTED();
 }
 
-void __cdecl Dvar_SetVec4(struct dvar_s const *,float,float,float,float)
+void __cdecl Dvar_SetVec4(struct dvar_s const * dvar, float x, float y, float z, float w)
 {	UNIMPLEMENTED();
 }
 
-void __cdecl Dvar_SetVec3(struct dvar_s const *,float,float,float)
+void __cdecl Dvar_SetVec3(struct dvar_s const * dvar, float x, float y, float z)
 {	UNIMPLEMENTED();
 }
 
-void __cdecl Dvar_SetVec2(struct dvar_s const *,float,float)
+void __cdecl Dvar_SetVec2(struct dvar_s const * dvar, float x, float y)
 {	UNIMPLEMENTED();
 }
 
-void __cdecl Dvar_SetFloat(struct dvar_s const *,float)
+void __cdecl Dvar_SetFloat(struct dvar_s const * dvar, float value)
 {	UNIMPLEMENTED();
 }
 
-void __cdecl Dvar_SetInt(struct dvar_s const *,int)
+void __cdecl Dvar_SetInt(struct dvar_s const * dvar, int value)
 {	UNIMPLEMENTED();
 }
 
-void __cdecl Dvar_SetBool(struct dvar_s const *,bool)
+void __cdecl Dvar_SetBool(struct dvar_s const * dvar, bool value)
 {	UNIMPLEMENTED();
 }
 
-void __cdecl Dvar_SetCommand(char const *,char const *)
+void __cdecl Dvar_SetCommand(char const * dvarName, char const * string)
 {	UNIMPLEMENTED();
 }
 
-void __cdecl Dvar_SetFromStringByName(char const *,char const *)
+void __cdecl Dvar_SetFromStringByName(char const * dvarName, char const * string)
 {	UNIMPLEMENTED();
 }
 
-void __cdecl Dvar_SetColorByName(char const *,unsigned char,unsigned char,unsigned char,unsigned char)
+void __cdecl Dvar_SetColorByName(char const * dvarName, unsigned char r, unsigned char g, unsigned char b, unsigned char a)
 {	UNIMPLEMENTED();
 }
 
-void __cdecl Dvar_SetStringByName(char const *,char const *)
+void __cdecl Dvar_SetStringByName(char const * dvarName, char const * value)
 {	UNIMPLEMENTED();
 }
 
-void __cdecl Dvar_SetVec4ByName(char const *,float,float,float,float)
+void __cdecl Dvar_SetVec4ByName(char const * dvarName, float x, float y, float z, float w)
 {	UNIMPLEMENTED();
 }
 
-void __cdecl Dvar_SetVec3ByName(char const *,float,float,float)
+void __cdecl Dvar_SetVec3ByName(char const * dvarName, float x, float y, float z)
 {	UNIMPLEMENTED();
 }
 
-void __cdecl Dvar_SetVec2ByName(char const *,float,float)
+void __cdecl Dvar_SetVec2ByName(char const * dvarName, float x, float y)
 {	UNIMPLEMENTED();
 }
 
-void __cdecl Dvar_SetFloatByName(char const *,float)
+void __cdecl Dvar_SetFloatByName(char const * dvarName, float value)
 {	UNIMPLEMENTED();
 }
 
-void __cdecl Dvar_SetIntByName(char const *,int)
+void __cdecl Dvar_SetIntByName(char const * dvarName, int value)
 {	UNIMPLEMENTED();
 }
 
-void __cdecl Dvar_SetBoolByName(char const *,bool)
+void __cdecl Dvar_SetBoolByName(char const * dvarName, bool value)
 {	UNIMPLEMENTED();
 }
 
@@ -290,43 +290,43 @@ void __cdecl Dvar_DeserializeDvars(char const *,int)
 {	UNIMPLEMENTED();
 }
 
-struct dvar_s const * __cdecl Dvar_RegisterColor(char const *,float,float,float,float,unsigned short)
+struct dvar_s const * __cdecl Dvar_RegisterColor(char const * dvarName, float r, float g, float b, float a, unsigned short flags)
 {	UNIMPLEMENTED();
 }
 
-struct dvar_s const * __cdecl Dvar_RegisterEnum(char const *,char const * * const,int,unsigned short)
+struct dvar_s const * __cdecl Dvar_RegisterEnum(char const * dvarName, char const * * const valueList, int defaultIndex, unsigned short flags)
 {	UNIMPLEMENTED();
 }
 
-struct dvar_s const * __cdecl Dvar_RegisterVec4(char const *,float,float,float,float,float,float,unsigned short)
+struct dvar_s const * __cdecl Dvar_RegisterVec4(char const * dvarName, float x, float y, float z, float w, float min, float max, unsigned short flags)
 {	UNIMPLEMENTED();
 }
 
-struct dvar_s const * __cdecl Dvar_RegisterVec3(char const *,float,float,float,float,float,unsigned short)
+struct dvar_s const * __cdecl Dvar_RegisterVec3(char const * dvarName, float x, float y, float z, float min, float max, unsigned short flags)
 {	UNIMPLEMENTED();
 }
 
-struct dvar_s const * __cdecl Dvar_RegisterVec2(char const *,float,float,float,float,unsigned short)
+struct dvar_s const * __cdecl Dvar_RegisterVec2(char const * dvarName, float x, float y, float min, float max, unsigned short flags)
 {	UNIMPLEMENTED();
 }
 
-struct dvar_s const * __cdecl Dvar_RegisterFloat(char const *,float,float,float,unsigned short)
+struct dvar_s const * __cdecl Dvar_RegisterFloat(char const * dvarName, float value, float min, float max, unsigned short flags)
 {	UNIMPLEMENTED();
 }
 
-struct dvar_s const * __cdecl Dvar_RegisterInt(char const *,int,int,int,unsigned short)
+struct dvar_s const * __cdecl Dvar_RegisterInt(char const * dvarName, int value, int min, int max, unsigned short flags)
 {	UNIMPLEMENTED();
 }
 
-struct dvar_s const * __cdecl Dvar_RegisterBool(char const *,bool,unsigned short)
+struct dvar_s const * __cdecl Dvar_RegisterBool(char const * dvarName, bool value, unsigned short flags)
 {	UNIMPLEMENTED();
 }
 
-int __cdecl Com_LoadDvarsFromBuffer(char const * * const,int,char const *,char const *)
+int __cdecl Com_LoadDvarsFromBuffer(char const * * const dvarnames, int numDvars, char const * buffer, char const * filename)
 {	UNIMPLEMENTED();
 }
 
-void __cdecl Dvar_Init(void)
+void __cdecl Dvar_Init()
 {	UNIMPLEMENTED();
 }
 

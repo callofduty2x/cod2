@@ -6,35 +6,35 @@ void __cdecl CG_HudMenuShowAllTimed(void)
 {	UNIMPLEMENTED();
 }
 
-void __cdecl CG_MenuShowNotify(int)
+void __cdecl CG_MenuShowNotify(int menuToShow)
 {	UNIMPLEMENTED();
 }
 
-void __cdecl CG_ParseFog(void)
+void __cdecl CG_ParseFog()
 {	UNIMPLEMENTED();
 }
 
-void __cdecl CG_CloseScriptMenu(void)
+void __cdecl CG_CloseScriptMenu()
 {	UNIMPLEMENTED();
 }
 
-void __cdecl CG_ParseCodinfo(void)
+void __cdecl CG_ParseCodinfo()
 {	UNIMPLEMENTED();
 }
 
-void __cdecl CG_ParseServerinfo(void)
+void __cdecl CG_ParseServerinfo()
 {	UNIMPLEMENTED();
 }
 
-void __cdecl CG_CheckOpenWaitingScriptMenu(void)
+void __cdecl CG_CheckOpenWaitingScriptMenu()
 {	UNIMPLEMENTED();
 }
 
-void __cdecl CG_SetConfigValues(void)
+void __cdecl CG_SetConfigValues()
 {	UNIMPLEMENTED();
 }
 
-void __cdecl CG_MapRestart(int)
+void __cdecl CG_MapRestart(int savepersist)
 {	UNIMPLEMENTED();
 }
 
@@ -46,11 +46,11 @@ void __cdecl CG_ParseXUIDs(void)
 {	UNIMPLEMENTED();
 }
 
-void __cdecl CG_ServerCommand(void)
+void __cdecl CG_ServerCommand()
 {	UNIMPLEMENTED();
 }
 
-void __cdecl CG_ExecuteNewServerCommands(int)
+void __cdecl CG_ExecuteNewServerCommands(int latestSequence)
 {	UNIMPLEMENTED();
 }
 

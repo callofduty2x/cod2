@@ -1,20 +1,20 @@
-void __cdecl RB_ShowLightVisCachePoints(float const * const,struct DpvsPlane const * const,int)
+void __cdecl RB_ShowLightVisCachePoints(float const * const viewOrigin, struct DpvsPlane const * const clipPlanes, int clipPlaneCount)
 {	UNIMPLEMENTED();
 }
 
-float __cdecl RB_GetLightingAtPoint(struct GfxLightGrid const *,float const * const,float (* const)[4])
+float __cdecl RB_GetLightingAtPoint(struct GfxLightGrid const * lightGrid, float const * const samplePos, float  colorForDir)[4])
 {	UNIMPLEMENTED();
 }
 
-void __cdecl RB_SetupEntityLighting(struct GfxEntity const *,struct GfxEntityLighting *)
+void __cdecl RB_SetupEntityLighting(struct GfxEntity const * ent, struct GfxEntityLighting * lighting)
 {	UNIMPLEMENTED();
 }
 
-void __cdecl RB_InitLightVisHistory(char const *)
+void __cdecl RB_InitLightVisHistory(char const * bspName)
 {	UNIMPLEMENTED();
 }
 
-void __cdecl RB_SaveLightVisHistory(void)
+void __cdecl RB_SaveLightVisHistory()
 {	UNIMPLEMENTED();
 }
 
@@ -72,6 +72,10 @@ struct GfxLightGridPoint * __cdecl RB_GetLightGridSample(struct GfxLightGrid con
 }
 
 void __cdecl R_LightVisHistoryFilename(char const *,char * const)
+{	UNIMPLEMENTED();
+}
+
+RB_DeriveEntityLights(float const (*) [4], float, Material const*, _D3DLIGHT9*, int)
 {	UNIMPLEMENTED();
 }
 

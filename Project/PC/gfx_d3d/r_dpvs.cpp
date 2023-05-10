@@ -22,15 +22,15 @@ float __cdecl R_DpvsPlaneMinSignedDistToBox(struct DpvsPlane const *,float const
 {	UNIMPLEMENTED();
 }
 
-void __cdecl R_SetCullDist(float)
+void __cdecl R_SetCullDist(float dist)
 {	UNIMPLEMENTED();
 }
 
-float __cdecl R_GetFarPlaneDist(void)
+float __cdecl R_GetFarPlaneDist()
 {	UNIMPLEMENTED();
 }
 
-void __cdecl R_ClearDpvsScene(void)
+void __cdecl R_ClearDpvsScene()
 {	UNIMPLEMENTED();
 }
 
@@ -46,15 +46,15 @@ void __cdecl R_FrustumClipPlanes(struct _D3DMATRIX const *,float const (* const)
 {	UNIMPLEMENTED();
 }
 
-int __cdecl R_CellForPoint(float const * const)
+int __cdecl R_CellForPoint(float const * const origin)
 {	UNIMPLEMENTED();
 }
 
-void __cdecl R_DrawModel(int)
+void __cdecl R_DrawModel(int entIndex)
 {	UNIMPLEMENTED();
 }
 
-void __cdecl R_AddWorldSurfacesDpvs(struct GfxViewParms const *,int)
+void __cdecl R_AddWorldSurfacesDpvs(struct GfxViewParms const * viewParms, int cameraCellIndex)
 {	UNIMPLEMENTED();
 }
 

@@ -1,16 +1,16 @@
-void __cdecl R_ShutdownLightDefs(void)
+void __cdecl R_ShutdownLightDefs()
 {	UNIMPLEMENTED();
 }
 
-int __cdecl R_GetPointLightPartitions(struct GfxDrawSurf const *,int,struct PointLightPartition * const,int)
+int __cdecl R_GetPointLightPartitions(struct GfxDrawSurf const * drawSurfs, int drawSurfCount, struct PointLightPartition * const partitions, int partitionLimit)
 {	UNIMPLEMENTED();
 }
 
-struct GfxLightDef * __cdecl R_RegisterLightDef(char const *)
+struct GfxLightDef * __cdecl R_RegisterLightDef(char const * name)
 {	UNIMPLEMENTED();
 }
 
-void __cdecl R_InitLightDefs(void)
+void __cdecl R_InitLightDefs()
 {	UNIMPLEMENTED();
 }
 

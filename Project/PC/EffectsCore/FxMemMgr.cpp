@@ -10,7 +10,7 @@ struct FxMemBlock * __cdecl FxMem_ClaimBlock(struct FxMemBlock *,int,unsigned in
 {	UNIMPLEMENTED();
 }
 
-void __cdecl FxMem_Init(void)
+void __cdecl FxMem_Init()
 {	UNIMPLEMENTED();
 }
 

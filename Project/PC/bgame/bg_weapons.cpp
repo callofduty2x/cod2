@@ -2,15 +2,15 @@ void __cdecl Com_BitClear(int * const,int)
 {	UNIMPLEMENTED();
 }
 
-float __cdecl BG_GetBobCycle(struct playerState_s const *)
+float __cdecl BG_GetBobCycle(struct playerState_s const * ps)
 {	UNIMPLEMENTED();
 }
 
-bool __cdecl PM_IsBinocularsADS(struct playerState_s const *)
+bool __cdecl PM_IsBinocularsADS(struct playerState_s const * ps)
 {	UNIMPLEMENTED();
 }
 
-bool __cdecl BG_IsAnyEmptyPrimaryWeaponSlot(struct playerState_s const *)
+bool __cdecl BG_IsAnyEmptyPrimaryWeaponSlot(struct playerState_s const * ps)
 {	UNIMPLEMENTED();
 }
 
@@ -30,7 +30,7 @@ int __cdecl BG_GetSharedAmmoCapSize(int)
 {	UNIMPLEMENTED();
 }
 
-int __cdecl BG_GetAmmoClipSize(int)
+int __cdecl BG_GetAmmoClipSize(int iClipIndex)
 {	UNIMPLEMENTED();
 }
 
@@ -38,7 +38,7 @@ int __cdecl BG_GetNumAmmoClips(void)
 {	UNIMPLEMENTED();
 }
 
-int __cdecl BG_GetAmmoTypeMax(int)
+int __cdecl BG_GetAmmoTypeMax(int iAmmoIndex)
 {	UNIMPLEMENTED();
 }
 
@@ -46,11 +46,11 @@ int __cdecl BG_GetNumAmmoTypes(void)
 {	UNIMPLEMENTED();
 }
 
-int __cdecl BG_GetNumWeapons(void)
+int __cdecl BG_GetNumWeapons()
 {	UNIMPLEMENTED();
 }
 
-struct WeaponDef * __cdecl BG_GetWeaponDef(int)
+struct WeaponDef * __cdecl BG_GetWeaponDef(int iWeapon)
 {	UNIMPLEMENTED();
 }
 
@@ -58,43 +58,43 @@ void __cdecl PM_StartWeaponAnim(struct playerState_s *,int)
 {	UNIMPLEMENTED();
 }
 
-int __cdecl BG_WeaponIsClipOnly(int)
+int __cdecl BG_WeaponIsClipOnly(int weapon)
 {	UNIMPLEMENTED();
 }
 
-int __cdecl BG_AmmoForWeapon(int)
+int __cdecl BG_AmmoForWeapon(int weapon)
 {	UNIMPLEMENTED();
 }
 
-int __cdecl BG_ClipForWeapon(int)
+int __cdecl BG_ClipForWeapon(int weapon)
 {	UNIMPLEMENTED();
 }
 
-void __cdecl BG_GetSpreadForWeapon(struct playerState_s const *,int,float *,float *)
+void __cdecl BG_GetSpreadForWeapon(struct playerState_s const * ps, int weaponIndex, float * minSpread, float * maxSpread)
 {	UNIMPLEMENTED();
 }
 
-int __cdecl BG_GetTotalAmmoReserve(struct playerState_s const *,int)
+int __cdecl BG_GetTotalAmmoReserve(struct playerState_s const * ps, int weaponIndex)
 {	UNIMPLEMENTED();
 }
 
-int __cdecl BG_GetMaxPickupableAmmo(struct playerState_s const *,int)
+int __cdecl BG_GetMaxPickupableAmmo(struct playerState_s const * ps, int weaponIndex)
 {	UNIMPLEMENTED();
 }
 
-int __cdecl BG_IsPlayerWeaponAnAlt(int,int)
+int __cdecl BG_IsPlayerWeaponAnAlt(int iWeaponIndex, int iAltIndex)
 {	UNIMPLEMENTED();
 }
 
-int __cdecl BG_GetStackSlotForWeapon(struct playerState_s const *,int,enum weapSlot_t)
+int __cdecl BG_GetStackSlotForWeapon(struct playerState_s const * pPS, int iWeaponIndex, enum weapSlot_t preferedSlot)
 {	UNIMPLEMENTED();
 }
 
-int __cdecl BG_GetEmptySlotForWeapon(struct playerState_s const *,int)
+int __cdecl BG_GetEmptySlotForWeapon(struct playerState_s const * pPS, int iWeaponIndex)
 {	UNIMPLEMENTED();
 }
 
-int __cdecl BG_IsPlayerWeaponInSlot(struct playerState_s const *,int,int)
+int __cdecl BG_IsPlayerWeaponInSlot(struct playerState_s const * pPS, int iWeaponIndex, int bAnyMode)
 {	UNIMPLEMENTED();
 }
 
@@ -102,15 +102,15 @@ int __cdecl BG_SetPlayerWeaponForSlot(struct playerState_s *,int,int)
 {	UNIMPLEMENTED();
 }
 
-int __cdecl BG_TakePlayerWeapon(struct playerState_s *,int)
+int __cdecl BG_TakePlayerWeapon(struct playerState_s * pPS, int iWeaponIndex)
 {	UNIMPLEMENTED();
 }
 
-bool __cdecl BG_DoesWeaponNeedSlot(int)
+bool __cdecl BG_DoesWeaponNeedSlot(int weapIndex)
 {	UNIMPLEMENTED();
 }
 
-bool __cdecl BG_DoesWeaponRequireSlot(int)
+bool __cdecl BG_DoesWeaponRequireSlot(int weaponIndex)
 {	UNIMPLEMENTED();
 }
 
@@ -118,55 +118,55 @@ bool __cdecl BG_ValidateWeaponNumber(int)
 {	UNIMPLEMENTED();
 }
 
-int __cdecl BG_IsAimDownSightWeapon(int)
+int __cdecl BG_IsAimDownSightWeapon(int iWeapon)
 {	UNIMPLEMENTED();
 }
 
-int __cdecl BG_GetFirstEquippedOffhand(struct playerState_s const *,int)
+int __cdecl BG_GetFirstEquippedOffhand(struct playerState_s const * ps, int offhandClass)
 {	UNIMPLEMENTED();
 }
 
-int __cdecl BG_GetViewmodelWeaponIndex(struct playerState_s const *)
+int __cdecl BG_GetViewmodelWeaponIndex(struct playerState_s const * ps)
 {	UNIMPLEMENTED();
 }
 
-void __cdecl BG_ShutdownWeaponDefFiles(void)
+void __cdecl BG_ShutdownWeaponDefFiles()
 {	UNIMPLEMENTED();
 }
 
-float __cdecl BG_GetHorizontalBobFactor(struct playerState_s const *,float,float,float)
+float __cdecl BG_GetHorizontalBobFactor(struct playerState_s const * ps, float cycle, float speed, float maxAmp)
 {	UNIMPLEMENTED();
 }
 
-float __cdecl BG_GetVerticalBobFactor(struct playerState_s const *,float,float,float)
+float __cdecl BG_GetVerticalBobFactor(struct playerState_s const * ps, float cycle, float speed, float maxAmp)
 {	UNIMPLEMENTED();
 }
 
-void __cdecl BG_WeaponFireRecoil(struct playerState_s const *,float * const,float * const)
+void __cdecl BG_WeaponFireRecoil(struct playerState_s const * ps, float * const vGunSpeed, float * const kickAVel)
 {	UNIMPLEMENTED();
 }
 
-int __cdecl PM_WeaponAmmoAvailable(struct playerState_s *)
+int __cdecl PM_WeaponAmmoAvailable(struct playerState_s * ps)
 {	UNIMPLEMENTED();
 }
 
-int __cdecl BG_WeaponAmmo(struct playerState_s const *,int)
+int __cdecl BG_WeaponAmmo(struct playerState_s const * ps, int weapon)
 {	UNIMPLEMENTED();
 }
 
-void __cdecl PM_ExitAimDownSight(struct playerState_s *)
+void __cdecl PM_ExitAimDownSight(struct playerState_s * ps)
 {	UNIMPLEMENTED();
 }
 
-bool __cdecl BG_IsWeaponValid(struct playerState_s const *,int)
+bool __cdecl BG_IsWeaponValid(struct playerState_s const * ps, int weaponIndex)
 {	UNIMPLEMENTED();
 }
 
-int __cdecl BG_GetFirstAvailableOffhand(struct playerState_s const *,int)
+int __cdecl BG_GetFirstAvailableOffhand(struct playerState_s const * ps, int offhandClass)
 {	UNIMPLEMENTED();
 }
 
-int __cdecl BG_FindWeaponIndexForName(char const *)
+int __cdecl BG_FindWeaponIndexForName(char const * name)
 {	UNIMPLEMENTED();
 }
 
@@ -178,7 +178,7 @@ int __cdecl BG_GetAmmoTypeForName(char const *)
 {	UNIMPLEMENTED();
 }
 
-void __cdecl PM_AdjustAimSpreadScale(struct pmove_t *,struct pml_t *)
+void __cdecl PM_AdjustAimSpreadScale(struct pmove_t * pm, struct pml_t * pml)
 {	UNIMPLEMENTED();
 }
 
@@ -186,27 +186,27 @@ int __cdecl PM_InteruptWeaponWithProneMove(struct playerState_s *)
 {	UNIMPLEMENTED();
 }
 
-void __cdecl PM_UpdateAimDownSightLerp(struct pmove_t *,struct pml_t *)
+void __cdecl PM_UpdateAimDownSightLerp(struct pmove_t * pm, struct pml_t * pml)
 {	UNIMPLEMENTED();
 }
 
-void __cdecl PM_UpdateAimDownSightFlag(struct pmove_t *,struct pml_t *)
+void __cdecl PM_UpdateAimDownSightFlag(struct pmove_t * pm, struct pml_t * pml)
 {	UNIMPLEMENTED();
 }
 
-void __cdecl BG_CalculateWeaponPosition_Sway(struct playerState_s *,float * const,float * const,float * const,float,int)
+void __cdecl BG_CalculateWeaponPosition_Sway(struct playerState_s * ps, float * const swayViewAngles, float * const swayOffset, float * const swayAngles, float ssSwayScale, int frametime)
 {	UNIMPLEMENTED();
 }
 
-void __cdecl BG_CalculateViewAngles(struct viewState_t *,float * const)
+void __cdecl BG_CalculateViewAngles(struct viewState_t * vs, float * const angles)
 {	UNIMPLEMENTED();
 }
 
-void __cdecl PM_ResetWeaponState(struct playerState_s *)
+void __cdecl PM_ResetWeaponState(struct playerState_s * ps)
 {	UNIMPLEMENTED();
 }
 
-void __cdecl BG_CalculateWeaponAngles(struct weaponState_t *,float * const)
+void __cdecl BG_CalculateWeaponAngles(struct weaponState_t * ws, float * const angles)
 {	UNIMPLEMENTED();
 }
 
@@ -218,7 +218,7 @@ struct WeaponDef * __cdecl BG_LoadWeaponDef(char const *,char const *)
 {	UNIMPLEMENTED();
 }
 
-void __cdecl PM_Weapon(struct pmove_t *,struct pml_t *)
+void __cdecl PM_Weapon(struct pmove_t * pm, struct pml_t * pml)
 {	UNIMPLEMENTED();
 }
 
@@ -226,7 +226,7 @@ void __cdecl BG_FillInAllWeaponItems(void)
 {	UNIMPLEMENTED();
 }
 
-int __cdecl BG_GetWeaponIndexForName(char const *,void (__cdecl*)(int))
+int __cdecl BG_GetWeaponIndexForName(char const * name, void  regWeap)(int))
 {	UNIMPLEMENTED();
 }
 
@@ -234,7 +234,7 @@ int __cdecl CG_GetWeaponIndexForName(char const *)
 {	UNIMPLEMENTED();
 }
 
-void __cdecl CG_SetWeaponDefToDefaultWeapon(int)
+void __cdecl CG_SetWeaponDefToDefaultWeapon(int iWeapon)
 {	UNIMPLEMENTED();
 }
 
@@ -242,7 +242,7 @@ void __cdecl BG_FillInAmmoItems(void (__cdecl*)(int))
 {	UNIMPLEMENTED();
 }
 
-void __cdecl BG_ClearWeaponDef(void)
+void __cdecl BG_ClearWeaponDef()
 {	UNIMPLEMENTED();
 }
 

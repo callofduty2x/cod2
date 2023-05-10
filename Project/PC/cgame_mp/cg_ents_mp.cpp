@@ -1,16 +1,16 @@
-void __cdecl CG_CullIn(struct centity_s const *)
+void __cdecl CG_CullIn(struct centity_s const * cent)
 {	UNIMPLEMENTED();
 }
 
-void __cdecl CG_UsedDObjCalcPose(struct centity_s const *)
+void __cdecl CG_UsedDObjCalcPose(struct centity_s const * cent)
 {	UNIMPLEMENTED();
 }
 
-void __cdecl CG_ProcessClientNoteTracks(int)
+void __cdecl CG_ProcessClientNoteTracks(int clientNum)
 {	UNIMPLEMENTED();
 }
 
-void __cdecl CG_SetFrameInterpolation(void)
+void __cdecl CG_SetFrameInterpolation()
 {	UNIMPLEMENTED();
 }
 
@@ -26,11 +26,11 @@ int __cdecl CG_DObjGetWorldTagBox(struct centity_s *,struct DObj_s *,unsigned in
 {	UNIMPLEMENTED();
 }
 
-void __cdecl CG_AdjustPositionForMover(float const * const,int,int,int,float * const,float * const)
+void __cdecl CG_AdjustPositionForMover(float const * const in, int moverNum, int fromTime, int toTime, float * const out, float * const outDeltaAngles)
 {	UNIMPLEMENTED();
 }
 
-struct XAnim_s * __cdecl CG_GetMG42Anims(struct centity_s *)
+struct XAnim_s * __cdecl CG_GetMG42Anims(struct centity_s * cent)
 {	UNIMPLEMENTED();
 }
 
@@ -42,39 +42,39 @@ struct XAnim_s * __cdecl CG_GetAnimations(int,int)
 {	UNIMPLEMENTED();
 }
 
-void __cdecl CG_CalcEntityLerpPositions(struct centity_s *)
+void __cdecl CG_CalcEntityLerpPositions(struct centity_s * cent)
 {	UNIMPLEMENTED();
 }
 
-void __cdecl CG_SoundBlend(struct centity_s *)
+void __cdecl CG_SoundBlend(struct centity_s * cent)
 {	UNIMPLEMENTED();
 }
 
-void __cdecl CG_EntityEffects(struct centity_s *)
+void __cdecl CG_EntityEffects(struct centity_s * cent)
 {	UNIMPLEMENTED();
 }
 
-void __cdecl CG_DObjCalcBoneGeneric(int,int,int)
+void __cdecl CG_DObjCalcBoneGeneric(int handle, int localClientNum, int boneIndex)
 {	UNIMPLEMENTED();
 }
 
-void __cdecl CG_DObjCalcBone(struct centity_s const *,struct DObj_s *,int)
+void __cdecl CG_DObjCalcBone(struct centity_s const * cent, struct DObj_s * obj, int boneIndex)
 {	UNIMPLEMENTED();
 }
 
-void __cdecl CG_DObjCalcPose(struct centity_s const *,struct DObj_s const *,int * const)
+void __cdecl CG_DObjCalcPose(struct centity_s const * cent, struct DObj_s const * obj, int * const partBits)
 {	UNIMPLEMENTED();
 }
 
-int __cdecl CG_DObjGetViewModelTagPos(struct DObj_s *,unsigned int,float * const)
+int __cdecl CG_DObjGetViewModelTagPos(struct DObj_s * obj, unsigned int tagName, float * const pos)
 {	UNIMPLEMENTED();
 }
 
-struct DObjAnimMat_s * __cdecl CG_DObjGetLocalTagMatrix(struct centity_s const *,struct DObj_s *,unsigned int)
+struct DObjAnimMat_s * __cdecl CG_DObjGetLocalTagMatrix(struct centity_s const * cent, struct DObj_s * obj, unsigned int tagName)
 {	UNIMPLEMENTED();
 }
 
-int __cdecl CG_DObjGetWorldTagPos(struct centity_s const *,struct DObj_s *,unsigned int,float * const)
+int __cdecl CG_DObjGetWorldTagPos(struct centity_s const * cent, struct DObj_s * obj, unsigned int tagName, float * const pos)
 {	UNIMPLEMENTED();
 }
 
@@ -82,35 +82,35 @@ int __cdecl CG_DObjGetWorldTagMatrix(struct centity_s const *,struct DObj_s *,un
 {	UNIMPLEMENTED();
 }
 
-void __cdecl CG_DObjUpdateInfo(struct DObj_s *)
+void __cdecl CG_DObjUpdateInfo(struct DObj_s * obj)
 {	UNIMPLEMENTED();
 }
 
-void __cdecl CG_AddCEntityToScene(struct GfxEntity const *,struct DObj_s const *,struct centity_s const *)
+void __cdecl CG_AddCEntityToScene(struct GfxEntity const * ent, struct DObj_s const * obj, struct centity_s const * cent)
 {	UNIMPLEMENTED();
 }
 
-void __cdecl CG_Missile(struct centity_s *)
+void __cdecl CG_Missile(struct centity_s * cent)
 {	UNIMPLEMENTED();
 }
 
-void __cdecl CG_Item(struct centity_s *)
+void __cdecl CG_Item(struct centity_s * cent)
 {	UNIMPLEMENTED();
 }
 
-void __cdecl CG_General(struct centity_s *)
+void __cdecl CG_General(struct centity_s * cent)
 {	UNIMPLEMENTED();
 }
 
-void __cdecl CG_ScriptMover(struct centity_s *)
+void __cdecl CG_ScriptMover(struct centity_s * cent)
 {	UNIMPLEMENTED();
 }
 
-void __cdecl CG_ProcessEntity(struct centity_s *)
+void __cdecl CG_ProcessEntity(struct centity_s * cent)
 {	UNIMPLEMENTED();
 }
 
-void __cdecl CG_AddPacketEntities(void)
+void __cdecl CG_AddPacketEntities()
 {	UNIMPLEMENTED();
 }
 

@@ -6,11 +6,11 @@ void __cdecl Byte4PackNativeColor(float const * const,unsigned char * const)
 {	UNIMPLEMENTED();
 }
 
-void __cdecl CG_InitMarkPolys(void)
+void __cdecl CG_InitMarkPolys()
 {	UNIMPLEMENTED();
 }
 
-void __cdecl CG_AddMarks(void)
+void __cdecl CG_AddMarks()
 {	UNIMPLEMENTED();
 }
 
@@ -18,7 +18,7 @@ void __cdecl CG_FreeMarkPoly(struct MarkPoly *)
 {	UNIMPLEMENTED();
 }
 
-void __cdecl CG_ImpactMark(struct Material *,float const * const,float const * const,float,float const * const,float)
+void __cdecl CG_ImpactMark(struct Material * markMaterial, float const * const origin, float const * const dir, float orientation, float const * const color, float radius)
 {	UNIMPLEMENTED();
 }
 

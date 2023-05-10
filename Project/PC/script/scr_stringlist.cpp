@@ -1,4 +1,4 @@
-void __cdecl SL_Shutdown(void)
+void __cdecl SL_Shutdown()
 {	UNIMPLEMENTED();
 }
 
@@ -6,19 +6,19 @@ void __cdecl SL_TransferSystem(unsigned int,unsigned int)
 {	UNIMPLEMENTED();
 }
 
-void __cdecl SL_AddRefToString(unsigned int)
+void __cdecl SL_AddRefToString(unsigned int stringValue)
 {	UNIMPLEMENTED();
 }
 
-unsigned int __cdecl SL_FindStringOfLen(char const *,unsigned int)
+unsigned int __cdecl SL_FindStringOfLen(char const * str, unsigned int len)
 {	UNIMPLEMENTED();
 }
 
-unsigned int __cdecl SL_ConvertFromString(char const *)
+unsigned int __cdecl SL_ConvertFromString(char const * str)
 {	UNIMPLEMENTED();
 }
 
-int __cdecl SL_GetStringLen(unsigned int)
+int __cdecl SL_GetStringLen(unsigned int stringValue)
 {	UNIMPLEMENTED();
 }
 
@@ -26,51 +26,51 @@ char const * __cdecl SL_ConvertToString(unsigned int)
 {	UNIMPLEMENTED();
 }
 
-unsigned int __cdecl SL_FindLowercaseString(char const *)
+unsigned int __cdecl SL_FindLowercaseString(char const * str)
 {	UNIMPLEMENTED();
 }
 
-unsigned int __cdecl SL_FindString(char const *)
+unsigned int __cdecl SL_FindString(char const * str)
 {	UNIMPLEMENTED();
 }
 
-void __cdecl SL_RemoveRefToStringOfLen(unsigned int,unsigned int)
+void __cdecl SL_RemoveRefToStringOfLen(unsigned int stringValue, unsigned int len)
 {	UNIMPLEMENTED();
 }
 
-void __cdecl SL_RemoveRefToString(unsigned int)
+void __cdecl SL_RemoveRefToString(unsigned int stringValue)
 {	UNIMPLEMENTED();
 }
 
-void __cdecl SL_ShutdownSystem(unsigned int)
+void __cdecl SL_ShutdownSystem(unsigned int user)
 {	UNIMPLEMENTED();
 }
 
-unsigned int __cdecl SL_GetStringForVector(float const *)
+unsigned int __cdecl SL_GetStringForVector(float const * v)
 {	UNIMPLEMENTED();
 }
 
-unsigned int __cdecl SL_GetStringForInt(int)
+unsigned int __cdecl SL_GetStringForInt(int i)
 {	UNIMPLEMENTED();
 }
 
-unsigned int __cdecl SL_GetStringForFloat(float)
+unsigned int __cdecl SL_GetStringForFloat(float f)
 {	UNIMPLEMENTED();
 }
 
-void __cdecl Scr_SetString(unsigned short *,unsigned int)
+void __cdecl Scr_SetString(unsigned short * to, unsigned int from)
 {	UNIMPLEMENTED();
 }
 
-unsigned int __cdecl SL_GetString(char const *,unsigned int)
+unsigned int __cdecl SL_GetString(char const * str, unsigned int user)
 {	UNIMPLEMENTED();
 }
 
-void __cdecl Scr_ShutdownGameStrings(void)
+void __cdecl Scr_ShutdownGameStrings()
 {	UNIMPLEMENTED();
 }
 
-unsigned int __cdecl Scr_AllocString(char const *,int)
+unsigned int __cdecl Scr_AllocString(char const * s, int sys)
 {	UNIMPLEMENTED();
 }
 
@@ -78,11 +78,11 @@ void __cdecl Scr_SetStringFromCharString(unsigned short *,char const *)
 {	UNIMPLEMENTED();
 }
 
-unsigned int __cdecl Scr_CreateCanonicalFilename(char const *)
+unsigned int __cdecl Scr_CreateCanonicalFilename(char const * filename)
 {	UNIMPLEMENTED();
 }
 
-unsigned int __cdecl SL_GetLowercaseString_(char const *,unsigned int,int)
+unsigned int __cdecl SL_GetLowercaseString_(char const * str, unsigned int user, int type)
 {	UNIMPLEMENTED();
 }
 
@@ -90,7 +90,7 @@ unsigned int __cdecl SL_GetLowercaseString(char const *,unsigned int)
 {	UNIMPLEMENTED();
 }
 
-void __cdecl SL_Init(void)
+void __cdecl SL_Init()
 {	UNIMPLEMENTED();
 }
 

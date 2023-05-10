@@ -2,7 +2,7 @@ char * __cdecl strchr(char *,int)
 {	UNIMPLEMENTED();
 }
 
-char * __cdecl Key_GetBinding(int)
+char * __cdecl Key_GetBinding(int keynum)
 {	UNIMPLEMENTED();
 }
 
@@ -14,11 +14,11 @@ int __cdecl Key_IsDown(int)
 {	UNIMPLEMENTED();
 }
 
-void __cdecl Key_SetOverstrikeMode(int)
+void __cdecl Key_SetOverstrikeMode(int state)
 {	UNIMPLEMENTED();
 }
 
-int __cdecl Key_GetOverstrikeMode(void)
+int __cdecl Key_GetOverstrikeMode()
 {	UNIMPLEMENTED();
 }
 
@@ -26,11 +26,11 @@ void __cdecl CL_Keys_SwitchToLocalClient(int)
 {	UNIMPLEMENTED();
 }
 
-char * __cdecl Key_KeynumToString(int,int)
+char * __cdecl Key_KeynumToString(int keynum, int translate)
 {	UNIMPLEMENTED();
 }
 
-void __cdecl Key_Shutdown(void)
+void __cdecl Key_Shutdown()
 {	UNIMPLEMENTED();
 }
 
@@ -38,7 +38,7 @@ void __cdecl Key_AppendBindingsToConfig(char *)
 {	UNIMPLEMENTED();
 }
 
-void __cdecl Key_WriteBindings(int)
+void __cdecl Key_WriteBindings(int f)
 {	UNIMPLEMENTED();
 }
 
@@ -46,23 +46,23 @@ int __cdecl Key_GetKey(char const *)
 {	UNIMPLEMENTED();
 }
 
-void __cdecl Key_SetBinding(int,char const *)
+void __cdecl Key_SetBinding(int keynum, char const * binding)
 {	UNIMPLEMENTED();
 }
 
-void __cdecl Field_AdjustScroll(struct field_t *)
+void __cdecl Field_AdjustScroll(struct field_t * edit)
 {	UNIMPLEMENTED();
 }
 
-void __cdecl Field_Draw(struct field_t *,int,int,int,int,int)
+void __cdecl Field_Draw(struct field_t * edit, int x, int y, int horzAlign, int vertAlign, int showCursor)
 {	UNIMPLEMENTED();
 }
 
-void __cdecl Key_Unbindall_f(void)
+void __cdecl Key_Unbindall_f()
 {	UNIMPLEMENTED();
 }
 
-void __cdecl Field_CharEvent(struct field_t *,int)
+void __cdecl Field_CharEvent(struct field_t * edit, int ch)
 {	UNIMPLEMENTED();
 }
 
@@ -70,43 +70,43 @@ void __cdecl Field_Paste(struct field_t *)
 {	UNIMPLEMENTED();
 }
 
-void __cdecl Field_KeyDownEvent(struct field_t *,int)
+void __cdecl Field_KeyDownEvent(struct field_t * edit, int key)
 {	UNIMPLEMENTED();
 }
 
-void __cdecl Message_Key(int)
+void __cdecl Message_Key(int key)
 {	UNIMPLEMENTED();
 }
 
-void __cdecl Console_Key(int)
+void __cdecl Console_Key(int key)
 {	UNIMPLEMENTED();
 }
 
-void __cdecl CL_CharEvent(int)
+void __cdecl CL_CharEvent(int key)
 {	UNIMPLEMENTED();
 }
 
-void __cdecl CL_KeyEvent(int,int,unsigned int)
+void __cdecl CL_KeyEvent(int key, int down, unsigned int time)
 {	UNIMPLEMENTED();
 }
 
-void __cdecl Key_ClearStates(void)
+void __cdecl Key_ClearStates()
 {	UNIMPLEMENTED();
 }
 
-void __cdecl Key_Bindlist_f(void)
+void __cdecl Key_Bindlist_f()
 {	UNIMPLEMENTED();
 }
 
-void __cdecl Key_Bind_f(void)
+void __cdecl Key_Bind_f()
 {	UNIMPLEMENTED();
 }
 
-void __cdecl Key_Unbind_f(void)
+void __cdecl Key_Unbind_f()
 {	UNIMPLEMENTED();
 }
 
-void __cdecl CL_InitKeyCommands(void)
+void __cdecl CL_InitKeyCommands()
 {	UNIMPLEMENTED();
 }
 

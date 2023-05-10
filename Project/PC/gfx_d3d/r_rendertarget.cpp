@@ -18,11 +18,11 @@ public: unsigned long __cdecl D3DResource::Release(void)
 {	UNIMPLEMENTED();
 }
 
-void __cdecl R_ShutdownRenderTargets(void)
+void __cdecl R_ShutdownRenderTargets()
 {	UNIMPLEMENTED();
 }
 
-void __cdecl R_InitRenderTargets(void)
+void __cdecl R_InitRenderTargets()
 {	UNIMPLEMENTED();
 }
 
@@ -84,6 +84,10 @@ void __cdecl R_InitFrameBufferRenderTarget(void)
 }
 
 void __cdecl R_InitShadowCookieRenderTarget(struct GfxRenderTarget *)
+{	UNIMPLEMENTED();
+}
+
+R_DescribeFormat(_D3DFORMAT format)
 {	UNIMPLEMENTED();
 }
 

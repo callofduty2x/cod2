@@ -22,11 +22,11 @@ bool __cdecl R_NeedFloatZ(void)
 {	UNIMPLEMENTED();
 }
 
-void __cdecl R_BeginDebugFrame(void)
+void __cdecl R_BeginDebugFrame()
 {	UNIMPLEMENTED();
 }
 
-struct GfxViewParms * __cdecl R_AllocViewParms(void)
+struct GfxViewParms * __cdecl R_AllocViewParms()
 {	UNIMPLEMENTED();
 }
 
@@ -34,7 +34,7 @@ void __cdecl R_ToggleSmpFrame(void)
 {	UNIMPLEMENTED();
 }
 
-void __cdecl R_AddFrontendCmd(int,void *)
+void __cdecl R_AddFrontendCmd(int type, void * data)
 {	UNIMPLEMENTED();
 }
 
@@ -46,15 +46,15 @@ void __cdecl R_AddCmdDrawTriangles(struct Material *,enum MaterialTechniqueType,
 {	UNIMPLEMENTED();
 }
 
-void __cdecl R_AddCmdBlendSavedScreen(int)
+void __cdecl R_AddCmdBlendSavedScreen(int fadeMsec)
 {	UNIMPLEMENTED();
 }
 
-void __cdecl R_AddCmdSaveScreen(void)
+void __cdecl R_AddCmdSaveScreen()
 {	UNIMPLEMENTED();
 }
 
-void __cdecl R_AddCmdClearScreen(int,float const * const,float,unsigned char)
+void __cdecl R_AddCmdClearScreen(int whichToClear, float const * const color, float depth, unsigned char stencil)
 {	UNIMPLEMENTED();
 }
 
@@ -62,23 +62,23 @@ void __cdecl R_AddCmdBlurShadowCookie(void)
 {	UNIMPLEMENTED();
 }
 
-void __cdecl R_AddCmdDrawSunPostEffects(int)
+void __cdecl R_AddCmdDrawSunPostEffects(int viewIndex)
 {	UNIMPLEMENTED();
 }
 
-void __cdecl R_AddCmdApplyLatePostEffects(float)
+void __cdecl R_AddCmdApplyLatePostEffects(float blurRadius)
 {	UNIMPLEMENTED();
 }
 
-void __cdecl R_AddCmdApplyEarlyPostEffects(void)
+void __cdecl R_AddCmdApplyEarlyPostEffects()
 {	UNIMPLEMENTED();
 }
 
-void __cdecl R_AddCmdSetViewport(int,int,int,int)
+void __cdecl R_AddCmdSetViewport(int x, int y, int width, int height)
 {	UNIMPLEMENTED();
 }
 
-void __cdecl R_AddCmdBeginView(int,struct GfxSceneDef const *,struct GfxViewParms const *,struct GfxLodParms const *)
+void __cdecl R_AddCmdBeginView(int viewCount, struct GfxSceneDef const * sceneDef, struct GfxViewParms const * viewParms, struct GfxLodParms const * lodParms)
 {	UNIMPLEMENTED();
 }
 
@@ -98,7 +98,7 @@ void __cdecl R_AddCmdSetStencilRefValue(int)
 {	UNIMPLEMENTED();
 }
 
-void __cdecl R_AddCmdDrawSun(int)
+void __cdecl R_AddCmdDrawSun(int viewIndex)
 {	UNIMPLEMENTED();
 }
 
@@ -106,7 +106,7 @@ void __cdecl R_AddCmdResolveRenderTarget(int,enum _D3DFORMAT,float const * const
 {	UNIMPLEMENTED();
 }
 
-void __cdecl R_AddCmdSetRenderTarget(enum GfxRenderTargetId)
+void __cdecl R_AddCmdSetRenderTarget(enum GfxRenderTargetId renderTargetId)
 {	UNIMPLEMENTED();
 }
 
@@ -126,19 +126,19 @@ void __cdecl R_AddCmdPreTessGroupCompleted(int)
 {	UNIMPLEMENTED();
 }
 
-void __cdecl R_AddCmdLightProperties(int,struct GfxLight const *)
+void __cdecl R_AddCmdLightProperties(int lightIndex, struct GfxLight const * light)
 {	UNIMPLEMENTED();
 }
 
-void __cdecl R_AddCmdSetMaterialColor(float const * const)
+void __cdecl R_AddCmdSetMaterialColor(float const * const color)
 {	UNIMPLEMENTED();
 }
 
-void __cdecl R_AddCmdDrawFullScreenColoredQuad(float,float,float,float,float const * const,struct Material *)
+void __cdecl R_AddCmdDrawFullScreenColoredQuad(float s0, float t0, float s1, float t1, float const * const color, struct Material * material)
 {	UNIMPLEMENTED();
 }
 
-void __cdecl R_AddCmdDrawSprite(struct Material * const,unsigned char const * const,float const * const,float,float,int)
+void __cdecl R_AddCmdDrawSprite(struct Material * const material, unsigned char const * const rgbaColor, float const * const pos, float radius, float minScreenRadius, int renderFxFlags)
 {	UNIMPLEMENTED();
 }
 
@@ -146,35 +146,35 @@ void __cdecl R_AddCmdDrawQuadPic(float const (*)[2],float const * const,struct M
 {	UNIMPLEMENTED();
 }
 
-void __cdecl R_AddCmdDrawTextInSpace(char const *,struct Font_s *,float const * const,float const * const,float const * const,float const * const)
+void __cdecl R_AddCmdDrawTextInSpace(char const * text, struct Font_s * font, float const * const org, float const * const xPixelStep, float const * const yPixelStep, float const * const color)
 {	UNIMPLEMENTED();
 }
 
-void __cdecl R_AddCmdDrawTextWithCursor(char const *,int,struct Font_s *,float,float,float,float,float const * const,int,int,char)
+void __cdecl R_AddCmdDrawTextWithCursor(char const * text, int maxChars, struct Font_s * font, float x, float y, float xScale, float yScale, float const * const color, int style, int cursorPos, char cursor)
 {	UNIMPLEMENTED();
 }
 
-void __cdecl R_AddCmdDrawStretchRaw(int,int,int,int,int,int,unsigned char const *,int,int)
+void __cdecl R_AddCmdDrawStretchRaw(int x, int y, int w, int h, int cols, int rows, unsigned char const * data, int client, int dirty)
 {	UNIMPLEMENTED();
 }
 
-void __cdecl R_AddCmdDrawStretchPicRotate(float,float,float,float,float,float,float,float,float,float const * const,struct Material *)
+void __cdecl R_AddCmdDrawStretchPicRotate(float x, float y, float w, float h, float s0, float t0, float s1, float t1, float angle, float const * const color, struct Material * material)
 {	UNIMPLEMENTED();
 }
 
-void __cdecl R_AddCmdDrawStretchPic(float,float,float,float,float,float,float,float,float const * const,struct Material *)
+void __cdecl R_AddCmdDrawStretchPic(float x, float y, float w, float h, float s0, float t0, float s1, float t1, float const * const color, struct Material * material)
 {	UNIMPLEMENTED();
 }
 
-void __cdecl R_IssueDelayedDrawing(int)
+void __cdecl R_IssueDelayedDrawing(int marker)
 {	UNIMPLEMENTED();
 }
 
-void __cdecl R_EndDelayedDrawing(int)
+void __cdecl R_EndDelayedDrawing(int marker)
 {	UNIMPLEMENTED();
 }
 
-int __cdecl R_BeginDelayedDrawing(void)
+int __cdecl R_BeginDelayedDrawing()
 {	UNIMPLEMENTED();
 }
 
@@ -182,23 +182,23 @@ void __cdecl R_SkinGfxEntityDelayed(struct GfxEntity *)
 {	UNIMPLEMENTED();
 }
 
-void __cdecl R_UpdateXModelBoundsDelayed(struct GfxEntity *)
+void __cdecl R_UpdateXModelBoundsDelayed(struct GfxEntity * ent)
 {	UNIMPLEMENTED();
 }
 
-void __cdecl R_UpdateEffectsNonBolt(void)
+void __cdecl R_UpdateEffectsNonBolt()
 {	UNIMPLEMENTED();
 }
 
-void __cdecl R_UpdateEffectsBolt(void)
+void __cdecl R_UpdateEffectsBolt()
 {	UNIMPLEMENTED();
 }
 
-void __cdecl R_ShutdownBackendData(void)
+void __cdecl R_ShutdownBackendData()
 {	UNIMPLEMENTED();
 }
 
-void __cdecl R_InitBackendData(void)
+void __cdecl R_InitBackendData()
 {	UNIMPLEMENTED();
 }
 
@@ -218,19 +218,19 @@ void __cdecl R_AddCmdDrawSurfsReversed(struct GfxDrawSurf *,int,enum MaterialTec
 {	UNIMPLEMENTED();
 }
 
-void __cdecl R_AddCmdDrawSurfs(struct GfxDrawSurf *,int,enum MaterialTechniqueType)
+void __cdecl R_AddCmdDrawSurfs(struct GfxDrawSurf * drawSurfs, int drawSurfCount, enum MaterialTechniqueType techType)
 {	UNIMPLEMENTED();
 }
 
-void __cdecl R_SyncRenderThread(void)
+void __cdecl R_SyncRenderThread()
 {	UNIMPLEMENTED();
 }
 
-void __cdecl R_AbortRenderCommands(void)
+void __cdecl R_AbortRenderCommands()
 {	UNIMPLEMENTED();
 }
 
-void __cdecl R_BeginFrame(void)
+void __cdecl R_BeginFrame()
 {	UNIMPLEMENTED();
 }
 
@@ -258,7 +258,7 @@ int __cdecl R_ProcessNonSkinFrontendCmds(int)
 {	UNIMPLEMENTED();
 }
 
-void __cdecl R_EndDebugFrame(void)
+void __cdecl R_EndDebugFrame()
 {	UNIMPLEMENTED();
 }
 
@@ -278,7 +278,7 @@ void __cdecl R_InitFrontendThread(void)
 {	UNIMPLEMENTED();
 }
 
-void __cdecl R_EndFrame(void)
+void __cdecl R_EndFrame()
 {	UNIMPLEMENTED();
 }
 
@@ -364,6 +364,10 @@ void __cdecl R_FrontendThread(void)
 }
 
 void __cdecl R_IssueRenderCommands(void)
+{	UNIMPLEMENTED();
+}
+
+R_AddCmdTouchAllImages()
 {	UNIMPLEMENTED();
 }
 

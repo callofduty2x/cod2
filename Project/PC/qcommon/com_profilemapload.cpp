@@ -1,4 +1,4 @@
-bool __cdecl Com_IsMapProfilerActive(void)
+bool __cdecl Com_IsMapProfilerActive()
 {	UNIMPLEMENTED();
 }
 

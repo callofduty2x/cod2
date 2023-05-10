@@ -3101,12 +3101,12 @@ struct _3671
 	char va_string[2048];
 	int index;
 };
-
+/* 
 struct orientation_t
 {
 	char origin[12];
 	char axis[36];
-};
+}; */
 
 struct cspField_t
 {
@@ -3129,7 +3129,7 @@ struct TraceCheckCount
 	int verts;
 	int partitions;
 };
-
+/* 
 struct cplane_s
 {
 	char normal[12];
@@ -3137,7 +3137,7 @@ struct cplane_s
 	char type;
 	char signbits;
 	short pad;
-};
+}; */
 
 struct DObjAnimMat_s
 {
@@ -3151,7 +3151,7 @@ union _3674
 	int f;
 	int i;
 };
-
+/* 
 typedef enum
 {
 	PMSG_CONSOLE = 0,
@@ -3159,8 +3159,8 @@ typedef enum
 	PMSG_BOLDGAME = 2,
 	PMSG_SUBTITLE = 3,
 	PMSG_LOGFILE = 4
-} print_msg_type_t;
-
+} print_msg_type_t; */
+/* 
 typedef enum
 {
 	ERR_FATAL = 0,
@@ -3170,7 +3170,7 @@ typedef enum
 	ERR_SCRIPT = 4,
 	ERR_SCRIPT_DROP = 5,
 	ERR_LOCALIZATION = 6
-} errorParm_t;
+} errorParm_t; */
 
 struct _3728
 {
@@ -3191,7 +3191,7 @@ typedef enum
 	SE_CONSOLE = 4,
 	SE_PACKET = 5
 } sysEventType_t;
-
+/* 
 struct dvar_s
 {
 	int name;
@@ -3204,8 +3204,8 @@ struct dvar_s
 	DvarLimits domain;
 	int next;
 	int hashNext;
-};
-
+}; */
+/* 
 union DvarValue
 {
 	char enabled;
@@ -3214,11 +3214,11 @@ union DvarValue
 	int vector;
 	int string;
 	int color;
-};
-
+}; */
+/* 
 union DvarLimits
 {
-};
+}; */
 
 struct _3557
 {
@@ -3354,14 +3354,14 @@ struct _3609
 	unz_file_info_internal cur_file_info_internal;
 	int pfile_in_zip_read;
 };
-
+/* 
 typedef enum
 {
 	FS_READ = 0,
 	FS_WRITE = 1,
 	FS_APPEND = 2,
 	FS_APPEND_SYNC = 3
-} fsMode_t;
+} fsMode_t; */
 
 struct fileHandleData_t
 {
@@ -3795,7 +3795,7 @@ struct _3634
 	int totalAlloc;
 	int totalAllocBuckets;
 };
-
+/* 
 struct trace_t
 {
 	int fraction;
@@ -3808,7 +3808,7 @@ struct trace_t
 	short partGroup;
 	char allsolid;
 	char startsolid;
-};
+}; */
 
 struct TraceExtents
 {
@@ -3829,7 +3829,7 @@ struct _3740
 	char pad1[1];
 	short surfNames;
 };
-
+/* 
 struct qtime_s
 {
 	int tm_sec;
@@ -3841,7 +3841,7 @@ struct qtime_s
 	int tm_wday;
 	int tm_yday;
 	int tm_isdst;
-};
+}; */
 
 struct CStringEdPackage
 {
@@ -4213,7 +4213,7 @@ struct _3748
 	int64_t sampleTime;
 	int64_t bufRate;
 };
-
+/* 
 struct Effect
 {
 	int Effect;
@@ -4465,306 +4465,311 @@ struct FxFlagEntry
 struct GPObject
 {
 };
-
-struct FxChannelBackwardCompatible
-{
-	char start[24];
-	char end[24];
-	int64_t parm;
-	int flags;
-	char containsData;
+ents;
+	short size;
+	short maxSize;
 };
 
-struct FxCurve
+union TMediaElement
 {
-	int dimensionCount;
-	int keyCount;
-	int keys;
-};
-
-struct TextPool
-{
-};
-
-struct _3580
-{
-	int fraction;
-	char normal[12];
-	int surfaceFlags;
-	int contents;
+	int model;
 	int material;
-	short entityNum;
-	short partName;
-	short partGroup;
-	char allsolid;
-	char startsolid;
+	EffectTemplateLoadPtr u;
+	int data;
 };
 
-struct ScheduledEffect
+struct FxChannel
 {
-	int mFx;
-	int mPrimIndex;
-	int mStartTime;
-	int64_t mBolt;
-	char mOrigin[12];
-	char mAxis[36];
-	int mSeed;
-	int mIndexInBatch;
-	int mScheduledNext;
+	int curve;
+	int64_t scaleRange;
 };
 
-struct EffectVisInfo
+struct BackCompatibleParameters
 {
-	char origin[12];
-	int distSq;
-	int vis;
+	char fxChannels[1536];
 };
 
-struct EffectPrimitive
+struct GPGroup
+{
+};
+
+struct GPValue
+{
+};
+
+struct FxCurveIterator
+{
+	int master;
+	int currentKeyIndex;
+};
+
+union EffectTemplateLoadPtr
 {
 	int fx;
-	int primTemp;
-	int boltFrame;
+	int name;
 };
 
-struct Particle
+struct FxFlagEntry
 {
-	char pad0[324];
-	char colorChannelInstance[12];
-	char colorRandChannelInstance[12];
-	char alphaChannelInstance[12];
-	char alphaRandChannelInstance[12];
-	char sizeChannelInstance[12];
-	char sizeRandChannelInstance[12];
-	char size2ChannelInstance[12];
-	char size2RandChannelInstance[12];
-	char rotationDeltaChannelInstance[12];
-	char rotationDeltaRandChannelInstance[12];
-	char velocityXChannelInstance[12];
-	char velocityYChannelInstance[12];
-	char velocityZChannelInstance[12];
-	char velocityXRandChannelInstance[12];
-	char velocityYRandChannelInstance[12];
-	char velocityZRandChannelInstance[12];
-	char velocity2XChannelInstance[12];
-	char velocity2YChannelInstance[12];
-	char velocity2ZChannelInstance[12];
-	char velocity2XRandChannelInstance[12];
-	char velocity2YRandChannelInstance[12];
-	char velocity2ZRandChannelInstance[12];
+	int flag;
+	int64_t masks;
 };
 
-struct SortedCluster
+sstruct Effect
 {
-	int clusterId;
-	int distSq;
+	int Effect;
+	char pad0[60];
+	FxGfxEntity mRefEnt;
+	int mFlags;
+	int mClusterId;
+	int mSortGroup;
+	int mModel;
+	int mTimeStart;
+	int mTimeEnd;
+	FxBoltFramePtr mBolt;
 };
 
-struct Cloud
+struct FxGfxEntity
 {
-	char pad0[604];
-	char useLength;
-	char pad1[3];
-	int randomLengthWeight;
-	char lengthChannelInstance[12];
-	char lengthRandChannelInstance[12];
-};
-
-struct Flash
-{
-};
-
-struct Light
-{
-	char pad0[204];
-	char colorChannelInstance[12];
-	char colorRandChannelInstance[12];
-	char sizeChannelInstance[12];
-	char sizeRandChannelInstance[12];
-};
-
-struct Cylinder
-{
-};
-
-struct Tail
-{
-	char pad0[604];
-	int randomLengthWeight;
-	char lengthChannelInstance[12];
-	char lengthRandChannelInstance[12];
-};
-
-struct Line
-{
-};
-
-struct Emitter
-{
-};
-
-struct OrientedParticle
-{
-};
-
-struct FxHelper
-{
-	int time;
-	int mTime;
-	int mOldTime;
-	int mFrameTime;
-	int mTimeFrozen;
-	FxCamera mCamera;
-	char mPrevCamera[112];
-	int mSeed;
-	int adsZoomFactor;
-};
-
-struct FxCamera
-{
-	char vieworg[12];
-	char frustum[96];
-	int numPlanes;
-};
-
-struct GfxEntity
-{
-	refEntityType_t reType;
-	int renderFxFlags;
-	char pad0[12];
-	char axis[36];
-	int scale;
-	char origin[12];
-	char endpos[12];
 	int customMaterial;
-	int materialRGBA;
-	int materialTime;
-	int materialSubimageIndex;
-	int64_t radius;
 	int rotation;
-	int minScreenRadius;
+	char axis[36];
+	char dlightColor[12];
+	int materialTime;
+	char origin[12];
+	int64_t radius;
+	int materialRGBA;
+	int materialSubimageIndex;
+	int scale;
+	char endpos[12];
 };
 
-struct refdef_s
+struct FxBoltFramePtr
 {
-	int x;
-	int y;
-	int width;
-	int height;
-	int fov_x;
-	int fov_y;
-	char vieworg[12];
-	char viewaxis[36];
-	int time;
-	int zNear;
-	int blurRadius;
-	int viewIndex;
+};
+
+struct FxArchive
+{
+};
+
+struct EffectTemplate
+{
+	int mEffectName;
+	int mPrimitiveCount;
+	char mPrimitives[96];
+};
+
+struct FxBoltFrame
+{
+	char pad0[60];
+	FxBoltInfo mBolt;
+};
+
+struct PrimitiveTemplate
+{
+	char mName[32];
+	char mMaterialImpact[32];
+	PrimType mType;
+	int mParentPrimIndex;
+	FxRange mSpawnDelay;
+	int64_t mSpawnCount;
+	int64_t mLife;
+	int64_t mSpawnRange;
+	MediaHandles mMediaHandles;
+	int64_t mImpactFxHandles;
+	int64_t mDeathFxHandles;
+	int64_t mEmitterFxHandles;
+	int64_t mPlayFxHandles;
+	int mAttributeFlags;
+	int mSpawnFlags;
+	int mGroupFlags;
+	char mNonUniformScale;
+	char useLength;
+	char pad0[2];
+	char mMin[12];
+	char mMax[12];
+	int64_t mOrigin1X;
+	int64_t mOrigin1Y;
+	int64_t mOrigin1Z;
+	int64_t mOrigin2X;
+	int64_t mOrigin2Y;
+	int64_t mOrigin2Z;
+	int64_t mRadius;
+	int64_t mHeight;
+	int64_t mWindModifier;
+	char mFxChannels[288];
+	int64_t mRotation;
+	int64_t mAngle1;
+	int64_t mAngle2;
+	int64_t mAngle3;
+	int64_t mAngle1Delta;
+	int64_t mAngle2Delta;
+	int64_t mAngle3Delta;
+	int64_t mGravity;
+	int64_t mDensity;
+	int64_t mVariance;
+	int64_t mTexCoordS;
+	int64_t mTexCoordT;
+	int64_t mElasticity;
+	StartFrameMode mSequenceStartFrameMode;
+	int mSequenceFixedFrameValue;
+	PlayRateMode mSequencePlayRateMode;
+	int mSequenceFixedFpsValue;
+	LoopMode mSequenceLoopMode;
+	int mSequenceLoopTimes;
+	int spawnFrustumCullRadius;
+};
+
+struct FxBoltInfo
+{
+	int dobjHandle;
+	int boneIndex;
 };
 
 typedef enum
 {
-	RT_DOBJ = 0,
-	RT_XMODEL = 1,
-	RT_STATICMODEL = 2,
-	RT_BRUSHMODEL = 3,
-	RT_SPRITE = 4,
-	RT_RAIL_CORE = 5,
-	RT_PARTICLE_CLOUD = 6,
-	RT_ORIENTED_QUAD = 7,
-	RT_LINE = 8,
-	RT_CYLINDER = 9,
-	RT_MAX_REF_ENTITY_TYPE = 10
-} refEntityType_t;
+	PT_NONE = 0,
+	PT_PARTICLE = 1,
+	PT_LINE = 2,
+	PT_TAIL = 3,
+	PT_CYLINDER = 4,
+	PT_EMITTER = 5,
+	PT_DECAL = 6,
+	PT_ORIENTEDPARTICLE = 7,
+	PT_FXRUNNER = 8,
+	PT_LIGHT = 9,
+	PT_CAMERASHAKE = 10,
+	PT_SCREENFLASH = 11,
+	PT_CLOUD = 12
+} PrimType;
 
-union _3666
+struct FxRange
 {
-	char baseCoords[12];
-	char origin[12];
+	int mMin;
+	int mMax;
 };
 
-struct GfxWorldVertex
+struct MediaHandles
 {
-	char xyz[12];
-	char normal[12];
-	GfxColor color;
-	int64_t texCoord;
-	int64_t lmapCoord;
-	char binormal[12];
-	char tangent[12];
-};
-
-struct _3667
-{
-	int colorForDir;
-	int sunVisibility;
-};
-
-union GfxColor
-{
-	int packed;
-	int array;
-};
-
-struct EffectCluster
-{
-	char origin[12];
-	int refCount;
-};
-
-struct SortedEffect
-{
-	int effect;
-	int distSq;
-};
-
-struct GenericParser2
-{
-};
-
-struct FxScheduler
-{
-	char pad0[4];
-	int mScheduledHead;
-	int mScheduledCount;
+	TMediaList mMediaList;
 };
 
 typedef enum
 {
-	MEDIA_MATERIALS = 0,
-	MEDIA_MODELS = 1,
-	MEDIA_EFFECTS = 2
-} EMediaTypes;
+	SFM_FIXED_FRAME = 0,
+	SFM_RANDOM = 1,
+	SFM_INDEXED = 2,
+	SFM_MODE_COUNT = 3
+} StartFrameMode;
 
-struct cmodel_t
+typedef enum
 {
-	char mins[12];
-	char maxs[12];
-	int radius;
-	cLeaf_t leaf;
+	PRM_FIXED_FPS = 0,
+	PRM_SYNC_TO_PARTICLE_LIFETIME = 1,
+	PRM_MODE_COUNT = 2
+} PlayRateMode;
+
+typedef enum
+{
+	LM_FOREVER = 0,
+	LM_TIMES = 1,
+	LM_MODE_COUNT = 2
+} LoopMode;
+
+typedef enum
+{
+	FXCHAN_COLOR = 0,
+	FXCHAN_COLOR_RAND = 1,
+	FXCHAN_ALPHA = 2,
+	FXCHAN_ALPHA_RAND = 3,
+	FXCHAN_SIZE = 4,
+	FXCHAN_SIZE_RAND = 5,
+	FXCHAN_SIZE2 = 6,
+	FXCHAN_SIZE2_RAND = 7,
+	FXCHAN_LENGTH = 8,
+	FXCHAN_LENGTH_RAND = 9,
+	FXCHAN_ROTATION_DELTA = 10,
+	FXCHAN_ROTATION_DELTA_RAND = 11,
+	FXCHAN_VELOCITY_X = 12,
+	FXCHAN_VELOCITY_Y = 13,
+	FXCHAN_VELOCITY_Z = 14,
+	FXCHAN_VELOCITY_X_RAND = 15,
+	FXCHAN_VELOCITY_Y_RAND = 16,
+	FXCHAN_VELOCITY_Z_RAND = 17,
+	FXCHAN_VELOCITY2_X = 18,
+	FXCHAN_VELOCITY2_Y = 19,
+	FXCHAN_VELOCITY2_Z = 20,
+	FXCHAN_VELOCITY2_X_RAND = 21,
+	FXCHAN_VELOCITY2_Y_RAND = 22,
+	FXCHAN_VELOCITY2_Z_RAND = 23,
+	FXCHAN_COUNT = 24
+} FxChannelId;
+
+struct FxChannelInstance
+{
+	FxCurveIterator curveIterator;
+	int scale;
 };
 
-struct cLeaf_t
+struct TMediaList
 {
-	short firstCollAabbIndex;
-	short collAabbCount;
-	int brushContents;
-	int terrainContents;
-	char mins[12];
-	char maxs[12];
-	int leafBrushNode;
-	short cluster;
+	int elements;
+	short size;
+	short maxSize;
 };
 
-struct traceWork_t
+union TMediaElement
 {
-	TraceExtents extents;
-	char delta[12];
-	int deltaLen;
-	int deltaLenSq;
-	char midpoint[12];
-	char halfDelta[12];
-	char halfDeltaAbs[12];
-	char size[12];
+	int model;
+	int material;
+	EffectTemplateLoadPtr u;
+	int data;
+};
+
+struct FxChannel
+{
+	int curve;
+	int64_t scaleRange;
+};
+
+struct BackCompatibleParameters
+{
+	char fxChannels[1536];
+};
+
+struct GPGroup
+{
+};
+
+struct GPValue
+{
+};
+
+struct FxCurveIterator
+{
+	int master;
+	int currentKeyIndex;
+};
+
+union EffectTemplateLoadPtr
+{
+	int fx;
+	int name;
+};
+
+struct FxFlagEntry
+{
+	int flag;
+	int64_t masks;
+}; */
+
+struct GPObject
+{
+};
+GPObject
+{
+};
+r size[12];
 	char bounds[24];
 	int contents;
 	int isPoint;
@@ -4893,7 +4898,7 @@ struct _3682
 	int leafBrushNode;
 	short cluster;
 };
-
+/* 
 struct playerState_s
 {
 	int commandTime;
@@ -4983,7 +4988,7 @@ struct playerState_s
 	int shellshockDuration;
 	char objective[448];
 	int deltaTime;
-};
+}; */
 
 struct MantleState
 {
@@ -5086,7 +5091,7 @@ struct _3592
 	char b;
 	char a;
 };
-
+/* 
 struct entityState_s
 {
 	int number;
@@ -5123,8 +5128,8 @@ struct entityState_s
 	float fTorsoHeight;
 	float fTorsoPitch;
 	float fWaistPitch;
-};
-
+}; */
+/* 
 struct trajectory_t
 {
 	trType_t trType;
@@ -5132,7 +5137,7 @@ struct trajectory_t
 	int trDuration;
 	char trBase[12];
 	char trDelta[12];
-};
+}; */
 
 union _3596
 {
@@ -5146,7 +5151,7 @@ union _3597
 	int scale;
 	int eventParm2;
 };
-
+/* 
 typedef enum
 {
 	TR_STATIONARY = 0,
@@ -5158,7 +5163,7 @@ typedef enum
 	TR_GRAVITY_PAUSED = 6,
 	TR_ACCELERATE = 7,
 	TR_DECELERATE = 8
-} trType_t;
+} trType_t; */
 
 typedef enum
 {
@@ -5184,7 +5189,7 @@ struct pmove_t
 	char mantleEndPos[12];
 	int mantleDuration;
 };
-
+/* 
 struct usercmd_s
 {
 	int serverTime;
@@ -5195,7 +5200,7 @@ struct usercmd_s
 	char angles[12];
 	char forwardmove;
 	char rightmove;
-};
+}; */
 
 struct pml_t
 {
@@ -6485,7 +6490,7 @@ struct cm_world_t
 	short freeHead;
 	char sectors[24576];
 };
-
+/* 
 typedef enum
 {
 	FMV_IDLE = 0,
@@ -6495,7 +6500,7 @@ typedef enum
 	FMV_ID_IDLE = 4,
 	FMV_LOOPED = 5,
 	FMV_ID_WAIT = 6
-} e_status;
+} e_status; */
 
 struct _3803
 {
@@ -6565,7 +6570,7 @@ struct cin_cache
 	int buf;
 	connstate_t previousGameState;
 };
-
+/* 
 typedef enum
 {
 	CA_DISCONNECTED = 0,
@@ -6578,7 +6583,7 @@ typedef enum
 	CA_PRIMED = 7,
 	CA_ACTIVE = 8
 } connstate_t;
-
+ */
 struct MD4_CTX
 {
 	char state[16];
@@ -6791,7 +6796,7 @@ struct indent_s
 	int script;
 	int next;
 };
-
+/* 
 struct pc_token_s
 {
 	int type;
@@ -6799,7 +6804,7 @@ struct pc_token_s
 	int intvalue;
 	int floatvalue;
 	char string[1024];
-};
+}; */
 
 struct directive_s
 {
@@ -6848,7 +6853,7 @@ struct _3461
 	__darwin_pthread_mutex_t dd_lock;
 	int dd_td;
 };
-
+/* 
 struct GfxSceneEntity
 {
 	int refCount;
@@ -6881,8 +6886,8 @@ struct GfxBrushModel
 	char bounds[24];
 	int surfaceCount;
 	int startSurfIndex;
-};
-
+}; */
+/* 
 struct Material
 {
 	MaterialInfo info;
@@ -6950,8 +6955,8 @@ struct MaterialTechnique
 	short flags;
 	short passCount;
 	MaterialPassArray passArray;
-};
-
+}; */
+/* 
 struct GfxImage
 {
 	D3DRESOURCETYPE mapType;
@@ -6968,8 +6973,8 @@ struct GfxImage
 	char category;
 	char pad1[1];
 	int name;
-};
-
+}; */
+/* 
 struct MaterialWaterDef
 {
 	int textureWidth;
@@ -6985,8 +6990,8 @@ union MaterialPassArray
 {
 	char dx7[92];
 	char dx9[28];
-};
-
+}; */
+/* 
 union GfxTexture
 {
 	int basemap;
@@ -6994,8 +6999,8 @@ union GfxTexture
 	int volmap;
 	int cubemap;
 	int loadDef;
-};
-
+}; */
+/* 
 struct Picmip
 {
 	short platform;
@@ -7004,8 +7009,8 @@ struct Picmip
 struct CardMemory
 {
 	int64_t platform;
-};
-
+}; */
+/* 
 struct water_t
 {
 	WaterWritable writable;
@@ -7048,8 +7053,8 @@ struct MaterialPassDx9
 	short pixelArgCount;
 	int vertexArgs;
 	int pixelArgs;
-};
-
+}; */
+/* 
 struct GfxImageLoadDef
 {
 	char format;
@@ -7057,8 +7062,8 @@ struct GfxImageLoadDef
 	char dimensions[6];
 	int data;
 	int resourceSize;
-};
-
+}; */
+/* 
 struct WaterWritable
 {
 	int frameCount;
@@ -7092,14 +7097,14 @@ struct MaterialShader
 	char shaderType;
 	char shaderVersion;
 	MaterialShaderPtr u;
-};
+}; */
 
 struct complex_s
 {
 	int real;
 	int imag;
 };
-
+/* 
 union MaterialArgumentDef
 {
 	int literalConst;
@@ -7139,14 +7144,14 @@ struct MaterialStateMapRule
 	int64_t stateBitsValue;
 	int64_t stateBitsSet;
 	int64_t stateBitsClear;
-};
-
+}; */
+/* 
 struct GfxDrawSurf
 {
 	int sort;
 	int surface;
-};
-
+}; */
+/* 
 struct GfxViewParms
 {
 	char origin[12];
@@ -7209,14 +7214,14 @@ struct GfxLightImage
 {
 	int image;
 	char samplerState;
-};
-
+}; */
+/* 
 struct GfxModelSurface
 {
 	int surfType;
 	int xsurf;
-};
-
+}; */
+/* 
 struct XSurface_s
 {
 	char tileMode;
@@ -7260,15 +7265,15 @@ struct XBlendInfo_s
 	char offset[12];
 	short boneOffset;
 	short boneWeight;
-};
-
+}; */
+/* 
 struct GfxSurface
 {
 	int material;
 	short lightmapIndex;
 	short sortGroup;
-};
-
+}; */
+/* 
 union _3707
 {
 	int data;
@@ -7292,15 +7297,15 @@ struct srfPoly_t
 	short lmapIndex;
 	short vertCount;
 	int verts;
-};
-
+}; */
+/* 
 struct PointLightPartition
 {
 	int light;
 	int firstDrawSurf;
 	int drawSurfCount;
-};
-
+}; */
+/* 
 struct GfxStaticModelInstance
 {
 	int cullDist;
@@ -7311,8 +7316,8 @@ struct GfxStaticModelInstance
 	char axis[36];
 	int scale;
 	char baseLightingCoords[12];
-};
-
+}; */
+/* 
 struct GfxScene
 {
 	int viewCount;
@@ -7334,8 +7339,8 @@ struct GfxSceneDef
 	int floatTime;
 	int entityCount;
 	int entities;
-};
-
+}; */
+/* 
 struct trXSkin_t
 {
 	int materialHandles;
@@ -7420,8 +7425,8 @@ struct GfxCmdHeader
 {
 	short id;
 	short byteCount;
-};
-
+}; */
+/* 
 typedef enum
 {
 	TECHNIQUE_DEPTH_PREPASS = 0,
@@ -7467,8 +7472,8 @@ typedef enum
 	TECHNIQUE_COUNT = 34,
 	TECHNIQUE_TOTAL_COUNT = 35,
 	TECHNIQUE_NONE = -1
-} MaterialTechniqueType;
-
+} MaterialTechniqueType; */
+/* 
 struct Font_s
 {
 	int name;
@@ -7476,8 +7481,8 @@ struct Font_s
 	int glyphCount;
 	int material;
 	int glyphs;
-};
-
+}; */
+/* 
 struct Glyph
 {
 	short letter;
@@ -7491,8 +7496,8 @@ struct Glyph
 	int t0;
 	int s1;
 	int t1;
-};
-
+}; */
+/* 
 typedef enum
 {
 	R_RENDERTARGET_FRAME_BUFFER = 0,
@@ -7661,8 +7666,8 @@ struct Image_MemUsage
 	int total;
 	int lightmap;
 	int minspec;
-};
-
+}; */
+/* 
 struct refexport_t
 {
 	int Shutdown;
@@ -8163,8 +8168,8 @@ struct sunflare_t
 	int glareFadeInTime;
 	int glareFadeOutTime;
 	char sunFxPosition[12];
-};
-
+}; */
+/* 
 struct mnode_t
 {
 	int contents;
@@ -8308,8 +8313,8 @@ struct GfxOccluderEdge
 {
 	int64_t plane;
 	int64_t vertex;
-};
-
+}; */
+/* 
 struct r_globals_t
 {
 	char registered;
@@ -9038,7 +9043,7 @@ struct SunFlareDynamic
 	int hitNum;
 	int64_t sunQuery;
 	short sunQueryIssued;
-};
+}; */
 
 struct static_model_tree_list_t
 {
@@ -10444,13 +10449,13 @@ struct _3727
 	int compassY;
 	char corpseinfo[9664];
 };
-
+/* 
 struct gameState_t
 {
 	char stringOffsets[8192];
 	char stringData[16000];
 	int dataCount;
-};
+}; */
 
 struct shellshock_parms_t
 {

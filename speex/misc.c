@@ -1,3 +1,7 @@
+// Doesn't exist in speex anymore?
+// Last appeared in 2009?
+// http://lists.freeswitch.org/pipermail/freeswitch-trunk/2009-February/008281.html
+
 speex_memset_bytes(char* dst,  char src,  int nbytes)
 {	UNIMPLEMENTED();
 }

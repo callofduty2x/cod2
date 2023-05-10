@@ -3171,7 +3171,7 @@ typedef enum
 	ERR_SCRIPT_DROP = 5,
 	ERR_LOCALIZATION = 6
 } errorParm_t; */
-
+/* 
 struct _3728
 {
 	int evTime;
@@ -3190,7 +3190,7 @@ typedef enum
 	SE_GAMEPAD_AXIS = 3,
 	SE_CONSOLE = 4,
 	SE_PACKET = 5
-} sysEventType_t;
+} sysEventType_t; */
 /* 
 struct dvar_s
 {
@@ -3243,7 +3243,7 @@ struct _3560
 	int min;
 	int max;
 };
-
+/* 
 struct field_t
 {
 	int cursor;
@@ -3253,7 +3253,7 @@ struct field_t
 	int charHeight;
 	int fixedSize;
 	char buffer[256];
-};
+}; */
 
 struct SysInfo
 {
@@ -3269,7 +3269,7 @@ struct _3722
 	int ip;
 	short port;
 };
-
+/* 
 typedef enum
 {
 	NA_BOT = 0,
@@ -3277,7 +3277,7 @@ typedef enum
 	NA_LOOPBACK = 2,
 	NA_BROADCAST = 3,
 	NA_IP = 4
-} netadrtype_t;
+} netadrtype_t; */
 
 struct LargeLocal
 {
@@ -10025,7 +10025,7 @@ struct client_s
 	char muteList[64];
 	char sendVoice;
 };
-
+/* 
 struct netchan_t
 {
 	int outgoingSequence;
@@ -10042,7 +10042,7 @@ struct netchan_t
 	int unsentLength;
 	char unsentBuffer[16384];
 	int pProf;
-};
+}; */
 
 struct svscmd_info_t
 {
@@ -10062,21 +10062,21 @@ struct clientSnapshot_t
 	int messageAcked;
 	int messageSize;
 };
-
+/* 
 typedef enum
 {
 	NS_CLIENT1 = 0,
 	NS_SERVER = 1,
 	NS_MAXCLIENTS = 1,
 	NS_PACKET = 2
-} netsrc_t;
-
+} netsrc_t; */
+/* 
 struct netadr_t
 {
 	netadrtype_t type;
 	int ip;
 	short port;
-};
+}; */
 
 struct VoicePacket_t
 {
@@ -10806,7 +10806,7 @@ struct ClientVoicePacket_t
 	int dataSize;
 	char data[256];
 };
-
+/* 
 struct msg_t
 {
 	int overflowed;
@@ -10816,7 +10816,7 @@ struct msg_t
 	int readcount;
 	int bit;
 };
-
+ */
 struct _3568
 {
 	char talker;
@@ -11576,7 +11576,7 @@ struct NetField
 	int offset;
 	int bits;
 };
-
+/* 
 struct _3769
 {
 	huff_t compressor;
@@ -11606,7 +11606,7 @@ struct nodetype
 	int head;
 	int weight;
 	int symbol;
-};
+}; */
 
 struct _3783
 {

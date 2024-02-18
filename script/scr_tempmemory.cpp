@@ -1,3 +1,8 @@
+#include "com_memory.h"
+#include "com_files.h"
+
+static int currentPos;
+
 int __cdecl Scr_Allign2(int)
 {	UNIMPLEMENTED();
 }
@@ -14,24 +19,37 @@ int __cdecl Scr_Allign4Strict(int)
 {	UNIMPLEMENTED();
 }
 
-void __cdecl TempMemoryReset()
-{	UNIMPLEMENTED();
+void TempMemoryReset()
+{
+	currentPos = 0;
 }
 
-char * __cdecl TempMalloc(int len)
-{	UNIMPLEMENTED();
+void* TempMalloc(int size)
+{
+	int pos;
+	char *buf;
+
+	pos = currentPos + size;
+	buf = (char *)Hunk_ReallocateTempMemoryInternal(currentPos + size) + currentPos;
+	currentPos = pos;
+
+	return buf;
 }
 
-void __cdecl TempMemorySetPos(char * pos)
-{	UNIMPLEMENTED();
+void* TempMemorySetPos(char *pos)
+{
+	currentPos -= (char *)TempMalloc(0) - pos;
+	return Hunk_ReallocateTempMemoryInternal(currentPos);
 }
 
-char * __cdecl TempMallocAlignStrict(int len)
-{	UNIMPLEMENTED();
+char* TempMallocAlignStrict(int size)
+{
+	return (char *)TempMalloc(size);
 }
 
-char * __cdecl TempMallocAlign(int len)
-{	UNIMPLEMENTED();
+char* TempMallocAlign(int size)
+{
+	return (char *)TempMalloc(size);
 }
 
 int marker_scr_tempmemory;
